@@ -1,8 +1,7 @@
-
 <properties umbracoNaviHide="0" pageTitle="Install a new Active Directory forest in Windows Azure" metaKeywords="Windows Azure, virtual network, domain controller, active directory, AD, tutorial" metaDescription="Learn how to install a replica AD domain control in a Windows Azure virtual network." linkid="manage-windows-how-to-guide-storage-accounts" urlDisplayName="How to: storage accounts" headerExpose="" footerExpose="" disqusComments="1" />
+#Install a new Active Directory forest in Windows Azure
 
-
-<h1 id="ADtutorial2">Install a new Active Directory forest in Windows Azure</h1>
+<div chunk="../../Shared/Chunks/disclaimer.md" />
 
 This tutorial walks you through the steps to create a new Active Directory forest on a virtual machine (VM) on Windows Azure Virtual Network. In this tutorial, the virtual network for the VM is not connected to the network at your company.
 
@@ -39,7 +38,7 @@ Before you begin, make sure the following prerequisites are complete:
 >You need to provide your own DNS infrastructure to support AD DS on Windows Azure Virtual Network. The DNS infrastructure provided by Windows Azure for this release does not support some features that AD DS requires, such as SRV resource record registration or dynamic DNS. 
 
 **Note**
->If you already completed the steps in [Install a replica Active Directory domain controller in Windows Azure Virtual Network](../../../manage/windows/tutorials/tutorial-AD-1/), you might need to remove AD DS from the domain controller on the Windows Azure virtual network before you begin this tutorial. For more information about how to remove AD DS, see [Removing a Domain Controller from a Domain](http://technet.microsoft.com/en-us/library/cc771844(v=WS.10).aspx).
+>If you already completed the steps in [Install a replica Active Directory domain controller in Windows Azure Virtual Network](tutorial-AD-1), you might need to remove AD DS from the domain controller on the Windows Azure virtual network before you begin this tutorial. For more information about how to remove AD DS, see [Removing a Domain Controller from a Domain](http://technet.microsoft.com/en-us/library/cc771844(v=WS.10).aspx).
 
 
 <h2 id="Step1">Step 1: Sign on to Windows Azure, attach data disks, and connect to the VM</h2>
