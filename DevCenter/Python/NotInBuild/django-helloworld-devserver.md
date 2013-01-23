@@ -1,6 +1,6 @@
-# Django Hello World Web Application
+﻿# Django Hello World Web Application
 
-This tutorial describes how to host a Django-based website on Windows 
+This tutorial describes how to host a Django-based web site on Windows 
 Azure using a Windows Server 2008 R2 virtual machine. This tutorial assumes you have no prior experience using Windows Azure. Upon completing this guide, you will have a Django-based application up and running in the cloud.
 
 You will learn how to:
@@ -60,8 +60,8 @@ We recommend using Windows PowerShell for developing your Windows Azure applicat
 
     ![The result of the New-AzureService command][]
 
-    The **django-admin.py** script generates a basic structure for Django-based websites:
-    -   **manage.py** helps you to start hosting and stop hosting your Django-based website
+    The **django-admin.py** script generates a basic structure for Django-based web sites:
+    -   **manage.py** helps you to start hosting and stop hosting your Django-based web site
     -   **helloworld\settings.py** contains Django settings for your application.
     -   **helloworld\urls.py** contains the mapping code between each url and its view.
 
@@ -81,17 +81,17 @@ We recommend using Windows PowerShell for developing your Windows Azure applicat
 		)
 
 
-## Deploying and running your Django website
+## Deploying and running your Django web site
 
 1.  Close *Notepad* and switch back to the Windows PowerShell window.
-    Enter the following command to deploy your Django website:
+    Enter the following command to deploy your Django web site:
 
         PS C:\django\helloworld> $ipPort = [System.Net.Dns]::GetHostEntry("127.0.0.1")
         PS C:\django\helloworld> $ipPort = [string]$ipPort.AddressList[1]
         PS C:\django\helloworld> $ipPort += ":80"
         PS C:\django\helloworld> C:\Python27\python.exe .\manage.py runserver $ipPort
 
-    The **runserver** parameter instructs Django to run our *helloworld* website on TCP port *80*. The results of this command should be similar to:
+    The **runserver** parameter instructs Django to run our *helloworld* web site on TCP port *80*. The results of this command should be similar to:
 
         PS C:\django\helloworld> C:\Python27\python.exe .\manage.py runserver $ipPort
         Validating models...
@@ -105,7 +105,7 @@ We recommend using Windows PowerShell for developing your Windows Azure applicat
 
     ![A browser window displaying the hello world page on Windows Azure][]
 
-1.  To stop Django from hosting the website, simply switch to the PowerShell window and press **CTRL-C**.
+1.  To stop Django from hosting the web site, simply switch to the PowerShell window and press **CTRL-C**.
 
 
 
@@ -122,11 +122,11 @@ When you're done with this tutorial, shutdown and/or remove your newly created W
 [A directory listing of the webrole folder]: ../Media/django-helloworld-ps-webrole-dir.png
 [A directory listing of the django folder]: ../Media/django-helloworld-ps-django-dir.png
 [A web browser displaying the Hello World web page on emulator]: ../Media/django-helloworld-browser-emulator.png
-[The menu displayed when right-clicking the Windows Azure emulator from the task bar]: ../../../DevCenter/Node/Media/getting-started-11.png
+[The menu displayed when right-clicking the Windows Azure emulator from the task bar]: ../../../DevCenter/nodejs/Media/getting-started-11.png
 [http://www.windowsazure.com]: http://www.windowsazure.com
 [A browser window displaying http://www.windowsazure.com/ with the Free Trial link highlighted]: ../../../DevCenter/dotNet/Media/getting-started-12.png
-[A browser window displaying the liveID sign in page]: ../../../DevCenter/Node/Media/getting-started-13.png
-[Internet Explorer displaying the save as dialog for the publishSettings file.]: ../../../DevCenter/Node/Media/getting-started-14.png
+[A browser window displaying the liveID sign in page]: ../../../DevCenter/notejs/Media/getting-started-13.png
+[Internet Explorer displaying the save as dialog for the publishSettings file.]: ../../../DevCenter/nodejs/Media/getting-started-14.png
 [The output of the Publish-AzureService command]: ../Media/django-helloworld-ps-publish.png
 [The status of the Stop-AzureService command]: ../Media/django-helloworld-ps-stop.png
 [The status of the Remove-AzureService command]: ../Media/django-helloworld-ps-remove.png
