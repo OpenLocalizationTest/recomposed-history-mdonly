@@ -1,14 +1,14 @@
-<properties linkid="develop-mobile-tutorials-authorize-users-in-scripts-js" urlDisplayName="Authorize Users in Scripts" pageTitle="Authorize users in scripts (JavaScript) - Mobile Services" metaKeywords="" metaDescription="Learn how to authorize users in scripts in your Windows Store app with Windows Azure Mobile Services." metaCanonical="http://www.windowsazure.com/en-us/develop/mobile/tutorials/authorize-users-in-scripts-dotnet/" disqusComments="1" umbracoNaviHide="1" />
+<properties linkid="develop-mobile-tutorials-authorize-users-in-scripts-android" urlDisplayName="Authorize Users in Scripts (Android)" pageTitle="Authorize users in scripts (Android) - Windows Azure Mobile Services" metaKeywords="Windows Azure authorizing user, Android scripts authorization, authorize mobile services" metaDescription="Learn how to authorize users with scripts in your Windows Azure Mobile Services app for Android." metaCanonical="" disqusComments="1" umbracoNaviHide="1" />
 
-<div chunk="../chunks/article-left-menu-windows-store.md" />
+<div chunk="../chunks/article-left-menu-android.md" />
 
 # Use scripts to authorize users in Mobile Services
 <div class="dev-center-tutorial-selector"> 
-	<a href="/en-us/develop/mobile/tutorials/authorize-users-in-scripts-dotnet" title="Windows Store C#">Windows Store C#</a><a href="/en-us/develop/mobile/tutorials/authorize-users-in-scripts-js" title="Windows Store JavaScript" class="current">Windows Store JavaScript</a><a href="/en-us/develop/mobile/tutorials/authorize-users-in-scripts-wp8" title="Windows Phone 8">Windows Phone 8</a> <a href="/en-us/develop/mobile/tutorials/authorize-users-in-scripts-ios" title="iOS">iOS</a><a href="/en-us/develop/mobile/tutorials/authorize-users-in-scripts-android" title="Android">Android</a> 
+	<a href="/en-us/develop/mobile/tutorials/authorize-users-in-scripts-dotnet" title="Windows Store C#">Windows Store C#</a><a href="/en-us/develop/mobile/tutorials/authorize-users-in-scripts-js" title="Windows Store JavaScript">Windows Store JavaScript</a><a href="/en-us/develop/mobile/tutorials/authorize-users-in-scripts-wp8" title="Windows Phone 8">Windows Phone 8</a> <a href="/en-us/develop/mobile/tutorials/authorize-users-in-scripts-ios" title="iOS">iOS</a> 
+	<a href="/en-us/develop/mobile/tutorials/authorize-users-in-scripts-android" title="Android" class="current">Android</a>
 </div>	
 
-
-This topic shows you how to use server scripts to authorize authenticated users for accessing data in Windows Azure Mobile Services from a Windows Store app.  In this tutorial you register scripts with Mobile Services to filter queries based on the userId of an authenticated user, ensuring that each user can see only their own data.
+This topic shows you how to use server scripts to authorize authenticated users for accessing data in Windows Azure Mobile Services from an Android app.  In this tutorial you register scripts with Mobile Services to filter queries based on the userId of an authenticated user, ensuring that each user can see only their own data.
 
 This tutorial is based on the Mobile Services quickstart and builds on the previous tutorial [Get started with authentication]. Before you start this tutorial, you must first complete [Get started with authentication].  
 
@@ -52,21 +52,19 @@ Because the quickstart app reads and inserts data, you need to register scripts 
 
 ## Test the app
 
-1. In Visual Studio 2012 Express for Windows 8, open the project that you modified when you completed the tutorial [Get started with authentication].
+1. In Eclipse, open the project that you modified when you completed the tutorial [Get started with authentication].
 
-2. Press the F5 key to run the app, then log-on with your chosen identity provider. 
+2. From the **Run** menu, then click **Run** to start the app and sign in with your chosen identity provider. 
 
    Notice that this time, although there are items already in the TodoItem table from preview tutorials, no items are returned. This happens because previous items were inserted without the userId column and now have null values.
 
 3. In the app, enter text in **Insert a TodoItem** and then click **Save**.
 
-   ![][3]
-
    This inserts both the text and the userId in the TodoItem table in the mobile service. Because the new item has the correct userId value, it is returned by the mobile service and displayed in the second column.
 
 5. Back in the **todoitem** table in the [Management Portal][Windows Azure Management Portal], click **Browse** and verify that each newly added item how has an associated userId value.
 
-6. (Optional) If you have additional login accounts, you can verify that users can only see their own data by closing the app (Alt+F4) and then running it again. When the login credentials dialog is displayed, enter a different login, and then verify that the items entered under the previous account are not displayed. 
+6. (Optional) If you have additional login accounts, you can verify that users can only see their own data by closing the app and then running it again. When the login credentials dialog is displayed, enter a different login, and then verify that the items entered under the previous account are not displayed.
 
 ## Next steps
 
@@ -89,16 +87,14 @@ This concludes the tutorials that demonstrate the basics of working with authent
 [0]: ../Media/mobile-services-selection.png
 [1]: ../Media/mobile-portal-data-tables.png
 [2]: ../Media/mobile-insert-script-users.png
-[3]: ../Media/mobile-quickstart-startup.png
+[3]: ../Media/mobile-quickstart-startup-android.png
 
 <!-- URLs. -->
-[Windows Push Notifications & Live Connect]: http://go.microsoft.com/fwlink/p/?LinkID=257677
 [Mobile Services server script reference]: http://go.microsoft.com/fwlink/p/?LinkId=262293
 [My Apps dashboard]: http://go.microsoft.com/fwlink/p/?LinkId=262039
-[Get started with Mobile Services]: /en-us/develop/mobile/tutorials/get-started/#create-new-service
-[Get started with data]: ./mobile-services-get-started-with-data-js.md
-[Get started with authentication]: ./mobile-services-get-started-with-users-js.md
-[Get started with push notifications]: ./mobile-services-get-started-with-push-js.md
-[JavaScript and HTML]: mobile-services-win8-javascript/
+[Get started with Mobile Services]: /en-us/develop/mobile/tutorials/get-started-android
+[Get started with data]: ./mobile-services-get-started-with-data-android.md
+[Get started with authentication]: ./mobile-services-get-started-with-users-android.md
+[Get started with push notifications]: ./mobile-services-get-started-with-push-android.md
 [WindowsAzure.com]: http://www.windowsazure.com/
 [Windows Azure Management Portal]: https://manage.windowsazure.com/
