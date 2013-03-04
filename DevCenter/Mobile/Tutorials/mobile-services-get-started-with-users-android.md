@@ -1,14 +1,11 @@
-<properties linkid="develop-mobile-tutorials-get-started-with-users-ios" urlDisplayName="Get Started with Authentication (iOS)" pageTitle="Get started with authentication (iOS) - Mobile Services" metaKeywords="Windows Azure registering application, Azure authentication, application authenticate, authenticate mobile services, Mobile Services iOS" metaDescription="Learn how to use authentication in your Windows Azure Mobile Services app for iOS." metaCanonical="" disqusComments="1" umbracoNaviHide="1" />
+<properties linkid="develop-mobile-tutorials-get-started-with-users-android" urlDisplayName="Get Started with Authentication (Android)" pageTitle="Get started with authentication (Android) - Mobile Services" metaKeywords="Windows Azure registering application, Azure authentication, application authenticate, authenticate mobile services, Mobile Services Android" metaDescription="Learn how to use authentication in your Windows Azure Mobile Services app for Android." metaCanonical="" disqusComments="1" umbracoNaviHide="1" />
 
-<div chunk="../chunks/article-left-menu-ios.md" />
+<div chunk="../chunks/article-left-menu-android.md" />
 
 # Get started with authentication in Mobile Services
 <div class="dev-center-tutorial-selector"> 
-	<a href="/en-us/develop/mobile/tutorials/get-started-with-users-dotnet" title="Windows Store C#">Windows Store C#</a><a href="/en-us/develop/mobile/tutorials/get-started-with-users-js" title="Windows Store JavaScript">Windows Store JavaScript</a><a href="/en-us/develop/mobile/tutorials/get-started-with-users-wp8" title="Windows Phone 8">Windows Phone 8</a><a href="/en-us/develop/mobile/tutorials/get-started-with-users-ios" title="iOS" class="current">iOS</a><a href="/en-us/develop/mobile/tutorials/get-started-with-users-android" title="Android">Android</a> 
+	<a href="/en-us/develop/mobile/tutorials/get-started-with-users-dotnet" title="Windows Store C#">Windows Store C#</a><a href="/en-us/develop/mobile/tutorials/get-started-with-users-js" title="Windows Store JavaScript">Windows Store JavaScript</a><a href="/en-us/develop/mobile/tutorials/get-started-with-users-wp8" title="Windows Phone 8">Windows Phone 8</a><a href="/en-us/develop/mobile/tutorials/get-started-with-users-ios" title="iOS">iOS</a> <a href="/en-us/develop/mobile/tutorials/get-started-with-users-android" title="Android" class="current">Android</a>
 </div>
-
-
-_The iOS client library for Mobile Services is currently under development on [GitHub]. We welcome feedback on and contributions to this library._
 
 This topic shows you how to authenticate users in Windows Azure Mobile Services from your app.  In this tutorial, you add authentication to the quickstart project using an identity provider that is supported by Mobile Services. After being successfully authenticated and authorized by Mobile Services, the user ID value is displayed.  
 
@@ -20,7 +17,7 @@ This tutorial walks you through these basic steps to enable authentication in yo
 
 This tutorial is based on the Mobile Services quickstart. You must also first complete the tutorial [Get started with Mobile Services]. 
 
-Completing this tutorial requires XCode 4.5 and iOS 5.0 or later versions. 
+Completing this tutorial requires Eclipse and Android 4.2 or a later version. 
 
 <!--<div class="dev-callout"><b>Note</b>
 	<p>This tutorial demonstrates the basic method provided by Mobile Services to authenticate users by using a variety of identity providers. This method is easy to configure and supports multiple providers. However, this method also requires users to log-in every time your app starts. To instead use Live Connect to provide a single sign-on experience in your Windows Store app, see the topic <a href="/en-us/develop/mobile/tutorials/single-sign-on-win8-dotnet">Single sign-on for Windows Store apps by using Live Connect</a>.</p>
@@ -69,67 +66,77 @@ Both your mobile service and your app are now configured to work with your chose
 
    ![][15]
 
-3. In Xcode, open the project that you created when you completed the tutorial [Get started with Mobile Services]. 
+3. In Eclipse, open the project that you created when you completed the tutorial [Get started with Mobile Services]. 
 
-4. Press the **Run** button to build the project and start the app in the iPhone emulator; verify that an unhandled exception with a status code of 401 (Unauthorized) is raised after the app starts. 
-   
-   This happens because the app attempts to access Mobile Services as an unauthenticated user, but the _TodoItem_ table now requires authentication.
+4. From the **Run** menu, then click **Run** to start the app; verify that an unhandled exception with a status code of 401 (Unauthorized) is raised after the app starts. 
+
+	 This happens because the app attempts to access Mobile Services as an unauthenticated user, but the _TodoItem_ table now requires authentication.
 
 Next, you will update the app to authenticate users before requesting resources from the mobile service.
 
 <h2><a name="add-authentication"></a><span class="short-header">Add authentication</span>Add authentication to the app</h2>
 
-1. Open the project file TodoListController.m and in the **viewDidLoad** method, remove the following code that reloads the data into the table:
+1. In the Package Explorer in Eclipse, open the ToDoActivity.java file and add the following import statements.
 
-        [todoService refreshDataOnSuccess:^{
-            [self.tableView reloadData];
-        }];
+		import com.microsoft.windowsazure.mobileservices.MobileServiceUser;
+		import com.microsoft.windowsazure.mobileservices.MobileServiceAuthenticationProvider;
+		import com.microsoft.windowsazure.mobileservices.UserAuthenticationCallback;
 
-2.	Just after the **viewDidLoad** method, add the following code:
+2. Add the following method to the **ToDoActivity** class: 
+	
+		private void authenticate() {
+		
+			// Login using the Google provider.
+			mClient.login(MobileServiceAuthenticationProvider.Google,
+					new UserAuthenticationCallback() {
+	
+						@Override
+						public void onCompleted(MobileServiceUser user,
+								Exception exception, ServiceFilterResponse response) {
+	
+							if (exception == null) {
+								createAndShowDialog(String.format(
+												"You are now logged in - %1$2s",
+												user.getUserId()), "Success");
+								createTable();
+							} else {
+								createAndShowDialog("You must log in. Login Required", "Error");
+							}
+						}
+					});
+		}
 
-        - (void)viewDidAppear:(BOOL)animated
-        {
-            // If user is already logged in, no need to ask for auth
-            if (todoService.client.currentUser == nil)
-            {
-                // We want the login view to be presented after the this run loop has completed
-                // Here we use a delay to ensure this.
-                [self performSelector:@selector(login) withObject:self afterDelay:0.1];
-            }
-        }
-
-        - (void) login
-        {
-            UINavigationController *controller =
-    
-            [self.todoService.client
-                loginViewControllerWithProvider:@"facebook"
-                completion:^(MSUser *user, NSError *error) {
-         
-                if (error) {
-                        NSLog(@"Authentication Error: %@", error);
-                        // Note that error.code == -1503 indicates
-                        // that the user cancelled the dialog
-                } else {
-                    // No error, so load the data
-                    [self.todoService refreshDataOnSuccess:^{
-                        [self.tableView reloadData];
-                    }];
-                }
-         
-                [self dismissViewControllerAnimated:YES completion:nil];
-            }];
-    
-            [self presentViewController:controller animated:YES completion:nil];
-        }
-
-    This creates a member variable for storing the current user and a method to handle the authentication process. The user is authenticated by using a Facebook login.
+    This creates a new method to handle the authentication process. The user is authenticated by using a Google login. A dialog is displayed which displays the ID of the authenticated user. You cannot proceed without a positive authentication.
 
     <div class="dev-callout"><b>Note</b>
-	<p>If you are using an identity provider other than Facebook, change the value passed to <strong>loginViewControllerWithProvider</strong> above to one of the following: <i>microsoftaccount</i>, <i>facebook</i>, <i>twitter</i>, or <i>google</i>.</p>
+	<p>If you are using an identity provider other than Google, change the value passed to the <strong>login</strong> method above to one of the following: <i>MicrosoftAccount</i>, <i>Facebook</i>, or <i>Twitter</i>.</p>
     </div>
-		
-3. Press the **Run** button to build the project, start the app in the iPhone emulator, then log-on with your chosen identity provider.
+
+3. In the **onCreate** method, add the following line of code after the code that instantiates the `MobileServiceClient` object.
+
+		authenticate();
+
+	This call starts the authentication process.
+
+4. Move the remaining code after `authenticate();` in the **onCreate** method to a new **createTable** method, which looks like this:
+
+		private void createTable() {
+	
+			// Get the Mobile Service Table instance to use
+			mToDoTable = mClient.getTable(ToDoItem.class);
+	
+			mTextNewToDo = (EditText) findViewById(R.id.textNewToDo);
+	
+			// Create an adapter to bind the items with the view
+			mAdapter = new ToDoItemAdapter(this, R.layout.row_list_to_do);
+			ListView listViewToDo = (ListView) findViewById(R.id.listViewToDo);
+			listViewToDo.setAdapter(mAdapter);
+	
+			// Load the items from the Mobile Service
+			refreshItemsFromTable();
+		}
+
+9. From the **Run** menu, then click **Run** to start the app and sign in with your chosen identity provider. 
 
    When you are successfully logged-in, the app should run without errors, and you should be able to query Mobile Services and make updates to data.
 
@@ -168,10 +175,10 @@ In the next tutorial, [Authorize users with scripts], you will take the user ID 
 [My Applications]: http://go.microsoft.com/fwlink/p/?LinkId=262039
 [Live SDK for Windows]: http://go.microsoft.com/fwlink/p/?LinkId=262253
 [Single sign-on for Windows Store apps by using Live Connect]: ./mobile-services-single-sign-on-win8-dotnet.md
-[Get started with Mobile Services]: ./mobile-services-get-started-ios.md
-[Get started with data]: ./mobile-services-get-started-with-data-ios.md
-[Get started with authentication]: ./mobile-services-get-started-with-users-ios.md
-[Get started with push notifications]: ./mobile-services-get-started-with-push-ios.md
-[Authorize users with scripts]: ./mobile-services-authorize-users-ios.md
+[Get started with Mobile Services]: ./mobile-services-get-started-android.md
+[Get started with data]: ./mobile-services-get-started-with-data-android.md
+[Get started with authentication]: ./mobile-services-get-started-with-users-android.md
+[Get started with push notifications]: ./mobile-services-get-started-with-push-android.md
+[Authorize users with scripts]: ./mobile-services-authorize-users-android.md
 [WindowsAzure.com]: http://www.windowsazure.com/
 [Windows Azure Management Portal]: https://manage.windowsazure.com/
