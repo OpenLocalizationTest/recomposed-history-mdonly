@@ -1,7 +1,4 @@
-<properties linkid="develop-php-website-with-mysql-and-ftp" urlDisplayName="Web w/ MySQL + FTP" pageTitle="PHP web site with MySQL and FTP - Windows Azure tutorial" metaKeywords="" description="A tutorial that demonstrates how to create a PHP web site that stores data in MySQL and use FTP deployment to Windows Azure." metaCanonical="" services="web-sites" documentationCenter="PHP" title="Create a PHP-MySQL Windows Azure Web Site and Deploy Using FTP" authors=""  solutions="" writer="" manager="" editor=""  />
-
-
-
+﻿<properties linkid="develop-php-website-with-mysql-and-ftp" urlDisplayName="Web w/ MySQL + FTP" pageTitle="PHP web site with MySQL and FTP - Windows Azure tutorial" metaKeywords="" description="A tutorial that demonstrates how to create a PHP web site that stores data in MySQL and use FTP deployment to Windows Azure." metaCanonical="" services="web-sites" documentationCenter="PHP" title="Create a PHP-MySQL Windows Azure Web Site and Deploy Using FTP" authors=""  solutions="" writer="" manager="" editor=""  />
 
 
 #Create a PHP-MySQL Windows Azure Web Site and Deploy Using FTP
@@ -17,7 +14,7 @@ By following this tutorial, you will build a simple registration web application
 
 ![Windows Azure PHP Web Site][running-app]
 
-<div chunk="../../Shared/Chunks/create-account-and-websites-note.md" />
+[WACOM.INCLUDE [create-account-and-websites-note](../includes/create-account-and-websites-note.md)]
 
 ##Create a Windows Azure Web Site and set up FTP publishing
 
@@ -95,10 +92,8 @@ To build and run the application locally, follow the steps below. Note that thes
 		echo "<h3>Table created.</h3>";
 		?>
 
-	<div class="dev-callout"> 
-	<b>Note</b> 
-	<p>You will need to update the values for <code>$user</code> and <code>$pwd</code> with your local MySQL user name and password.</p> 
-	</div>
+	> WACOM.NOTE 
+	> You will need to update the values for <code>$user</code> and <code>$pwd</code> with your local MySQL user name and password.
 
 4. Open a web browser and browse to [http://localhost/registration/createtable.php][localhost-createtable]. This will create the `registration_tbl` table in the database.
 
@@ -151,10 +146,8 @@ To build and run the application locally, follow the steps below. Note that thes
 			die(var_dump($e));
 		}
 
-	<div class="dev-callout"> 
-	<b>Note</b> 
-	<p>Again, you will need to update the values for <code>$user</code> and <code>$pwd</code> with your local MySQL user name and password.</p> 
-	</div>
+	> WACOM.NOTE
+	> Again, you will need to update the values for <code>$user</code> and <code>$pwd</code> with your local MySQL user name and password.
 
 7. Following the database connection code, add code for inserting registration information into the database.
 
@@ -251,20 +244,20 @@ After uploading both `index.php` and `createtable.php`, browse to **http://[site
  
 
 [install-php]: http://www.php.net/manual/en/install.php
-[install-mysql]: http://dev.mysql.com/doc/refman/5.6/en/installing.html
+
 [pdo-mysql]: http://www.php.net/manual/en/ref.pdo-mysql.php
 [localhost-createtable]: http://localhost/tasklist/createtable.php
 [localhost-index]: http://localhost/tasklist/index.php
-[running-app]: ../Media/running_app_2.png
-[new-website]: ../../Shared/Media/new_website.jpg
-[custom-create]: ../../Shared/Media/custom_create.png
-[website-details]: ../../Shared/Media/website_details.jpg
-[new-mysql-db]: ../../Shared/Media/new_mysql_db.jpg
-[go-to-dashboard]: ../../Shared/Media/go_to_dashboard.png
-[reset-deployment-credentials]: ../Media/reset-deployment-credentials.png
-[portal-git-username-password]: ../../Shared/Media/git-deployment-credentials.png
-[creating-repo]: ../Media/creating_repo.jpg
-[push-files]: ../Media/push_files.jpg
-[connection-string-info]: ../../Shared/Media/connection_string_info.png
+[running-app]: ./media/web-sites-php-web-site-mysql-deploy-use-ftp/running_app_2.png
+[new-website]: ./media/web-sites-php-web-site-mysql-deploy-use-ftp/new_website.jpg
+[custom-create]: ./media/web-sites-php-web-site-mysql-deploy-use-ftp/custom_create.png
+[website-details]: ./media/web-sites-php-web-site-mysql-deploy-use-ftp/website_details.jpg
+[new-mysql-db]: ./media/web-sites-php-web-site-mysql-deploy-use-ftp/new_mysql_db.jpg
+[go-to-dashboard]: ./media/web-sites-php-web-site-mysql-deploy-use-ftp/go_to_dashboard.png
+[reset-deployment-credentials]: ./media/web-sites-php-web-site-mysql-deploy-use-ftp/reset-deployment-credentials.png
+[portal-git-username-password]: ./media/web-sites-php-web-site-mysql-deploy-use-ftp/git-deployment-credentials.png
+
+
+[connection-string-info]: ./media/web-sites-php-web-site-mysql-deploy-use-ftp/connection_string_info.png
 [management-portal]: https://manage.windowsazure.com
-[download-publish-profile]: ../../Shared/Media/download_publish_profile_2.png
+[download-publish-profile]: ./media/web-sites-php-web-site-mysql-deploy-use-ftp/download_publish_profile_2.png

@@ -1,8 +1,4 @@
-<properties linkid="develop-php-how-to-guides-service-management" urlDisplayName="Service Management" pageTitle="How to use Windows Azure service management APIs (PHP)" metaKeywords="" description="Learn how to use the Windows Azure PHP Service Management APIs to manage cloud services and other Windows Azure applications." metaCanonical="" services="" documentationCenter="PHP" title="How to use Service Management from PHP" authors=""  solutions="" writer="" manager="" editor=""  />
-
-
-
-
+﻿<properties linkid="develop-php-how-to-guides-service-management" urlDisplayName="Service Management" pageTitle="How to use Windows Azure service management APIs (PHP)" metaKeywords="" description="Learn how to use the Windows Azure PHP Service Management APIs to manage cloud services and other Windows Azure applications." metaCanonical="" services="" documentationCenter="PHP" title="How to use Service Management from PHP" authors=""  solutions="" writer="" manager="" editor=""  />
 
 # How to use Service Management from PHP
 
@@ -27,25 +23,25 @@ This guide will show you how to programmatically perform common service manageme
 * [How to: Create an affinity group](#CreateAffinityGroup)
 * [How to: Delete an affinity group](#DeleteAffinityGroup)
 
-<h2><a id="WhatIs"></a>What is Service Management</h2>
+##<a id="WhatIs"></a>What is Service Management
 The Service Management API provides programmatic access to much of the service management functionality available through the [management portal][management-portal]. The Windows Azure SDK for PHP allows you to manage your cloud services, storage accounts, and affinity groups.
 
 To use the Service Management API, you will need to [create a Windows Azure account](http://www.windowsazure.com/en-us/pricing/free-trial/). 
 
-<h2><a id="Concepts"></a>Concepts</h2>
+##<a id="Concepts"></a>Concepts
 The Windows Azure SDK for PHP wraps the [Windows Azure Service Management API][svc-mgmt-rest-api], which is a REST API. All API operations are performed over SSL and mutually authenticated using X.509 v3 certificates. The management service may be accessed from within a service running in Windows Azure, or directly over the Internet from any application that can send an HTTPS request and receive an HTTPS response.
 
-<h2><a id="CreateApplication"></a>Create a PHP application</h2>
+##<a id="CreateApplication"></a>Create a PHP application
 
 The only requirement for creating a PHP application that uses Windows Azure Service Management is the referencing of classes in the Windows Azure SDK for PHP from within your code. You can use any development tools to create your application, including Notepad.
 
 In this guide, you will use service features which can be called within a PHP application locally, or in code running within a Windows Azure web role, worker role, or web site.
 
-<h2><a id="GetClientLibraries"></a>Get the Windows Azure Client Libraries</h2>
+##<a id="GetClientLibraries"></a>Get the Windows Azure Client Libraries
 
-<div chunk="../../Shared/Chunks/get-client-libraries.md" />
+[WACOM.INCLUDE [get-client-libraries](../includes/get-client-libraries.md)]
 
-<h2><a id="Connect"></a>How to: Connect to service management</h2>
+##<a id="Connect"></a>How to: Connect to service management
 
 To connect to the Service Management endpoint, you need your Windows Azure subscription ID and the path to a valid management certificate. You can obtain your subscription ID through the [management portal][management-portal], and you can create management certificates in a number of ways. In this guide [OpenSSL](http://www.openssl.org/) is used, which you can [download for Windows](http://www.openssl.org/related/binaries.html) and run in a console.
 
@@ -75,7 +71,7 @@ After you have obtained your subscription ID, created a certificate, and uploade
 
 In the example above, `$serviceManagementRestProxy` is a [ServiceManagementRestProxy] object. The **ServiceManagementRestProxy** class is the primary class used to manage Windows Azure services. 
 
-<h2><a id="ListAvailableLocations"></a>How to: List Available Locations</h2>
+##<a id="ListAvailableLocations"></a>How to: List Available Locations
 
 To list the locations that are available for hosting services, use the **ServiceManagementRestProxy->listLocations** method:
 
@@ -118,12 +114,10 @@ When you create a cloud service, storage service, or affinity group, you will ne
 - West US 
 - East US
 
-<div class="dev-callout"> 
-<b>Note</b> 
-<p>In the code examples that follow, locations are passed to methods as strings. However, you can also pass locations as enumerations using the <code>WindowsAzure\ServiceManagement\Models\Locations</code> class. For example, instead of passing "West US" to a method that accepts a location, you could pass <code>Locations::WEST_US</code>.</p> 
-</div>
+> WACOM.NOTE
+> In the code examples that follow, locations are passed to methods as strings. However, you can also pass locations as enumerations using the <code>WindowsAzure\ServiceManagement\Models\Locations</code> class. For example, instead of passing "West US" to a method that accepts a location, you could pass <code>Locations::WEST_US</code>.
 
-<h2><a id="CreateCloudService"></a>How to: Create a cloud service</h2>
+##<a id="CreateCloudService"></a>How to: Create a cloud service
 
 When you create an application and run it in Windows Azure, the code and configuration together are called a Windows Azure [cloud service] (known as a *hosted service* in earlier Windows Azure releases). The **createHostedServices** method allows you to create a new hosted service by providing a hosted service name (which must be unique in Windows Azure), a label (the base 64-endcoded hosted service name), and a **CreateServiceOptions** object. The [CreateServiceOptions] object allows you to set the location *or* the affinity group for your service. 
 
@@ -182,7 +176,7 @@ If you want to get information about a particular hosted service, you can do so 
 
 After you have created a cloud service, you can deploy your code to the service with the [createDeployment](#CreateDeployment) method.
 
-<h2><a id="DeleteCloudService"></a>How to: Delete a cloud service</h2>
+##<a id="DeleteCloudService"></a>How to: Delete a cloud service
 
 You can delete a cloud service by passing the service name to the **deleteHostedService** method:
 
@@ -190,7 +184,7 @@ You can delete a cloud service by passing the service name to the **deleteHosted
 
 Note that before you can delete a service, all deployments for the the service must first be deleted. (See [How to: Delete a deployment](#DeleteDeployment) for details.)
 
-<h2><a id="CreateDeployment"></a>How to: Create a deployment</h2>
+##<a id="CreateDeployment"></a>How to: Create a deployment
 
 The **createDeployment** method uploads a new [service package] and creates a new deployment in the staging or production environment. The parameters for this method are as follows:
 
@@ -262,7 +256,7 @@ You can access deployment properties with the **getDeployment** method. The foll
 	}
 	echo "------<br />";
 
-<h2><a id="UpdateDeployment"></a>How to: Update a deployment</h2>
+##<a id="UpdateDeployment"></a>How to: Update a deployment
 
 A deployment can be updated by using the **changeDeploymentConfiguration** method or the **updateDeploymentStatus** method.
 
@@ -328,7 +322,7 @@ The **updateDeploymentStatus** method allows you to set a deployment status to R
 		echo $code.": ".$error_message."<br />";
 	}
 
-<h2><a id="MoveDeployments"></a>How to: Move deployments between staging and production</h2>
+##<a id="MoveDeployments"></a>How to: Move deployments between staging and production
 
 Windows Azure provides two deployment environments: staging and production. Typically a service is deployed to the staging environment to test it before deploying the service to the production environment. When it is time to promote the service in staging to the production environment, you can do so without redeploying the service. This can be done by swapping the deployments. (For more information on swapping deployments, see [Overview of Managing Deployments in Windows Azure].)
 
@@ -354,7 +348,7 @@ The following example shows how to use the **swapDeployment** method to swap two
 		echo $code.": ".$error_message."<br />";
 	}
 
-<h2><a id="DeleteDeployment"></a>How to: Delete a deployment</h2>
+##<a id="DeleteDeployment"></a>How to: Delete a deployment
 
 To delete a deployment, use the **deleteDeployment** method. The following example shows how to delete a deployment in the staging environment by using the **setSlot** method on a [GetDeploymentOptions] object, then passing it to **deleteDeployment**. Instead of specifying a deployment by slot, you can use the **setName** method on the [GetDepolymentOptions] class to specify a deployment by deployment name.
 
@@ -383,7 +377,7 @@ To delete a deployment, use the **deleteDeployment** method. The following examp
 		echo $code.": ".$error_message."<br />";
 	}
 
-<h2><a id="CreateStorageService"></a>How to: Create a storage service</h2>
+##<a id="CreateStorageService"></a>How to: Create a storage service
 
 A [storage service] gives you access to Windows Azure [Blobs][azure-blobs], [Tables][azure-tables], and [Queues][azure-queues]. To create a storage service, you need a name for the service (between 3 and 24 lowercase characters and unique within Windows Azure), a label (a base-64 encoded name for the service, up to 100 characters), and either a location or an affinity group. Providing a description for the service is optional. The location, affinity group, and description are set in a [CreateServiceOptions] object, which is passed to the **createStorageService** method. The following example shows how to create a storage service by specifying a location. If you want to use an affinity group, you have to create an affinity group first (see [How to: Create an affinity group](#CreateAffinityGroup)) and set it with the **CreateServiceOptions->setAffinityGroup** method.
 
@@ -435,7 +429,7 @@ You can list your storage accounts and their properties with the **listStorageSe
 		echo "------<br />";
 	}
 
-<h2><a id="DeleteStorageService"></a>How to: Delete a storage service</h2>
+##<a id="DeleteStorageService"></a>How to: Delete a storage service
 
 You can delete a storage service by passing the storage service name to the **deleteStorageService** method. Deleting a storage service will delete all data stored in the service (blobs, tables and queues).
 
@@ -459,7 +453,7 @@ You can delete a storage service by passing the storage service name to the **de
 		echo $code.": ".$error_message."<br />";
 	}
 
-<h2><a id="CreateAffinityGroup"></a>How to: Create an affinity group</h2>
+##<a id="CreateAffinityGroup"></a>How to: Create an affinity group
 
 An affinity group is a logical grouping of Azure services that tells Windows Azure to locate the services for optimized performance. For example, you might create an affinity group in the “West US” location, then create a [cloud Service](#CreateCloudService) in that affinity group. If you then create a storage service in the same affinity group, Windows Azure knows to put it in the “West US” location and optimize within the data center for the best performance with the cloud services in the same affinity group.
 
@@ -508,7 +502,7 @@ You can list affinity groups and inspect their properties by calling the  **list
 		echo "------<br />";
 	}
 
-<h2><a id="DeleteAffinityGroup"></a>How to: Delete an affinity group</h2>
+##<a id="DeleteAffinityGroup"></a>How to: Delete an affinity group
 	
 You can delete an affinity group by passing the group name to the **deleteAffinityGroup** method. Note that before you can delete an affinity group, the affinity group must be disassociated from any services (or services that use the affintiy group must be deleted).
 
@@ -539,21 +533,27 @@ You can delete an affinity group by passing the group name to the **deleteAffini
 [svc-mgmt-rest-api]: http://msdn.microsoft.com/en-us/library/windowsazure/ee460799.aspx
 [win-azure-account]: http://www.windowsazure.com/en-us/pricing/free-trial/
 [storage-account]: https://www.windowsazure.com/en-us/manage/services/storage/how-to-create-a-storage-account/
+
 [download-SDK-PHP]: https://www.windowsazure.com/en-us/develop/php/common-tasks/download-php-sdk/
 [Composer]: http://getcomposer.org/
 [ServiceManagementSettings]: https://github.com/WindowsAzure/azure-sdk-for-php/blob/master/WindowsAzure/ServiceManagement/ServiceManagementSettings.php
+
 [cloud service]: http://www.windowsazure.com/en-us/manage/services/cloud-services/what-is-a-cloud-service/
 [CreateServiceOptions]: https://github.com/WindowsAzure/azure-sdk-for-php/blob/master/WindowsAzure/ServiceManagement/Models/CreateServiceOptions.php
 [ListHostedServicesResult]: https://github.com/WindowsAzure/azure-sdk-for-php/blob/master/WindowsAzure/ServiceManagement/Models/ListHostedServicesResult.php
+
 [service package]: http://msdn.microsoft.com/en-us/library/windowsazure/gg433093
 [Windows Azure PowerShell cmdlets]: https://www.windowsazure.com/en-us/develop/php/how-to-guides/powershell-cmdlets/
 [cspack commandline tool]: http://msdn.microsoft.com/en-us/library/windowsazure/gg432988.aspx
 [GetDeploymentOptions]: https://github.com/WindowsAzure/azure-sdk-for-php/blob/master/WindowsAzure/ServiceManagement/Models/GetDeploymentOptions.php
 [ListHostedServicesResult]: https://github.com/WindowsAzure/azure-sdk-for-php/blob/master/WindowsAzure/ServiceManagement/Models/GetDeploymentOptions.php
+
 [Overview of Managing Deployments in Windows Azure]: http://msdn.microsoft.com/en-us/library/windowsazure/hh386336.aspx
 [storage service]: https://www.windowsazure.com/en-us/manage/services/storage/what-is-a-storage-account/
 [azure-blobs]: https://www.windowsazure.com/en-us/develop/php/how-to-guides/blob-service/
 [azure-tables]: https://www.windowsazure.com/en-us/develop/php/how-to-guides/table-service/
 [azure-queues]: https://www.windowsazure.com/en-us/develop/php/how-to-guides/queue-service/
 [AffinityGroup]: https://github.com/WindowsAzure/azure-sdk-for-php/blob/master/WindowsAzure/ServiceManagement/Models/AffinityGroup.php
+
+
 [Windows Azure Service Configuration Schema (.cscfg)]: http://msdn.microsoft.com/en-us/library/windowsazure/ee758710.aspx
