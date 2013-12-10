@@ -21,9 +21,9 @@ application. The application will be hosted in a Windows Azure virtual machine.
 
 A screenshot of the completed application is below:
 
-![A browser window displaying the hello world page on Windows Azure][]
+![A browser window displaying the hello world page on Windows Azure][A browser window displaying the hello world page on Windows Azure]
 
-<div chunk="../../Shared/Chunks/create-account-and-vms-note.md" />
+[WACOM.INCLUDE [create-account-and-vms-note](../includes/create-account-and-vms-note.md)]
 
 ## Creating and configuring a Windows Azure virtual machine to host Django
 
@@ -66,7 +66,7 @@ The Ubuntu Linux VM already comes with Python 2.7 pre-installed, but it doesn't 
     
 1.  Enter the following commands to create a new Django project:
 
-    ![The result of the django-admin command][]
+    ![The result of the django-admin command][The result of the django-admin command]
 
     The **django-admin.py** script generates a basic structure for Django-based web sites:
     -   **manage.py** helps you to start hosting and stop hosting your Django-based web site
@@ -109,7 +109,7 @@ The Ubuntu Linux VM already comes with Python 2.7 pre-installed, but it doesn't 
 
 1.  Finally, load the web page in your browser:
 
-	![A browser window displaying the hello world page on Windows Azure][]
+	![A browser window displaying the hello world page on Windows Azure][A browser window displaying the hello world page on Windows Azure]
 
 
 ## Shutting down your Windows Azure virtual machine
@@ -119,5 +119,5 @@ When you're done with this tutorial, shutdown and/or remove your newly created W
 [A browser window displaying the hello world page on Windows Azure]: ../Media/mac-linux-django-helloworld-browser.png
 [The result of the django-admin command]: ../Media/mac-linux-django-helloworld-dir.png
 [add endpoint]: ../Media/mac-linux-django-helloworld-add-endpoint.png
-[port80]: ../Media/mac-linux-django-helloworld-port80.png
+[port80]: ./media/virtual-machines-python-django-web-app-linux/mac-linux-django-helloworld-port80.png
 [portal-vm]: /en-us/manage/linux/tutorials/virtual-machine-from-gallery/

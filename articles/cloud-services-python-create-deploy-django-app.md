@@ -16,7 +16,7 @@
 
 This tutorial focuses on Python Tools for Visual Studio and Windows Azure. For more details on Django and the polls application built in this tutorial, see [https://www.djangoproject.com/](https://www.djangoproject.com/).
 
-<div chunk="../../Shared/Chunks/create-account-and-websites-note.md" />
+[WACOM.INCLUDE [create-account-and-websites-note](../includes/create-account-and-websites-note.md)]
 
 ##Requirements
 To complete the tutorial, you'll need
@@ -39,21 +39,21 @@ Python Tools for Visual Studio supports Python Virtual Environments.  We'll crea
 
 1. Open Visual Studio, File/New Project, Django application, with the name **tutorial**.
 
-	![](../Media/django-tutorial-001-new-project.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-001-new-project.png)
 
 1. Create a new virtual environment.  In solution explorer, right-click on **Python Environments** and select **Add Virtual Environment**.
 
-	![](../Media/django-tutorial-002-add-virtual-env.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-002-add-virtual-env.png)
 
 1. Select Python 2.7 as the base Python Interpreter and accept the default name **env**. PTVS will install pip and/or virtualenv if you don't have them installed already.
 
 1. Right-click on **env** and Install Python package: **django**
 
-	![](../Media/django-tutorial-003-install-django.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-003-install-django.png)
 
 1. Django has a large number of files, so it will take some time to install. You can view the progress in the output window.
 
-	![](../Media/django-tutorial-004-install-django-output.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-004-install-django-output.png)
 
 	**Note:** In rare cases, you may see a failure in the output window. If this happens, check if the error is related to cleanup. Sometimes the cleanup will fail but installation will still be successful (scroll up in the output window to verify this). This is due to PTVS getting a lock on the newly created temporary files/folders, which prevents the pip cleanup step from deleting them.
 
@@ -69,7 +69,7 @@ A Django project can have multiple applications. In this tutorial, the name of o
 
 1. Select the **project node**, **Add**->**Django app**, with the name **polls**. This will create a folder for the application, with boilerplate code for commonly used application files.
 
-	![](../Media/django-tutorial-005-add-django-app.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-005-add-django-app.png)
 
 1. In **tutorial/settings.py**, add the following to **INSTALLED\_APPS**:
 
@@ -239,7 +239,7 @@ A Django project can have multiple applications. In this tutorial, the name of o
 
 1. You should now have the following files in your project:
 
-	![](../Media/django-tutorial-006-solution-explorer.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-006-solution-explorer.png)
 
 ##Create a sqlite3 database locally
 
@@ -268,31 +268,31 @@ Our web application is almost ready to use, but first we need to configure a dat
 
 1. Right-click on the project node and select **Django**->**Django Sync DB**.  A Django management interactive window will appear.  Since the database doesn't exist yet, it will prompt you to create administrator credentials.  Enter a user name and password. Email is optional.
 
-	![](../Media/django-tutorial-007-sqlite3.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-007-sqlite3.png)
 
 1. Start the web site with F5 or CTRL-F5. This will launch the django development server and start your web browser. The root url for the web site displays the index of polls, but there aren't any in the database yet.
 
-	![](../Media/django-tutorial-008-dev-server.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-008-dev-server.png)
 
 1. Navigate to **http://localhost:{port}/admin**. You can get the port number from the development server console window. Login using the credentials you created in the previous step.
 
-	![](../Media/django-tutorial-009-admin-login.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-009-admin-login.png)
 
 1. Use the admin interface to add one or two polls.  Do not spend too much time adding polls to the local database. We'll switch to a cloud database later and repopulate the database then.
 
-	![](../Media/django-tutorial-009-admin-add-poll.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-009-admin-add-poll.png)
 
 1. Navigate to **http://localhost:{port}/**.  You'll see an index of the polls you've added.
 
-	![](../Media/django-tutorial-010-index.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-010-index.png)
 
 1. Click on one of the polls to go to the voting page.
 
-	![](../Media/django-tutorial-011-detail.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-011-detail.png)
 
 1. Submit your vote, and you'll be redirected to the results page where you should see the vote count incremented.
 
-	![](../Media/django-tutorial-012-results.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-012-results.png)
 
 ##Use stylesheets and other static files
 
@@ -319,7 +319,7 @@ In this section, we'll update the look of our site to use a stylesheet. Static f
 
 1. You should now have the following files in your project:
 
-	![](../Media/django-tutorial-013-solution-explorer.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-013-solution-explorer.png)
 
 1. Edit the header of all templates to refer to the stylesheet with the following markup:
 
@@ -330,7 +330,7 @@ In this section, we'll update the look of our site to use a stylesheet. Static f
 
 1. Run the web site again.  The index, poll and results pages will use the stylesheet we created, with dark blue text and a background image.
 
-	![](../Media/django-tutorial-014-detail-styled.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-014-detail-styled.png)
 
 ##Debugging
 
@@ -346,7 +346,7 @@ Python Tools for Visual Studio has special support for debugging Django template
 
 1. You can press **F10** to step just like in regular Python code.  Inside the for loop, you can inspect the value of **poll**:
 
-	![](../Media/django-tutorial-015-debugging.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-015-debugging.png)
 
 ##Create a database on Windows Azure
 
@@ -444,7 +444,7 @@ In the Windows Azure Store, you can add various services to your account, includ
 		p.choice_set.create(choice_text='Cloud Service', votes=0)
 		p.choice_set.create(choice_text='Virtual Machine', votes=0)
 
-	![](../Media/django-tutorial-018-shell-add-poll.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-018-shell-add-poll.png)
 
 1. The static analysis of the models provides a limited view of the full API.  In the interactive window, you'll get IntelliSense against the live objects, so this is a great way to explore the API.  Here are some things to try in the interactive window:
 
@@ -460,7 +460,7 @@ In the Windows Azure Store, you can add various services to your account, includ
 		# get object by primary key
 		Poll.objects.get(pk=1)
 
-	![](../Media/django-tutorial-019-shell-query.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-019-shell-query.png)
 
 1. Start the web site.  You should see the poll we added using the Django shell.
 
@@ -486,11 +486,11 @@ Hosting Django in a Virtual Machine is out of scope for this tutorial.  It invol
 
 1. Once it is created, download the publish profile for the web site.
 
-	![](../Media/django-tutorial-020-website-download-profile.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-020-website-download-profile.png)
 
 1. In Visual Studio, right-click on the project node and select **Publish**.
 
-	![](../Media/django-tutorial-020-website-publish.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-020-website-publish.png)
 
 1. Import the web site publish profile file you downloaded previously.
 
@@ -498,7 +498,7 @@ Hosting Django in a Virtual Machine is out of scope for this tutorial.  It invol
 
 1. When publishing has completed, a web browser will open to the published web site.
 
-	![](../Media/django-tutorial-020-website.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-020-website.png)
 
 ###Windows Azure Cloud Service
 
@@ -506,7 +506,7 @@ Hosting Django in a Virtual Machine is out of scope for this tutorial.  It invol
 
 	**Note:** If you don't see the command to create the Windows Azure Cloud Service Project in your project context menu, then you need to install the Windows Azure Tools for Visual Studio. These are installed as part of the Windows Azure SDK for .NET. See the requirements section at the beginning of this tutorial.
 
-	![](../Media/django-tutorial-021-cloudservice-solution-explorer.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-021-cloudservice-solution-explorer.png)
 
 ####Run in Windows Azure Emulator
 
@@ -514,7 +514,7 @@ Hosting Django in a Virtual Machine is out of scope for this tutorial.  It invol
 
 1. Start debugging with **F5** and the app will run and deploy in the compute emulator. Verify that the admin interface works and you can vote on polls.
 
-	![](../Media/django-tutorial-021-cloudservice-emulator.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-021-cloudservice-emulator.png)
 
 1. You can now restart Visual Studio if you do not wish to continue running as an administrator.
 
@@ -524,21 +524,21 @@ Hosting Django in a Virtual Machine is out of scope for this tutorial.  It invol
 
 	**Note:** Make sure to select **Publish** on the Cloud Service project. This will launch the **Publish Windows Azure Application** dialog, to publish to an Azure Cloud Service.  If you select **Publish** on the Django project, it will launch the **Publish Web** dialog used to publish to an Azure Web Site.  
 
-	![](../Media/django-tutorial-021-cloudservice-publish.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-021-cloudservice-publish.png)
 
 1. You'll need to import your Windows Azure subscription file.  Click the [Sign in to download credentials](https://manage.windowsazure.com/publishsettings/index?client=vs&schemaversion=2.0) link to download it from the Azure portal.
 
 1. In the Settings page, select **Create New** in the Cloud Service combo box to create a new Cloud Service. You can use any name that is available.
 
-	![](../Media/django-tutorial-021-cloudservice-settings.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-021-cloudservice-settings.png)
 
 1. Accept the defaults and click **Publish**. This will take longer than publishing to a Web Site, as it needs to provision a VM for the Cloud Service. You can view the progress in the Windows Azure Activity Log window:
 
-	![](../Media/django-tutorial-021-cloudservice-publish-progress.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-021-cloudservice-publish-progress.png)
 
 1. When the operation has completed, click the Website URL in the Windows Azure Activity Log window to open a web browser.
 
-	![](../Media/django-tutorial-021-cloudservice.png)
+	![](./media/cloud-services-python-create-deploy-django-app/django-tutorial-021-cloudservice.png)
 
 ##Conclusion
 
