@@ -26,9 +26,9 @@ You will learn:
 
 A screenshot of the completed application will be similar as below (the added tasks items will be different):
 
-![](../media/web-app-with-storage-Finaloutput-mac.png)
+![](./media/storage-python-use-table-storage-web-app/web-app-with-storage-Finaloutput-mac.png)
 
-<div chunk="../../Shared/Chunks/create-account-note.md" />
+[WACOM.INCLUDE [create-account-note](../includes/create-account-note.md)]
 
 ## <a id="setup"> </a>Setting Up the Development Environment
 
@@ -40,14 +40,14 @@ A screenshot of the completed application will be similar as below (the added ta
 
 ## Create A Storage Account In Windows Azure
 
-<div chunk="../../Shared/Chunks/create-storage-account.md" />
+[WACOM.INCLUDE [create-storage-account](../includes/create-storage-account.md)]
 
 ## Create A Django Project
 
 Here are the steps for creating the app:
 
 -   Create a default Django Project named 'TableserviceSample' 
-- 	From the command line, cd into a directory where you’d like to store your code, then run the following command: 
+- 	From the command line, cd into a directory where you???d like to store your code, then run the following command: 
 
 		django-admin.py startproject TableserviceSample
 
@@ -113,7 +113,7 @@ Add the following code to **views.py** just after the windowsazure import, and r
 	account_key = 'yourkey'
 
 ## Create TableService
-Add following code after “account_name …”
+Add following code after ???account_name ??????
 
 	table_service = TableService(account_name=account_name, account_key=account_key)
 	table_service.create_table('mytasks')
@@ -181,15 +181,15 @@ Now that you've successfully run your app on the built-in Django server, you can
 
 <h2><a id="NextSteps"></a>Next Steps</h2>
 
-Now that you’ve learned the basics of the Windows Azure Table storage service, follow these links to learn how to do more complex storage tasks.
+Now that you???ve learned the basics of the Windows Azure Table storage service, follow these links to learn how to do more complex storage tasks.
 
 - See the MSDN Reference: [Storing and Accessing Data in Windows Azure] []
 - Visit the Windows Azure Storage Team Blog: <http://blogs.msdn.com/b/windowsazurestorage/>
 
 
 [Storing and Accessing Data in Windows Azure]: http://msdn.microsoft.com/en-us/library/windowsazure/gg433040.aspx
-[container-acl]: http://msdn.microsoft.com/en-us/library/windowsazure/dd179391.aspx
-[error-codes]: http://msdn.microsoft.com/en-us/library/windowsazure/dd179439.aspx
+
+
 
 [Installation Guide]: ../commontasks/how-to-install-python.md 
 [Django Hello World Web Application]: ./django-helloworld.md

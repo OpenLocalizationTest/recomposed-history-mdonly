@@ -22,7 +22,7 @@ A screenshot of the completed application is below:
 
 ![A browser window displaying the hello world page on Windows Azure][1]
 
-<div chunk="../../Shared/Chunks/create-account-and-vms-note.md" />
+[WACOM.INCLUDE [create-account-and-vms-note](../includes/create-account-and-vms-note.md)]
 
 ## Creating and configuring a Windows Azure virtual machine to host Django
 
@@ -76,7 +76,7 @@ To set up your Python and Django environments, please see the [Installation Guid
 
 	You should see the following:
 
-	![IIS config1](../media/django-helloworld-iis1.png) 
+	![IIS config1](./media/virtual-machines-python-django-web-app-windows-server/django-helloworld-iis1.png) 
 
 1. Tell the FastCGI to WSGI gateway which WSGI handler to use:
 
@@ -98,7 +98,7 @@ To set up your Python and Django environments, please see the [Installation Guid
 
 	C:\Python27\python.exe -m django.bin.django-admin startproject DjangoApplication
     
-	![The result of the New-AzureService command][]
+	![The result of the New-AzureService command][The result of the New-AzureService command]
 
  The **django-admin.py** script generates a basic structure for Django-based web sites:
     
@@ -131,9 +131,9 @@ To set up your Python and Django environments, please see the [Installation Guid
 
 When you're done with this tutorial, shutdown and/or remove your newly created Windows Azure virtual machine to free up resources for other tutorials and avoid incurring Windows Azure usage charges.
 
-[1]: ../Media/django-helloworld-browser-azure.png
+[1]: ./media/virtual-machines-python-django-web-app-windows-server/django-helloworld-browser-azure.png
 [The result of the New-AzureService command]: ../Media/django-helloworld-cmd-new-azure-service.png
 [add endpoint]: ../Media/django-helloworld-addendpoint.png
-[port80]: ../Media/django-helloworld-port80.png
+[port80]: ./media/virtual-machines-python-django-web-app-windows-server/django-helloworld-port80.png
 [portal-vm]: /en-us/manage/windows/tutorials/virtual-machine-from-gallery/
 [Installation Guide]: ../commontasks/how-to-install-python.md

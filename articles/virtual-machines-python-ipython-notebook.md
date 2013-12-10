@@ -20,7 +20,7 @@ following screenshot shows the IPython Notebook being used, in combination with
 the SciPy and matplotlib packages, to analyze the structure of a sound
 recording:
 
-![Screenshot](../Media/ipy-notebook-spectral.png)
+![Screenshot](./media/virtual-machines-python-ipython-notebook/ipy-notebook-spectral.png)
 
 This document will show you how to deploy the IPython Notebook on Windows
 Azure, using Linux or Windows virtual machines (VMs).  By using the IPython
@@ -30,7 +30,7 @@ libraries.  Since all installation is done in the cloud, users can access these
 resources without the need for any local configuration beyond a modern web
 browser.
 
-<div chunk="../../Shared/Chunks/create-account-and-vms-note.md" />
+[WACOM.INCLUDE [create-account-and-vms-note](../includes/create-account-and-vms-note.md)]
 
 ## Create and Configure a VM on Windows Azure
 
@@ -59,11 +59,11 @@ To create an endpoint, go to the VM dashboard, click "Endpoints", then "Add
 Endpoint" and create a new endpoint (called `ipython_nb` in this example). Pick
 TCP for the protocol, 443 for the public port and 9999 for the private port:
 
-![Screenshot](../Media/ipy-azure-linux-005.png)
+![Screenshot](./media/virtual-machines-python-ipython-notebook/ipy-azure-linux-005.png)
 
 After this step, the "Endpoints" Dashboard tab will look like this:
 
-![Screenshot](../Media/ipy-azure-linux-006.png)
+![Screenshot](./media/virtual-machines-python-ipython-notebook/ipy-azure-linux-006.png)
 
 ## Install Required Software on the VM
 
@@ -235,18 +235,18 @@ You should now be able to access your IPython Notebook at the address
 
 When you first access your notebook, the login page asks for your password:
 
-![Screenshot](../Media/ipy-notebook-001.png)
+![Screenshot](./media/virtual-machines-python-ipython-notebook/ipy-notebook-001.png)
 
 And once you log in, you will see the "IPython Notebook Dashboard", which is
 the control center for all notebook operations.  From this page you can create
 new notebooks, open existing ones, etc:
 
-![Screenshot](../Media/ipy-notebook-002.png)
+![Screenshot](./media/virtual-machines-python-ipython-notebook/ipy-notebook-002.png)
 
 If you click on the "New Notebook" button, you will see an opening page as
 follows:
 
-![Screenshot](../Media/ipy-notebook-003.png)
+![Screenshot](./media/virtual-machines-python-ipython-notebook/ipy-notebook-003.png)
 
 The area marked with an `In []:` prompt is the input area, and here you can
 type any valid Python code and it will execute when you hit `Shift-Enter` or
@@ -255,7 +255,7 @@ click on the "Play" icon (the right-pointing triangle in the toolbar).
 Sinc we have configured the notebook to start with NumPy and matplotlib support
 automatically, you can even produce figures, for example:
 
-![Screenshot](../Media/ipy-notebook-004.png)
+![Screenshot](./media/virtual-machines-python-ipython-notebook/ipy-notebook-004.png)
 
 ## A powerful paradigm: live computational documents with rich media
 
@@ -265,7 +265,7 @@ blocks of Python code, but you can also keep notes and other text by changing
 the style of a cell from "Code" to "Markdown" using the drop-down menu in the
 toolbar:
 
-![Screenshot](../Media/ipy-notebook-005.png)
+![Screenshot](./media/virtual-machines-python-ipython-notebook/ipy-notebook-005.png)
 
 
 But this is much more than a word processor, as the IPython notebook allows the
@@ -273,18 +273,18 @@ mixing of computation and rich media (text, graphics, video and virtually
 anything a modern web browser can display). For example, you can mix
 explanatory videos with computation for educational purposes:
 
-![Screenshot](../Media/ipy-notebook-006.png)
+![Screenshot](./media/virtual-machines-python-ipython-notebook/ipy-notebook-006.png)
 
 or embed external web sites that remain live and usable, inside of a notebook
 file:
 
-![Screenshot](../Media/ipy-notebook-007.png)
+![Screenshot](./media/virtual-machines-python-ipython-notebook/ipy-notebook-007.png)
 
 And with the power of Python's many excellent libraries for scientific and
 technical computing, a simple calculation can be performed with the same ease
 than a complex network analysis, all in one environment:
 
-![Screenshot](../Media/ipy-notebook-008.png)
+![Screenshot](./media/virtual-machines-python-ipython-notebook/ipy-notebook-008.png)
 
 This paradigm of mixing the power of the modern web with live computation
 offers many possibilities, and is ideally suited for the cloud; the Notebook
@@ -331,7 +331,7 @@ environment that includes an advanced editor with IntelliSense, debugging,
 profiling and parallel computing integration.
 
 
-[ipython]:      http://ipython.org                  "IPython"
+
 [tornado]:      http://www.tornadoweb.org/          "Tornado"
 [PyZMQ]:        https://github.com/zeromq/pyzmq     "PyZMQ"
 [NumPy]:        http://www.numpy.org/               "NumPy"
