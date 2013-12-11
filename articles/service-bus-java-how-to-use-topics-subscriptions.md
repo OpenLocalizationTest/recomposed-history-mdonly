@@ -28,7 +28,7 @@ messages to a topic**, **receiving messages from a subscription**, and
 -   [How to: Delete Topics and Subscriptions][]
 -   [Next Steps][]
 
-<div chunk="../../shared/chunks/howto-service-bus-topics.md" />
+[WACOM.INCLUDE [howto-service-bus-topics](../includes/howto-service-bus-topics.md)]
 
 ## <a name="bkmk_ConfigYourApp"> </a>Configure Your Application to Use Service Bus
 
@@ -84,7 +84,7 @@ to create a topic named "TestTopic" with a maximum size of 5GB:
     topicInfo.setMaxSizeInMegabytes(maxSizeInMegabytes); 
     CreateTopicResult result = service.createTopic(topicInfo);
 
-**Note:** You can use the **listTopics** method on
+Note that you can use the **listTopics** method on
 **ServiceBusContract** objects to check if a topic with a specified name
 already exists within a service namespace.
 

@@ -27,11 +27,11 @@ more information on blobs, see the [Next Steps](#NextSteps) section.
 * [How to: Delete a blob container](#DeleteContainer)
 * [Next steps](#NextSteps)
 
-<div chunk="../../Shared/Chunks/howto-blob-storage.md" />
+[WACOM.INCLUDE [howto-blob-storage](../includes/howto-blob-storage.md)]
 
 <h2><a id="CreateAccount"></a>Create a Windows Azure storage account</h2>
 
-<div chunk="../../Shared/Chunks/create-storage-account.md" />
+[WACOM.INCLUDE [create-storage-account](../includes/create-storage-account.md)]
 
 ## <a name="CreateApplication"> </a>Create a Java application
 
@@ -170,14 +170,14 @@ The blob service has the concept of directories within containers, as
 well. This is so that you can organize your blobs in a more folder-like
 structure.
 
-For example, you could have a container named “photos”, in which you
-might upload blobs named “rootphoto1”, “2010/photo1”, “2010/photo2”, and
-“2011/photo1”. This would create the virtual directories “2010” and
-“2011” within the “photos” container. When you call **listBlobs** on the
-“photos” container, the collection returned will contain
+For example, you could have a container named "photos", in which you
+might upload blobs named "rootphoto1", "2010/photo1", "2010/photo2", and
+"2011/photo1". This would create the virtual directories "2010" and
+"2011" within the "photos" container. When you call **listBlobs** on the
+"photos" container, the collection returned will contain
 **CloudBlobDirectory** and **CloudBlob** objects representing the
 directories and blobs contained at the top level. In this case,
-directories “2010” and “2011”, as well as photo “rootphoto1” would be
+directories "2010" and "2011", as well as photo "rootphoto1" would be
 returned. You can use the **instanceof** operator to distinguish these
 objects.
 

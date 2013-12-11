@@ -59,7 +59,7 @@ The Qpid Properties File JNDI Provider is configured using a properties file of 
 \# connectionfactory.[jndi_name] = [ConnectionURL]
 
 connectionfactory.SBConnectionFactory = \
-  amqps://[username]:[password]@[namespace].servicebus.windows.net
+  amqps://
 
 \# Register some queues in JNDI using the form
 \# queue.[jndi_name] = [physical_name]
@@ -83,7 +83,7 @@ Where [jndi_name] and [ConnectionURL] have the following meanings:
 
 The format of the ConnectionURL is as follows:
 <pre><code>
-amqps://[username]:[password]@[namespace].servicebus.windows.net
+amqps://
 </pre></code>
 Where the [username], [password] and [namespace] variables have the following meanings:
 

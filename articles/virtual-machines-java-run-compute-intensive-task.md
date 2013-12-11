@@ -30,7 +30,7 @@ The following is an example of the Java application monitoring the compute-inten
 
 ![Traveling Salesman Problem client][client_output]
 
-<div chunk="../../Shared/Chunks/create-account-and-vms-note.md" />
+[WACOM.INCLUDE [create-account-and-vms-note](../includes/create-account-and-vms-note.md)]
 
 ## To create a virtual machine
 
@@ -490,10 +490,8 @@ Run the compute-intensive application, first to create the queue, then to solve 
         java -jar TSPSolver.jar 8
 
  If you don't specify a number, it will run for 10 cities. As the solver finds current shortest routes, it will add them to the queue.
-    <div class="dev-callout"> 
-    <b>Note</b> 
-    <p>The larger the number that you specify, the longer the solver will run. For example, running for 14 cities could take several minutes, and running for 15 cities could take several hours. Increasing to 16 or more cities could result in days of runtime (eventually weeks, months, and years). This is due to the rapid increase in the number of permutations evaluated by the solver as the number of cities increases.</p>
-</div>
+    > WACOM.NOTE 
+    > The larger the number that you specify, the longer the solver will run. For example, running for 14 cities could take several minutes, and running for 15 cities could take several hours. Increasing to 16 or more cities could result in days of runtime (eventually weeks, months, and years). This is due to the rapid increase in the number of permutations evaluated by the solver as the number of cities increases.
  
 ### How to run the monitoring client application
 1. Log on to your machine where you will run the client application. This does not need to be the same machine running the **TSPSolver** application, although it can be.
@@ -519,14 +517,14 @@ Run the compute-intensive application, first to create the queue, then to solve 
 For both the solver and client applications, you can press **Ctrl+C** to exit if you want to end prior to normal completion.
 
 
-[solver_output]: ../media/WA_JavaTSPSolver.png
-[client_output]: ../media/WA_JavaTSPClient.png
-[svc_bus_node]: ../media/SvcBusQueues_02_SvcBusNode.jpg
-[create_namespace]: ../media/SvcBusQueues_03_CreateNewSvcNamespace.jpg
-[avail_namespaces]: ../media/SvcBusQueues_04_SvcBusNode_AvailNamespaces.jpg
-[namespace_list]: ../media/SvcBusQueues_05_NamespaceList.jpg
-[properties_pane]: ../media/SvcBusQueues_06_PropertiesPane.jpg
-[default_key]: ../media/SvcBusQueues_07_DefaultKey.jpg
+[solver_output]: ./media/virtual-machines-java-run-compute-intensive-task/WA_JavaTSPSolver.png
+[client_output]: ./media/virtual-machines-java-run-compute-intensive-task/WA_JavaTSPClient.png
+[svc_bus_node]: ./media/virtual-machines-java-run-compute-intensive-task/SvcBusQueues_02_SvcBusNode.jpg
+[create_namespace]: ./media/virtual-machines-java-run-compute-intensive-task/SvcBusQueues_03_CreateNewSvcNamespace.jpg
+[avail_namespaces]: ./media/virtual-machines-java-run-compute-intensive-task/SvcBusQueues_04_SvcBusNode_AvailNamespaces.jpg
+[namespace_list]: ./media/virtual-machines-java-run-compute-intensive-task/SvcBusQueues_05_NamespaceList.jpg
+[properties_pane]: ./media/virtual-machines-java-run-compute-intensive-task/SvcBusQueues_06_PropertiesPane.jpg
+[default_key]: ./media/virtual-machines-java-run-compute-intensive-task/SvcBusQueues_07_DefaultKey.jpg
 [add_ca_cert]: ../commontasks/add_ca_cert.md
 
 

@@ -34,11 +34,11 @@ tables, see the [Next steps](#NextSteps) section.
 * [How to: Delete a table](#DeleteTable)
 * [Next steps](#NextSteps)
 
-<div chunk="../../Shared/Chunks/howto-table-storage.md" />
+[WACOM.INCLUDE [howto-table-storage](../includes/howto-table-storage.md)]
 
 <h2><a name="CreateAccount"></a>Create a Windows Azure storage account</h2>
 
-<div chunk="../../Shared/Chunks/create-storage-account.md" />
+[WACOM.INCLUDE [create-storage-account](../includes/create-storage-account.md)]
 
 ## <a name="CreateApplication"></a>Create a Java application
 
@@ -82,7 +82,7 @@ how you can declare a static field to hold the connection string:
 In an application running within a role in Windows Azure, this string
 can be stored in the service configuration file,
 ServiceConfiguration.cscfg, and can be accessed with a call to the
-**RoleEnvironment.getConfigurationSettings** method. Here’s an example
+**RoleEnvironment.getConfigurationSettings** method. Here's an example
 of getting the connection string from a **Setting** element named
 *StorageConnectionString* in the service configuration file:
 
@@ -517,7 +517,7 @@ to learn how to do more complex storage tasks.
     Azure]
 -   Visit the [Windows Azure Storage Team Blog][]
 
-[OData.org]: http://www.odata.org/
+
 [using the REST API]: http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx
 [blog post]: http://blogs.msdn.com/b/windowsazurestorage/archive/2011/09/15/windows-azure-tables-introducing-upsert-and-query-projection.aspx
 [Storing and Accessing Data in Windows Azure]: http://msdn.microsoft.com/en-us/library/windowsazure/gg433040.aspx
