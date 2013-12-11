@@ -1,11 +1,11 @@
-<properties linkid="develop-net-how-to-guides-new-relic-app" urlDisplayName="New Relic App Performance Management" pageTitle="New Relic App Performance Management on Windows Azure" metaKeywords="new relic windows azure, performance azure" description="Learn how to use New Relic's performance monitoring on Windows Azure." metaCanonical="" services="web-sites" documentationCenter=".NET" title="New Relic Application Performance Management on Windows Azure Web Sites" authors=""  solutions="" writer="larryfr" manager="" editor=""  />
+<properties linkid="develop-net-how-to-guides-new-relic" urlDisplayName="New Relic" pageTitle="Using New Relic with Windows Azure - Windows Azure feature guides" metaKeywords="" description="Learn how to use the New Relic service to manage and monitor your Windows Azure application." metaCanonical="" services="" documentationCenter=".NET" title="New Relic Application Performance Management on Windows Azure" authors=""  solutions="" writer="" manager="" editor=""  />
 
 
 
-#New Relic Application Performance Management on Windows Azure Web Sites
+#New Relic Application Performance Management on Windows Azure
 
 This guide describes how to add New Relic's world-class performance
-monitoring to your Windows Azure Web Site. We'll cover the fast and simple
+monitoring to your Windows Azure hosted applications. We'll cover the fast and simple
 process to add New Relic to your application and introduce you to some of
 New Relic's features. For more information about using New Relic, see [Using New Relic](#using-new-relic).
 
@@ -25,8 +25,8 @@ alerting, tracks application exceptions, and a whole lot more.
 New Relic special pricing through the Windows Azure Store
 --
 
-New Relic Standard is free to Windows Azure users.
-New Relic Pro is offered in multiple packages based on which web site mode you are using, and the instance size if you are using reserved mode.
+New Relic Standard is free to Windows Azure users
+New Relic Pro is offered based on instance size for Windows Azure Cloud Services
 
 For pricing information see the [New Relic page in the Windows Azure Store](http://www.windowsazure.com/en-us/store/service/?id=3ab16c2e-b5aa-48b5-94b4-8ffb2b7cb640).
 
@@ -40,9 +40,9 @@ Windows Azure customers receive a 2 week trial subscription of New Relic Pro whe
 Sign up for New Relic using the Windows Azure Store
 --
 
-New Relic integrates seamlessly with Windows Azure Web Roles, Worker roles and Web Sites.
+New Relic integrates seamlessly with Windows Azure Web Roles and Worker roles.
 
-To sign up for New Relic directly from the Windows Azure Store, follow these four easy steps.
+To sign up for New Relic directly from the Windows Azure Store, follow these three easy steps.
 
 ### Step 1. Sign up through the Windows Azure Store
 
@@ -51,6 +51,7 @@ To sign up for New Relic directly from the Windows Azure Store, follow these fou
 3. Click **Store**.
 4. In the **Choose an Add-on** dialog, select **New Relic** and click **Next**.
 5. In the **Personalize Add-on** dialog, select the New Relic plan that you want.
+6. Enter a promotion code, if applicable.
 7. Enter a name for how the New Relic service will appear in your Windows Azure
    settings, or use the default value **NewRelic**. This name must be unique in
    your list of subscribed Windows Azure Store items.
@@ -59,111 +60,53 @@ To sign up for New Relic directly from the Windows Azure Store, follow these fou
 10. In the **Review Purchase** dialog, review the plan and pricing information,
     and review the legal terms. If you agree to the terms, click **Purchase**.
 11. After you click **Purchase**, your New Relic account will begin the creation process. You can monitor the status in the Windows Azure management portal.
-12. To retrieve your New Relic license key, click the Add-On you just created and then click **Connection Info**. 
+12. To retrieve your New Relic license key, click **Output Values**. 
 13. Copy the license key that appears. You will need to enter it when you install the New Relic Nuget package.
 
-### Step 2. Install the New Relic package
+### Step 2. Install the Nuget package
 
-The New Relic Web Sites Agent is distributed as a NuGet package, which can be added to your Web Site using either Visual Studio or WebMatrix. If you are unfamiliar with using Visual Studio or WebMatrix with a Windows Azure Web Site, see [Deploying an ASP.NET Web Application to a Windows Azure Web Site using Visual Studio][vswebsite] or [Develop and deploy a web site with Microsoft WebMatrix][webmatrixwebsite].
+1. Open your Visual Studio solution, or create a new one by selecting
+   **File > New > Project**.
 
-Perform the following steps for the specific development environment you are using:
+	![Visual Studio](./media/store-new-relic-cloud-services-dotnet-application-performce-management/NewRelicAzureNuget01.png)
 
-**Visual Studio**
+2. If you don't already have a Windows Azure Cloud Service Project in your
+   solution, add one by right-clicking your app in the Solution Explorer and
+   selecting **Add Windows Azure Cloud Service Project**.
 
-1. Open your Visual Studio Web Site solution.
+	![Create cloud service](./media/store-new-relic-cloud-services-dotnet-application-performce-management/NewRelicAzureNuget02.png)
 
-2. Open the Package Manager console by selecting **Tools > Library Package Manager > 
+3. Open the Package Manager console by selecting **Tools > Library Package Manager > 
    Package Manager Console**. Set your project to be the Default Project at the
    top of the Package Manager Console window.
 
-	![Package manager console](../media/NewRelicAzureNuget04.png)
+	![Package manager console](./media/store-new-relic-cloud-services-dotnet-application-performce-management/NewRelicAzureNuget04.png)
 
-3. On the Package Manager command prompt, use the following command to install the package:
+4. On the Package Manager command prompt, type `Install-Package
+   NewRelicWindowsAzure` and press **Enter**.
 
-		Install-Package NewRelic.Azure.WebSites
+	![install in package manager](./media/store-new-relic-cloud-services-dotnet-application-performce-management/NewRelicAzureNuget06.png)
 
-4. At the license key prompt, enter the license key you received from the Windows Azure Store.
+5. At the license key prompt, enter the license key you received from the Windows Azure Store.
 
-	![enter license key][vslicensekey]
+	![enter license key](./media/store-new-relic-cloud-services-dotnet-application-performce-management/NewRelicAzureNuget07.png)
 
-<!--5. Optional: At the application name prompt, enter your app's name as it will
+6. Optional: At the application name prompt, enter your app's name as it will
    appear in New Relic's dashboard. Or, use your solution name as the default.
 
-	![enter application name](../media/NewRelicAzureNuget08.png)-->
+	![enter application name](./media/store-new-relic-cloud-services-dotnet-application-performce-management/NewRelicAzureNuget08.png)
 
-**WebMatrix**
+7. From the Solution Explorer, right-click your Windows Azure Cloud Service Project, and select **Publish**.
 
-1. Open your Web Site using WebMatrix.
-
-2. On the **Home** tab of the ribbon, select **NuGet**.
-
-	![nuget buton on home tab][wmnugetbutton]
-
-3. In the NuGet Gallery, set the source to **NuGet Official Package Source** and then search for NewRelic.Azure.WebSites.
-
-	![nuget gallery searching for NewRelic.Azure.WebSites][wmnugetgallery]
-
-4. Select the **New Relic for Windows Azure Web Sites** entry, and then click **Install**.
-
-5. After installing the package, your site will now contain a folder named **newrelic**. Expand this folder and open the **newrelic.config** file. In this file, replace the value **REPLACE\_WITH\_LICENSE_KEY** with the license key you received from the Windows Azure Store.
-
-	![newrelic folder expanded with newrelic.conf selected][newrelicconf]
-
-	After adding the license key information, save the changes to the **newrelic.config** file.
-
-### Step 3. Configure the Web Site and publish the application.
-
-The New Relic package added to your application in the previous step is configured by **App Settings** added to your Windows Azure Web Site. Perform the following steps to add these settings.
-
-1. Sign in to the [Windows Azure management portal](https://manage.windowsazure.com) and navigate to your Web Site.
-
-2. From your Web Site, select **Configure**. In the **Developer Analytics** section, select either **Add-on** or **Custom**. Either method produces the same output, but requires slightly different input. **Add-on** lists your current New-Relic licenses and allows you to select one, while **Custom** requires you to manually specify the license key.
-
-	If you selected **Add-on**, use the **choose add-on** field to select your your New-Relic license.
-
-	![Image of the add-on fields][add-on]
-
-	If you selected **Custom**, use select New-Relic as the **Provider**, and then enter your license in the **Provider Key** field.
-
-	![Image of the custom fields][custom]
-
-3. After specifying license in **Developer Analytics**, click **Save**. Once the save operation has completed, the following values will have been added to the **App Settings** section of the page to support New-Relic:
-
-	<table border="1">
-	<thead>
-	<tr>
-	<td>Key</td>
-	<td>Value</td>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-	<td>COR\_ENABLE\_PROFILING</td><td>1</td>
-	</tr>
-	<tr>
-	<td>COR\_PROFILER</td><td>{71DA0A04-7777-4EC6-9643-7D28B46A8A41}</td>
-	</tr>
-	<tr>
-	<td>COR\_PROFILER\_PATH</td><td>C:\Home\site\wwwroot\newrelic\NewRelic.Profiler.dll</td>
-	</tr>
-	<tr>
-	<td>NEWRELIC\_HOME</td><td>C:\Home\site\wwwroot\newrelic</td>
-	</tr>
-	<tr>
-	<td>NEWRELIC\_LICENSEKEY</td><td>Your license key</td>
-	</tr>
-	</tbody>
-	</table><br/>
-
-	<div class="dev-callout"> 
-	<strong>Note</strong> 
-	<p>It may take up to 30 seconds for the new <strong>App Settings</strong> to take effect. To force the settings to take effect immediately, restart the web site.</p> 
-	</div>
+	![public the cloud project](./media/store-new-relic-cloud-services-dotnet-application-performce-management/NewRelicAzureNuget09.png)
 
 
-4. Using Visual Studio or WebMatrix, publish your application.
+**Note:** If this is your first time deploying this app to Windows Azure, you will be prompted to enter your 
+Azure credentials. For more information, see <a href="/en-us/develop/net/tutorials/get-started/">Deploying an ASP.NET Web Application to a Windows Azure Web Site</a>.
 
-### Step 4. Check out your application's performance in New Relic.
+![publish settings](./media/store-new-relic-cloud-services-dotnet-application-performce-management/NewRelicAzureNuget10.png)
+
+### Step 3. Check out your application's performance in New Relic.
 
 To view your New Relic dashboard:
 
@@ -173,7 +116,7 @@ To view your New Relic dashboard:
 
 	The **Monitoring > Overview** dashboard automatically appears.
 
-	![New Relic monitoring dashboard](../media/NewRelic_app.png)
+	![New Relic monitoring dashboard](./media/store-new-relic-cloud-services-dotnet-application-performce-management/NewRelic_app.png)
 
 	After you select an app from the list on your **Applications** menu, the **Overview** dashboard shows current app server and browser information.
 
@@ -227,13 +170,13 @@ In addition to the <a href="https://newrelic.com/docs/site/the-new-relic-ui#func
 
 Below is an example of the Applications Overview dashboard when you select the Browser view.
 
-![Package manager console](../media/NewRelic_app_browser.png)
+![Package manager console](./media/store-new-relic-cloud-services-dotnet-application-performce-management/NewRelic_app_browser.png)
 
 ## Next steps
 
 Check out these additional resources for more information:
 
- * [Installing the .NET Agent for Windows Azure Web Sites](https://newrelic.com/docs/dotnet/azure-web-sites-beta#manual_install): New Relic .NET Agent installation procedures 
+ * [Installing the .NET Agent on Azure](https://newrelic.com/docs/dotnet/installing-the-net-agent-on-azure): New Relic .NET Agent installation procedures 
  * [The New Relic User Interface](https://newrelic.com/docs/site/the-new-relic-ui): 
 Overview of the New Relic UI, setting user rights and profiles, using standard functions and dashboard drill-down details
  * [Applications Overview](https://newrelic.com/docs/site/applications-overview): Features and functions when using New Relic's Applications Overview dashboard
@@ -241,15 +184,3 @@ Overview of the New Relic UI, setting user rights and profiles, using standard f
  * [Real User Monitoring](https://newrelic.com/docs/features/real-user-monitoring): Overview of how RUM details the time it takes for your users' 
 browsers to load your webpages, where they come from, and what browsers they use
  * [Finding Help](https://newrelic.com/docs/site/finding-help): Resources available through New Relic's online Help Center
-
-[managementportal]: https:manage.windowsazure.com
-[webmatrixwebsite]: http://www.windowsazure.com/en-us/develop/net/tutorials/website-with-webmatrix/
-[vswebsite]: http://www.windowsazure.com/en-us/develop/net/tutorials/get-started/
-
-[wmnugetbutton]: ../media/nrwmnugetbutton.png
-[wmnugetgallery]: ../media/nrwmnugetgallery.png
-[appsettings]: ../media/nrappsettings.png
-[newrelicconf]: ../media/nrwmlicensekey.png
-[vslicensekey]: ../media/nrvslicensekey.png
-[add-on]: ../media/nraddon.png
-[custom]: ../media/nrcustom.png
