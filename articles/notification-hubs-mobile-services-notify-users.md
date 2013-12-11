@@ -1,14 +1,8 @@
 <properties linkid="notification-hubs-how-to-guides-howto-notify-users-mobileservices" urlDisplayName="Notify Users" pageTitle="Notify Users of your mobile service with Notification Hubs" metaKeywords="" description="Follow this tutorial to register to receive notifications from your mobile service by using Notification Hubs" metaCanonical="" services="mobile-services,notification-hubs" documentationCenter="" title="Notify users with Notification Hubs" authors=""  solutions="" writer="glenga" manager="" editor=""  />
-
-
-
-
-
 # <a name="getting-started"> </a>Notify users with Notification Hubs
 
 <div class="dev-center-tutorial-selector sublanding">
-    <a href="/en-us/manage/services/notification-hubs/notify-users" title="Mobile Services" class="current">Mobile Services</a>
-    <a href="/en-us/manage/services/notification-hubs/notify-users-aspnet" title="ASP.NET">ASP.NET</a>
+    <a href="/en-us/manage/services/notification-hubs/notify-users" title="Mobile Services" class="current">Mobile Services</a><a href="/en-us/manage/services/notification-hubs/notify-users-aspnet" title="ASP.NET">ASP.NET</a>
 </div> 
 
 This tutorial shows you how to use Windows Azure Notification Hubs to send push notifications to a specific app user on a specific device. A Windows Azure Mobile Services backend is used to authenticate clients and to generate notifications. This tutorial builds on the notification hub that you created in the previous **Get started with Notification Hubs** tutorial. The notification registration code is moved from the client to the backend service. This ensures that registration is only completed after a client has been positively authenticated by the service. It also means that notification hub credentials aren't distributed with the client app. The service also controls the tags requested during registration.
@@ -245,28 +239,28 @@ For more information about Notification Hubs, see [Windows Azure Notification Hu
 [Update your mobile service to send notifications]: #send-notifications
 
 <!-- Images. -->
-[0]: ../Media/mobile-services-selection.png
-[1]: ../Media/mobile-custom-api-create.png
-[2]: ../Media/mobile-custom-api-create2.png
-[3]: ../Media/mobile-custom-api-select.png
-[4]: ../Media/mobile-portal-data-tables.png
-[5]: ../Media/mobile-insert-script-push2.png
-[6]: ../Media/notification-hub-select-hub-connection.png
-[7]: ../Media/notification-hub-connection-strings.png
+[0]: ./media/notification-hubs-mobile-services-notify-users/mobile-services-selection.png
+[1]: ./media/notification-hubs-mobile-services-notify-users/mobile-custom-api-create.png
+[2]: ./media/notification-hubs-mobile-services-notify-users/mobile-custom-api-create2.png
+[3]: ./media/notification-hubs-mobile-services-notify-users/mobile-custom-api-select.png
+[4]: ./media/notification-hubs-mobile-services-notify-users/mobile-portal-data-tables.png
+[5]: ./media/notification-hubs-mobile-services-notify-users/mobile-insert-script-push2.png
+[6]: ./media/notification-hubs-mobile-services-notify-users/notification-hub-select-hub-connection.png
+[7]: ./media/notification-hubs-mobile-services-notify-users/notification-hub-connection-strings.png
 
 <!-- URLs. -->
-[Get started Windows Store]: ./getting-started-windowsdotnet.md
-[Get started iOS]: ./getting-started-ios.md
-[Get started Android]: ./getting-started-android.md
+[Get started Windows Store]: /en-us/manage/services/notification-hubs/getting-started-windows-dotnet
+[Get started iOS]: /en-us/manage/services/notification-hubs/get-started-notification-hubs-ios
+[Get started Android]: /en-us/manage/services/notification-hubs/get-started-notification-hubs-android
 [Get started auth Windows Store]: /en-us/develop/mobile/tutorials/get-started-with-users-dotnet/
 [Get started auth iOS]: /en-us/develop/mobile/tutorials/get-started-with-users-ios/
 [Get started auth Android]: /en-us/develop/mobile/tutorials/get-started-with-users-android/
-[Client topic Windows Store C# version]: ./howto-register-user-with-mobile-service-windowsdotnet.md 
-[Client topic iOS version]: ./howto-register-user-with-mobile-service-ios.md 
+[Client topic Windows Store C# version]: /en-us/manage/services/notification-hubs/register-users-mobile-services-dotnet 
+[Client topic iOS version]: /en-us/manage/services/notification-hubs/register-users-ios 
 [Visual Studio 2012 Express for Windows 8]: http://go.microsoft.com/fwlink/?LinkId=257546
-[WindowsAzure.com]: http://www.windowsazure.com/
+
 [Management Portal]: https://manage.windowsazure.com/
-[Send cross-platform notifications to users with Notification Hubs]: ./tutorial-notify-users-cross-platform-mobileservice.md
-[Breaking news .NET]: ./breaking-news-dotnet.md
-[Breaking news iOS]: ./breaking-news-ios.md
+[Send cross-platform notifications to users with Notification Hubs]: /en-us/manage/services/notification-hubs/notify-users-xplat-mobile-services
+[Breaking news .NET]: /en-us/manage/services/notification-hubs/breaking-news-dotnet
+[Breaking news iOS]: /en-us/manage/services/notification-hubs/breaking-news-ios
 [Windows Azure Notification Hubs]: http://msdn.microsoft.com/en-us/library/windowsazure/jj927170.aspx

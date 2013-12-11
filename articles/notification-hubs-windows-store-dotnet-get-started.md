@@ -1,8 +1,5 @@
 <properties linkid="develop-notificationhubs-tutorials-get-started-windowsdotnet" urlDisplayName="Get started with notification hubs" pageTitle="Get started with Windows Azure Notification Hubs" metaKeywords="" description="Learn how to use Windows Azure Notification Hubs to push notifications." metaCanonical="" services="notification-hubs" documentationCenter="Mobile" title="Getting Started with Notification Hubs" authors=""  solutions="" writer="elioda" manager="" editor=""  />
 
-
-
-
 # Getting Started with Notification Hubs
 
 <div class="dev-center-tutorial-selector sublanding"><a href="/en-us/manage/services/notification-hubs/getting-started-windows-dotnet" title="Windows Store C#" class="current">Windows Store C#</a><a href="/en-us/manage/services/notification-hubs/get-started-notification-hubs-wp8" title="Windows Phone">Windows Phone</a><a href="/en-us/manage/services/notification-hubs/get-started-notification-hubs-ios" title="iOS">iOS</a><a href="/en-us/manage/services/notification-hubs/get-started-notification-hubs-android" title="Android">Android</a><a href="/en-us/manage/services/notification-hubs/getting-started-xamarin-ios" title="Xamarin.iOS">Xamarin.iOS</a><a href="/en-us/manage/services/notification-hubs/getting-started-xamarin-android" title="Xamarin.Android">Xamarin.Android</a></div>
@@ -243,47 +240,46 @@ In this simple example you sent broadcast notifications to all your Windows devi
 [Next Steps]:#next-steps
 
 <!-- Images. -->
-[0]: ../media/mobile-services-submit-win8-app.png
-[1]: ../media/mobile-services-win8-app-name.png
-[2]: ../media/notification-hub-create-win8-app.png
-[3]: ../media/notification-hub-associate-win8-app.png
-[4]: ../media/mobile-services-select-app-name.png
-[5]: ../media/mobile-services-win8-edit-app.png
-[6]: ../media/mobile-services-win8-app-push-auth.png
-[7]: ../media/notification-hub-create-from-portal.png
-[8]: ../media/notification-hub-create-from-portal2.png
-[9]: ../media/notification-hub-select-from-portal.png
-[10]: ../media/notification-hub-select-from-portal2.png
-[11]: ../media/notification-hub-configure-wns.png
-[12]: ../media/notification-hub-connection-strings.png
-[13]: ../media/notification-hub-create-console-app.png
-[14]: ../media/notification-hub-windows-toast.png
-[15]: ../media/notification-hub-scheduler1.png
-[16]: ../media/notification-hub-scheduler2.png
-[17]: ../media/mobile-services-win8-edit2-app.png
-[18]: ../media/notification-hub-win8-app-toast.png
-[19]: ../media/notification-hub-windows-reg.png
+[0]: ./media/notification-hubs-windows-store-dotnet-get-started/mobile-services-submit-win8-app.png
+[1]: ./media/notification-hubs-windows-store-dotnet-get-started/mobile-services-win8-app-name.png
+[2]: ./media/notification-hubs-windows-store-dotnet-get-started/notification-hub-create-win8-app.png
+[3]: ./media/notification-hubs-windows-store-dotnet-get-started/notification-hub-associate-win8-app.png
+[4]: ./media/notification-hubs-windows-store-dotnet-get-started/mobile-services-select-app-name.png
+[5]: ./media/notification-hubs-windows-store-dotnet-get-started/mobile-services-win8-edit-app.png
+[6]: ./media/notification-hubs-windows-store-dotnet-get-started/mobile-services-win8-app-push-auth.png
+[7]: ./media/notification-hubs-windows-store-dotnet-get-started/notification-hub-create-from-portal.png
+[8]: ./media/notification-hubs-windows-store-dotnet-get-started/notification-hub-create-from-portal2.png
+[9]: ./media/notification-hubs-windows-store-dotnet-get-started/notification-hub-select-from-portal.png
+[10]: ./media/notification-hubs-windows-store-dotnet-get-started/notification-hub-select-from-portal2.png
+[11]: ./media/notification-hubs-windows-store-dotnet-get-started/notification-hub-configure-wns.png
+[12]: ./media/notification-hubs-windows-store-dotnet-get-started/notification-hub-connection-strings.png
+[13]: ./media/notification-hubs-windows-store-dotnet-get-started/notification-hub-create-console-app.png
+[14]: ./media/notification-hubs-windows-store-dotnet-get-started/notification-hub-windows-toast.png
+[15]: ./media/notification-hubs-windows-store-dotnet-get-started/notification-hub-scheduler1.png
+[16]: ./media/notification-hubs-windows-store-dotnet-get-started/notification-hub-scheduler2.png
+[17]: ./media/notification-hubs-windows-store-dotnet-get-started/mobile-services-win8-edit2-app.png
+[18]: ./media/notification-hubs-windows-store-dotnet-get-started/notification-hub-win8-app-toast.png
+[19]: ./media/notification-hubs-windows-store-dotnet-get-started/notification-hub-windows-reg.png
 
 <!-- URLs. -->
 [Submit an app page]: http://go.microsoft.com/fwlink/p/?LinkID=266582
 [My Applications]: http://go.microsoft.com/fwlink/p/?LinkId=262039
 [Live SDK for Windows]: http://go.microsoft.com/fwlink/p/?LinkId=262253
 [Get started with Mobile Services]: /en-us/develop/mobile/tutorials/get-started/#create-new-service
-[Get started with data]: ../tutorials/mobile-services-get-started-with-data-dotnet.md
-[Get started with authentication]: ../tutorials/mobile-services-get-started-with-users-dotnet.md
-[Get started with push notifications]: ../tutorials/mobile-services-get-started-with-push-dotnet.md
-[Push notifications to app users]: ../tutorials/mobile-services-push-notifications-to-app-users-dotnet.md
-[Authorize users with scripts]: ../tutorials/mobile-services-authorize-users-dotnet.md
-[JavaScript and HTML]: ../tutorials/mobile-services-get-started-with-push-js.md
-[WindowsAzure.com]: http://www.windowsazure.com/
+[Get started with data]: /en-us/develop/mobile/tutorials/get-started-with-data-dotnet
+[Get started with authentication]: /en-us/develop/mobile/tutorials/get-started-with-users-dotnet
+[Get started with push notifications]: /en-us/develop/mobile/tutorials/get-started-with-push-dotnet
+[Push notifications to app users]: /en-us/develop/mobile/tutorials/push-notifications-to-users-dotnet
+[Authorize users with scripts]: /en-us/develop/mobile/tutorials/authorize-users-in-scripts-dotnet
+[JavaScript and HTML]: /en-us/develop/mobile/tutorials/get-started-with-push-js
+
 [Windows Azure Management Portal]: https://manage.windowsazure.com/
-[Windows Developer Preview registration steps for Mobile Services]: ../HowTo/mobile-services-windows-developer-preview-registration.md
 [wns object]: http://go.microsoft.com/fwlink/p/?LinkId=260591
 [Notification Hubs Guidance]: http://msdn.microsoft.com/en-us/library/jj927170.aspx
 [Notification Hubs How-To for Windows Store]: http://msdn.microsoft.com/en-us/library/jj927172.aspx
 
-[Use Notification Hubs to push notifications to users]: ./tutorial-notify-users-aspnet.md
-[Use Notification Hubs to send breaking news]: ./breaking-news-dotnet.md
+[Use Notification Hubs to push notifications to users]: /en-us/manage/services/notification-hubs/notify-users-aspnet
+[Use Notification Hubs to send breaking news]: /en-us/manage/services/notification-hubs/breaking-news-dotnet
 
 [toast catalog]: http://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx
 [tile catalog]: http://msdn.microsoft.com/en-us/library/windows/apps/hh761491.aspx

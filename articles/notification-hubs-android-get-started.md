@@ -1,9 +1,4 @@
 <properties linkid="develop-notificationhubs-tutorials-get-started-android" urlDisplayName="Get Started" pageTitle="Get Started with Windows Azure Notification Hubs" metaKeywords="" description="Learn how to use Windows Azure Notification Hubs to push notifications." metaCanonical="" services="notification-hubs" documentationCenter="Mobile" title="Get started with Notification Hubs" authors=""  solutions="" writer="elioda" manager="" editor=""  />
-
-
-
-
-
 # Get started with Notification Hubs
 
 <div class="dev-center-tutorial-selector sublanding"><a href="/en-us/manage/services/notification-hubs/getting-started-windows-dotnet" title="Windows Store C#">Windows Store C#</a><a href="/en-us/manage/services/notification-hubs/get-started-notification-hubs-wp8" title="Windows Phone">Windows Phone</a><a href="/en-us/manage/services/notification-hubs/get-started-notification-hubs-ios" title="iOS">iOS</a><a href="/en-us/manage/services/notification-hubs/get-started-notification-hubs-android" title="Android" class="current">Android</a><a href="/en-us/manage/services/notification-hubs/getting-started-xamarin-ios" title="Xamarin.iOS">Xamarin.iOS</a><a href="/en-us/manage/services/notification-hubs/getting-started-xamarin-android" title="Xamarin.Android">Xamarin.Android</a></div>
@@ -334,50 +329,49 @@ In this simple example you broadcast notifications to all your Android devices. 
 [Next Steps]:#next-steps
 
 <!-- Images. -->
-[1]: ../media/mobile-services-google-developers.png
-[2]: ../media/mobile-services-google-create-server.png
-[3]: ../media/mobile-services-google-create-server2.png
-[4]: ../media/mobile-services-google-create-server3.png
+[1]: ./media/notification-hubs-android-get-started/mobile-services-google-developers.png
+[2]: ./media/notification-hubs-android-get-started/mobile-services-google-create-server.png
+[3]: ./media/notification-hubs-android-get-started/mobile-services-google-create-server2.png
+[4]: ./media/notification-hubs-android-get-started/mobile-services-google-create-server3.png
 
-[7]: ../media/notification-hub-create-from-portal.png
-[8]: ../media/notification-hub-create-from-portal2.png
-[9]: ../media/notification-hub-select-from-portal.png
-[10]: ../media/notification-hub-select-from-portal2.png
-[11]: ../media/notification-hub-configure-android.png
-[12]: ../media/notification-hub-connection-strings.png
+[7]: ./media/notification-hubs-android-get-started/notification-hub-create-from-portal.png
+[8]: ./media/notification-hubs-android-get-started/notification-hub-create-from-portal2.png
+[9]: ./media/notification-hubs-android-get-started/notification-hub-select-from-portal.png
+[10]: ./media/notification-hubs-android-get-started/notification-hub-select-from-portal2.png
+[11]: ./media/notification-hubs-android-get-started/notification-hub-configure-android.png
+[12]: ./media/notification-hubs-android-get-started/notification-hub-connection-strings.png
 
-[13]: ../media/notification-hub-create-android-app.png
-[14]: ../media/notification-hub-create-android-app2.png
-[15]: ../media/notification-hub-create-android-app4.png
-[16]: ../media/notification-hub-create-android-app5.png
-[17]: ../media/notification-hub-create-android-app6.png
+[13]: ./media/notification-hubs-android-get-started/notification-hub-create-android-app.png
+[14]: ./media/notification-hubs-android-get-started/notification-hub-create-android-app2.png
+[15]: ./media/notification-hubs-android-get-started/notification-hub-create-android-app4.png
+[16]: ./media/notification-hubs-android-get-started/notification-hub-create-android-app5.png
+[17]: ./media/notification-hubs-android-get-started/notification-hub-create-android-app6.png
 
-[18]: ../media/notification-hub-create-android-app7.png
-[19]: ../media/notification-hub-create-android-app8.png
+[18]: ./media/notification-hubs-android-get-started/notification-hub-create-android-app7.png
+[19]: ./media/notification-hubs-android-get-started/notification-hub-create-android-app8.png
 
-[20]: ../media/notification-hub-create-console-app.png
-[21]: ../media/notification-hub-android-toast.png
-[22]: ../media/notification-hub-scheduler1.png
-[23]: ../media/notification-hub-scheduler2.png
+[20]: ./media/notification-hubs-android-get-started/notification-hub-create-console-app.png
+[21]: ./media/notification-hubs-android-get-started/notification-hub-android-toast.png
+[22]: ./media/notification-hubs-android-get-started/notification-hub-scheduler1.png
+[23]: ./media/notification-hubs-android-get-started/notification-hub-scheduler2.png
 
 <!-- URLs. -->
 [Submit an app page]: http://go.microsoft.com/fwlink/p/?LinkID=266582
 [My Applications]: http://go.microsoft.com/fwlink/p/?LinkId=262039
 [Live SDK for Windows]: http://go.microsoft.com/fwlink/p/?LinkId=262253
 [Get started with Mobile Services]: /en-us/develop/mobile/tutorials/get-started/#create-new-service
-[Get started with data]: ../tutorials/mobile-services-get-started-with-data-dotnet.md
-[Get started with authentication]: ../tutorials/mobile-services-get-started-with-users-dotnet.md
-[Get started with push notifications]: ../tutorials/mobile-services-get-started-with-push-dotnet.md
-[Push notifications to app users]: ../tutorials/mobile-services-push-notifications-to-app-users-dotnet.md
-[Authorize users with scripts]: ../tutorials/mobile-services-authorize-users-dotnet.md
-[JavaScript and HTML]: ../tutorials/mobile-services-get-started-with-push-js.md
-[WindowsAzure.com]: http://www.windowsazure.com/
+[Get started with data]: /en-us/develop/mobile/tutorials/get-started-with-data-android
+[Get started with authentication]: /en-us/develop/mobile/tutorials/get-started-with-users-android
+[Get started with push notifications]: /en-us/develop/mobile/tutorials/get-started-with-push-android
+[Push notifications to app users]: /en-us/develop/mobile/tutorials/push-notifications-to-users-android
+[Authorize users with scripts]: /en-us/develop/mobile/tutorials/authorize-users-in-scripts-android
+[JavaScript and HTML]: /en-us/develop/mobile/tutorials/get-started-with-push-js
+
 [Windows Azure Management Portal]: https://manage.windowsazure.com/
-[Windows Developer Preview registration steps for Mobile Services]: ../HowTo/mobile-services-windows-developer-preview-registration.md
 [wns object]: http://go.microsoft.com/fwlink/p/?LinkId=260591
 [Notification Hubs Guidance]: http://msdn.microsoft.com/en-us/library/jj927170.aspx
 [Notification Hubs How-To for Android]: http://msdn.microsoft.com/en-us/library/dn282661.aspx
 
-[Use Notification Hubs to push notifications to users]: ./tutorial-notify-users-aspnet.md
-[Use Notification Hubs to send breaking news]: ./breaking-news-dotnet.md
+[Use Notification Hubs to push notifications to users]: /en-us/manage/services/notification-hubs/notify-users-aspnet
+[Use Notification Hubs to send breaking news]: /en-us/manage/services/notification-hubs/breaking-news-dotnet
 

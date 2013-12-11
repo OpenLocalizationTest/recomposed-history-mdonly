@@ -1,10 +1,6 @@
 <properties linkid="develop-notificationhubs-tutorials-get-started-ios" urlDisplayName="Get Started" pageTitle="Get Started with Windows Azure Notification Hubs" metaKeywords="" description="Learn how to use Windows Azure Notification Hubs to push notifications." metaCanonical="" services="notification-hubs" documentationCenter="Mobile" title="Get started with Notification Hubs" authors=""  solutions="" writer="elioda" manager="" editor=""  />
 
-
-
-
 # Get started with Notification Hubs
-
 <div class="dev-center-tutorial-selector sublanding"><a href="/en-us/manage/services/notification-hubs/getting-started-windows-dotnet" title="Windows Store C#">Windows Store C#</a><a href="/en-us/manage/services/notification-hubs/get-started-notification-hubs-wp8" title="Windows Phone">Windows Phone</a><a href="/en-us/manage/services/notification-hubs/get-started-notification-hubs-ios" title="iOS" class="current">iOS</a><a href="/en-us/manage/services/notification-hubs/get-started-notification-hubs-android" title="Android">Android</a><a href="/en-us/manage/services/notification-hubs/getting-started-xamarin-ios" title="Xamarin.iOS">Xamarin.iOS</a><a href="/en-us/manage/services/notification-hubs/getting-started-xamarin-android" title="Xamarin.Android">Xamarin.Android</a></div>	
 
 This topic shows you how to use Windows Azure Notification Hubs to send push notifications to an iOS application. 
@@ -351,76 +347,76 @@ In this simple example you broadcast notifications to all your iOS devices. In o
 [Next Steps]:#next-steps
 
 <!-- Images. -->
-[5]: ../media/mobile-services-ios-push-step5.png
-[6]: ../media/mobile-services-ios-push-step6.png
-[7]: ../media/mobile-services-ios-push-step7.png
+[5]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-step5.png
+[6]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-step6.png
+[7]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-step7.png
 
-[9]: ../media/mobile-services-ios-push-step9.png
-[10]: ../media/mobile-services-ios-push-step10.png
-
-[17]: ../media/mobile-services-ios-push-step17.png
-[18]: ../media/mobile-services-ios-push-step18.png
-
-[103]: ../media/mobile-services-ios-push-03.png
-[105]: ../media/mobile-services-ios-push-05.png
-[106]: ../media/mobile-services-ios-push-06.png
-[107]: ../media/mobile-services-ios-push-07.png
-[108]: ../media/mobile-services-ios-push-08.png
-[109]: ../media/mobile-services-ios-push-09.png
-[110]: ../media/mobile-services-ios-push-10.png
-[111]: ../media/mobile-services-ios-push-11.png
-[112]: ../media/mobile-services-ios-push-12.png
-[113]: ../media/mobile-services-ios-push-13.png
-[114]: ../media/mobile-services-ios-push-14.png
-[115]: ../media/mobile-services-ios-push-15.png
-[116]: ../media/mobile-services-ios-push-16.png
-[117]: ../media/mobile-services-ios-push-17.png
-[118]: ../media/mobile-services-ios-push-18.png
-[119]: ../media/mobile-services-ios-push-19.png
-
-[120]: ../media/mobile-services-ios-push-20.png
-[121]: ../media/mobile-services-ios-push-21.png
-[122]: ../media/mobile-services-ios-push-22.png
-[123]: ../media/mobile-services-ios-push-23.png
-[124]: ../media/mobile-services-ios-push-24.png
-[125]: ../media/mobile-services-ios-push-25.png
-[126]: ../media/mobile-services-ios-push-26.png
-
-[27]: ../media/notification-hub-create-from-portal.png
-[28]: ../media/notification-hub-create-from-portal2.png
-[29]: ../media/notification-hub-select-from-portal.png
-[210]: ../media/notification-hub-select-from-portal2.png
-[211]: ../media/notification-hub-configure-ios.png
-[212]: ../media/notification-hub-connection-strings.png
+[9]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-step9.png
+[10]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-step10.png
 
 
-[213]: ../media/notification-hub-create-console-app.png
-[214]: ../media/notification-hub-windows-toast.png
+[18]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-step18.png
 
 
-[215]: ../media/notification-hub-scheduler1.png
-[216]: ../media/notification-hub-scheduler2.png
+[105]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-05.png
+[106]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-06.png
+[107]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-07.png
+[108]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-08.png
+[109]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-09.png
+[110]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-10.png
+[111]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-11.png
+[112]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-12.png
+[113]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-13.png
+[114]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-14.png
+[115]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-15.png
+[116]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-16.png
+
+[118]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-18.png
+[119]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-19.png
+
+[120]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-20.png
+[121]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-21.png
+[122]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-22.png
+[123]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-23.png
+[124]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-24.png
+[125]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-25.png
+[126]: ./media/notification-hubs-ios-get-started/mobile-services-ios-push-26.png
+
+[27]: ./media/notification-hubs-ios-get-started/notification-hub-create-from-portal.png
+[28]: ./media/notification-hubs-ios-get-started/notification-hub-create-from-portal2.png
+[29]: ./media/notification-hubs-ios-get-started/notification-hub-select-from-portal.png
+[210]: ./media/notification-hubs-ios-get-started/notification-hub-select-from-portal2.png
+[211]: ./media/notification-hubs-ios-get-started/notification-hub-configure-ios.png
+[212]: ./media/notification-hubs-ios-get-started/notification-hub-connection-strings.png
 
 
-[31]: ../media/notification-hub-create-ios-app.png
-[32]: ../media/notification-hub-create-ios-app2.png
-[33]: ../media/notification-hub-create-ios-app3.png
-[34]: ../media/notification-hub-create-ios-app4.png
+[213]: ./media/notification-hubs-ios-get-started/notification-hub-create-console-app.png
+
+
+
+[215]: ./media/notification-hubs-ios-get-started/notification-hub-scheduler1.png
+[216]: ./media/notification-hubs-ios-get-started/notification-hub-scheduler2.png
+
+
+[31]: ./media/notification-hubs-ios-get-started/notification-hub-create-ios-app.png
+[32]: ./media/notification-hubs-ios-get-started/notification-hub-create-ios-app2.png
+[33]: ./media/notification-hubs-ios-get-started/notification-hub-create-ios-app3.png
+
 
 <!-- URLs. -->
 [Mobile Services iOS SDK]: http://go.microsoft.com/fwLink/?LinkID=266533
 [Submit an app page]: http://go.microsoft.com/fwlink/p/?LinkID=266582
 [My Applications]: http://go.microsoft.com/fwlink/p/?LinkId=262039
 [Live SDK for Windows]: http://go.microsoft.com/fwlink/p/?LinkId=262253
-[WindowsAzure.com]: http://www.windowsazure.com/
-[Get started with Mobile Services]: ../../../DevCenter/Mobile/Tutorials/mobile-services-get-started-ios.md
+
+[Get started with Mobile Services]: /en-us/develop/mobile/tutorials/get-started-ios
 [Windows Azure Management Portal]: https://manage.windowsazure.com/
 [Notification Hubs Guidance]: http://msdn.microsoft.com/en-us/library/jj927170.aspx
 [Notification Hubs How-To for iOS]: http://msdn.microsoft.com/en-us/library/jj927168.aspx
 [Install Xcode]: https://go.microsoft.com/fwLink/p/?LinkID=266532
 [iOS Provisioning Portal]: http://go.microsoft.com/fwlink/p/?LinkId=272456
 
-[Use Notification Hubs to push notifications to users]: ./tutorial-notify-users-aspnet.md
-[Use Notification Hubs to send breaking news]: ./breaking-news-dotnet.md
+[Use Notification Hubs to push notifications to users]: /en-us/manage/services/notification-hubs/notify-users-aspnet
+[Use Notification Hubs to send breaking news]: /en-us/manage/services/notification-hubs/breaking-news-dotnet
 
 [Local and Push Notification Programming Guide]: http://developer.apple.com/library/mac/#documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
