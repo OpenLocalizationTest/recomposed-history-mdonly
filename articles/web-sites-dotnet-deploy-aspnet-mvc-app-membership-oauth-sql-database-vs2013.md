@@ -42,7 +42,7 @@ In this tutorial:
 - [Next steps][]
 
 
-<div chunk="../chunks/install-sdk-2013-only.md" />
+[WACOM.INCLUDE [install-sdk-2013-only](../includes/install-sdk-2013-only.md)]
 
 
 <h2><a name="bkmk_setupwindowsazure"></a>Set up the Windows Azure environment</h2>
@@ -74,7 +74,7 @@ The wizard advances to the **Specify database settings** step.
 1. In the **Name** box, enter *ContactDB*. (see the image below). 
 1. In the **Server** box, select **New SQL Database server**. (see the image below). Alternatively, if you previously created a SQL Server database, you can select that SQL Server from the dropdown control.<br/>
 1. Set the **Region** to the same area you created the Web Site.
-1. Enter an administrator **Login Name** and **Password**. If you selected **New SQL Database server** you aren't entering an existing name and password here, you're entering a new name and password that you're defining now to use later when you access the database. If you selected a SQL Server you’ve created previously, you’ll be prompted for the password to the previous SQL Server account name you created. For this tutorial, we won't check the **Advanced** box.  For a free DB, you can only set the collation.
+1. Enter an administrator **Login Name** and **Password**. If you selected **New SQL Database server** you aren't entering an existing name and password here, you're entering a new name and password that you're defining now to use later when you access the database. If you selected a SQL Server you've created previously, you'll be prompted for the password to the previous SQL Server account name you created. For this tutorial, we won't check the **Advanced** box.  For a free DB, you can only set the collation.
 1. Click the check mark at the bottom right of the box to indicate you're finished.
 ![Database Settings step of New Web Site - Create with Database wizard][setup007]<br/>
 <br/> The following image shows using an existing SQL Server and Login.
@@ -89,20 +89,20 @@ You have created a Windows Azure Web Site, but there is no content in it yet. Yo
 
 2. From the **File** menu, click **New Project**.
 
-   ![New Project in File menu](../Media/gs13newproj.png)
+   ![New Project in File menu](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/gs13newproj.png)
 
 3. In the **New Project** dialog box, expand **C#** and select **Web** under **Installed Templates**, and then select **ASP.NET Web Application**.
 
 
 4. Name the application **ContactManager** and click **OK**.
 
-   ![New Project dialog box](../Media/GS13newprojdb.png)
+   ![New Project dialog box](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/GS13newprojdb.png)
  
    **Note:** The image shows "MyExample" as the name, but make sure you enter "ContactManager". Code blocks that you'll be copying later assume that the project name is ContactManager. 
 
 5. In the **New ASP.NET Project** dialog box, select the **MVC** template, and then click **Change Authentication**.
 
-   ![New ASP.NET Project dialog box](../Media/GS13changeauth.png)
+   ![New ASP.NET Project dialog box](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/GS13changeauth.png)
 
 6. Keep the default **Individual User Accounts** in the **Change Authentication** dialog box. 
 
@@ -112,7 +112,7 @@ You have created a Windows Azure Web Site, but there is no content in it yet. Yo
 
 5. In the **New ASP.NET Project** dialog box, click **OK**.
 
-     ![New ASP.NET Project dialog box](../Media/GS13changeauth.png)
+     ![New ASP.NET Project dialog box](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/GS13changeauth.png)
 
 
 ### Set the page header and footer
@@ -124,14 +124,14 @@ You have created a Windows Azure Web Site, but there is no content in it yet. Yo
 1. Replace "Application name" with "CM Demo". 
 2. Update the first Action link and replace *Home* with *Cm* to use the *Cm* Controller.
 <br/><br/>
-![code changes](..\Media\rs3.png)
+![code changes](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rs3.png)
 
 
 ### Run the application locally
 
 1. Press CTRL+F5 to run the application.
 The application home page appears in the default browser.<br/>
-![Web site running locally](../Media/rr2.png)
+![Web site running locally](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rr2.png)
 
 This is all you need to do for now to create the application that you'll deploy to Windows Azure. Later you'll add database functionality.
 
@@ -139,7 +139,7 @@ This is all you need to do for now to create the application that you'll deploy 
 
 5. In Visual Studio, right-click the project in **Solution Explorer** and select **Publish** from the context menu.<br/>
 
-   ![Publish in project context menu](../Media/GS13publish.png)
+   ![Publish in project context menu](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/GS13publish.png)
 	
    The **Publish Web** wizard opens.
 
@@ -151,14 +151,14 @@ This is all you need to do for now to create the application that you'll deploy 
 
 5. Use one of the following methods to enable Visual Studio to connect to your Windows Azure account.
 
-   <div chunk="../../shared/chunks/vs-connect-ws-publish.md" />   
+   [WACOM.INCLUDE [vs-connect-ws-publish](../includes/vs-connect-ws-publish.md)]   
 
 7. In the **Import Publish Profile** dialog box, select your web site from the drop-down list, and then click **OK**.<br/>
-![Import Publish Profile](..\Media\rs4.png)
+![Import Publish Profile](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rs4.png)
 
 1. In the **Publish Web** dialog box, click **Publish**.
 
-	![Publish](../Media/rr3.png)
+	![Publish](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rr3.png)
 
 	The application you created is now running in the cloud. The next time you deploy the application, only the changed (or new) files will be deployed.
 
@@ -171,7 +171,7 @@ Next, you'll update the MVC application to add the ability to display and update
 You begin by creating a simple data model in code.
 
 1. In **Solution Explorer**, right-click the Models folder, click **Add**, and then **Class**.<br/>
-![Add Class in Models folder context menu](../Media/rr5.png)
+![Add Class in Models folder context menu](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rr5.png)
 
 2. In the **Add New Item** dialog box, name the new class file *Contact.cs*, and then click **Add**.<br/>
 ![Add New Item dialog box][adddb002]
@@ -205,11 +205,11 @@ The ASP.NET MVC scaffolding feature can automatically generate code that perform
 1. In **Solution Explorer**, right-click the Controllers folder and click **Add**, and then click **Controller**.<br/>
 ![Add Controller in Controllers folder context menu][addcode001]<br/>
 5. In the **Add Scaffold** dialog box, select **MVC 5 Controller with views, using EF** and then click **Add**.
-![Add Scaffold dlg](../Media/rr6.png)
+![Add Scaffold dlg](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rr6.png)
 5. In the **Add Controller** dialog box, enter "CmController" for the controller name. (See the image below.)
 1. In the **Model class** dropdown box, select **Contact (ContactManager.Models)**.
 1. In the **Data context class**, select **ApplicationDbContext (ContactManager.Models)**. The **ApplicationDbContext** will be used for both the membership DB and our contact data.<br/><br/>
-![New data ctx dlg](../Media/rrCtx.png)
+![New data ctx dlg](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rrCtx.png)
 1. Click **Add**.
 
    Visual Studio creates a controller methods and views for CRUD database operations for **Contact** objects.
@@ -322,7 +322,7 @@ In addition to authentication, the tutorial will also use roles to implement aut
 1. Enter your  credentials.
 1. Click **Accept** to allow the application to access your email and basic information.
 1. You are redirected to the Register page. You can change the **User name** if you like. Click **Register**.
-![register](..\Media\rr8.png)
+![register](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rr8.png)
 
 <h2><a name="mbrDB"></a><span class="short-header">Membership DB</span>Using the Membership API</h2>
 In this section you will add a local user and the *canEdit* role to the membership database. Only those users in the *canEdit* role will be able to edit data. A best practice is to name roles by the actions they can perform, so *canEdit* is preferred over a role called *admin*. When your application evolves you can add new roles such as *canDeleteMembers* rather than the less descriptive *superAdmin*.
@@ -375,7 +375,7 @@ In this section you will temporarily modify the **ExternalLoginConfirmation** me
 
    The code above adds the newly registered user to the "CanEdit" role, which gives them access to action methods that change (edit) data. An image of the code change is shown below:
 
-   ![code](..\Media\rr9.png)
+   ![code](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rr9.png)
 
 Later in the tutorial you will deploy the application to Windows Azure, where you will log-on with Google or another third party authentication provider. This will add your newly registered account to the *canEdit* role. Anyone who finds your site's URL and has a Google ID can then register and update your database. To prevent other people from doing that, you can stop the site. You'll be able to verify who is in the *canEdit* role by examining the database.
 
@@ -416,7 +416,7 @@ In this section you will apply the [Authorize](http://msdn.microsoft.com/en-us/l
 2. Do a global search for *AllowAnonymous*, you can see it is used in the log in and registration methods of the Account controller.
 1. In *CmController.cs*, add `[Authorize(Roles = "canEdit")]` to the HttpGet and HttpPost methods that change data (Create, Edit, Delete, every action method except Index and Details) in the *Cm* controller. A portion of the completed code is shown below: 
 
-   ![img of code](..\Media\rr11.png)
+   ![img of code](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rr11.png)
 
 ## Enable SSL for the Project ##
 
@@ -426,7 +426,7 @@ In this section you will apply the [Authorize](http://msdn.microsoft.com/en-us/l
 1. In Solution Explorer, right click the **Contact Manager** project and click **Properties**.
 1. In the left tab, click **Web**.
 1. Change the **Project Url** to use the **SSL URL** and save the page (Control S).
-<br/> <br/>![enable SSL](..\Media\rrr1.png)
+<br/> <br/>![enable SSL](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rrr1.png)
 <br/> <br/>
 1. Press CTRL+F5 to run the application. The browser will display a certificate warning. For our application you can safely click on the link **Continue to this website**. 
 <br/> <br/>![cert Warn][rxNOT]
@@ -453,10 +453,10 @@ The **Publish Web** wizard opens.
 1. Click the **Settings** tab. Click the **v** icon to select the **Remote connection string** for **ApplicationDbContext** and select **ContactDB**.
 
    (If you closed and re-opened Visual Studio after you created the publish profile, you might not see the connection string in the drop-down list. In that case, instead of editing the publish profile that you created earlier, create a new one the same way you did earlier, and then follow these steps on the **Settings** tab.)
-<br/><br/>![settings](..\Media\rrc2.png)
+<br/><br/>![settings](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rrc2.png)
 1. Under **ContactManagerContext**, select **Execute Code First Migrations**.
 <br/><br/>
-![settings](..\Media\rrc3.png)
+![settings](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rrc3.png)
 1. Click **Publish**.
 1. Log in as *user1* and verify you can edit data.
 1. Log out.
@@ -467,10 +467,10 @@ The **Publish Web** wizard opens.
 1. In **Server Explorer**, navigate to **Web Sites**.
 4. Right click on each Web Site instance and select **Stop Web Site**. 
 <br/><br/>
-![stop web site](..\Media\rrr2.png) <br/><br/>
+![stop web site](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rrr2.png) <br/><br/>
 Alternatively, from the Windows Azure management portal, you can select the web site, then click the **stop** icon at the bottom of the page.
 <br/><br/>
-![stop web site](..\Media\rrr3.png)
+![stop web site](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rrr3.png)
 
 ### Remove AddToRoleAsync, Publish, and Test
 
@@ -479,7 +479,7 @@ Alternatively, from the Windows Azure management portal, you can select the web 
 1. Build the project (which saves the file changes and verify you don't have any compile errors).
 5. Right-click the project in **Solution Explorer** and select **Publish**.<br/>
 
-	   ![Publish in project context menu](../Media/GS13publish.png)
+	   ![Publish in project context menu](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/GS13publish.png)
 	
 4. Click the **Start Preview** button. Only the files that need to be updated are deployed.
 5. Start the Web Site. The easiest way to do this is from the Portal. **You won't be able to publish while the web site is stopped**.
@@ -491,15 +491,15 @@ Alternatively, from the Windows Azure management portal, you can select the web 
 1. Log out of the local user account and log in with the Google account you previously registered with. Verify you can edit data. 
 -->
 <br/><br/>
-![Log off](..\Media\rrr6.png)
+![Log off](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rrr6.png)
 <br/><br/>
 1. Verify you can navigate to the *About* and *Contact* pages.
 <br/><br/>
-![Log off](..\Media\rrr7.png)
+![Log off](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rrr7.png)
 <br/><br/>
 1. Click the **CM Demo** link to navigate to the **Cm** controller. Alternatively, you can append *Cm* to the URL. 
 <br/><br/>
-![CM page](..\Media\rrr4.png)
+![CM page](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rrr4.png)
  <br/><br/>
 1. Click an Edit link. You will be redirected to the log in page. Under **Use another service to log in**, Click Google or Facebook and log in with the account you previously registered.
 2. Verify you can edit data while logged into that account.
@@ -511,21 +511,21 @@ Alternatively, from the Windows Azure management portal, you can select the web 
 1. In **Server Explorer**, navigate to the **ContactDB**
 2. Right click on **ContactDB** and select **Open in SQL Server Object Explorer**.
  <br/><br/>
-![open in SSOX](..\Media\rrr12.png)
+![open in SSOX](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rrr12.png)
  <br/><br/>
 **Note:** If you can't expand **SQL Databases** and *can't* see the **ContactDB** from Visual Studio, you will have to follow the instructions below to open a firewall port or a range of ports. Follow the instructions under **Adding a Range of Allowed IP Addresses** and **Connecting to a SQL Azure Database from SSOX**. You may have to wait for a few minutes to access the database after adding the firewall rule.
  <br/>
 1. Right click on the **AspNetUsers** table and select **View Data**.
 <br/><br/>
-![CM page](..\Media\rrr8.png)
+![CM page](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rrr8.png)
  <br/><br/>
 1. Note the Id from the Google account you registered with to be in the **canEdit** role, and the Id of *user1*. These should be the only users in the **canEdit** role. (You'll verify that in the next step.)
 <br/><br/>
-![CM page](..\Media\rrr9.png)
+![CM page](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rrr9.png)
  <br/><br/>
 2. In **SQL Server Object Explorer**, right click on **AspNetUserRoles** and select **View Data**.
 <br/><br/>
-![CM page](..\Media\rs1.png)
+![CM page](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rs1.png)
  <br/><br/>
 Verify the **UserId**s are from *user1* and the Google account you registered. 
 
@@ -564,7 +564,7 @@ Finally, you can connect to the SQL Database instance from SSOX
 1. Select the **ContactDB**, and then click **View SQL Database connection strings**.
 1. From the **Connection Strings** page, copy the **Server**  and **User ID**. 
 1. Past the **Server** and **User ID** values into the **Connect to Server** dialog in Visual Studio. The **User ID** value goes into the **Login** entry. Enter the password you used to create the SQL DB.
-![Connect to Server DLG](..\Media\rss1.png)
+![Connect to Server DLG](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rss1.png)
 
 You can now navigate to the Contact DB using the instructions given earlier.
 
@@ -575,10 +575,10 @@ Earlier in the tutorial you used code to add users to the canEdit role. An alter
 
 2. In **SQL Server Object Explorer**, right click on **AspNetUserRoles** and select **View Data**.
 <br/><br/>
-![CM page](..\Media\rs1.png)
+![CM page](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rs1.png)
 <br/><br/>
 1. Copy the *RoleId* and paste it into the empty (new) row.
-![CM page](..\Media\rs2.png)
+![CM page](./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rs2.png)
 <br/><br/>
 2. In the **AspNetUsers** table find the user you want to put in the role, and copy the  user's *Id*, and then paste it into the **UserId** column of the **AspNetUserRoles** table.
 
@@ -614,188 +614,188 @@ To get the colorful Facebook, Google and Yahoo log on buttons, see the blog post
 [Using the Membership API]:#mbrDB
 [Create a Data Deployment Script]:#ppd
 [Update the Membership Database]:#ppd2
-[setupdbenv]: #bkmk_setupdevenv
+
 [setupwindowsazureenv]: #bkmk_setupwindowsazure
 [createapplication]: #bkmk_createmvc4app
 [deployapp1]: #bkmk_deploytowindowsazure1
 [deployapp11]: #bkmk_deploytowindowsazure11
 [adddb]: #bkmk_addadatabase
-[addcontroller]: #bkmk_addcontroller
-[addwebapi]: #bkmk_addwebapi
-[deploy2]: #bkmk_deploydatabaseupdate
+
+
+
 
 <!-- links -->
-[WTEInstall]: http://go.microsoft.com/fwlink/?LinkID=208120
-[MVC4Install_20012]: http://go.microsoft.com/fwlink/?LinkID=275131
-[VS2012ExpressForWebInstall]: http://www.microsoft.com/web/gallery/install.aspx?appid=VWD11_BETA&prerelease=true
-[windowsazure.com]: http://www.windowsazure.com
-[WindowsAzureDataStorageOfferings]: http://social.technet.microsoft.com/wiki/contents/articles/data-storage-offerings-on-the-windows-azure-platform.aspx
-[GoodFitForAzure]: http://msdn.microsoft.com/en-us/library/windowsazure/hh694036(v=vs.103).aspx
-[NetAppWithSQLAzure]: http://www.windowsazure.com/en-us/develop/net/net-app-with-sql-azure
-[MultiTierApp]: http://www.windowsazure.com/en-us/develop/net/tutorials/multi-tier-application/
-[HybridApp]: http://www.windowsazure.com/en-us/develop/net/tutorials/hybrid-solution/
-[SQLAzureHowTo]: https://www.windowsazure.com/en-us/develop/net/how-to-guides/sql-azure/
-[SQLAzureDataMigration]: http://msdn.microsoft.com/en-us/library/windowsazure/hh694043(v=vs.103).aspx
-[ASP.NETFormsAuth]: http://msdn.microsoft.com/en-us/library/windowsazure/hh508993.aspx
-[CommonTasks]: http://windowsazure.com/develop/net/common-tasks/
-[TSQLReference]: http://msdn.microsoft.com/en-us/library/windowsazure/ee336281.aspx
-[SQLAzureGuidelines]: http://msdn.microsoft.com/en-us/library/windowsazure/ee336245.aspx
-[SQLAzureDataMigrationBlog]: http://blogs.msdn.com/b/ssdt/archive/2012/04/19/migrating-a-database-to-sql-azure-using-ssdt.aspx
-[SQLAzureConnPoolErrors]: http://blogs.msdn.com/b/adonet/archive/2011/11/05/minimizing-connection-pool-errors-in-sql-azure.aspx
-[UniversalProviders]: http://nuget.org/packages/System.Web.Providers
-[EFCodeFirstMVCTutorial]: http://www.asp.net/mvc/tutorials/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application
-[EFCFMigrations]: http://msdn.microsoft.com/en-us/library/hh770484
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- links from Tom's hopefully no collisions -->
-[windowsazure.com]: http://www.windowsazure.com
-[WindowsAzureDataStorageOfferings]: http://social.technet.microsoft.com/wiki/contents/articles/data-storage-offerings-on-the-windows-azure-platform.aspx
-[GoodFitForAzure]: http://msdn.microsoft.com/en-us/library/windowsazure/hh694036(v=vs.103).aspx
-[NetAppWithSQLAzure]: http://www.windowsazure.com/en-us/develop/net/tutorials/cloud-service-with-sql-database/
-[MultiTierApp]: http://www.windowsazure.com/en-us/develop/net/tutorials/multi-tier-application/
-[HybridApp]: http://www.windowsazure.com/en-us/develop/net/tutorials/hybrid-solution/
-[SQLAzureHowTo]: https://www.windowsazure.com/en-us/develop/net/how-to-guides/sql-azure/
-[SQLAzureDataMigration]: http://msdn.microsoft.com/en-us/library/windowsazure/hh694043(v=vs.103).aspx
-[ASP.NETFormsAuth]: http://msdn.microsoft.com/en-us/library/windowsazure/hh508993.aspx
-[CommonTasks]: http://www.windowsazure.com/en-us/develop/net/common-tasks/
-[TSQLReference]: http://msdn.microsoft.com/en-us/library/windowsazure/ee336281.aspx
-[SQLAzureGuidelines]: http://msdn.microsoft.com/en-us/library/windowsazure/ee336245.aspx
-[MigratingDataCentricApps]: http://msdn.microsoft.com/en-us/library/jj156154.aspx
-[SQLAzureDataMigrationBlog]: http://blogs.msdn.com/b/ssdt/archive/2012/04/19/migrating-a-database-to-sql-azure-using-ssdt.aspx
-[SQLAzureConnPoolErrors]: http://blogs.msdn.com/b/adonet/archive/2011/11/05/minimizing-connection-pool-errors-in-sql-azure.aspx
-[UniversalProviders]: http://nuget.org/packages/Microsoft.AspNet.Providers
-[UniversalProvidersLocalDB]: http://nuget.org/packages/Microsoft.AspNet.Providers.LocalDB
-[EFCodeFirstMVCTutorial]: http://www.asp.net/mvc/tutorials/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application
-[EFCFMigrations]: http://msdn.microsoft.com/en-us/library/hh770484
-[DevelopingWebAppsWithWindowsAzure]: http://msdn.microsoft.com/en-us/library/Hh674484
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- images-->
-[rxE]: ../Media/rxE.png
-[rx2]: ../Media/rx2.png
-[rxP]: ../Media/rxP.png
-[rx22]: ../Media/rx22.png
-[rxFBapp]: ../Media/rxFBapp.png
-[rxFB]: ../Media/rxFB.png
-[rxFBt]: ../Media/rxFBt.png
-[rxSTD]: ../Media/rxSTD.png
-[rxUid]: ../Media/rxUid.png
-[rxRoleID]: ../Media/rxRoleID.png
-[rxUR]: ../Media/rxUR.png
-[rxC2S]: ../Media/rxC2S.png
-[rxGenScripts]: ../Media/rxGenScripts.png
-[rx11]: ../Media/rx11.png
-[rxAdv]: ../Media/rxAdv.png
-[rx1]: ../Media/rx1.png
-[rxd]: ../Media/rxd.png
-[rxSettings]: ../Media/rxSettings.png
-[rxD2]: ../Media/rxD2.png
-[rxAddSQL2]: ../Media/rxAddSQL2.png
-[rxc]: ../Media/rxc.png
-[rx3]: ../Media/rx3.png
-[rx4]: ../Media/rx4.png
-[rx5]: ../Media/rx5.png
-[rx6]: ../Media/rx6.png
-[rx7]: ../Media/rx7.png
-[rx8]: ../Media/rx8.png
-[rx9]: ../Media/rx9.png
-[rxa]: ../Media/rxa.png
-[rxb]: ../Media/rxb.png
-[rxSS]: ../Media/rxSS.png
-[rxp2]: ../Media/rxp2.png
-[rxp3]: ../Media/rxp3.png
-[rxSSL]: ../Media/rxSSL.png
-[rxS2]: ../Media/rxS2.png
-[rxNOT]: ../Media/rxNOT.png
-[rxNOT2]: ../Media/rxNOT2.png
-[rxb2]: ../Media/rxb2.png
-[rxNOT]: ../Media/rxNOT.png
-[rxNOT]: ../Media/rxNOT.png
-[rxNOT]: ../Media/rxNOT.png
-[rr1]: ../Media/rr1.png
-[rxNewCtx]: ../Media/rxNewCtx.png
-[rxCreateWSwithDB_2]: ../Media/rxCreateWSwithDB_2.png 
-[rxPrevDB]: ../Media/rxPrevDB.png
-[rxOverwrite]: ../Media/rxOverwrite.png
-[rxWebConfig]: ../Media/rxWebConfig.png
-[rxPWS]: ../Media/rxPWS.png
-[rxNewCtx]: ../Media/rxNewCtx.png
-[rxAddApiController]: ../Media/rxAddApiController.png
-[rxFFchrome]: ../Media/rxFFchrome.png
-[rxSettings]: ../Media/rxSettings.png
-[intro001]: ../Media/dntutmobil-intro-finished-web-app.png
-[setup001]: ../Media/dntutmobile-setup-run-sdk-setup-exe.png
-[setup002]: ../Media/dntutmobile-setup-web-pi.png
-[setup003]: ../Media/dntutmobile-setup-azure-account-1.png
-[rxWSnew]: ../Media/rxWSnew2.png
-[rxCreateWSwithDB]: ../Media/rxCreateWSwithDB.png
-[setup006]: ../Media/dntutmobile-setup-azure-site-003.png
-[setup007]: ../Media/dntutmobile-setup-azure-site-004.png
-[setup008]: ../Media/dntutmobile-setup-azure-site-005.png
-[setup009]: ../Media/dntutmobile-setup-azure-site-006.png
-[newapp001]: ../Media/dntutmobile-createapp-001.png
-[newapp002]: ../Media/dntutmobile-createapp-002.png
-[newapp003]: ../Media/dntutmobile-createapp-003.png
-[newapp004]: ../Media/dntutmobile-createapp-004.png
-[newapp004.1]: ../Media/dntutmobile-createapp-004.1.png
-[newapp004.2]: ../Media/dntutmobile-createapp-004.2.png
-[newapp005]: ../Media/newapp005.png
-[firsdeploy001]: ../Media/dntutmobile-deploy1-download-profile.png
-[firsdeploy002]: ../Media/dntutmobile-deploy1-save-profile.png
-[firsdeploy003]: ../Media/dntutmobile-deploy1-publish-001.png
-[firsdeploy004]: ../Media/dntutmobile-deploy1-publish-002.png
-[firsdeploy005]: ../Media/dntutmobile-deploy1-publish-003.png
-[firsdeploy006]: ../Media/dntutmobile-deploy1-publish-004.png
-[firsdeploy007]: ../Media/dntutmobile-deploy1-publish-005.png
-[firsdeploy008]: ../Media/dntutmobile-deploy1-publish-006.png
-[firsdeploy009]: ../Media/dntutmobile-deploy1-publish-007.png
-[adddb001]: ../Media/dntutmobile-adddatabase-001.png
-[adddb002]: ../Media/dntutmobile-adddatabase-002.png
-[addcode001]: ../Media/dntutmobile-controller-add-context-menu.png
-[addcode002]: ../Media/dntutmobile-controller-add-controller-dialog.png
-[addcode002.1]: ../Media/dntutmobile-controller-002.1.png
-[addcode003]: ../Media/dntutmobile-controller-add-controller-override-dialog.png
-[addcode003.1]: ../Media/dntutmobile-controller-explorer-globalasas-file.png
-[addcode004]: ../Media/dntutmobile-controller-modify-index-context.png
-[addcode005]: ../Media/dntutmobile-controller-add-contents-context-menu.png
-[addcode006]: ../Media/dntutmobile-controller-add-new-item-style-sheet.png
-[addcode007]: ../Media/dntutmobile-controller-modify-bundleconfig-context.png
-[addcode008]: ../Media/dntutmobile-migrations-package-manager-menu.png
-[addcode009]: ../Media/dntutmobile-migrations-package-manager-console.png
-[addwebapi001]: ../Media/dntutmobile-webapi-add-folder-context-menu.png
-[addwebapi002]: ../Media/dntutmobile-webapi-add-controller-context-menu.png
-[addwebapi003]: ../Media/dntutmobile-webapi-add-controller-dialog.png
-[addwebapi004]: ../Media/dntutmobile-webapi-added-contact.png
-[addwebapi005]: ../Media/dntutmobile-webapi-new-browser.png
-[addwebapi006]: ../Media/dntutmobile-webapi-save-returned-contacts.png
-[addwebapi007]: ../Media/dntutmobile-webapi-contacts-in-notepad.png
-[lastdeploy001]: ../Media/dntutmobile-web-publish-settings.png
-[rxf]: ../Media/rxf.png
+
+[rx2]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rx2.png
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[rx5]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rx5.png
+[rx6]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rx6.png
+[rx7]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rx7.png
+[rx8]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rx8.png
+[rx9]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rx9.png
+
+[rxb]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rxb.png
+
+
+
+[rxSSL]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rxSSL.png
+
+[rxNOT]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rxNOT.png
+[rxNOT2]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rxNOT2.png
+
+[rxNOT]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rxNOT.png
+[rxNOT]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rxNOT.png
+[rxNOT]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rxNOT.png
+[rr1]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rr1.png
+
+
+[rxPrevDB]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rxPrevDB.png
+
+
+
+
+
+
+
+
+
+
+
+[rxWSnew]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rxWSnew2.png
+[rxCreateWSwithDB]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/rxCreateWSwithDB.png
+
+[setup007]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/dntutmobile-setup-azure-site-004.png
+
+
+
+
+
+[newapp004]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/dntutmobile-createapp-004.png
+
+
+
+
+
+[firsdeploy003]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/dntutmobile-deploy1-publish-001.png
+
+
+
+
+
+
+
+[adddb002]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/dntutmobile-adddatabase-002.png
+[addcode001]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/dntutmobile-controller-add-context-menu.png
+
+
+
+
+
+
+
+
+[addcode008]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/dntutmobile-migrations-package-manager-menu.png
+[addcode009]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/dntutmobile-migrations-package-manager-console.png
+
+
+
+
+
+
+
+
+
 [Important information about ASP.NET in Windows Azure Web Sites]: #aspnetwindowsazureinfo
 [Next steps]: #nextsteps
 
-[DeployedWebSite]: ../Media/DeployedWebSite.png
-[DownloadPublishProfile]: ../Media/DownloadPublishProfile.png
-[ImportPublishSettings]: ../Media/ImportPublishSettings.png
-[ImportPublishProfile]: ../Media/ImportPublishProfile.png
-[InternetAppTemplate]: ../Media/InternetAppTemplate.png
-[NewMVC4WebApp]: ../Media/NewMVC4WebApp.png
-[NewVSProject]: ../Media/NewVSProject.png
-[PublishOutput]: ../Media/PublishOutput.png
-[PublishVSSolution]: ../Media/PublishVSSolution.png
-[PublishWebSettingsTab]: ../Media/PublishWebSettingsTab.png
-[PublishWebStartPreview]: ../Media/PublishWebStartPreview.png
-[PublishWebStartPreviewOutput]: ../Media/PublishWebStartPreviewOutput.png
-[SavePublishSettings]: ../Media/SavePublishSettings.png
-[ValidateConnection]: ../Media/ValidateConnection.png
-[ValidateConnectionSuccess]: ../Media/ValidateConnectionSuccess.png
-[WebPIAzureSdk20NetVS12]: ../Media/WebPIAzureSdk20NetVS12.png
-[WebSiteNew]: ../Media/WebSiteNew.png
-[WebSiteStatusRunning]: ../Media/WebSiteStatusRunning.png
 
-[WebPIAzureSdk20NetVS12]: ../Media/WebPIAzureSdk20NetVS12.png
-[rzAddWAsub]: ../Media/rzAddWAsub.png
-[rzDownLoad]: ../Media/rzDownLoad.png
-[rzDown2]: ../Media/rzDown2.png
-[rzImp]: ../Media/rzImp.png
+
+[ImportPublishSettings]: ./media/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database-vs2013/ImportPublishSettings.png
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

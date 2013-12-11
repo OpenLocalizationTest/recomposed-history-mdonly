@@ -25,7 +25,7 @@ You'll build a simple contact list web application that is built on ASP.NET MVC 
 
 ![screenshot of web site][intro001]
 
-<div chunk="../../Shared/Chunks/create-account-and-websites-note.md" />
+[WACOM.INCLUDE [create-account-and-websites-note](../includes/create-account-and-websites-note.md)]
 
 In this tutorial:
 
@@ -76,7 +76,7 @@ SQL Database is a cloud-based relational database service that is built on SQL S
 
 	The **New Web Site - Custom Create** wizard opens. 
 
-3. In the **New Web Site** step of the wizard, enter a string in the **URL** box to use as the unique URL for your application. The complete URL will consist of what you enter here plus the suffix that you see below the text box. The illustration shows "contactmgr22", but that URL is probably taken so you’ll have to choose a different one.
+3. In the **New Web Site** step of the wizard, enter a string in the **URL** box to use as the unique URL for your application. The complete URL will consist of what you enter here plus the suffix that you see below the text box. The illustration shows "contactmgr22", but that URL is probably taken so you'll have to choose a different one.
 
 1. In the **Region** drop-down list, choose the region that is closest to you.<br/>
 
@@ -96,7 +96,7 @@ SQL Database is a cloud-based relational database service that is built on SQL S
 
 9. Click the arrow that points to the right at the bottom of the box.<br/>
 
-10. Enter an administrator **LOGIN NAME** and **PASSWORD**. If you selected **New SQL Database server** you aren't entering an existing name and password here, you're entering a new name and password that you're defining now to use later when you access the database. If you selected a SQL Server you’ve created previously, you’ll be prompted for the password to the previous SQL Server account name you created. For this tutorial, we won't check the **Advanced ** box. The **Advanced ** box allows you to set the DB size (the default is 1 GB but you can increase this to 150 GB) and the collation.
+10. Enter an administrator **LOGIN NAME** and **PASSWORD**. If you selected **New SQL Database server** you aren't entering an existing name and password here, you're entering a new name and password that you're defining now to use later when you access the database. If you selected a SQL Server you've created previously, you'll be prompted for the password to the previous SQL Server account name you created. For this tutorial, we won't check the **Advanced ** box. The **Advanced ** box allows you to set the DB size (the default is 1 GB but you can increase this to 150 GB) and the collation.
 
 11. Click the check mark at the bottom of the box to indicate you're finished.
 
@@ -197,25 +197,25 @@ This is all you need to do for now to create the application that you'll deploy 
 
     a. In the **Import Publish Profile** dialog box, click **Add Windows Azure subscription**.<br/> 
     
-	![add win az sub](../Media/rzAddWAsub.png)
+	![add win az sub](./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rzAddWAsub.png)
     
 	b. In the **Import Windows Azure Subscriptions** dialog box, click **Download subscription file**.<br/>
     
-	![download sub](../Media/rzDownLoad.png)
+	![download sub](./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rzDownLoad.png)
     
 	c. In your browser window, save the *.publishsettings* file.<br/>
     
-	![download pub file](../Media/rzDown2.png)
+	![download pub file](./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rzDown2.png)
     
-	<div chunk="../../shared/chunks/publishsettingsfilewarningchunk.md" />
+	[WACOM.INCLUDE [publishsettingsfilewarningchunk](../includes/publishsettingsfilewarningchunk.md)]
     
 	d. In the **Import Windows Azure Subscriptions** dialog box, click **Browse** and navigate to the *.publishsettings* file.<br/>
     
-	![download sub](../Media/rzDownLoad.png)
+	![download sub](./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rzDownLoad.png)
     
 	e. Click **Import**.<br/>
     
-	![import](../Media/rzImp.png)
+	![import](./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rzImp.png)
 
 7. In the **Import Publish Profile** dialog box, select **Import from a Windows Azure web site**, select your web site from the drop-down list, and then click **OK**.<br/>
 
@@ -650,7 +650,7 @@ To:
 
 <h2><a name="xsrf"></a><span class="short-header">XSRF</span>Add XSRF Protection</h2>
 
-Cross-site request forgery (also known as XSRF or CSRF) is an attack against web-hosted applications whereby a malicious web site can influence the interaction between a client browser and a web site trusted by that browser. These attacks are made possible because web browsers will send authentication tokens automatically with every request to a web site. The canonical example is an authentication cookie, such as ASP.NET’s Forms Authentication ticket. However, web sites which use any persistent authentication mechanism (such as Windows Authentication, Basic, and so forth) can be targeted by these attacks.
+Cross-site request forgery (also known as XSRF or CSRF) is an attack against web-hosted applications whereby a malicious web site can influence the interaction between a client browser and a web site trusted by that browser. These attacks are made possible because web browsers will send authentication tokens automatically with every request to a web site. The canonical example is an authentication cookie, such as ASP.NET's Forms Authentication ticket. However, web sites which use any persistent authentication mechanism (such as Windows Authentication, Basic, and so forth) can be targeted by these attacks.
 
 An XSRF attack is distinct from a phishing attack. Phishing attacks require interaction from the victim. In a phishing attack, a malicious web site will mimic the target web site, and the victim is fooled into providing sensitive information to the attacker. In an XSRF attack, there is often no interaction necessary from the victim. Rather, the attacker is relying on the browser automatically sending all relevant cookies to the destination web site.
 
@@ -815,174 +815,174 @@ Please leave feedback on what you liked or what you would like to see improved, 
 [setupwindowsazureenv]: #bkmk_setupwindowsazure
 [createapplication]: #bkmk_createmvc4app
 [deployapp1]: #bkmk_deploytowindowsazure1
-[deployapp11]: #bkmk_deploytowindowsazure11
+
 [adddb]: #bkmk_addadatabase
 [addcontroller]: #bkmk_addcontroller
 [addwebapi]: #bkmk_addwebapi
 [deploy2]: #bkmk_deploydatabaseupdate
 
 <!-- links -->
-[WTEInstall]: http://go.microsoft.com/fwlink/?LinkID=208120
-[MVC4Install_20012]: http://go.microsoft.com/fwlink/?LinkID=275131
-[VS2012ExpressForWebInstall]: http://www.microsoft.com/web/gallery/install.aspx?appid=VWD11_BETA&prerelease=true
-[windowsazure.com]: http://www.windowsazure.com
-[WindowsAzureDataStorageOfferings]: http://social.technet.microsoft.com/wiki/contents/articles/data-storage-offerings-on-the-windows-azure-platform.aspx
-[GoodFitForAzure]: http://msdn.microsoft.com/en-us/library/windowsazure/hh694036(v=vs.103).aspx
-[NetAppWithSQLAzure]: http://www.windowsazure.com/en-us/develop/net/net-app-with-sql-azure
-[MultiTierApp]: http://www.windowsazure.com/en-us/develop/net/tutorials/multi-tier-application/
-[HybridApp]: http://www.windowsazure.com/en-us/develop/net/tutorials/hybrid-solution/
-[SQLAzureHowTo]: https://www.windowsazure.com/en-us/develop/net/how-to-guides/sql-azure/
-[SQLAzureDataMigration]: http://msdn.microsoft.com/en-us/library/windowsazure/hh694043(v=vs.103).aspx
-[ASP.NETFormsAuth]: http://msdn.microsoft.com/en-us/library/windowsazure/hh508993.aspx
-[CommonTasks]: http://windowsazure.com/develop/net/common-tasks/
-[TSQLReference]: http://msdn.microsoft.com/en-us/library/windowsazure/ee336281.aspx
-[SQLAzureGuidelines]: http://msdn.microsoft.com/en-us/library/windowsazure/ee336245.aspx
-[SQLAzureDataMigrationBlog]: http://blogs.msdn.com/b/ssdt/archive/2012/04/19/migrating-a-database-to-sql-azure-using-ssdt.aspx
-[SQLAzureConnPoolErrors]: http://blogs.msdn.com/b/adonet/archive/2011/11/05/minimizing-connection-pool-errors-in-sql-azure.aspx
-[UniversalProviders]: http://nuget.org/packages/System.Web.Providers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 [EFCodeFirstMVCTutorial]: http://www.asp.net/mvc/tutorials/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application
-[EFCFMigrations]: http://msdn.microsoft.com/en-us/library/hh770484
+
 
 <!-- images-->
-[rxE]: ../Media/rxE.png
-[rx2]: ../Media/rx2.png
-[rxP]: ../Media/rxP.png
-[rx22]: ../Media/rx22.png
-[rxFBapp]: ../Media/rxFBapp.png
-[rxFB]: ../Media/rxFB.png
-[rxFBt]: ../Media/rxFBt.png
-[rxSTD]: ../Media/rxSTD.png
-[rxUid]: ../Media/rxUid.png
-[rxRoleID]: ../Media/rxRoleID.png
-[rxUR]: ../Media/rxUR.png
-[rxC2S]: ../Media/rxC2S.png
-[rxGenScripts]: ../Media/rxGenScripts.png
-[rx11]: ../Media/rx11.png
-[rxAdv]: ../Media/rxAdv.png
-[rx1]: ../Media/rx1.png
-[rxd]: ../Media/rxd.png
-[rxSettings]: ../Media/rxSettings.png
-[rxD2]: ../Media/rxD2.png
-[rxAddSQL2]: ../Media/rxAddSQL2.png
-[rxc]: ../Media/rxc.png
-[rx3]: ../Media/rx3.png
-[rx4]: ../Media/rx4.png
-[rx5]: ../Media/rx5.png
-[rx6]: ../Media/rx6.png
-[rx7]: ../Media/rx7.png
-[rx8]: ../Media/rx8.png
-[rx9]: ../Media/rx9.png
-[rxa]: ../Media/rxa.png
-[rxb]: ../Media/rxb.png
-[rxSS]: ../Media/rxSS.png
-[rxp2]: ../Media/rxp2.png
-[rxp3]: ../Media/rxp3.png
-[rxSSL]: ../Media/rxSSL.png
-[rxS2]: ../Media/rxS2.png
-[rxNOT]: ../Media/rxNOT.png
-[rxNOT2]: ../Media/rxNOT2.png
-[rxb2]: ../Media/rxb2.png
-[rxz]: ../Media/rxz.png
-[rxzz]: ../Media/rxzz.png
-[rxz2]: ../Media/rxz2.png
-[rxz3]: ../Media/rxz3.png
-[rxStyle]: ../Media/rxStyle.png
-[rxz4]: ../Media/rxz4.png
-[rxz44]: ../Media/rxz44.png
-[rzAddWAsub]: ../Media/rzAddWAsub.png
-[rzDownLoad]: ../Media/rzDownLoad.png
-[rzDown2]: ../Media/rzDown2.png
-[rzImp]: ../Media/rzImp.png
-[rx]: ../Media/rx.png
-[rx]: ../Media/rx.png
-[rx]: ../Media/rx.png
-[rx]: ../Media/rx.png
-[rx]: ../Media/rx.png
+[rxE]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxE.png
 
-[rxCreateWSwithDB_2]: ../Media/rxCreateWSwithDB_2.png
-[rxNewCtx]: ../Media/rxNewCtx.png
-[rxCreateWSwithDB_2]: ../Media/rxCreateWSwithDB_2.png 
-[rxPrevDB]: ../Media/rxPrevDB.png
-[rxOverwrite]: ../Media/rxOverwrite.png
-[rxWebConfig]: ../Media/rxWebConfig.png
-[rxPWS]: ../Media/rxPWS.png
-[rxNewCtx]: ../Media/rxNewCtx.png
-[rxAddApiController]: ../Media/rxAddApiController.png
-[rxFFchrome]: ../Media/rxFFchrome.png
-[rxSettings]: ../Media/rxSettings.png
-[intro001]: ../Media/dntutmobil-intro-finished-web-app.png
-[setup001]: ../Media/dntutmobile-setup-run-sdk-setup-exe.png
-[setup002]: ../Media/dntutmobile-setup-web-pi.png
-[setup003]: ../Media/dntutmobile-setup-azure-account-1.png
-[rxWSnew]: ../Media/rxWSnew.png
-[rxCreateWSwithDB]: ../Media/rxCreateWSwithDB.png
-[setup006]: ../Media/dntutmobile-setup-azure-site-003.png
-[setup007]: ../Media/dntutmobile-setup-azure-site-004.png
-[setup008]: ../Media/dntutmobile-setup-azure-site-005.png
+[rxP]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxP.png
+[rx22]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rx22.png
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[rxb2]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxb2.png
+[rxz]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxz.png
+[rxzz]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxzz.png
+[rxz2]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxz2.png
+[rxz3]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxz3.png
+[rxStyle]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxStyle.png
+[rxz4]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxz4.png
+[rxz44]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxz44.png
+
+
+
+
+
+
+
+
+
+
+
+[rxNewCtx]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxNewCtx.png
+ 
+[rxPrevDB]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxPrevDB.png
+[rxOverwrite]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxOverwrite.png
+
+[rxPWS]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxPWS.png
+[rxNewCtx]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxNewCtx.png
+[rxAddApiController]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxAddApiController.png
+[rxFFchrome]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxFFchrome.png
+
+[intro001]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobil-intro-finished-web-app.png
+
+
+
+
+[rxCreateWSwithDB]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/rxCreateWSwithDB.png
+
+[setup007]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobile-setup-azure-site-004.png
+
 [setup009]: ../Media/dntutmobile-setup-azure-site-006.png
-[newapp001]: ../Media/dntutmobile-createapp-001.png
-[newapp002]: ../Media/dntutmobile-createapp-002.png
-[newapp003]: ../Media/dntutmobile-createapp-003.png
-[newapp004]: ../Media/dntutmobile-createapp-004.png
-[newapp004.1]: ../Media/dntutmobile-createapp-004.1.png
-[newapp004.2]: ../Media/dntutmobile-createapp-004.2.png
-[newapp005]: ../Media/newapp005.png
-[firsdeploy001]: ../Media/dntutmobile-deploy1-download-profile.png
-[firsdeploy002]: ../Media/dntutmobile-deploy1-save-profile.png
-[firsdeploy003]: ../Media/dntutmobile-deploy1-publish-001.png
-[firsdeploy004]: ../Media/dntutmobile-deploy1-publish-002.png
-[firsdeploy005]: ../Media/dntutmobile-deploy1-publish-003.png
-[firsdeploy006]: ../Media/dntutmobile-deploy1-publish-004.png
-[firsdeploy007]: ../Media/dntutmobile-deploy1-publish-005.png
-[firsdeploy008]: ../Media/dntutmobile-deploy1-publish-006.png
-[firsdeploy009]: ../Media/dntutmobile-deploy1-publish-007.png
-[adddb001]: ../Media/dntutmobile-adddatabase-001.png
-[adddb002]: ../Media/dntutmobile-adddatabase-002.png
-[addcode001]: ../Media/dntutmobile-controller-add-context-menu.png
-[addcode002]: ../Media/dntutmobile-controller-add-controller-dialog.png
-[addcode002.1]: ../Media/dntutmobile-controller-002.1.png
-[addcode003]: ../Media/dntutmobile-controller-add-controller-override-dialog.png
-[addcode003.1]: ../Media/dntutmobile-controller-explorer-globalasas-file.png
-[addcode004]: ../Media/dntutmobile-controller-modify-index-context.png
-[addcode005]: ../Media/dntutmobile-controller-add-contents-context-menu.png
-[addcode006]: ../Media/dntutmobile-controller-add-new-item-style-sheet.png
-[addcode007]: ../Media/dntutmobile-controller-modify-bundleconfig-context.png
-[addcode008]: ../Media/dntutmobile-migrations-package-manager-menu.png
-[addcode009]: ../Media/dntutmobile-migrations-package-manager-console.png
-[addwebapi001]: ../Media/dntutmobile-webapi-add-folder-context-menu.png
-[addwebapi002]: ../Media/dntutmobile-webapi-add-controller-context-menu.png
-[addwebapi003]: ../Media/dntutmobile-webapi-add-controller-dialog.png
-[addwebapi004]: ../Media/dntutmobile-webapi-added-contact.png
-[addwebapi005]: ../Media/dntutmobile-webapi-new-browser.png
-[addwebapi006]: ../Media/dntutmobile-webapi-save-returned-contacts.png
-[addwebapi007]: ../Media/dntutmobile-webapi-contacts-in-notepad.png
-[lastdeploy001]: ../Media/dntutmobile-web-publish-settings.png
-[rxf]: ../Media/rxf.png
+
+[newapp002]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobile-createapp-002.png
+
+[newapp004]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobile-createapp-004.png
+
+
+
+
+
+
+
+
+
+[firsdeploy007]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobile-deploy1-publish-005.png
+
+[firsdeploy009]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobile-deploy1-publish-007.png
+[adddb001]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobile-adddatabase-001.png
+[adddb002]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobile-adddatabase-002.png
+[addcode001]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobile-controller-add-context-menu.png
+[addcode002]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobile-controller-add-controller-dialog.png
+
+
+
+[addcode004]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobile-controller-modify-index-context.png
+[addcode005]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobile-controller-add-contents-context-menu.png
+
+[addcode007]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobile-controller-modify-bundleconfig-context.png
+[addcode008]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobile-migrations-package-manager-menu.png
+[addcode009]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobile-migrations-package-manager-console.png
+
+
+
+[addwebapi004]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobile-webapi-added-contact.png
+
+[addwebapi006]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobile-webapi-save-returned-contacts.png
+[addwebapi007]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/dntutmobile-webapi-contacts-in-notepad.png
+
+
 [Add XSRF Protection]: #xsrf
 
 
-[WebPIAzureSdk20NetVS12]: ../Media/WebPIAzureSdk20NetVS12.png
-[rxf]: ../Media/rxf.png
+[WebPIAzureSdk20NetVS12]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/WebPIAzureSdk20NetVS12.png
+
 [Add XSRF Protection]: #xsrf
-[ClickWebSite]: ../Media/ClickWebSite.png
-[CreateWebsite]: ../Media/CreateWebsite.png
-[CreateWebsite]: ../Media/CreateWebsite.png
-[DeployedWebSite]: ../Media/DeployedWebSite.png
-[DownloadPublishProfile]: ../Media/DownloadPublishProfile.png
-[ImportPublishSettings]: ../Media/ImportPublishSettings.png
-[ImportPublishProfile]: ../Media/ImportPublishProfile.png
-[InternetAppTemplate]: ../Media/InternetAppTemplate.png
-[NewMVC4WebApp]: ../Media/NewMVC4WebApp.png
-[NewVSProject]: ../Media/NewVSProject.png
-[PublishOutput]: ../Media/PublishOutput.png
-[PublishVSSolution]: ../Media/PublishVSSolution.png
-[PublishWebSettingsTab]: ../Media/PublishWebSettingsTab.png
-[PublishWebStartPreview]: ../Media/PublishWebStartPreview.png
-[PublishWebStartPreviewOutput]: ../Media/PublishWebStartPreviewOutput.png
-[SavePublishSettings]: ../Media/SavePublishSettings.png
-[ValidateConnection]: ../Media/ValidateConnection.png
-[ValidateConnectionSuccess]: ../Media/ValidateConnectionSuccess.png
-[WebPIAzureSdk20NetVS12]: ../Media/WebPIAzureSdk20NetVS12.png
-[WebSiteNew]: ../Media/WebSiteNew.png
-[WebSiteStatusRunning]: ../Media/WebSiteStatusRunning.png
+
+
+
+
+
+[ImportPublishSettings]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/ImportPublishSettings.png
+[ImportPublishProfile]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/ImportPublishProfile.png
+
+
+
+
+[PublishVSSolution]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/PublishVSSolution.png
+
+
+
+
+[ValidateConnection]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/ValidateConnection.png
+
+[WebPIAzureSdk20NetVS12]: ./media/web-sites-dotnet-rest-service-aspnet-api-sql-database/WebPIAzureSdk20NetVS12.png
+
+
 

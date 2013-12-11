@@ -33,7 +33,7 @@ The following illustration shows the completed application:
 4. [Deploy the application to Windows Azure][]
 5. [Next steps][]
 
-<div chunk="../chunks/install-sdk-2012-only.md" />
+[WACOM.INCLUDE [install-sdk-2012-only](../includes/install-sdk-2012-only.md)]
 
 <h2><a name="setupwindowsazure"></a><span class="short-header">Create site</span>Create a web site</h2>
 
@@ -87,25 +87,25 @@ The **Import Publish Profile** dialog box appears.
     
 	a.  In the **Import Publish Profile** dialog box, click **Import from a Windows Azure web site**, and then click **Add Windows Azure subscription**.<br/> 
     
-	![add Windows Azure subscription](../Media/rzAddWAsub.png)
+	![add Windows Azure subscription](./media/web-sites-dotnet-get-started-vs2012/rzAddWAsub.png)
     
 	b.  In the **Import Windows Azure Subscriptions** dialog box, click **Download subscription file**.<br/>
     
-	![download subscription file](../Media/rzDownLoadDownload.png)
+	![download subscription file](./media/web-sites-dotnet-get-started-vs2012/rzDownLoadDownload.png)
     
 	c.  In your browser window, save the *.publishsettings* file.<br/>
     
-	![download .publishsettings file](../Media/rzDown2.png)<br/>
+	![download .publishsettings file](./media/web-sites-dotnet-get-started-vs2012/rzDown2.png)<br/>
     
-	<div chunk="../../shared/chunks/publishsettingsfilewarningchunk.md" />
+	[WACOM.INCLUDE [publishsettingsfilewarningchunk](../includes/publishsettingsfilewarningchunk.md)]
 
 	d.  In the **Import Windows Azure Subscriptions** dialog box, click **Browse** and navigate to the *.publishsettings* file.<br/>
 
-    ![download sub](../Media/rzDownLoadBrowse.png)
+    ![download sub](./media/web-sites-dotnet-get-started-vs2012/rzDownLoadBrowse.png)
 
 	e.  Click **Import**.<br/>
     
-	![import](../Media/rzImp.png)
+	![import](./media/web-sites-dotnet-get-started-vs2012/rzImp.png)
 
 7. In the **Import Publish Profile** dialog box, select **Import from a Windows Azure web site**, select your web site from the drop-down list, and then click **OK**.<br/>
 ![Import Publish Profile][ImportPublishProfile]
@@ -134,27 +134,27 @@ In this tutorial, you've seen how to deploy a simple web application to a Window
 <h3>How to manage a web site</h3>
 When you're done with the site, you can delete it, and at times you might want to take it offline temporarily or change site settings. You can do some of these functions right from **Server Explorer** in Visual Studio.
 
-![Windows Azure Web Sites in Server Explorer](../Media/ServerExplorerWSSettings.png)
+![Windows Azure Web Sites in Server Explorer](./media/web-sites-dotnet-get-started-vs2012/ServerExplorerWSSettings.png)
 
-![Web Site Configuration in Visual Studio](../Media/WSConfigurationInVS.png)
+![Web Site Configuration in Visual Studio](./media/web-sites-dotnet-get-started-vs2012/WSConfigurationInVS.png)
 
 To delete your web site, you can use the Windows Azure Management Portal. The following screen shot shows **Stop**, **Restart**, and **Delete** buttons in the **Dashboard** tab of the management portal.
 
-![Management Portal Dashboard Tab](../Media/MPStopStartDelete.png)
+![Management Portal Dashboard Tab](./media/web-sites-dotnet-get-started-vs2012/MPStopStartDelete.png)
 
 You can change site settings on the **Configure** tab. For more information, see [How to Manage Web Sites](/en-us/manage/services/web-sites/how-to-manage-websites/).
 
 <h3>How to scale a web site</h3>
 When your site is public and it starts to get more traffic, response times might slow down. To remedy that, you can easily add server resources in the **Scale** tab of the management portal.
 
-![Management Portal Scale Tab](../Media/MPScale.png)
+![Management Portal Scale Tab](./media/web-sites-dotnet-get-started-vs2012/MPScale.png)
 
 For more information, see [How to Scale a Web Site](/en-us/manage/services/web-sites/how-to-scale-websites/). (Adding server resources to scale a web site is not free.)
 
 <h3>How to troubleshoot a web site</h3>
 You might want to look at trace or log output for help with troubleshooting. Visual Studio provides built-in tooling to make it easy to view Windows Azure logs as they are generated in real time.
 
-![Logs in Visual Studio](../Media/LogsInVS.png)
+![Logs in Visual Studio](./media/web-sites-dotnet-get-started-vs2012/LogsInVS.png)
 
 For more information, see [Troubleshooting Windows Azure Web Sites in Visual Studio](/en-us/develop/net/tutorials/troubleshoot-web-sites-in-visual-studio/).
 
@@ -170,31 +170,31 @@ In some scenarios you might want to run your application in a Windows Azure Clou
 [Deploy the application to Windows Azure]: #deploytowindowsazure
 [Next steps]: #nextsteps
 [PreviewPortal]: http://manage.windowsazure.com
-[MVC4Install]: http://www.asp.net/mvc/mvc4
-[windowsazure.com]: http://www.windowsazure.com
-[WebSitesManagement]: /en-us/manage/services/web-sites/
+
+
+
 [WebWithSQL]: /en-us/develop/net/tutorials/web-site-with-sql-database/
 
-[AppRunningLocally]: ../Media/AppRunningLocally.png
-[ClickQuickCreate]: ../Media/ClickQuickCreate.png
-[ClickWebSite]: ../Media/ClickWebSite.png
-[CreateWebsite]: ../Media/CreateWebsite.png
-[CreateWebsite]: ../Media/CreateWebsite.png
-[DeployedWebSite]: ../Media/DeployedWebSite.png
-[DownloadPublishProfile]: ../Media/DownloadPublishProfile.png
-[ImportPublishSettings]: ../Media/ImportPublishSettings.png
-[ImportPublishProfile]: ../Media/ImportPublishProfile.png
-[InternetAppTemplate]: ../Media/InternetAppTemplate.png
-[NewMVC4WebApp]: ../Media/NewMVC4WebApp.png
-[NewVSProject]: ../Media/NewVSProject.png
-[PublishOutput]: ../Media/PublishOutput.png
-[PublishVSSolution]: ../Media/PublishVSSolution.png
-[PublishWebSettingsTab]: ../Media/PublishWebSettingsTab.png
-[PublishWebStartPreview]: ../Media/PublishWebStartPreview.png
-[PublishWebStartPreviewOutput]: ../Media/PublishWebStartPreviewOutput.png
-[SavePublishSettings]: ../Media/SavePublishSettings.png
-[ValidateConnection]: ../Media/ValidateConnection.png
-[ValidateConnectionSuccess]: ../Media/ValidateConnectionSuccess.png
-[WebPIAzureSdk20NetVS12]: ../Media/WebPIAzureSdk20NetVS12.png
-[WebSiteNew]: ../Media/WebSiteNew.png
-[WebSiteStatusRunning]: ../Media/WebSiteStatusRunning.png
+[AppRunningLocally]: ./media/web-sites-dotnet-get-started-vs2012/AppRunningLocally.png
+[ClickQuickCreate]: ./media/web-sites-dotnet-get-started-vs2012/ClickQuickCreate.png
+
+[CreateWebsite]: ./media/web-sites-dotnet-get-started-vs2012/CreateWebsite.png
+[CreateWebsite]: ./media/web-sites-dotnet-get-started-vs2012/CreateWebsite.png
+[DeployedWebSite]: ./media/web-sites-dotnet-get-started-vs2012/DeployedWebSite.png
+
+[ImportPublishSettings]: ./media/web-sites-dotnet-get-started-vs2012/ImportPublishSettings.png
+[ImportPublishProfile]: ./media/web-sites-dotnet-get-started-vs2012/ImportPublishProfile.png
+[InternetAppTemplate]: ./media/web-sites-dotnet-get-started-vs2012/InternetAppTemplate.png
+[NewMVC4WebApp]: ./media/web-sites-dotnet-get-started-vs2012/NewMVC4WebApp.png
+[NewVSProject]: ./media/web-sites-dotnet-get-started-vs2012/NewVSProject.png
+[PublishOutput]: ./media/web-sites-dotnet-get-started-vs2012/PublishOutput.png
+[PublishVSSolution]: ./media/web-sites-dotnet-get-started-vs2012/PublishVSSolution.png
+[PublishWebSettingsTab]: ./media/web-sites-dotnet-get-started-vs2012/PublishWebSettingsTab.png
+[PublishWebStartPreview]: ./media/web-sites-dotnet-get-started-vs2012/PublishWebStartPreview.png
+[PublishWebStartPreviewOutput]: ./media/web-sites-dotnet-get-started-vs2012/PublishWebStartPreviewOutput.png
+
+[ValidateConnection]: ./media/web-sites-dotnet-get-started-vs2012/ValidateConnection.png
+[ValidateConnectionSuccess]: ./media/web-sites-dotnet-get-started-vs2012/ValidateConnectionSuccess.png
+
+[WebSiteNew]: ./media/web-sites-dotnet-get-started-vs2012/WebSiteNew.png
+[WebSiteStatusRunning]: ./media/web-sites-dotnet-get-started-vs2012/WebSiteStatusRunning.png

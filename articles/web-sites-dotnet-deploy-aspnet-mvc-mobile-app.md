@@ -22,7 +22,7 @@ For this tutorial, you'll add mobile features to the simple conference-listing a
 
 ![MVC4 conference application main page.][AppMainPage]
 
-<div chunk="../../Shared/Chunks/create-account-and-websites-note.md" />
+[WACOM.INCLUDE [create-account-and-websites-note](../includes/create-account-and-websites-note.md)]
 
 <h2>Setting up the development environment</h2>
 
@@ -333,7 +333,7 @@ You can disable consistent display mode in a view by setting *RequireConsistentD
     }
 <h2><a name="bkmk_mobilespeakersview"></a>Create a Mobile Speakers View</h2>
 
-As you just saw, the Speakers view is readable, but the links are small and are difficult to tap on a mobile device. In this section, you'll create a mobile-specific Speakers view that looks like a modern mobile application — it displays large, easy-to-tap links and contains a search box to quickly find speakers.
+As you just saw, the Speakers view is readable, but the links are small and are difficult to tap on a mobile device. In this section, you'll create a mobile-specific Speakers view that looks like a modern mobile application ??? it displays large, easy-to-tap links and contains a search box to quickly find speakers.
 
 1. Copy *AllSpeakers.cshtml* to *AllSpeakers.Mobile.cshtml.* Open the *AllSpeakers.Mobile.cshtml* file and remove the &lt;h2&gt; heading element.
 2. In the **&lt;ul&gt;** tag, add the data-role attribute and set its value to *listview*. Like other *data-** attributes, *data-role="listview"* makes the large list items easier to tap. This is what the completed markup looks like:
@@ -504,16 +504,16 @@ The **Publish Web** wizard opens.
 The **Import Publish Profile** dialog box appears.
 1. If you have not previously added your Windows Azure subscription in Visual Studio, perform the following steps. In these steps you add your subscription so that the drop-down list under **Import from a Windows Azure web site** will include your web site.
     1. In the **Import Publish Profile** dialog box, click **Add Windows Azure subscription**.<br/> 
-    ![add win az sub](../Media/rzAddWAsub.png)
+    ![add win az sub](./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/rzAddWAsub.png)
     1. In the **Import Windows Azure Subscriptions** dialog box, click **Download subscription file**.<br/>
-    ![download sub](../Media/rzDownLoad.png)
+    ![download sub](./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/rzDownLoad.png)
     1. In your browser window, save the *.publishsettings* file.<br/>
-    ![download pub file](../Media/rzDown2.png)
-    <div chunk="../../shared/chunks/publishsettingsfilewarningchunk.md" />
+    ![download pub file](./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/rzDown2.png)
+    [WACOM.INCLUDE [publishsettingsfilewarningchunk](../includes/publishsettingsfilewarningchunk.md)]
     1. In the **Import Windows Azure Subscriptions** dialog box, click **Browse** and navigate to the *.publishsettings* file.<br/>
-    ![download sub](../Media/rzDownLoad.png)
+    ![download sub](./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/rzDownLoad.png)
     1. Click **Import**.<br/>
-    ![import](../Media/rzImp.png)
+    ![import](./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/rzImp.png)
 7. In the **Import Publish Profile** dialog box, select **Import from a Windows Azure web site**, select your web site from the drop-down list, and then click **OK**.<br/>
 ![Import Publish Profile][ImportPublishProfile]
 
@@ -555,53 +555,53 @@ You can test your live web site using the phone emulator by browsing to the site
 [Deploy the Application to the Windows Azure Web Site]: #bkmk_deployapplciation
 
 <!-- Images -->
-[CreateWebSite1]: ../media/depoly_mobile_new_website_1.png
-[CreateWebSite2]: ../media/depoly_mobile_new_website_2.png
-[CreateWebSite3]: ../media/depoly_mobile_new_website_3.png
-[CreateWebSite4]: ../media/depoly_mobile_new_website_4.png
-[AppMainPage]: ../media/FinishedAPPMainScreen.png
-[PropertiesPopup]: ../media/propertiespopup.png
-[BrowseByTagWithCallout]:../media/BrowseByTagWithCallout.png
-[ASPNetPage]: ../media/ASPNetPage.png
-[Overrideviews1]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p2m_layouttags_mobile_thumb.png
-[Overrideviews2]: ../media/Windows-Live-Writer_ASP_NET-MVC-4-Mobile-Features_D2FF_p2_layoutTagsDesktop_thumb.png
-[jquery1]: ../media/deploy-mobile-open-packagmanager.png
-[jquery2]: ../media/deploy-mobile-open-install-jquey.png
-[jquery3]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_afternuget_thumb.png
-[jquery4]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_desktopviewwithmobilelink_thumb.png
-[jquery5]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_desktopviewwithmobilelink_thumb.png
-[jquery6]: ../media/Windows-Live-Writer_ASP_NET-MVC-4-Mobile-Features_D2FF_p3_desktopBrowser_thumb.png
-[SpeakerList1]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_speakersdesktop_thumb.png
-[SpeakerList2]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_speakersconsistent_thumb.png
-[SpeakerList3]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_updatedspeakerview1_thumb.png
-[SpeakerList4]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_ps_data_filter_thumb.png
-[MobileSpeakersView1]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_updatedspeakerview1_thumb.png
-[MobileSpeakersView2]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_ps_data_filter_thumb.png
-[MobileSpeakersView3]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_ps_data_filter_sc_thumb.png
-[TagsList1]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_tags_j_thumb.png
-[DatesList1]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_dates1_thumb.png
-[DatesList2]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_dates2_thumb.png
-[SessionView1]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_ps_data_filter_sc_thumb_1.png
-[SessionView2]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_scottha_thumb.png
-[SessionView3]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_ps_sessionsbyscottha_thumb.png
-[SessionByCode1]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_ps_data_filter_sc_thumb_2.png
-[SessionByCode2]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_scottha_thumb.png
-[SessionByCode3]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_ps_love_thumb.png
-[SessionByCode4]: ../media/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_love2_thumb.png
-[DeployApplication1]: ../media/depoly_mobile_new_website_5.png
-[DeployApplication2]: ../media/depoly_mobile_new_website_6.png
-[DeployApplication3]: ../media/depoly_mobile_new_website_7.png
-[DeployApplication4]: ../media/depoly_mobile_new_website_8.png
-[DeployApplication5]: ../media/depoly_mobile_new_website_9.png
-[DeployApplication6]: ../media/depoly_mobile_new_website_10.png
-[DeployApplication7]: ../media/depoly_mobile_new_website_12.png
-[DeployApplication8]: ../media/depoly_mobile_new_website_13.png
-[DeployApplication9]: ../media/depoly_mobile_new_website_14.png
-[DeployApplication10]: ../media/depoly_mobile_new_website_15.png
+[CreateWebSite1]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/depoly_mobile_new_website_1.png
+[CreateWebSite2]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/depoly_mobile_new_website_2.png
+[CreateWebSite3]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/depoly_mobile_new_website_3.png
+[CreateWebSite4]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/depoly_mobile_new_website_4.png
+[AppMainPage]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/FinishedAPPMainScreen.png
+[PropertiesPopup]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/propertiespopup.png
+[BrowseByTagWithCallout]:./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/BrowseByTagWithCallout.png
+[ASPNetPage]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/ASPNetPage.png
+[Overrideviews1]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p2m_layouttags_mobile_thumb.png
+[Overrideviews2]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/Windows-Live-Writer_ASP_NET-MVC-4-Mobile-Features_D2FF_p2_layoutTagsDesktop_thumb.png
+[jquery1]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/deploy-mobile-open-packagmanager.png
+[jquery2]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/deploy-mobile-open-install-jquey.png
+[jquery3]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_afternuget_thumb.png
+[jquery4]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_desktopviewwithmobilelink_thumb.png
+[jquery5]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_desktopviewwithmobilelink_thumb.png
+[jquery6]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/Windows-Live-Writer_ASP_NET-MVC-4-Mobile-Features_D2FF_p3_desktopBrowser_thumb.png
+[SpeakerList1]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_speakersdesktop_thumb.png
+[SpeakerList2]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_speakersconsistent_thumb.png
+
+[SpeakerList4]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_ps_data_filter_thumb.png
+[MobileSpeakersView1]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_updatedspeakerview1_thumb.png
+[MobileSpeakersView2]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_ps_data_filter_thumb.png
+[MobileSpeakersView3]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_ps_data_filter_sc_thumb.png
+[TagsList1]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_tags_j_thumb.png
+[DatesList1]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_dates1_thumb.png
+[DatesList2]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_dates2_thumb.png
+[SessionView1]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_ps_data_filter_sc_thumb_1.png
+[SessionView2]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_scottha_thumb.png
+[SessionView3]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_ps_sessionsbyscottha_thumb.png
+[SessionByCode1]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_ps_data_filter_sc_thumb_2.png
+[SessionByCode2]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_scottha_thumb.png
+[SessionByCode3]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_ps_love_thumb.png
+[SessionByCode4]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/windows-live-writer_asp_net-mvc-4-mobile-features_d2ff_p3_love2_thumb.png
+
+
+
+
+
+
+
+
+
+[DeployApplication10]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/depoly_mobile_new_website_15.png
 
 <!-- External Links -->
-[MVC4DeveloperPreview]: http://www.asp.net/mvc/mvc4
-[WebDeployUpdate]: http://www.windowsazure.com/en-us/develop/net/
+
+
 [Visual Studio Express 2012]: http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products
 
 [MVC4StarterProject]: http://go.microsoft.com/fwlink/?LinkId=228307
@@ -614,46 +614,46 @@ You can test your live web site using the phone emulator by browsing to the site
 [FireFox]: http://www.bing.com/search?q=firefox+download
 [FireFoxUserAgentSwitcher]: https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/
 
-[CSSMediaQuries]: http://www.w3.org/TR/css3-mediaqueries/
+
 
 [jquerydocs]: http://jquerymobile.com/demos/1.0b3/#/demos/1.0b3/docs/about/intro.html
 [setuseragent]: http://www.howtogeek.com/113439/how-to-change-your-browsers-user-agent-without-installing-any-extensions/
 [managementportal]: https://manage.windowsazure.com
 
-[WebPIAzureSdk20NetVS12]: ../Media/WebPIAzureSdk20NetVS12.png
-[rxf]: ../Media/rxf.png
+[WebPIAzureSdk20NetVS12]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/WebPIAzureSdk20NetVS12.png
+
 [Add XSRF Protection]: #xsrf
-[ClickWebSite]: ../Media/ClickWebSite.png
-[CreateWebsite]: ../Media/CreateWebsite.png
-[CreateWebsite]: ../Media/CreateWebsite.png
-[DeployedWebSite]: ../Media/DeployedWebSite.png
-[DownloadPublishProfile]: ../Media/DownloadPublishProfile.png
-[ImportPublishSettings]: ../Media/ImportPublishSettings.png
-[ImportPublishProfile]: ../Media/ImportPublishProfile.png
-[InternetAppTemplate]: ../Media/InternetAppTemplate.png
-[NewMVC4WebApp]: ../Media/NewMVC4WebApp.png
-[NewVSProject]: ../Media/NewVSProject.png
-[PublishOutput]: ../Media/PublishOutput.png
-[PublishVSSolution]: ../Media/PublishVSSolution.png
-[PublishWebSettingsTab]: ../Media/PublishWebSettingsTab.png
-[PublishWebStartPreview]: ../Media/PublishWebStartPreview.png
-[PublishWebStartPreviewOutput]: ../Media/PublishWebStartPreviewOutput.png
-[SavePublishSettings]: ../Media/SavePublishSettings.png
-[ValidateConnection]: ../Media/ValidateConnection.png
-[ValidateConnectionSuccess]: ../Media/ValidateConnectionSuccess.png
-[WebPIAzureSdk20NetVS12]: ../Media/WebPIAzureSdk20NetVS12.png
-[WebSiteNew]: ../Media/WebSiteNew.png
-[WebSiteStatusRunning]: ../Media/WebSiteStatusRunning.png
 
-[firsdeploy001]: ../Media/dntutmobile-deploy1-download-profile.png
-[firsdeploy002]: ../Media/dntutmobile-deploy1-save-profile.png
-[firsdeploy003]: ../Media/dntutmobile-deploy1-publish-001.png
-[firsdeploy004]: ../Media/dntutmobile-deploy1-publish-002.png
-[firsdeploy005]: ../Media/dntutmobile-deploy1-publish-003.png
-[firsdeploy006]: ../Media/dntutmobile-deploy1-publish-004.png
-[firsdeploy007]: ../Media/dntutmobile-deploy1-publish-005.png
-[firsdeploy008]: ../Media/dntutmobile-deploy1-publish-006.png
-[firsdeploy009]: ../Media/dntutmobile-deploy1-publish-007.png
 
-[rxPWS]: ../Media/rxPWS.png
-[rxNewCtx]: ../Media/rxNewCtx.png
+
+
+
+[ImportPublishSettings]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/ImportPublishSettings.png
+[ImportPublishProfile]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/ImportPublishProfile.png
+
+
+
+
+[PublishVSSolution]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/PublishVSSolution.png
+
+
+
+
+[ValidateConnection]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/ValidateConnection.png
+
+[WebPIAzureSdk20NetVS12]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/WebPIAzureSdk20NetVS12.png
+
+
+
+
+
+
+
+
+
+[firsdeploy007]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/dntutmobile-deploy1-publish-005.png
+
+[firsdeploy009]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/dntutmobile-deploy1-publish-007.png
+
+[rxPWS]: ./media/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/rxPWS.png
+

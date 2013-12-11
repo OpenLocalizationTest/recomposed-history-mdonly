@@ -6,4 +6,4 @@
 
 
 
-<div chunk="../../../Shared/Chunks/SecurityRX.md" />
+[WACOM.INCLUDE [SecurityRX](../includes/SecurityRX.md)]

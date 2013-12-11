@@ -77,7 +77,7 @@ In this tutorial you'll learn:
 
 
 
-<div chunk="../chunks/install-sdk-2012-only.md" />
+[WACOM.INCLUDE [install-sdk-2012-only](../includes/install-sdk-2012-only.md)]
 
 
 
@@ -116,7 +116,7 @@ When you run the sample application in Visual Studio, you can access tables, que
 
 6. Uncheck the **Enable Geo-Replication** check box. 
 
-   When geo-replication is enabled for a storage account, the stored content is replicated to a secondary location to enable failover to that location in case of a major disaster in the primary location. Geo-replication can incur additional costs. You'll see a warning when you disable geo-replication because you pay a data transfer charge if you start with it disabled and then decide to enable it later. You don’t want to disable replication, upload a huge amount of data, and then enable replication. For test and development accounts, you generally don't want to pay for geo-replication. For more information, see [How To Manage Storage Accounts][managestorage].
+   When geo-replication is enabled for a storage account, the stored content is replicated to a secondary location to enable failover to that location in case of a major disaster in the primary location. Geo-replication can incur additional costs. You'll see a warning when you disable geo-replication because you pay a data transfer charge if you start with it disabled and then decide to enable it later. You don't want to disable replication, upload a huge amount of data, and then enable replication. For test and development accounts, you generally don't want to pay for geo-replication. For more information, see [How To Manage Storage Accounts][managestorage].
 
 5. Click **Create Storage Account**. 
 
@@ -216,7 +216,7 @@ Other tools are also available that work with Windows Azure Storage, for example
 
       4. Select **Allow NuGet to download missing packages during build**.
 
-      ![Enabling NuGet package restore](../Media/NuGetPkgRestore.png)
+      ![Enabling NuGet package restore](./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/NuGetPkgRestore.png)
 
 3. From the **File** menu choose **Open Project**, navigate to where you downloaded the solution, and then open the solution file.
 
@@ -656,82 +656,82 @@ For links to additional resources for working with Windows Azure Storage tables,
 [Add another worker role instance to handle increased load]: #addRole
 
 [firsttutorial]: /en-us/develop/net/tutorials/multi-tier-web-site/1-overview/
-[tut2]: /en-us/develop/net/tutorials/multi-tier-web-site/2-download-and-run/
+
 [tut3]: /en-us/develop/net/tutorials/multi-tier-web-site/3-web-role/
 [tut5]: /en-us/develop/net/tutorials/multi-tier-web-site/5-worker-role-b/
 [NewPortal]: http://manage.windowsazure.com
 [managestorage]: /en-us/manage/services/storage/how-to-manage-a-storage-account/
 [autoscalingappblock]: /en-us/develop/net/how-to-guides/autoscaling/
 
-[WebPIAzureSDKNETVS12Oct2012]: ../Media/WebPIAzureSDKNETVS12Oct2012.png
-[mtas-portal-new-storage]: ../Media/mtas-portal-new-storage.png
-[mtas-storage-quick]: ../Media/mtas-storage-quick.png
-[mtas-create-storage-url-test]: ../Media/mtas-create-storage-url-test.png
-[mtas-manage-keys]: ../Media/mtas-manage-keys.png
-[mtas-guid-keys]: ../Media/mtas-guid-keys.PNG
-[mtas-new-cloud]: ../Media/mtas-new-cloud.png
-[mtas-create-cloud]: ../Media/mtas-create-cloud.png
-[mtas-ase-add]: ../Media/mtas-ase-add.png
-[mtas-ase-add2]: ../Media/mtas-ase-add2.png
-[mtas-ase-add3]: ../Media/mtas-ase-add3.png
-[mtas-rt-prop]: ../Media/mtas-rt-prop.png
-[mtas-mailinglist1]: ../Media/mtas-mailinglist1.png
-[mtas-create1]: ../Media/mtas-create1.png
-[mtas-mailing-list-index-page]: ../Media/mtas-mailing-list-index-page.png
-[mtas-subscribers-index-page]: ../Media/mtas-subscribers-index-page.png
-[mtas-message-create-page]: ../Media/mtas-message-create-page.png
-[mtas-message-index-page]: ../Media/mtas-message-index-page.png
-[mtas-serverExplorer]: ../Media/mtas-serverExplorer.png
-[mtas-wasVSdata]: ../Media/mtas-wasVSdata.png
-[mtas-elip]: ../Media/mtas-elip.png
-[mtas-enter]: ../Media/mtas-enter.png
-[mtas-ase1]: ../Media/mtas-ase1.png
-[mtas-se1]: ../Media/mtas-se1.png
-[mtas-se2]: ../Media/mtas-se2.png
-[mtas-se3]: ../Media/mtas-se3.png
-[mtas-aesp]: ../Media/mtas-aesp.png
-[mtas-1]: ../Media/mtas-1.png
-[mtas-se4]: ../Media/mtas-se4.png
-[mtas-2]: ../Media/mtas-2.png
-[mtas-pack]: ../Media/mtas-pack.png
 
-[mtas-fe]: ../Media/mtas-fe.png
-[mtas-c1]: ../Media/mtas-c1.png
-[mtas-c2]: ../Media/mtas-c2.png
-[mtas-c3]: ../Media/mtas-c3.png
-[mtas-c4]: ../Media/mtas-c4.png
-[mtas-c5]: ../Media/mtas-c5.png
-[mtas-c6]: ../Media/mtas-c6.png
-[mtas-c7]: ../Media/mtas-c7.png
-[mtas-er1]: ../Media/mtas-er1.png
-[mtas-sg]: ../Media/mtas-sg.png
-[mtas-trc]: ../Media/mtas-trc.png
-[mtas-instanceCnt]: ../Media/mtas-instanceCnt.png
-[mtas-sleep2]: ../Media/mtas-sleep2.png
-[mtas-in3]: ../Media/mtas-in3.png
-[mtas-in2]: ../Media/mtas-in2.png
-[mtas-3]: ../Media/mtas-3.png
-[mtas-5]: ../Media/mtas-5.png
-[mtas-6]: ../Media/mtas-6.png
-[mtas-16]: ../Media/mtas-16.png
-[mtas-7]: ../Media/mtas-7.png
-[mtas-8]: ../Media/mtas-8.png
-[mtas-9]: ../Media/mtas-9.png
-[mtas-11]: ../Media/mtas-11.png
-[mtas-12]: ../Media/mtas-12.png
-[mtas-c55]: ../Media/mtas-c55.png
-[mtas-np]: ../Media/mtas-np.png
-[mtas-19]: ../Media/mtas-19.png
+[mtas-portal-new-storage]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-portal-new-storage.png
+[mtas-storage-quick]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-storage-quick.png
+[mtas-create-storage-url-test]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-create-storage-url-test.png
+[mtas-manage-keys]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-manage-keys.png
+[mtas-guid-keys]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-guid-keys.PNG
+[mtas-new-cloud]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-new-cloud.png
+[mtas-create-cloud]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-create-cloud.png
+[mtas-ase-add]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-ase-add.png
+[mtas-ase-add2]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-ase-add2.png
 
-[tut4]: /en-us/develop/net/tutorials/multi-tier-web-site/4-worker-role-a/
-[blob6]: ../Media/blob6.png
-[blob7]: ../Media/blob7.png
-[blob8]: ../Media/blob8.png
-[blob9]: ../Media/blob9.png
+[mtas-rt-prop]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-rt-prop.png
+[mtas-mailinglist1]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-mailinglist1.png
+[mtas-create1]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-create1.png
+[mtas-mailing-list-index-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-mailing-list-index-page.png
+[mtas-subscribers-index-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-subscribers-index-page.png
+[mtas-message-create-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-message-create-page.png
+[mtas-message-index-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-message-index-page.png
+[mtas-serverExplorer]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-serverExplorer.png
+[mtas-wasVSdata]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-wasVSdata.png
+[mtas-elip]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-elip.png
+[mtas-enter]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-enter.png
+[mtas-ase1]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-ase1.png
 
-[mtas-storage-quick-SM]: ../Media/mtas-storage-quick-SM.png
-[0]: ../../Shared/media/antares-iaas-preview-01.png
-[1]: ../../Shared/media/antares-iaas-preview-05.png
-[2]: ../../Shared/media/antares-iaas-preview-06.png
-[Image001]: ../Media/Dev-net-getting-started-001.png
+
+[mtas-se3]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-se3.png
+[mtas-aesp]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-aesp.png
+[mtas-1]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-1.png
+[mtas-se4]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-se4.png
+
+
+
+
+
+
+
+
+
+[mtas-c6]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-c6.png
+[mtas-c7]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-c7.png
+
+[mtas-sg]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-sg.png
+[mtas-trc]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-trc.png
+[mtas-instanceCnt]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-instanceCnt.png
+
+[mtas-in3]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-in3.png
+[mtas-in2]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-in2.png
+[mtas-3]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-3.png
+[mtas-5]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-5.png
+[mtas-6]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-6.png
+[mtas-16]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-16.png
+[mtas-7]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-7.png
+[mtas-8]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-8.png
+[mtas-9]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-9.png
+[mtas-11]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-11.png
+[mtas-12]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-12.png
+[mtas-c55]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-c55.png
+
+[mtas-19]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-download-run/mtas-19.png
+
+
+
+
+
+
+
+
+
+
+
+
 

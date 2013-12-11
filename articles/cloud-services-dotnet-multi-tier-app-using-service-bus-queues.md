@@ -31,7 +31,7 @@ A screenshot of the completed application is shown below:
 
 **Note** Windows Azure also provides storage queue functionality. For more information about Windows Azure storage queues and Service Bus queues, see [Windows Azure Queues and Windows Azure Service Bus Queues - Compared and Contrasted][sbqueuecomparison].  
 
-<div chunk="../../Shared/Chunks/create-account-note.md" />
+[WACOM.INCLUDE [create-account-note](../includes/create-account-note.md)]
 
 <h2><span class="short-header">Inter-role communication</span>Scenario overview: inter-role communication</h2>
 
@@ -218,7 +218,7 @@ Queue and displaying status information about the queue.
     **Manage NuGet Packages...** or **Add Library Package Reference**.
 
 7.  Select **Online** on the left-hand side of the dialog. Search for
-    ‘**WindowsAzure**’ and select the **Windows Azure Service
+    "**WindowsAzure**" and select the **Windows Azure Service
     Bus** item. Then complete the installation and close this dialog.
 
     ![][13]
@@ -499,7 +499,7 @@ Windows Azure supports a set of managed APIs that provides a consistent way to c
 To instantiate a client (for example, a Service Bus **QueueClient**), you can represent the configuration information as a connection string. On the client side, there is a **CreateFromConnectionString()** method that instantiates that client type by using that connection string. For example, given the following configuration section:
 
 	<ConfigurationSettings>
-    …
+    ...
     	<Setting name="Microsoft.ServiceBus.ConnectionString" value="Endpoint=sb://[yourServiceNamespace].servicebus.windows.net/;SharedSecretIssuer=[issuerName];SharedSecretValue=[yourDefaultKey]" />
 	</ConfigurationSettings>
 
@@ -565,7 +565,7 @@ submissions. This example uses the **Worker Role with Service Bus Queue** Visual
 
 12. Browse to the subfolder for **FrontendWebRole\Models**, and double-click **OnlineOrder.cs** to add it to this project.
 
-13. Replace the value of the **QueueName** variable in **WorkerRole.cs** from `“ProcessingQueue"` to `“OrdersQueue"` as in the following code:
+13. Replace the value of the **QueueName** variable in **WorkerRole.cs** from `"ProcessingQueue"` to `"OrdersQueue"` as in the following code:
 
 		// The name of your queue
 		const string QueueName = "OrdersQueue";
@@ -617,44 +617,44 @@ To implement the application you create in this tutorial as a standard web proje
 To learn how to deploy the front end to a Windows Azure Web Site, see [Deploying an ASP.NET Web Application to a Windows Azure Web Site](http://www.windowsazure.com/en-us/develop/net/tutorials/get-started/). To learn how to deploy the back end to a Windows Azure Cloud Service, see [.NET Multi-Tier Application Using Storage Tables, Queues, and Blobs][mutitierstorage].
 
 
-  [0]: ../Media/getting-started-multi-tier-01.png
-  [1]: ../Media/getting-started-multi-tier-100.png
+  [0]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-01.png
+  [1]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-100.png
   [sbqueuecomparison]: http://msdn.microsoft.com/en-us/library/windowsazure/hh767287.aspx
-  [2]: ../Media/getting-started-multi-tier-101.png
+  [2]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-101.png
   [Get Tools and SDK]: http://go.microsoft.com/fwlink/?LinkId=271920
-  [3]: ../Media/getting-started-3.png
-  [4]: ../Media/getting-started-4-WebPI.png
-  [http://www.windowsazure.com]: http://www.windowsazure.com
-  [5]: ../Media/getting-started-12.png
+  [3]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-3.png
+  
+  
+  
   [Windows Azure Management Portal]: http://manage.windowsazure.com
-  [6]: ../Media/sb-queues-03.png
-  [7]: ../Media/sb-queues-04.png
-  [8]: ../Media/getting-started-multi-tier-09.png
-  [9]: ../Media/getting-started-multi-tier-10.jpg
-  [10]: ../Media/getting-started-multi-tier-11.png
-  [11]: ../Media/getting-started-multi-tier-02.png
-  [12]: ../Media/getting-started-multi-tier-12.png
-  [13]: ../Media/getting-started-multi-tier-13.png
-  [14]: ../Media/getting-started-multi-tier-33.png
-  [15]: ../Media/getting-started-multi-tier-34.png
-  [16]: ../Media/getting-started-multi-tier-35.png
-  [17]: ../Media/getting-started-multi-tier-36.png
-  [18]: ../Media/getting-started-multi-tier-37.png
-  [Microsoft.WindowsAzure.Configuration.CloudConfigurationManager]:http://msdn.microsoft.com/en-us/library/microsoft.windowsazure.cloudconfigurationmanager.aspx
-  [19]: ../Media/getting-started-multi-tier-38.png
-  [20]: ../Media/getting-started-multi-tier-39.png
-  [21]: ../Media/SBExplorer.png
-  [22]: ../Media/SBExplorerAddConnect.png
-  [23]: ../Media/SBWorkerRole1.png
-  [24]: ../Media/SBExplorerProperties.png
-  [25]: ../Media/SBWorkerRoleProperties.png
-  [26]: ../Media/SBNewWorkerRole.png
-  [27]: ../Media/getting-started-multi-tier-27.png
-  [28]: ../Media/getting-started-multi-tier-40.png
-  [30]: ../Media/sb-queues-09.png
-  [31]: ../Media/sb-queues-06.png
-  [32]: ../Media/getting-started-41.png
-  [33]: ../Media/getting-started-4-2-WebPI.png
+  [6]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/sb-queues-03.png
+  [7]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/sb-queues-04.png
+  [8]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-09.png
+  [9]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-10.jpg
+  [10]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-11.png
+  [11]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-02.png
+  [12]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-12.png
+  [13]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-13.png
+  [14]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-33.png
+  [15]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-34.png
+  [16]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-35.png
+  [17]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-36.png
+  [18]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-37.png
+  
+  [19]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-38.png
+  [20]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-39.png
+  [21]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/SBExplorer.png
+  [22]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/SBExplorerAddConnect.png
+  [23]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/SBWorkerRole1.png
+  [24]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/SBExplorerProperties.png
+  [25]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/SBWorkerRoleProperties.png
+  [26]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/SBNewWorkerRole.png
+  [27]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-27.png
+  [28]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-multi-tier-40.png
+  [30]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/sb-queues-09.png
+  [31]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/sb-queues-06.png
+  [32]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-41.png
+  [33]: ./media/cloud-services-dotnet-multi-tier-app-using-service-bus-queues/getting-started-4-2-WebPI.png
   [sbmsdn]: http://msdn.microsoft.com/en-us/library/windowsazure/ee732537.aspx  
   [sbwacom]: /en-us/manage/services/service-bus/  
   [sbwacomqhowto]: /en-us/develop/net/how-to-guides/service-bus-queues/  

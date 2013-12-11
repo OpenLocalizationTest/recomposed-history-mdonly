@@ -22,7 +22,7 @@ You will learn:
 -   How to use the Windows Azure Service Bus relay to share data between
     a Windows Azure application and a web service hosted elsewhere.
 
-<div chunk="../../Shared/Chunks/create-account-note.md" />
+[WACOM.INCLUDE [create-account-note](../includes/create-account-note.md)]
 
 ### HOW THE SERVICE BUS RELAY HELPS WITH HYBRID SOLUTIONS
 
@@ -33,7 +33,7 @@ place.
 
 Solution architects are starting to use the cloud for easier handling of
 scale requirements and lower operational costs. In doing so, they find
-that existing service assets they’d like to leverage as building blocks
+that existing service assets they'd like to leverage as building blocks
 for their solutions are inside the corporate firewall and out of easy
 reach for access by the cloud solution. Many internal services are not
 built or hosted in a way that they can be easily exposed at the
@@ -167,7 +167,7 @@ namespace.
 First, you will build a (mock) on-premises product catalog system. It
 will be fairly simple; you can see this as representing an actual
 on-premises product catalog system with a complete service surface that
-we’re trying to integrate.
+we're trying to integrate.
 
 This project will start as a Visual Studio console application. The
 project uses the Service Bus NuGet package to include the service bus
@@ -210,7 +210,7 @@ the Service Bus package, see [Using the NuGet Service Bus Package][].
     **Manage NuGet Packages**...
 8.  In the left-hand column of the NuGet dialog, click **Online**.
 
-9. 	In the right-hand column, click the **Search** box, type ‘**WindowsAzure**’ and select the **Windows
+9. 	In the right-hand column, click the **Search** box, type "**WindowsAzure**" and select the **Windows
     Azure Service Bus** item. Click **Install** to complete the
     installation, then close this dialog.
 
@@ -663,7 +663,7 @@ Run the application to verify that it works.
 
         ![][31]
 
-    8.  Click **Next**. If your subscription doesn’t already contain any hosted
+    8.  Click **Next**. If your subscription doesn't already contain any hosted
         services, you will be asked to create one. The hosted service
         acts as a container for your application within your Windows
         Azure subscription. Enter a name that identifies your
@@ -748,55 +748,55 @@ To learn more about Service Bus, see the following resources:
 * [How to Use Service Bus Queues][sbwacomqhowto]  
 
 
-  [0]: ../../../DevCenter/dotNet/Media/hybrid.png
-  [1]: ../../../DevCenter/dotNet/Media/App2.png
+  [0]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/hybrid.png
+  [1]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/App2.png
   [Get Tools and SDK]: http://go.microsoft.com/fwlink/?LinkId=271920
   [NuGet]: http://nuget.org
-  [2]: ../../../DevCenter/dotNet/Media/getting-started-3.png
-  [3]: ../../../DevCenter/dotNet/Media/getting-started-4-2-WebPI.png
-  [http://www.windowsazure.com]: http://www.windowsazure.com
-  [4]: ../../../DevCenter/dotNet/Media/getting-started-hybrid-32.png
+  [2]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/getting-started-3.png
+  [3]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/getting-started-4-2-WebPI.png
+  
+  
   [Windows Azure Management Portal]: http://manage.windowsazure.com
-  [5]: ../../../DevCenter/dotNet/Media/sb-queues-03.png
-  [6]: ../../../DevCenter/dotNet/Media/sb-queues-04.png
-  [7]: ../../../DevCenter/dotNet/Media/sb-queues-05.png
-  [8]: ../../../DevCenter/dotNet/Media/sb-queues-06.png
-  [9]: ../../../DevCenter/dotNet/Media/sb-queues-07.png
+  [5]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/sb-queues-03.png
+  [6]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/sb-queues-04.png
+  
+  
+  
   [Using the NuGet Service Bus Package]: http://go.microsoft.com/fwlink/?LinkId=234589
-  [10]: ../../../DevCenter/dotNet/Media/hy-web-1.png
-  [11]: ../../../DevCenter/dotNet/Media/hy-con-1.jpg
-  [12]: ../../../DevCenter/dotNet/Media/hy-con-3.png
-  [13]: ../../../DevCenter/dotNet/Media/getting-started-multi-tier-13.png
-  [14]: ../../../DevCenter/dotNet/Media/hy-con-4.png
-  [15]: ../../../DevCenter/dotNet/Media/hy-web-2.jpg
-  [16]: ../../../DevCenter/dotNet/Media/hy-web-4.png
-  [17]: ../../../DevCenter/dotNet/Media/hy-web-7.jpg
-  [18]: ../../../DevCenter/dotNet/Media/hy-web-10.jpg
-  [19]: ../../../DevCenter/dotNet/Media/getting-started-8.png
-  [20]: ../../../DevCenter/dotNet/Media/hy-web-11.png
-  [21]: ../../../DevCenter/dotNet/Media/App1.png
-  [22]: ../../../DevCenter/dotNet/Media/getting-started-hybrid-21.png
-  [23]: ../../../DevCenter/dotNet/Media/getting-started-hybrid-22.png
-  [24]: ../../../DevCenter/dotNet/Media/hy-web-12.png
-  [25]: ../../../DevCenter/dotNet/Media/hy-web-13.png
-  [26]: ../../../DevCenter/dotNet/Media/hy-web-14.png
-  [27]: ../../../DevCenter/dotNet/Media/getting-started-hybrid-33.png
-  [28]: ../../../DevCenter/dotNet/Media/getting-started-hybrid-34.png
-  [29]: ../../../DevCenter/dotNet/Media/getting-started-hybrid-25.png
-  [30]: ../../../DevCenter/dotNet/Media/getting-started-hybrid-36.png
-  [31]: ../../../DevCenter/dotNet/Media/getting-started-hybrid-37.png
-  [32]: ../../../DevCenter/dotNet/Media/getting-started-hybrid-38.png
-  [33]: ../../../DevCenter/dotNet/Media/getting-started-hybrid-39.png
-  [34]: ../../../DevCenter/dotNet/Media/getting-started-hybrid-40.png
-  [35]: ../../../DevCenter/dotNet/Media/getting-started-hybrid-41.png
-  [36]: ../../../DevCenter/dotNet/Media/App2.png
-  [37]: ../../../DevCenter/dotNet/Media/hy-service1.png
-  [38]: ../../../DevCenter/dotNet/Media/getting-started-multi-tier-27.png
-  [39]: ../../../DevCenter/dotNet/Media/sb-queues-09.png
-  [40]: ../../../DevCenter/dotNet/Media/sb-queues-06.png
-  [41]: ../../../DevCenter/dotNet/Media/getting-started-multi-tier-40.png
-  [42]: ../Media/getting-started-41.png
-  [43]: ../../../DevCenter/dotNet/Media/getting-started-hybrid-43.png
+  [10]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/hy-web-1.png
+  [11]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/hy-con-1.jpg
+  [12]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/hy-con-3.png
+  [13]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/getting-started-multi-tier-13.png
+  [14]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/hy-con-4.png
+  [15]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/hy-web-2.jpg
+  [16]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/hy-web-4.png
+  [17]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/hy-web-7.jpg
+  [18]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/hy-web-10.jpg
+  
+  [20]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/hy-web-11.png
+  [21]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/App1.png
+  [22]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/getting-started-hybrid-21.png
+  [23]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/getting-started-hybrid-22.png
+  [24]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/hy-web-12.png
+  [25]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/hy-web-13.png
+  [26]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/hy-web-14.png
+  [27]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/getting-started-hybrid-33.png
+  
+  
+  [30]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/getting-started-hybrid-36.png
+  [31]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/getting-started-hybrid-37.png
+  [32]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/getting-started-hybrid-38.png
+  [33]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/getting-started-hybrid-39.png
+  [34]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/getting-started-hybrid-40.png
+  [35]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/getting-started-hybrid-41.png
+  [36]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/App2.png
+  [37]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/hy-service1.png
+  [38]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/getting-started-multi-tier-27.png
+  [39]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/sb-queues-09.png
+  [40]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/sb-queues-06.png
+  [41]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/getting-started-multi-tier-40.png
+  [42]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/getting-started-41.png
+  [43]: ./media/cloud-services-dotnet-hybrid-app-using-service-bus-relay/getting-started-hybrid-43.png
 
   [sbmsdn]: http://msdn.microsoft.com/en-us/library/windowsazure/ee732537.aspx  
   [sbwacom]: /en-us/manage/services/service-bus/  

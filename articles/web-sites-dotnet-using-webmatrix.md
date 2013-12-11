@@ -14,7 +14,7 @@ You will learn:
 * How to deploy the customized web site directly from WebMatrix to Windows Azure.
 
 
-<div chunk="../../Shared/Chunks/create-account-and-websites-note.md" />
+[WACOM.INCLUDE [create-account-and-websites-note](../includes/create-account-and-websites-note.md)]
 
 ## Sign into Windows Azure
 
@@ -149,29 +149,29 @@ You've seen how to create and deploy a web site from WebMatrix to Windows Azure.
 
 * [WebMatrix web site](http://www.microsoft.com/click/services/Redirect2.ashx?CR_CC=200106398)
 
-[createnewsite]: ../../../Shared/media/howtocreatenewsite.png
-[opensiteinwebmatrix2]: ../../../Shared/media/howtoopensiteinWebMatrix2a.png
-[howtodownloadsite]: ../../../Shared/media/howtodownloadsite.png
-[howtositefromtemplate]: ../../../Shared/media/howtositefromtemplate.png
-[howtowebmatrixide]: ../../../Shared/media/howtowebmatrixide.png
-[howtopublishpreview]: ../../../Shared/media/howtopublishpreview.png
-[bakerysampleopeninwebmatrix2]: ../../../Shared/media/howtowebmatrix2ide.png
-[publishcomplete]: ../../../Shared/media/howtopublished2.png
-[bakerysample]: ../../../Shared/media/howtobakerysamplesite.png
-[addaccount]: ../../Shared/media/webmatrix-add-account.png
-[signin]: ../../Shared/media/webmatrix-sign-in.png
-[sitefromtemplate]: ../../Shared/media/webmatrix-site-from-template.png
-[sitefromtemplatedetails]: ../../Shared/media/webmatrix-site-from-template-details.png
-[sitefromtemplateazure]: ../../Shared/media/webmatrix-site-from-template-azure.png
 
-[modify1]: ../media/website-with-webmatrix-sample-mod-1-1.png
-[modify2]: ../media/website-with-webmatrix-sample-mod-1-2.png
-[modify3]: ../media/website-with-webmatrix-sample-mod-1-3.png
-[modify4]: ../media/website-with-webmatrix-sample-mod-1-4.png
-[modify5]: ../media/website-with-webmatrix-sample-mod-1-5.png
-[modify6]: ../media/website-with-webmatrix-sample-mod-1-6.png
-[modify7]: ../media/website-with-webmatrix-sample-mod-1-7.png
-[modify8]: ../media/website-with-webmatrix-sample-mod-1-8.png
 
-[webmatrix]: http://www.microsoft.com/web/webmatrix/
+
+
+[howtowebmatrixide]: ./media/web-sites-dotnet-using-webmatrix/howtowebmatrixide.png
+[howtopublishpreview]: ./media/web-sites-dotnet-using-webmatrix/howtopublishpreview.png
+
+[publishcomplete]: ./media/web-sites-dotnet-using-webmatrix/howtopublished2.png
+[bakerysample]: ./media/web-sites-dotnet-using-webmatrix/howtobakerysamplesite.png
+[addaccount]: ./media/web-sites-dotnet-using-webmatrix/webmatrix-add-account.png
+[signin]: ./media/web-sites-dotnet-using-webmatrix/webmatrix-sign-in.png
+[sitefromtemplate]: ./media/web-sites-dotnet-using-webmatrix/webmatrix-site-from-template.png
+[sitefromtemplatedetails]: ./media/web-sites-dotnet-using-webmatrix/webmatrix-site-from-template-details.png
+[sitefromtemplateazure]: ./media/web-sites-dotnet-using-webmatrix/webmatrix-site-from-template-azure.png
+
+[modify1]: ./media/web-sites-dotnet-using-webmatrix/website-with-webmatrix-sample-mod-1-1.png
+[modify2]: ./media/web-sites-dotnet-using-webmatrix/website-with-webmatrix-sample-mod-1-2.png
+[modify3]: ./media/web-sites-dotnet-using-webmatrix/website-with-webmatrix-sample-mod-1-3.png
+[modify4]: ./media/web-sites-dotnet-using-webmatrix/website-with-webmatrix-sample-mod-1-4.png
+[modify5]: ./media/web-sites-dotnet-using-webmatrix/website-with-webmatrix-sample-mod-1-5.png
+[modify6]: ./media/web-sites-dotnet-using-webmatrix/website-with-webmatrix-sample-mod-1-6.png
+[modify7]: ./media/web-sites-dotnet-using-webmatrix/website-with-webmatrix-sample-mod-1-7.png
+
+
+
 [sendmailissues]: http://go.microsoft.com/fwlink/?LinkId=253001#email
