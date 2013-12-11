@@ -19,7 +19,7 @@ You'll build an Orchard CMS site that uses a default template. [Orchard](http://
 
 ![Orchard blog][13]
 
-<div chunk="../../Shared/Chunks/create-account-and-websites-note.md" />
+[WACOM.INCLUDE [create-account-and-websites-note](../includes/create-account-and-websites-note.md)]
 
 <h2>Create an Orchard web site from the gallery</h2>
 
@@ -56,7 +56,7 @@ Windows Azure will initiate build and deploy operations. While the web site is b
 
 	![browse button][12]
 
-2. Enter the configuration information required by Orchard, and then click **Finish Setup** to complete the configuration and open the web site’s home page.
+2. Enter the configuration information required by Orchard, and then click **Finish Setup** to complete the configuration and open the web site's home page.
 
 	![login to Orchard][7]
 
@@ -70,13 +70,13 @@ Windows Azure will initiate build and deploy operations. While the web site is b
 * [Develop and deploy a web site with Microsoft WebMatrix](/en-us/develop/net/tutorials/website-with-webmatrix/) -- Learn how to edit a Windows Azure web site in WebMatrix. 
 * [Deploy a Secure ASP.NET MVC app with Membership, OAuth, and SQL Database to a Windows Azure Web Site](/en-us/develop/net/tutorials/web-site-with-sql-database/)-- Learn how to create a new web site from Visual Studio.
 
-[1]: ../media/orchardgallery-01.png
-[2]: ../media/orchardgallery-02.png
-[3]: ../media/orchardgallery-03.png
-[4]: ../media/orchardgallery-04.png
-[5]: ../media/orchardgallery-05.png
-[7]: ../media/orchardgallery-07.png
-[12]: ../media/orchardgallery-12.png
-[13]: ../media/orchardgallery-08.png
-[http://www.windowsazure.com]: http://www.windowsazure.com
-[0]: ../../devcenter/shared/media/freetrialonwindowsazurehomepage.png
+[1]: ./media/web-sites-dotnet-orchard-cms-gallery/orchardgallery-01.png
+[2]: ./media/web-sites-dotnet-orchard-cms-gallery/orchardgallery-02.png
+[3]: ./media/web-sites-dotnet-orchard-cms-gallery/orchardgallery-03.png
+[4]: ./media/web-sites-dotnet-orchard-cms-gallery/orchardgallery-04.png
+[5]: ./media/web-sites-dotnet-orchard-cms-gallery/orchardgallery-05.png
+[7]: ./media/web-sites-dotnet-orchard-cms-gallery/orchardgallery-07.png
+[12]: ./media/web-sites-dotnet-orchard-cms-gallery/orchardgallery-12.png
+[13]: ./media/web-sites-dotnet-orchard-cms-gallery/orchardgallery-08.png
+
+

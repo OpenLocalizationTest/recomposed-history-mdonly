@@ -1661,66 +1661,66 @@ For links to additional resources for working with Windows Azure Storage tables,
 
 <div><a href="../4-worker-role-a/" class="site-arrowboxcta download-cta">Tutorial 4</a></div>
 
-[createsolution]: #cloudproject
-[mailinglist]: #mailinglist
-[message]: #message
-[subscriber]: #subscriber
-[webapi]: #webapi
+
+
+
+
+
 [alternativearchitecture]: #alternativearchitecture
-[nextsteps]: #nextsteps
+
 
 [tut5]: /en-us/develop/net/tutorials/multi-tier-web-site/5-worker-role-b/
 [tut2]: /en-us/develop/net/tutorials/multi-tier-web-site/2-download-and-run/
 [firsttutorial]: /en-us/develop/net/tutorials/multi-tier-web-site/1-overview/
 [nexttutorial]: /en-us/develop/net/tutorials/multi-tier-web-site/4-worker-role-a/
-[TableServiceEntity]: http://msdn.microsoft.com/en-us/library/windowsazure/microsoft.windowsazure.storageclient.tableserviceentity.aspx
+
 [TableEntity]: http://msdn.microsoft.com/en-us/library/windowsazure/microsoft.windowsazure.storage.table.tableentity.aspx
 [DynamicTableEntity]: http://msdn.microsoft.com/en-us/library/windowsazure/microsoft.windowsazure.storage.table.dynamictableentity.aspx
 [managementportal]: http://manage.windowsazure.com
-[tableshowto]: /en-us/develop/net/how-to-guides/table-services/
+
 [percentinkeyfields]: http://blogs.msdn.com/b/windowsazurestorage/archive/2012/05/28/partitionkey-or-rowkey-containing-the-percent-character-causes-some-windows-azure-tables-apis-to-fail.aspx
 [tabledatamodel]: http://msdn.microsoft.com/en-us/library/windowsazure/dd179338.aspx 
 [deepdive]: http://blogs.msdn.com/b/windowsazurestorage/archive/2012/11/06/windows-azure-storage-client-library-2-0-tables-deep-dive.aspx
 [howtogetthemost]: http://blogs.msdn.com/b/windowsazurestorage/archive/2010/11/06/how-to-get-most-out-of-windows-azure-tables.aspx
-[[mtas-compute-emulator-icon]: ../Media/mtas-compute-emulator-icon.png
-[mtas-home-page-before-adding-controllers]: ../Media/mtas-home-page-before-adding-controllers.png
-[mtas-menu-in-layout]: ../Media/mtas-menu-in-layout.png
-[mtas-footer-in-layout]: ../Media/mtas-footer-in-layout.png
-[mtas-title-and-logo-in-layout]: ../Media/mtas-title-and-logo-in-layout.png
-[mtas-new-cloud-service-dialog-rename]: ../Media/mtas-new-cloud-service-dialog-rename.png
-[mtas-new-mvc4-project]: ../Media/mtas-new-mvc4-project.png
-[mtas-new-cloud-service-dialog]: ../Media/mtas-new-cloud-service-dialog.png
-[mtas-new-cloud-project]: ../Media/mtas-new-cloud-project.png
-[mtas-new-cloud-service-add-worker-a]: ../Media/mtas-new-cloud-service-add-worker-a.png
-[mtas-mailing-list-empty-index-page]: ../Media/mtas-mailing-list-empty-index-page.png
-[mtas-mailing-list-index-page]: ../Media/mtas-mailing-list-index-page.png
-[mtas-file-new-project]: ../Media/mtas-file-new-project.png
-[mtas-opening-layout-cshtml]: ../Media/mtas-opening-layout-cshtml.png
-[mtas-tableserviceentity]: ../Media/mtas-tableserviceentity.png
-[mtas-add-existing-item-to-models]: ../Media/mtas-add-existing-item-to-models.png
-[mtas-add-existing-item-to-controllers]: ../Media/mtas-add-existing-item-to-controllers.png
-[mtas-add-existing-item-to-views]: ../Media/mtas-add-existing-item-to-views.png
-[mtas-mvcwebrole-properties-menu]: ../Media/mtas-mvcwebrole-properties-menu.png
-[mtas-mvcwebrole-settings-tab]: ../Media/mtas-mvcwebrole-settings-tab.png
-[mtas-storage-acct-conn-string-dialog]: ../Media/mtas-storage-acct-conn-string-dialog.png
-[mtas-manage-keys-in-portal]: ../Media/mtas-manage-keys-in-portal.png
-[mtas-manage-access-keys-dialog]: ../Media/mtas-manage-access-keys-dialog.png
-[mtas-subscribers-empty-index-page]: ../Media/mtas-subscribers-empty-index-page.png
-[mtas-subscribers-index-page]: ../Media/mtas-subscribers-index-page.png
-[mtas-message-empty-index-page]: ../Media/mtas-message-empty-index-page.png
-[mtas-message-index-page]: ../Media/mtas-message-index-page.png
-[mtas-ase-edit-entity-unsubscribe]: ../Media/mtas-ase-edit-entity-unsubscribe.png
-[mtas-ase-unsubscribe]: ../Media/mtas-ase-unsubscribe.png
-[mtas-unsubscribe-page]: ../Media/mtas-unsubscribe-query-page.png
-[mtas-unsubscribe-confirmed-page]: ../Media/mtas-unsubscribe-confirmation-page.png
-[mtas-er1]: ../Media/mtas-er1.png
-[mtas-4]: ../Media/mtas-4.png
-[mtas-3]: ../Media/mtas-3.png
-[mtas-5]: ../Media/mtas-5.png
-[mtas-enter]: ../Media/mtas-enter.png
-[mtas-elip]: ../Media/mtas-elip.png
-[mtas-manage-nuget-for-solution]: ../Media/mtas-manage-nuget-for-solution.png
-[mtas-update-storage-nuget-pkg]: ../Media/mtas-update-storage-nuget-pkg.png
-[mtas-nuget-select-projects]: ../Media/mtas-nuget-select-projects.png
+
+[mtas-home-page-before-adding-controllers]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-home-page-before-adding-controllers.png
+[mtas-menu-in-layout]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-menu-in-layout.png
+[mtas-footer-in-layout]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-footer-in-layout.png
+[mtas-title-and-logo-in-layout]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-title-and-logo-in-layout.png
+[mtas-new-cloud-service-dialog-rename]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-new-cloud-service-dialog-rename.png
+[mtas-new-mvc4-project]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-new-mvc4-project.png
+[mtas-new-cloud-service-dialog]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-new-cloud-service-dialog.png
+[mtas-new-cloud-project]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-new-cloud-project.png
+[mtas-new-cloud-service-add-worker-a]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-new-cloud-service-add-worker-a.png
+[mtas-mailing-list-empty-index-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-mailing-list-empty-index-page.png
+[mtas-mailing-list-index-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-mailing-list-index-page.png
+[mtas-file-new-project]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-file-new-project.png
+[mtas-opening-layout-cshtml]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-opening-layout-cshtml.png
+
+[mtas-add-existing-item-to-models]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-add-existing-item-to-models.png
+[mtas-add-existing-item-to-controllers]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-add-existing-item-to-controllers.png
+[mtas-add-existing-item-to-views]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-add-existing-item-to-views.png
+[mtas-mvcwebrole-properties-menu]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-mvcwebrole-properties-menu.png
+
+
+
+
+[mtas-subscribers-empty-index-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-subscribers-empty-index-page.png
+[mtas-subscribers-index-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-subscribers-index-page.png
+[mtas-message-empty-index-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-message-empty-index-page.png
+[mtas-message-index-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-message-index-page.png
+[mtas-ase-edit-entity-unsubscribe]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-ase-edit-entity-unsubscribe.png
+[mtas-ase-unsubscribe]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-ase-unsubscribe.png
+[mtas-unsubscribe-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-unsubscribe-query-page.png
+[mtas-unsubscribe-confirmed-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-unsubscribe-confirmation-page.png
+[mtas-er1]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-er1.png
+[mtas-4]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-4.png
+[mtas-3]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-3.png
+[mtas-5]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-5.png
+[mtas-enter]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-enter.png
+[mtas-elip]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-elip.png
+[mtas-manage-nuget-for-solution]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-manage-nuget-for-solution.png
+[mtas-update-storage-nuget-pkg]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-update-storage-nuget-pkg.png
+[mtas-nuget-select-projects]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-web-role/mtas-nuget-select-projects.png
 
 

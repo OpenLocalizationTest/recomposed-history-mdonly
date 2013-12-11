@@ -6,4 +6,4 @@
 
 
 
-<div chunk="../../../Shared/Chunks/tshootguide.md" />
+[WACOM.INCLUDE [tshootguide](../includes/tshootguide.md)]

@@ -6,4 +6,4 @@
 
 
 
-<div chunk="../../../Shared/Chunks/performance.md" />
+[WACOM.INCLUDE [performance](../includes/performance.md)]

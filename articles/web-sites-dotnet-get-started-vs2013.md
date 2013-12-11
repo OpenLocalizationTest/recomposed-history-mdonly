@@ -21,7 +21,7 @@ You'll learn:
 
 The following illustration shows the completed application:
 
-![Web site home page](../Media/GS13homepage.png)
+![Web site home page](./media/web-sites-dotnet-get-started-vs2013/GS13homepage.png)
 
 <div class="dev-callout"><strong>Note</strong><p>To complete this tutorial, you need a Windows Azure account. If you don't have an account, you can <a href="/en-us/pricing/member-offers/msdn-benefits-details/?WT.mc_id=A261C142F" target="_blank">activate your MSDN subscriber benefits</a> or <a href="/en-us/pricing/free-trial/?WT.mc_id=A261C142F" target="_blank">sign up for a free trial</a>.</p></div>
  
@@ -32,7 +32,7 @@ The following illustration shows the completed application:
 4. [Deploy the application to Windows Azure](#deploytowindowsazure)
 5. [Next steps](#nextsteps)
 
-<div chunk="../chunks/install-sdk-2013-only.md" />
+[WACOM.INCLUDE [install-sdk-2013-only](../includes/install-sdk-2013-only.md)]
 
 
 <h2><a name="createapp"></a><span class="short-header">Create the app</span>Create an ASP.NET MVC 5 application</h2>
@@ -45,7 +45,7 @@ Your first step is to create a Visual Studio web application project that you'll
 
 2. From the **File** menu, click **New Project**.
 
-   ![New Project in File menu](../Media/gs13newproj.png)
+   ![New Project in File menu](./media/web-sites-dotnet-get-started-vs2013/gs13newproj.png)
 
 3. In the **New Project** dialog box, expand **C#** and select **Web** under **Installed Templates**, and then select **ASP.NET Web Application**.
 
@@ -53,21 +53,21 @@ Your first step is to create a Visual Studio web application project that you'll
 
 4. Name the application **MyExample** and click **OK**.
 
-   ![New Project dialog box](../Media/GS13newprojdb.png)
+   ![New Project dialog box](./media/web-sites-dotnet-get-started-vs2013/GS13newprojdb.png)
 
 5. In the **New ASP.NET Project** dialog box, select the **MVC** template, and then click **Change Authentication**.
 
-   ![New ASP.NET Project dialog box](../Media/GS13changeauth.png)
+   ![New ASP.NET Project dialog box](./media/web-sites-dotnet-get-started-vs2013/GS13changeauth.png)
 
 6. In the **Change Authentication** dialog box, click **No Authentication**, and then click **OK**.
 
-   ![No Authentication](../Media/GS13noauth.png)
+   ![No Authentication](./media/web-sites-dotnet-get-started-vs2013/GS13noauth.png)
 
    The sample application you're creating won't have features that require users to log in. For information about how to implement authentication and authorization features, see the [Next Steps](#nextsteps) section at the end of this tutorial. 
 
 5. In the **New ASP.NET Project** dialog box, click **OK**.
 
-   ![New ASP.NET Project dialog box](../Media/GS13newaspnetprojdb.png)
+   ![New ASP.NET Project dialog box](./media/web-sites-dotnet-get-started-vs2013/GS13newaspnetprojdb.png)
 
 ### Run the application locally
 
@@ -75,7 +75,7 @@ Your first step is to create a Visual Studio web application project that you'll
 
    The application home page appears in the default browser.
 
-   ![Web site running locally](../Media/GS13homepage.png)
+   ![Web site running locally](./media/web-sites-dotnet-get-started-vs2013/GS13homepage.png)
 
    The `http://localhost` URL shows that it's running on your local computer. By default it's running in IIS Express, which is a lightweight version of IIS designed for use during web application development.
 
@@ -90,23 +90,23 @@ This is all you need to do to create a simple application that you can deploy to
 
 5. In Visual Studio **Solution Explorer**, right-click the project, and then select **Publish** from the context menu.
 
-   ![Publish in project context menu](../Media/GS13publish.png)
+   ![Publish in project context menu](./media/web-sites-dotnet-get-started-vs2013/GS13publish.png)
 
    The **Publish Web** wizard opens.
 
 6. In the **Profile** tab of the **Publish Web** wizard, click **Import**.
 
-   ![Import publish settings](../Media/ImportPublishSettings.png)
+   ![Import publish settings](./media/web-sites-dotnet-get-started-vs2013/ImportPublishSettings.png)
 
    The **Import Publish Profile** dialog box appears.
 
 5. Use one of the following methods to enable Visual Studio to connect to your Windows Azure account.
 
-   <div chunk="../../shared/chunks/vs-connect-ws-publish.md" />
+   [WACOM.INCLUDE [vs-connect-ws-publish](../includes/vs-connect-ws-publish.md)]
 
 2. In the **Import Publish Settings** dialog box, select the **Import from a Windows Azure Web Site** radio button, and then click **New**.
 
-   ![Add New Site](../Media/GS13NewSite.png)
+   ![Add New Site](./media/web-sites-dotnet-get-started-vs2013/GS13NewSite.png)
 
 3. In the **Create a site on Windows Azure** dialog box, enter a string in the **Site name** box to use as the unique URL for your application.
 
@@ -122,51 +122,51 @@ This is all you need to do to create a simple application that you can deploy to
 
 6. Click **Create**.<br/>
 
-   ![Create a new web site](../Media/GS13createsite.png)
+   ![Create a new web site](./media/web-sites-dotnet-get-started-vs2013/GS13createsite.png)
 
    In a few seconds the web site is created. When you return to the **Import Publish Settings** dialog box, the new site is selected in the drop-down list.
 
 6. Click **OK**.
 
-   ![Web site created](../Media/GS13sitecreated.png)
+   ![Web site created](./media/web-sites-dotnet-get-started-vs2013/GS13sitecreated.png)
 
 8. In the **Connection** tab of the **Publish Web** wizard, click **Validate Connection** to make sure that the settings are correct.
 
-   ![Validate connection](../Media/GS13ValidateConnection.png)
+   ![Validate connection](./media/web-sites-dotnet-get-started-vs2013/GS13ValidateConnection.png)
 
    When the connection has been validated, a green check mark is shown next to the **Validate Connection** button. 
 
 9. Click **Next**.
 
-   ![Successfully validated connection](../Media/GS13ValidateConnectionSuccess.png)
+   ![Successfully validated connection](./media/web-sites-dotnet-get-started-vs2013/GS13ValidateConnectionSuccess.png)
 
 10. In the **Settings** tab, click **Next**.
 
-   ![Settings tab](../Media/GS13SettingsTab.png)
+   ![Settings tab](./media/web-sites-dotnet-get-started-vs2013/GS13SettingsTab.png)
 
    You can accept the default settings on this tab.  You're deploying a Release build configuration and you don't need to delete files at the destination server, precompile the application, or exclude files in the App_Data folder.
 
 11. In the **Preview** tab, click **Start Preview**.
 
-   ![StartPreview button in the Preview tab](../Media/GS13Preview.png)
+   ![StartPreview button in the Preview tab](./media/web-sites-dotnet-get-started-vs2013/GS13Preview.png)
 
    The tab displays a list of the files that will be copied to the server. Displaying the preview isn't required to publish the application but is a useful function to be aware of.
 
 12. Click **Publish**.
 
-   ![StartPreview file output](../Media/GS13previewoutput.png)
+   ![StartPreview file output](./media/web-sites-dotnet-get-started-vs2013/GS13previewoutput.png)
 
    Visual Studio begins the process of copying the files to the Windows Azure server.
 
 13. The **Output** window shows what deployment actions were taken and reports successful completion of the deployment.
 
-   ![Output window reporting successful deployment](../Media/PublishOutput.png)
+   ![Output window reporting successful deployment](./media/web-sites-dotnet-get-started-vs2013/PublishOutput.png)
 
 14. Upon successful deployment, the default browser automatically opens to the URL of the deployed web site.
 
    The application you created is now running in the cloud.
 
-   ![Web site running in Windows Azure](../Media/GS13deployedsite.png)
+   ![Web site running in Windows Azure](./media/web-sites-dotnet-get-started-vs2013/GS13deployedsite.png)
 
 <h2><a name="nextsteps"></a><span class="short-header">Next steps</span>Next steps</h2>
 
@@ -177,7 +177,7 @@ The [Windows Azure Management Portal][Portal] is a web interface that you can us
 
 You can make new web sites, cloud services, virtual machines, databases, and more. You can create open source applications from the gallery. And you can manage services that you've created. For example, the following screen shot shows **Stop**, **Restart**, and **Delete** buttons for a Windows Azure Web Site in the **Dashboard** tab of the management portal. The **Dashboard** also shows performance statistics such as CPU time used, number of requests, data in and out, and any errors that may have occurred.
 
-![Management Portal Dashboard Tab](../Media/MPStopStartDelete.png)
+![Management Portal Dashboard Tab](./media/web-sites-dotnet-get-started-vs2013/MPStopStartDelete.png)
 
 You can change many other site settings on the **Configure** tab. For more information, see [How to Manage Web Sites](/en-us/manage/services/web-sites/how-to-manage-websites/).
 

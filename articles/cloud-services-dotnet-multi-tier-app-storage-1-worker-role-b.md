@@ -657,19 +657,19 @@ These tutorials and the sample application were written by [Rick Anderson](http:
    * Michiel van Otegem
 
  
-[createsolution]: #cloudproject
-[mailinglist]: #mailinglist
-[message]: #message
-[subscriber]: #subscriber
-[webapi]: #webapi
-[nextsteps]: #nextsteps
+
+
+
+
+
+
 
 [firsttutorial]: /en-us/develop/net/tutorials/multi-tier-web-site/1-overview/
 [tut2]: /en-us/develop/net/tutorials/multi-tier-web-site/2-download-and-run/
 [tut3configstorage]: /en-us/develop/net/tutorials/multi-tier-web-site/3-web-role/#configstorage
 [tut4]: /en-us/develop/net/tutorials/multi-tier-web-site/4-worker-role-a/
 [queuehowto]: /en-us/develop/net/how-to-guides/queue-service/
-[tablehowto]: /en-us/develop/net/how-to-guides/table-services/
+
 [blobhowto]: /en-us/develop/net/how-to-guides/blob-storage/
 [GetMessage]: http://msdn.microsoft.com/en-us/library/windowsazure/ee741827.aspx
 [getstartedtutorial]: /en-us/develop/net/tutorials/get-started
@@ -677,14 +677,14 @@ These tutorials and the sample application were written by [Rick Anderson](http:
 [autoscalingappblock]: /en-us/develop/net/how-to-guides/autoscaling/
 
 
-[mtas-new-worker-role-project]: ../Media/mtas-new-worker-role-project.png
-[mtas-add-new-role-project-dialog]: ../Media/mtas-add-new-role-project-dialog.png
-[mtas-worker-b-add-existing]: ../Media/mtas-worker-b-add-existing.png
-[mtas-worker-b-add-reference-menu]: ../Media/mtas-worker-b-add-reference-menu.png
-[mtas-worker-b-reference-manager]: ../Media/mtas-worker-b-reference-manager.png
-[mtas-worker-b-manage-nuget]: ../Media/mtas-worker-b-manage-nuget.png
-[mtas-worker-b-install-sendgrid]: ../Media/mtas-worker-b-install-sendgrid.png
-[mtas-worker-b-test-completed]: ../Media/mtas-worker-b-test-completed.png
-[mtas-worker-b-properties-menu]: ../Media/mtas-worker-b-properties-menu.png
-[mtas-worker-b-settings]: ../Media/mtas-worker-b-settings.png
+[mtas-new-worker-role-project]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-worker-role-b/mtas-new-worker-role-project.png
+[mtas-add-new-role-project-dialog]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-worker-role-b/mtas-add-new-role-project-dialog.png
+[mtas-worker-b-add-existing]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-worker-role-b/mtas-worker-b-add-existing.png
+[mtas-worker-b-add-reference-menu]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-worker-role-b/mtas-worker-b-add-reference-menu.png
+[mtas-worker-b-reference-manager]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-worker-role-b/mtas-worker-b-reference-manager.png
+[mtas-worker-b-manage-nuget]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-worker-role-b/mtas-worker-b-manage-nuget.png
+[mtas-worker-b-install-sendgrid]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-worker-role-b/mtas-worker-b-install-sendgrid.png
+
+
+[mtas-worker-b-settings]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-worker-role-b/mtas-worker-b-settings.png
 

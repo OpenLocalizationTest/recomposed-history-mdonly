@@ -715,7 +715,7 @@ The schema of rows in the `messagearchive` table is identical to that of the `me
 <h2><a name="queues"></a><span class="short-header">Queues</span>Windows Azure Queues</h2>
 
 Windows Azure queues facilitate communication between tiers of this multi-tier application, and between worker roles in the back-end tier. 
-Queues are used to communicate between worker role A and worker role B in order to make the application scalable. Worker role A could create a row in the Message table for each email, and worker role B could scan the table for rows representing emails that haven’t been sent, but you wouldn’t be able to add additional instances of worker role B in order to divide up the work.  The problem with using table rows to coordinate the work between worker role A and worker role B is that you have no way of ensuring that only one worker role instance will pick up any given table row for processing.  Queues give you that assurance. When a worker role instance pulls a work item off a queue, the queue service makes sure that no other worker role instance can pull the same work item. This exclusive lease feature of Windows Azure queues facilitates sharing a workload among multiple instances of a worker role.
+Queues are used to communicate between worker role A and worker role B in order to make the application scalable. Worker role A could create a row in the Message table for each email, and worker role B could scan the table for rows representing emails that haven't been sent, but you wouldn't be able to add additional instances of worker role B in order to divide up the work. The problem with using table rows to coordinate the work between worker role A and worker role B is that you have no way of ensuring that only one worker role instance will pick up any given table row for processing. Queues give you that assurance. When a worker role instance pulls a work item off a queue, the queue service makes sure that no other worker role instance can pull the same work item. This exclusive lease feature of Windows Azure queues facilitates sharing a workload among multiple instances of a worker role.
 
 Windows Azure also provides the Service Bus queue service. For more information about Windows Azure Storage queues and Service Bus queues, see the resources that are listed at the end of [the last tutorial in this series][tut5].
 
@@ -904,21 +904,21 @@ For links to additional resources for working with Windows Azure Storage tables,
 [tut5]: /en-us/develop/net/tutorials/multi-tier-web-site/5-worker-role-b/
 [autoscalingappblock]: /en-us/develop/net/how-to-guides/autoscaling/
 
-[0]: ../../Shared/media/antares-iaas-preview-01.png
-[1]: ../../Shared/media/antares-iaas-preview-05.png
-[2]: ../../Shared/media/antares-iaas-preview-06.png
-[mtas-architecture-overview]: ../Media/mtas-architecture-overview.png
-[mtas-alternative-architecture]: ../Media/mtas-alternative-architecture.png
-[mtas-mailing-list-index-page]: ../Media/mtas-mailing-list-index-page.png
-[mtas-subscribers-index-page]: ../Media/mtas-subscribers-index-page.png
-[mtas-message-index-page]: ../Media/mtas-message-index-page.png
-[mtas-message-create-page]: ../Media/mtas-message-create-page.png
-[mtas-subscribe-confirmation-page]: ../Media/mtas-subscribe-confirmation-page.png
-[mtas-unsubscribe-query-page]: ../Media/mtas-unsubscribe-query-page.png
-[mtas-unsubscribe-confirmation-page]: ../Media/mtas-unsubscribe-confirmation-page.png
-[mtas-worker-roles-a-and-b]: ../Media/mtas-worker-roles-a-and-b.png
-[mtas-message-processing]: ../Media/mtas-message-processing.png
-[mtas-subscribe-email]: ../Media/mtas-subscribe-email.png
-[mtas-subscribe-diagram]: ../Media/mtas-subscribe-diagram.png
-[mtas-datadiagram]: ../Media/mtas-datadiagram.png
+
+
+
+[mtas-architecture-overview]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-overview/mtas-architecture-overview.png
+[mtas-alternative-architecture]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-overview/mtas-alternative-architecture.png
+[mtas-mailing-list-index-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-overview/mtas-mailing-list-index-page.png
+[mtas-subscribers-index-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-overview/mtas-subscribers-index-page.png
+[mtas-message-index-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-overview/mtas-message-index-page.png
+[mtas-message-create-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-overview/mtas-message-create-page.png
+[mtas-subscribe-confirmation-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-overview/mtas-subscribe-confirmation-page.png
+[mtas-unsubscribe-query-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-overview/mtas-unsubscribe-query-page.png
+[mtas-unsubscribe-confirmation-page]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-overview/mtas-unsubscribe-confirmation-page.png
+[mtas-worker-roles-a-and-b]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-overview/mtas-worker-roles-a-and-b.png
+[mtas-message-processing]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-overview/mtas-message-processing.png
+[mtas-subscribe-email]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-overview/mtas-subscribe-email.png
+[mtas-subscribe-diagram]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-overview/mtas-subscribe-diagram.png
+[mtas-datadiagram]: ./media/cloud-services-dotnet-multi-tier-app-storage-1-overview/mtas-datadiagram.png
 
