@@ -18,7 +18,7 @@ For purposes of this tutorial, an Apache Tomcat application server will be insta
 
 ![Virtual machine running Apache Tomcat][virtual_machine_tomcat]
 
-<div chunk="../../Shared/Chunks/create-account-and-vms-note.md" />
+[WACOM.INCLUDE [create-account-and-vms-note](../includes/create-account-and-vms-note.md)]
 
 ## To create a virtual machine
 
@@ -126,21 +126,21 @@ At this point, your Tomcat web site should now be viewable from an external brow
 ## Next steps
 * Learn about other services, such as Windows Azure Storage, service bus, SQL Database, and more that you may want to include with your Java applications, by viewing the information available at <http://www.windowsazure.com/en-us/develop/java/>.
 
-[virtual_machine_tomcat]: ../media/WA_VirtualMachineRunningApacheTomcat.png
-[virtual_machine_new_eps]: ../media/WA_NewEndpointDetails.png
-[service_automatic_startup]: ../media/WA_TomcatServiceAutomaticStart.png
-[create_vm]: ../media/CreateVM.png
-[ConnectVMCreds]: ../media/ConnectVMCreds.png
-[ConnectVMPublisher]: ../media/ConnectVMPublisher.png
-[ConnectVMRDP]: ../media/ConnectVMRDP.png
-[ConnectVMVerify]: ../media/ConnectVMVerify.png
-[ConnectVMWindows]: ../media/ConnectVMWindows.png
-[New]: ../media/New.png
-[New_VM_QuickCreate]: ../media/New_VM_QuickCreate.png
-[SelectVM]: ../media/SelectVM.png
-[NewIBRule]: ../media/NewInboundRule.png
-[NewRulePort]: ../media/NewRulePort.png
-[NewRuleProtocol]: ../media/NewRuleProtocol.png
-[NewRuleAction]: ../media/NewRuleAction.png
-[NewRuleName]: ../media/NewRuleName.png
-[NewRuleProfile]: ../media/NewRuleProfile.png
+[virtual_machine_tomcat]: ./media/virtual-machines-java-run-tomcat-application-server/WA_VirtualMachineRunningApacheTomcat.png
+
+[service_automatic_startup]: ./media/virtual-machines-java-run-tomcat-application-server/WA_TomcatServiceAutomaticStart.png
+
+
+
+
+
+
+
+
+
+[NewIBRule]: ./media/virtual-machines-java-run-tomcat-application-server/NewInboundRule.png
+[NewRulePort]: ./media/virtual-machines-java-run-tomcat-application-server/NewRulePort.png
+[NewRuleProtocol]: ./media/virtual-machines-java-run-tomcat-application-server/NewRuleProtocol.png
+[NewRuleAction]: ./media/virtual-machines-java-run-tomcat-application-server/NewRuleAction.png
+[NewRuleName]: ./media/virtual-machines-java-run-tomcat-application-server/NewRuleName.png
+[NewRuleProfile]: ./media/virtual-machines-java-run-tomcat-application-server/NewRuleProfile.png

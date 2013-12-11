@@ -58,7 +58,7 @@ The following are prerequisites if you intend to use SQL Database with Java.
 
 Before using Windows Azure SQL Database in Java code, you will need to create a Windows Azure SQL Database server.
 
-1. Login to the [Windows Azure Preview Management Portal](https://manage.windowsazure.com).
+1. Login to the [Windows Azure Management Portal](https://manage.windowsazure.com).
 2. Click **New**.
 
     ![Create new SQL database][create_new]
@@ -81,7 +81,7 @@ Before using Windows Azure SQL Database in Java code, you will need to create a 
 
 <h2><a id="determine_connection_string"></a>Determining the SQL Database connection string</h2>
 
-1. Login to the [Windows Azure Preview Management Portal](https://manage.windowsazure.com).
+1. Login to the [Windows Azure Management Portal](https://manage.windowsazure.com).
 2. Click **SQL Databases**.
 3. Click the database that you want to use.
 4. Click **Show connection strings**.
@@ -97,7 +97,7 @@ Before using Windows Azure SQL Database in Java code, you will need to create a 
 We'll actually use this string later in this guide, for now you know the steps to determine the connection string. Also, depending on your application needs, you may not need to use the **encrypt** and **hostNameInCertificate** settings, and you may need to modify the **loginTimeout** setting.
 
 <h2><a id="specify_allowed_ips"></a>To allow access to a range of IP addresses</h2>
-1. Login to the [Preview Management Portal](https://manage.windowsazure.com).
+1. Login to the [Management Portal](https://manage.windowsazure.com).
 2. Click **SQL Databases**.
 3. Click **Servers**.
 4. Click the server that you want to use.
@@ -689,17 +689,17 @@ The following code shows you how to drop a table named **Person**.
 
 <h2><a id="using_in_azure"></a>Using SQL Database in Java within a Windows Azure Deployment</h2>
 
-To use SQL Database in Java within a Windows Azure deployment, in addition to having Microsoft JDBC Driver 4.0 for SQL Server as a library in your class path as shown above, you’ll need to package it with your deployment.
+To use SQL Database in Java within a Windows Azure deployment, in addition to having Microsoft JDBC Driver 4.0 for SQL Server as a library in your class path as shown above, you'll need to package it with your deployment.
 
 
 **Packaging the Microsoft JDBC Driver 4.0 SQL Server if you are using Eclipse**
 
-1. Within Eclipse’s Project Explorer, right-click your project and click **Properties**.
+1. Within Eclipse's Project Explorer, right-click your project and click **Properties**.
 2. In the left-hand pane of the **Properties** dialog, click **Deployment Assembly**, and then click **Add**.
 3. In the **New Assembly Directive** dialog, click **Java Build Path Entries** and then click **Next**.
 4. Select **Microsoft JDBC Driver 4.0 SQL Server** and then click **Finish**.
 5. Click **OK** to close the **Properties** dialog.
-6. Export your project’s WAR file to your approot folder, and rebuild your Azure project, per the steps documented at [Creating a Hello World Application Using the Windows Azure Plugin for Eclipse with Java (by Microsoft Open Technologies)](http://msdn.microsoft.com/en-us/library/windowsazure/hh690944.aspx). That topic also describes how to run your application in the compute emulator, and in Windows Azure.
+6. Export your project's WAR file to your approot folder, and rebuild your Azure project, per the steps documented at [Creating a Hello World Application Using the Windows Azure Plugin for Eclipse with Java (by Microsoft Open Technologies)](http://msdn.microsoft.com/en-us/library/windowsazure/hh690944.aspx). That topic also describes how to run your application in the compute emulator, and in Windows Azure.
 
 **Packaging the Microsoft JDBC Driver 4.0 SQL Server if you are not using Eclipse**
 
@@ -729,9 +729,9 @@ To learn more about Microsoft JDBC Driver for SQL Server, see [Overview of the J
 [To drop a table]:#to_drop_table
 [Using SQL Database in Java within a Windows Azure Deployment]:#using_in_azure
 [Next steps]:#nextsteps
-[create_new]: ../media/WA_New.png
-[create_new_sql_db]: ../media/WA_SQL_DB_Create.png
-[create_database_settings]: ../media/WA_CustomCreate_1.png
-[create_server_settings]: ../media/WA_CustomCreate_2.png
-[get_jdbc_connection_string]: ../media/WA_SQL_JDBC_ConnectionString.png
-[allowed_ips_dialog]: ../media/WA_Allowed_IPs.png
+[create_new]: ./media/sql-data-java-how-to-use-sql-database/WA_New.png
+[create_new_sql_db]: ./media/sql-data-java-how-to-use-sql-database/WA_SQL_DB_Create.png
+[create_database_settings]: ./media/sql-data-java-how-to-use-sql-database/WA_CustomCreate_1.png
+[create_server_settings]: ./media/sql-data-java-how-to-use-sql-database/WA_CustomCreate_2.png
+[get_jdbc_connection_string]: ./media/sql-data-java-how-to-use-sql-database/WA_SQL_JDBC_ConnectionString.png
+[allowed_ips_dialog]: ./media/sql-data-java-how-to-use-sql-database/WA_Allowed_IPs.png

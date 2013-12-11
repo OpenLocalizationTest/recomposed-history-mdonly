@@ -14,11 +14,11 @@ The resulting email will look similar to the following screen shot.
 
 ![Email message][emailsent]
 
-You’ll need to do the following to use the code in this topic:
+You'll need to do the following to use the code in this topic:
 
 1. Obtain the javax.mail JARs, for example from <http://www.oracle.com/technetwork/java/javamail/index.html>.
 2. Add the JARs to your Java build path.
-3. If you are using Eclipse to create this Java application, you can include the SendGrid libraries in your application deployment file (WAR) using Eclipse’s deployment assembly feature. If you are not using Eclipse to create this Java application, ensure the libraries are included within the same Azure role as your Java application, and added to the class path of your application.
+3. If you are using Eclipse to create this Java application, you can include the SendGrid libraries in your application deployment file (WAR) using Eclipse's deployment assembly feature. If you are not using Eclipse to create this Java application, ensure the libraries are included within the same Azure role as your Java application, and added to the class path of your application.
 
 
 You must also have your own SendGrid username and password, to be able to send the email. To get started with SendGrid, see [How to send email using SendGrid from Java](/en-us/develop/java/how-to-guides/sendgrid-email-service/).
@@ -202,9 +202,9 @@ Deploy your application to the compute emulator and within a browser run emailfo
 This code was provided to show you how to use SendGrid in Java on Windows Azure. Before deploying to Windows Azure in production, you may want to add more error handling or other features. For example: 
 
 * You could use Windows Azure storage blobs or SQL Database to store email addresses and email messages, instead of using a web form. For information about using Windows Azure storage blobs in Java, see [How to Use the Blob Storage Service from Java](http://www.windowsazure.com/en-us/develop/java/how-to-guides/blob-storage/). For information about using SQL Database in Java, see [Using SQL Database in Java](http://www.windowsazure.com/en-us/develop/java/how-to-guides/using-sql-azure-in-java/).
-* You could use `RoleEnvironment.getConfigurationSettings` to retrieve the SendGrid username and password from your deployment’s configuration settings, instead of using the web form to retrieve those values. For information about the `RoleEnvironment` class, see [Using the Windows Azure Service Runtime Library in JSP](http://msdn.microsoft.com/en-us/library/windowsazure/hh690948) and the Windows Azure Service Runtime package documentation at <http://dl.windowsazure.com/javadoc>.
+* You could use `RoleEnvironment.getConfigurationSettings` to retrieve the SendGrid username and password from your deployment's configuration settings, instead of using the web form to retrieve those values. For information about the `RoleEnvironment` class, see [Using the Windows Azure Service Runtime Library in JSP](http://msdn.microsoft.com/en-us/library/windowsazure/hh690948) and the Windows Azure Service Runtime package documentation at <http://dl.windowsazure.com/javadoc>.
 * For more information about using SendGrid in Java, see [How to Send Email Using SendGrid from Java](./sendgrid-email-service.md).
 
-[emailform]: ../media/SendGridJavaEmailform.jpg
-[emailsent]: ../media/SendGridJavaEmailSent.jpg
-[emailresult]: ../media/SendGridJavaResult.jpg
+[emailform]: ./media/store-sendgrid-java-how-to-send-email-example/SendGridJavaEmailform.jpg
+[emailsent]: ./media/store-sendgrid-java-how-to-send-email-example/SendGridJavaEmailSent.jpg
+[emailresult]: ./media/store-sendgrid-java-how-to-send-email-example/SendGridJavaResult.jpg

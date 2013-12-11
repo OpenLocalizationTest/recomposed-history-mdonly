@@ -8,11 +8,8 @@
 
 This guide will show you how to use the Windows Azure Access Control Service (ACS) within the Windows Azure Plugin for Eclipse with Java (by Microsoft Open Technologies). For more information on ACS, see the [Next steps](#next_steps) section.
 
-<div class="dev-callout"> 
-<b>Note</b> 
-<p>The Windows Azure Access Services Control Filter (by Microsoft Open Technologies) is a community technology preview. As pre-release software, it is not formally supported by Microsoft Open Technologies, Inc. nor Microsoft.</p> 
-</div>
-
+> WACOM.NOTE
+> The Windows Azure Access Services Control Filter (by Microsoft Open Technologies) is a community technology preview. As pre-release software, it is not formally supported by Microsoft Open Technologies, Inc. nor Microsoft.
 
 ## Table of Contents
 
@@ -146,7 +143,7 @@ To complete the tasks in this guide, you will need the following:
 - Eclipse IDE for Java EE Developers, Indigo or later. This can be downloaded from <http://www.eclipse.org/downloads/>. 
 - A distribution of a Java-based web server or application server, such as Apache Tomcat, GlassFish, JBoss Application Server, or Jetty.
 - A Windows Azure subscription, which can be acquired from <http://www.microsoft.com/windowsazure/offers/>.
-- The Windows Azure Plugin for Eclipse with Java (by Microsoft Open Technologies) – August 2012 CTP. For more information, see [Installing the Windows Azure Plugin for Eclipse with Java (by Microsoft Open Technologies)](http://msdn.microsoft.com/en-us/library/windowsazure/hh690946.aspx).
+- The Windows Azure Plugin for Eclipse with Java (by Microsoft Open Technologies) - August 2012 CTP. For more information, see [Installing the Windows Azure Plugin for Eclipse with Java (by Microsoft Open Technologies)](http://msdn.microsoft.com/en-us/library/windowsazure/hh690946.aspx).
 - An X.509 certificate to use with your application. You will need this certificate in both public certificate (.cer) and Personal Information Exchange (.PFX) format. (Options for creating this certificate will be described later in this tutorial).
 - Familiarity with the Windows Azure compute emulator and deployment techniques discussed at [Creating a Hello World Application for Windows Azure in Eclipse](http://msdn.microsoft.com/en-us/library/windowsazure/hh690944.aspx).
 
@@ -234,10 +231,8 @@ In this task, you upload a .PFX certificate that will be used to sign token requ
     1. In the **Used for** section, click **Relying Party Application** and select **Azure Web App** (which you previously set as the name of your relying party application).
     2. In the **Type** section, select **X.509 Certificate**.
     3. In the **Certificate** section, click the browse button and navigate to the X.509 certificate file that you want to use. This will be a .PFX file. Select the file, click **Open**,  and then enter the certificate password in the **Password** text box.
-    <div class="dev-callout">
-        <strong>Note</strong>
-        <p>For testing purposes, you may use a self-signed-certificate. To create a self-signed certificate, use the **New** button in the **ACS Filter Library** dialog (described later), or use the **encutil.exe** utility from the [project web site][] of the Windows Azure Starter Kit for Java (by Microsoft Open Technologies).</p>
-    </div>
+    > WACOM.NOTE 
+    > For testing purposes, you may use a self-signed-certificate. To create a self-signed certificate, use the **New** button in the **ACS Filter Library** dialog (described later), or use the **encutil.exe** utility from the [project web site][] of the Windows Azure Starter Kit for Java (by Microsoft Open Technologies).
     4. Ensure that **Make Primary** is checked. Your **Add Token-Signing Certificate or Key** page should look similar to the following.
         ![Add token-signing certificate][add_token_signing_cert]
     5. Click **Save** to save your settings and close the **Add Token-Signing Certificate or Key** page.
@@ -385,23 +380,23 @@ At this point, your certificate would be included in your deployment. Note that 
 [Windows Identity Foundation]: http://www.microsoft.com/download/en/details.aspx?id=17331
 [Windows Identity Foundation SDK]: http://www.microsoft.com/download/en/details.aspx?id=4451
 [Windows Azure Management Portal]: https://manage.windowsazure.com
-[acs_flow]: ../Media/ACSFlow.png
-[portal_home_image]: ../Media/PortalHomeImage.png
-[portal_sb_acs_caching]: ../Media/PortalSBACSCaching.png
-[new_acs_namespace]: ../Media/NewACSNamespace.png
-[new_acs_namespace_dialog]: ../Media/NewACSNamespaceDialog.png
-[acs_home_page]: ../Media/ACSHomePage.png
+[acs_flow]: ./media/active-directory-java-authenticate-users-access-control-eclipse/ACSFlow.png
+
+
+
+
+[acs_home_page]: ./media/active-directory-java-authenticate-users-access-control-eclipse/ACSHomePage.png
 
 <!-- Eclipse-specific -->
-[add_acs_filter_lib]: ../Media/AddACSFilterLibrary.png
-[add_acs_filter_lib_emulator]: ../Media/AddACSFilterLibraryEmulator.png
-[add_acs_filter_lib_production]: ../Media/AddACSFilterLibraryProduction.png
-[new_azure_deployment]: ../Media/NewAzureDeployment.png
-[relying_party_realm_emulator]: ../Media/RelyingPartyRealmEmulator.png
-[relying_party_return_url_emulator]: ../Media\RelyingPartyReturnURLEmulator.png
-[relying_party_realm_production]: ../Media/RelyingPartyRealmProduction.png
-[relying_party_return_url_production]: ../Media/RelyingPartyReturnURLProduction.png
-[add_cert_component]: ../Media/AddCertificateComponent.png
-[add_jsp_file_acs]: ../Media/AddJSPFileACS.png
-[create_acs_hello_world]: ../Media/CreateACSHelloWorld.png
-[add_token_signing_cert]: ../Media/AddTokenSigningCertificate.png
+[add_acs_filter_lib]: ./media/active-directory-java-authenticate-users-access-control-eclipse/AddACSFilterLibrary.png
+[add_acs_filter_lib_emulator]: ./media/active-directory-java-authenticate-users-access-control-eclipse/AddACSFilterLibraryEmulator.png
+[add_acs_filter_lib_production]: ./media/active-directory-java-authenticate-users-access-control-eclipse/AddACSFilterLibraryProduction.png
+
+[relying_party_realm_emulator]: ./media/active-directory-java-authenticate-users-access-control-eclipse/RelyingPartyRealmEmulator.png
+[relying_party_return_url_emulator]: ./media/active-directory-java-authenticate-users-access-control-eclipse/RelyingPartyReturnURLEmulator.png
+[relying_party_realm_production]: ./media/active-directory-java-authenticate-users-access-control-eclipse/RelyingPartyRealmProduction.png
+[relying_party_return_url_production]: ./media/active-directory-java-authenticate-users-access-control-eclipse/RelyingPartyReturnURLProduction.png
+[add_cert_component]: ./media/active-directory-java-authenticate-users-access-control-eclipse/AddCertificateComponent.png
+[add_jsp_file_acs]: ./media/active-directory-java-authenticate-users-access-control-eclipse/AddJSPFileACS.png
+[create_acs_hello_world]: ./media/active-directory-java-authenticate-users-access-control-eclipse/CreateACSHelloWorld.png
+[add_token_signing_cert]: ./media/active-directory-java-authenticate-users-access-control-eclipse/AddTokenSigningCertificate.png

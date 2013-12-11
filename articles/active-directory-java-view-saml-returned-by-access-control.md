@@ -13,10 +13,8 @@ This guide will show you how to view the underlying Security Assertion Markup La
 
 For more information on ACS, see the [Next steps](#next_steps) section.
 
-<div class="dev-callout"> 
-<b>Note</b> 
-<p>The Windows Azure Access Services Control Filter (by Microsoft Open Technologies) is a community technology preview. As pre-release software, it is not formally supported by Microsoft Open Technologies, Inc. nor Microsoft.</p> 
-</div>
+> WACOM.NOTE
+> The Windows Azure Access Services Control Filter (by Microsoft Open Technologies) is a community technology preview. As pre-release software, it is not formally supported by Microsoft Open Technologies, Inc. nor Microsoft.
 
 ## Table of Contents
 
@@ -193,4 +191,4 @@ To further explore ACS's functionality and to experiment with more sophisticated
 [Next steps]: #next_steps
 [Access Control Service 2.0]: http://go.microsoft.com/fwlink/?LinkID=212360
 [How to Authenticate Web Users with Windows Azure Access Control Service Using Eclipse]: howto-acs-java.md
-[saml_output]: ../media/SAML_Output.png
+[saml_output]: ./media/active-directory-java-view-saml-returned-by-access-control/SAML_Output.png

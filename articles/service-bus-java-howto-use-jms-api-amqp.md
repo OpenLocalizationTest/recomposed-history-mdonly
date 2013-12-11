@@ -15,7 +15,7 @@ This how-to guide explains how to use the Service Bus brokered messaging feature
 
 ##Getting Started with Service Bus
 
-This guide assumes that you already have a Service Bus namespace containing a queue named "queue1." If you do not, then you can create the namespace and queue using the [Windows Azure Management Portal](http://manage.windowsazure.com). For more information about how to create Service Bus namespaces and queues, see the How-To Guide titled “[How to Use Service Bus Queues.](https://www.windowsazure.com/en-us/develop/net/how-to-guides/service-bus-queues/)”
+This guide assumes that you already have a Service Bus namespace containing a queue named "queue1." If you do not, then you can create the namespace and queue using the [Windows Azure Management Portal](http://manage.windowsazure.com). For more information about how to create Service Bus namespaces and queues, see the How-To Guide titled [How to Use Service Bus Queues.](https://www.windowsazure.com/en-us/develop/net/how-to-guides/service-bus-queues/).
 
 ##Downloading the AMQP 1.0 JMS client library
 
@@ -33,7 +33,7 @@ You must add the following four JAR files from the Apache Qpid JMS AMQP 1.0 dist
 ### Java Naming and Directory Interface (JNDI)
 JMS uses the Java Naming and Directory Interface (JNDI) to create a separation between logical names and physical names. Two types of JMS objects are resolved using JNDI: ConnectionFactory and Destination. JNDI uses a provider model into which you can plug different directory services to handle name resolution duties. The Apache Qpid JMS AMQP 1.0 library comes with a simple properties file-based JNDI Provider that is configured using a properties file of the following format:
 
-	# servicebus.properties – sample JNDI configuration
+	# servicebus.properties - sample JNDI configuration
 	
 	# Register a ConnectionFactory in JNDI using the form:
 	# connectionfactory.[jndi_name] = [ConnectionURL]
@@ -104,7 +104,7 @@ For example, if the information obtained from the Windows Azure Management porta
   </tr>
 </table>
 
-Then in order to define a **ConnectionFactory** named “SBCF”, the configuration string appears as follows:
+Then in order to define a **ConnectionFactory** named "SBCF", the configuration string appears as follows:
 
 	connectionfactory.SBCF = amqps://owner:j9VYv1q33Ea%2BcbahWsHFYnLkEzrF0yA5SAqcLNvU7KM%3D@foo.servicebus.windows.net
 
@@ -274,7 +274,7 @@ For more information about the details of cross-platform messaging using Service
 To demonstrate JMS to .NET messaging:
 
 * Start the .NET sample application without any command-line arguments.
-* Start the Java sample application with the “sendonly” command-line argument. In this mode, the application will not receive messages from the queue, it will only send.
+* Start the Java sample application with the "sendonly" command-line argument. In this mode, the application will not receive messages from the queue, it will only send.
 * Press **Enter** a few times in the Java application console, which will cause messages to be sent.
 * These messages are received by the .NET application.
 
@@ -300,7 +300,7 @@ To demonstrate JMS to .NET messaging:
 
 To demonstrate .NET to JMS messaging:
 
-* Start the .NET sample application with the “sendonly” command-line argument. In this mode, the application will not receive messages from the queue, it will only send.
+* Start the .NET sample application with the "sendonly" command-line argument. In this mode, the application will not receive messages from the queue, it will only send.
 * Start the Java sample application without any command-line arguments.
 * Press **Enter** a few times in the .NET application console, which will cause messages to be sent.
 * These messages are received by the Java application.

@@ -32,11 +32,11 @@ the [Next steps](#NextSteps) section.
 * [How to: Delete a queue](#delete-queue)
 * [Next steps](#NextSteps)
 
-<div chunk="../../Shared/Chunks/howto-queue-storage.md" />
+[WACOM.INCLUDE [howto-queue-storage](../includes/howto-queue-storage.md)]
 
 <h2><a id="CreateAccount"></a>Create a Windows Azure storage account</h2>
 
-<div chunk="../../Shared/Chunks/create-storage-account.md" />
+[WACOM.INCLUDE [create-storage-account](../includes/create-storage-account.md)]
 
 ## <a name="CreateApplication"> </a>Create a Java application
 
@@ -79,7 +79,7 @@ how you can declare a static field to hold the connection string:
 In an application running within a role in Windows Azure, this string
 can be stored in the service configuration file,
 ServiceConfiguration.cscfg, and can be accessed with a call to the
-RoleEnvironment.getConfigurationSettings method. Here’s an example of
+RoleEnvironment.getConfigurationSettings method. Here's an example of
 getting the connection string from a **Setting** element named
 *StorageConnectionString* in the service configuration file:
 
@@ -105,7 +105,7 @@ CloudStorageAccount for details.
     CloudQueueClient queueClient = storageAccount.createCloudQueueClient();
 
 Use the CloudQueueClient object to get a reference to the queue you want
-to use. You can create the queue if it doesn’t exist.
+to use. You can create the queue if it doesn't exist.
 
     // Retrieve a reference to a queue
     CloudQueue queue = queueClient.getQueueReference("myqueue");
@@ -118,8 +118,8 @@ to use. You can create the queue if it doesn’t exist.
 To insert a message into an existing queue, first create a new
 CloudQueueMessage. Next, call the addMessage method. A CloudQueueMessage
 can be created from either a string (in UTF-8 format) or a byte array.
-Here is code which creates a queu (if it doesn’t exist) and inserts the
-message “Hello, World”.
+Here is code which creates a queu (if it doesn't exist) and inserts the
+message "Hello, World".
 
     // Retrieve storage account from connection-string
     CloudStorageAccount storageAccount = 
@@ -297,7 +297,7 @@ method on the queue object.
 
 ## <a name="NextSteps"> </a>Next steps
 
-Now that you’ve learned the basics of queue storage, follow these links
+Now that you've learned the basics of queue storage, follow these links
 to learn how to do more complex storage tasks.
 
 -   See the MSDN Reference: [Storing and Accessing Data in Windows
