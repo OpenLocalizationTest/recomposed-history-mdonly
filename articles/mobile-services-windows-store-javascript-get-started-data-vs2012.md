@@ -1,16 +1,14 @@
-<properties linkid="develop-mobile-tutorials-get-started-with-data-js" urlDisplayName="Get Started with Data" pageTitle="Get started with data (JavaScript) - Mobile Services" metaKeywords="" metaDescription="Learn how to get started using data with Windows Azure Mobile Services." writer="glenga" metaCanonical="https://www.windowsazure.com/en-us/develop/mobile/tutorials/get-started-with-data-dotnet/" disqusComments="1" umbracoNaviHide="1" />
+<properties linkid="develop-mobile-tutorials-get-started-with-data-js" urlDisplayName="Get Started with Data" pageTitle="Get started with data (JavaScript) - Mobile Services" metaKeywords="" desscription="Learn how to get started using data with Windows Azure Mobile Services." writer="glenga" metaCanonical="https://www.windowsazure.com/en-us/develop/mobile/tutorials/get-started-with-data-dotnet/" disqusComments="1" umbracoNaviHide="1" title="Get started with data in Mobile Services using Visual Studio 2012" documentationCenter="Mobile" />
+# Get started with data in Mobile Services using Visual Studio 2012
 
-
-# Get started with data in Mobile Services
 <div class="dev-center-tutorial-selector sublanding"> 
-	<a href="/en-us/develop/mobile/tutorials/get-started-with-data-dotnet" title="Windows Store C#">Windows Store C#</a><a href="/en-us/develop/mobile/tutorials/get-started-with-data-js" title="Windows Store JavaScript" class="current">Windows Store JavaScript</a><a href="/en-us/develop/mobile/tutorials/get-started-with-data-wp8" title="Windows Phone">Windows Phone</a><a href="/en-us/develop/mobile/tutorials/get-started-with-data-ios" title="iOS">iOS</a><a href="/en-us/develop/mobile/tutorials/get-started-with-data-android" title="Android">Android</a><a href="/en-us/develop/mobile/tutorials/get-started-with-data-html" title="HTML">HTML</a><a href="/en-us/develop/mobile/tutorials/get-started-with-data-html" title="HTML">HTML</a><a href="/en-us/develop/mobile/tutorials/get-started-with-data-xamarin-ios" title="Xamarin.iOS">Xamarin.iOS</a><a href="/en-us/develop/mobile/tutorials/get-started-with-data-xamarin-android" title="Xamarin.Android">Xamarin.Android</a>
+	<a href="/en-us/develop/mobile/tutorials/get-started-with-data-dotnet-vs2012" title="Windows Store C#">Windows Store C#</a><a href="/en-us/develop/mobile/tutorials/get-started-with-data-js-vs2012" title="Windows Store JavaScript" class="current">Windows Store JavaScript</a><a href="/en-us/develop/mobile/tutorials/get-started-with-data-wp8" title="Windows Phone">Windows Phone</a><a href="/en-us/develop/mobile/tutorials/get-started-with-data-ios" title="iOS">iOS</a><a href="/en-us/develop/mobile/tutorials/get-started-with-data-android" title="Android">Android</a><a href="/en-us/develop/mobile/tutorials/get-started-with-data-html" title="HTML">HTML</a><a href="/en-us/develop/mobile/tutorials/get-started-with-data-html" title="HTML">HTML</a><a href="/en-us/develop/mobile/tutorials/get-started-with-data-xamarin-ios" title="Xamarin.iOS">Xamarin.iOS</a><a href="/en-us/develop/mobile/tutorials/get-started-with-data-xamarin-android" title="Xamarin.Android">Xamarin.Android</a>
 </div>	
-
 
 This topic shows you how to use Windows Azure Mobile Services to leverage data in a Windows Store app. In this tutorial, you will download an app that stores data in memory, create a new mobile service, integrate the mobile service with the app, and then login to the Windows Azure Management Portal to view changes to data made when running the app.
 
 <div class="dev-callout"><b>Note</b>
-<p><em>Visual Studio 2013 Preview</em> includes new features that make it easy to connect your Windows Store app to Mobile Services.  For more information, see <a href="http://go.microsoft.com/fwlink/p/?LinkId=309096">Quickstart: Adding a mobile service</a> in the Windows Dev Center.</p>
+<p>This tutorial adds Mobile Services functionality to a Windows Store app created in Visual Studio 2012. Visual Studio 2013 includes new features that make it easy to connect your Windows Store app to Mobile Services. For more information, see <a href="/en-us/develop/mobile/tutorials/get-started-with-data-js/">Get started with data in Mobile Services</a>.</p>
 </div>
 
 This tutorial walks you through these basic steps:
@@ -45,11 +43,11 @@ This tutorial is built on the [GetStartedWithData app][Developer Code Samples si
 
 <h2><a name="create-service"></a><span class="short-header">Create mobile service</span>Create a new mobile service in the Management Portal</h2>
 
-<div chunk="../chunks/mobile-services-create-new-service-data.md" />
+[WACOM.INCLUDE [mobile-services-create-new-service-data](../includes/mobile-services-create-new-service-data.md)]
 
 <h2><a name="add-table"></a><span class="short-header">Add a new table</span>Add a new table to the mobile service</h2>
 
-<div chunk="../chunks/mobile-services-create-new-service-data-2.md" />
+[WACOM.INCLUDE [mobile-services-create-new-service-data-2](../includes/mobile-services-create-new-service-data-2.md)]
 
 <h2><a name="update-app"></a><span class="short-header">Update the app</span>Update the app to use the mobile service for data access</h2>
 
@@ -88,7 +86,7 @@ Now that your mobile service is ready, you can update the app to store items in 
 
         var todoTable = client.getTable('TodoItem');
 
-   This code creates a proxy object (**todoTable**) for the SQL Database **TodoItem**. 
+   This code creates a proxy object (**todoTable**) for the new database table. 
 
 7. Replace the **InsertTodoItem** function with the following code:
 
@@ -191,27 +189,27 @@ Once you have completed the data series, try one of these other tutorials:
 [Next Steps]:#next-steps
 
 <!-- Images. -->
-[0]: ../Media/mobile-quickstart-startup.png
-[1]: ../../Shared/Media/plus-new.png
-[2]: ../Media/mobile-create.png
-[3]: ../Media/mobile-create-page1.png
-[4]: ../Media/mobile-create-page2.png
-[5]: ../Media/mobile-data-tab-empty.png
-[6]: ../Media/mobile-create-todoitem-table.png
-[7]: ../Media/mobile-add-nuget-package-js.png
-[8]: ../Media/mobile-dashboard-tab.png
-[9]: ../Media/mobile-todoitem-data-browse.png
-[10]: ../Media/mobile-data-sample-download-js.png
+[0]: ./media/mobile-services-windows-store-javascript-get-started-data-vs2012/mobile-quickstart-startup.png
+
+
+
+
+
+
+[7]: ./media/mobile-services-windows-store-javascript-get-started-data-vs2012/mobile-add-nuget-package-js.png
+[8]: ./media/mobile-services-windows-store-javascript-get-started-data-vs2012/mobile-dashboard-tab.png
+[9]: ./media/mobile-services-windows-store-javascript-get-started-data-vs2012/mobile-todoitem-data-browse.png
+[10]: ./media/mobile-services-windows-store-javascript-get-started-data-vs2012/mobile-data-sample-download-js.png
 
 
 <!-- URLs. -->
 [Validate and modify data with scripts]: /en-us/develop/mobile/tutorials/validate-modify-and-augment-data-js
 [Refine queries with paging]: /en-us/develop/mobile/tutorials/add-paging-to-data-js
-[Get started with Mobile Services]: ./mobile-services-get-started.md
+[Get started with Mobile Services]: /en-us/develop/mobile/tutorials/get-started
 [Get started with authentication]: /en-us/develop/mobile/tutorials/get-started-with-users-js
-[Get started with push notifications]: ./mobile-services-get-started-with-push-js.md
-[C# and XAML]: ./mobile-services-get-started-with-data-dotnet.md
-[WindowsAzure.com]: http://www.windowsazure.com/
+[Get started with push notifications]: /en-us/develop/mobile/tutorials/get-started-with-push-js-vs2012
+[C# and XAML]: /en-us/develop/mobile/tutorials/get-started-with-data-dotnet-vs2012
+
 [Windows Azure Management Portal]: https://manage.windowsazure.com/
 [Management Portal]: https://manage.windowsazure.com/
 [Mobile Services SDK]: http://go.microsoft.com/fwlink/?LinkId=257545
