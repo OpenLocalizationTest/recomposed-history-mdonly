@@ -1,13 +1,8 @@
-<properties linkid="develop-notificationhubs-tutorials-send-breaking-news-ios" urlDisplayName="Breaking News" pageTitle="Notification Hubs Breaking News Tutorial - iOS" metaKeywords="" description="Learn how to use Windows Azure Service Bus Notification Hubs to send breaking news notifications to iOS devices." metaCanonical="" services="mobile-services,service-bus,notification-hubs" documentationCenter="" title="Use Notification Hubs to send breaking news" authors=""  solutions="" writer="ricksal" manager="" editor=""  />
-
-
-
+<properties linkid="develop-notificationhubs-tutorials-send-breaking-news-ios" urlDisplayName="Breaking News" pageTitle="Notification Hubs Breaking News Tutorial - iOS" metaKeywords="" description="Learn how to use Windows Azure Service Bus Notification Hubs to send breaking news notifications to iOS devices." metaCanonical="" services="mobile-services,notification-hubs" documentationCenter="" title="Use Notification Hubs to send breaking news" authors=""  solutions="" writer="ricksal" manager="" editor=""  />
 
 # Use Notification Hubs to send breaking news
 <div class="dev-center-tutorial-selector sublanding">     	
-	<a href="/en-us/manage/services/notification-hubs/breaking-news-dotnet" title="Windows Store C#" >Windows Store C#</a>
-	<a href="/en-us/manage/services/notification-hubs/breaking-news-wp8" title="Windows Phone">Windows Phone</a>
-	<a href="/en-us/manage/services/notification-hubs/breaking-news-ios" title="iOS" class="current">iOS</a>
+	<a href="/en-us/manage/services/notification-hubs/breaking-news-dotnet" title="Windows Store C#" >Windows Store C#</a><a href="/en-us/manage/services/notification-hubs/breaking-news-wp8" title="Windows Phone">Windows Phone</a><a href="/en-us/manage/services/notification-hubs/breaking-news-ios" title="iOS" class="current">iOS</a>
 </div>
 
 This topic shows you how to use Windows Azure Notification Hubs to broadcast breaking news notifications to an iOS app. When complete, you will be able to register for breaking news categories you are interested in, and receive only push notifications for those categories. This scenario is a common pattern for many apps where notifications have to be sent to groups of users that have previously declared interest in them, e.g. RSS reader, apps for music fans, etc. 
@@ -199,7 +194,7 @@ The app is now complete and can store a set of categories in the device local st
 
 <h2><a name="send"></a><span class="short-header">Send notifications</span>Send notifications from your back-end</h2>
 
-<div chunk="../chunks/notification-hubs-back-end.md" />
+[WACOM.INCLUDE [notification-hubs-back-end](../includes/notification-hubs-back-end.md)]
 
 ##<a name="test-app"></a>Run the app and generate notifications
 
@@ -241,22 +236,22 @@ In this tutorial we learned how to broadcast breaking news by category. Consider
 [Next Steps]: #next-steps
 
 <!-- Images. -->
-[2]: ../media/notification-hub-breakingnews-ios1.png
-[3]: ../media/notification-hub-breakingnews-ios2.png
-[4]: ../media/notification-hub-breakingnews-ios3.png
-[5]: ../media/notification-hub-breakingnews-ios4.png
-[13]: ../media/notification-hub-create-console-app.png
-[14]: ../media/notification-hub-windows-toast.png
-[15]: ../media/notification-hub-scheduler1.png
-[16]: ../media/notification-hub-scheduler2.png
+[2]: ./media/notification-hubs-ios-send-breaking-news/notification-hub-breakingnews-ios1.png
+[3]: ./media/notification-hubs-ios-send-breaking-news/notification-hub-breakingnews-ios2.png
+[4]: ./media/notification-hubs-ios-send-breaking-news/notification-hub-breakingnews-ios3.png
+
+
+
+
+
 
 
 <!-- URLs. -->
 [How To: Service Bus Notification Hubs (iOS Apps)]: http://msdn.microsoft.com/en-us/library/jj927168.aspx
 [Use Notification Hubs to broadcast localized breaking news]: /en-us/manage/services/notification-hubs/breaking-news-localized-dotnet/
-[Mobile Service]: ../../../DevCenter/Mobile/Tutorials/mobile-services-get-started.md
+[Mobile Service]: /en-us/develop/mobile/tutorials/get-started
 [Notify users with Notification Hubs]: /en-us/manage/services/notification-hubs/notify-users/
-[WindowsAzure.com]: http://www.windowsazure.com/
+
 [Windows Azure Management Portal]: https://manage.windowsazure.com/
 [Notification Hubs Guidance]: http://msdn.microsoft.com/en-us/library/jj927170.aspx
 [Notification Hubs How-To for iOS]: http://msdn.microsoft.com/en-us/library/jj927168.aspx

@@ -1,14 +1,8 @@
 <properties linkid="develop-notificationhubs-tutorials-send-localized-breaking-news-iOS" urlDisplayName="Localized Breaking News" pageTitle="Notification Hubs Localized Breaking News Tutorial for iOS" metaKeywords="" description="Learn how to use Windows Azure Service Bus Notification Hubs to send localized breaking news notifications (iOS)." metaCanonical="" services="mobile-services,notification-hubs" documentationCenter="" title="Use Notification Hubs to send localized breaking news to iOS devices" authors=""  solutions="" writer="ricksal" manager="" editor=""  />
-
-
-
-
-
 # Use Notification Hubs to send localized breaking news to iOS devices
 
 <div class="dev-center-tutorial-selector sublanding"> 
-    	<a href="/en-us/manage/services/notification-hubs/breaking-news-localized-dotnet" title="Windows Store C#">Windows Store C#</a>
-		<a href="/en-us/manage/services/notification-hubs/breaking-news-localized-ios" title="iOS" class="current">iOS</a>
+    	<a href="/en-us/manage/services/notification-hubs/breaking-news-localized-dotnet" title="Windows Store C#">Windows Store C#</a><a href="/en-us/manage/services/notification-hubs/breaking-news-localized-ios" title="iOS" class="current">iOS</a>
 </div>
 
 
@@ -166,7 +160,7 @@ In order to adapt your client apps to receive localized messages, you have to re
 
 <h2><a name="send"></a><span class="short-header">Send localized notifications</span>Send localized notifications from your back-end</h2>
 
-<div chunk="../chunks/notification-hubs-localized-back-end.md" />
+[WACOM.INCLUDE [notification-hubs-localized-back-end](../includes/notification-hubs-localized-back-end.md)]
 
 
 ## Next Steps
@@ -190,40 +184,40 @@ A reference for the template expression language is in [Notification Hubs How-To
 [Next Steps]: #next-steps
 
 <!-- Images. -->
-[0]: mobile-services-submit-win8-app.png
-[1]: ../media/notification-hub-breakingnews-win1.png
-[2]: notification-hub-create-win8-app.png
-[3]: notification-hub-associate-win8-app.png
-[4]: mobile-services-select-app-name.png
-[5]: mobile-services-win8-edit-app.png
-[6]: mobile-services-win8-app-push-auth.png
-[11]: notification-hub-configure-wns.png
-[12]: notification-hub-connection-strings.png
-[13]: ../media/ios_localized1.png
-[14]: ../media/ios_localized2.png
-[15]: ../media/notification-hub-scheduler1.png
-[16]: ../media/notification-hub-scheduler2.png
-[17]: mobile-services-win8-edit2-app.png
-[18]: notification-hub-win8-app-toast.png
-[19]: notification-hub-windows-reg.png
+
+
+
+
+
+
+
+
+
+[13]: ./media/notification-hubs-ios-send-localized-breaking-news/ios_localized1.png
+[14]: ./media/notification-hubs-ios-send-localized-breaking-news/ios_localized2.png
+
+
+
+
+
 
 <!-- URLs. -->
 [How To: Service Bus Notification Hubs (iOS Apps)]: http://msdn.microsoft.com/en-us/library/jj927168.aspx
-[Use Notification Hubs to send breaking news]: breaking-news-ios.md
-[Mobile Service]: ../../../DevCenter/Mobile/Tutorials/mobile-services-get-started.md
-[Notify users with Notification Hubs: ASP.NET]: tutorial-notify-users-aspnet.md
-[Notify users with Notification Hubs: Mobile Services]: tutorial-notify-users-mobileservices.md
+[Use Notification Hubs to send breaking news]: /en-us/manage/services/notification-hubs/breaking-news-ios
+[Mobile Service]: /en-us/develop/mobile/tutorials/get-started
+[Notify users with Notification Hubs: ASP.NET]: /en-us/manage/services/notification-hubs/notify-users-aspnet
+[Notify users with Notification Hubs: Mobile Services]: /en-us/manage/services/notification-hubs/notify-users
 [Submit an app page]: http://go.microsoft.com/fwlink/p/?LinkID=266582
 [My Applications]: http://go.microsoft.com/fwlink/p/?LinkId=262039
 [Live SDK for Windows]: http://go.microsoft.com/fwlink/p/?LinkId=262253
 [Get started with Mobile Services]: /en-us/develop/mobile/tutorials/get-started/#create-new-service
-[Get started with data]: ../tutorials/mobile-services-get-started-with-data-dotnet.md
-[Get started with authentication]: ../tutorials/mobile-services-get-started-with-users-dotnet.md
-[Get started with push notifications]: ../tutorials/mobile-services-get-started-with-push-dotnet.md
-[Push notifications to app users]: ../tutorials/mobile-services-push-notifications-to-app-users-dotnet.md
-[Authorize users with scripts]: ../tutorials/mobile-services-authorize-users-dotnet.md
-[JavaScript and HTML]: ../tutorials/mobile-services-get-started-with-push-js.md
-[WindowsAzure.com]: http://www.windowsazure.com/
+[Get started with data]: /en-us/develop/mobile/tutorials/get-started-with-data-ios
+[Get started with authentication]: /en-us/develop/mobile/tutorials/get-started-with-users-ios
+[Get started with push notifications]: /en-us/develop/mobile/tutorials/get-started-with-push-ios
+[Push notifications to app users]: /en-us/develop/mobile/tutorials/push-notifications-to-users-ios
+[Authorize users with scripts]: /en-us/develop/mobile/tutorials/authorize-users-in-scripts-ios
+[JavaScript and HTML]: /en-us/develop/mobile/tutorials/get-started-with-push-js.md
+
 [Windows Azure Management Portal]: https://manage.windowsazure.com/
 [Windows Developer Preview registration steps for Mobile Services]: ../HowTo/mobile-services-windows-developer-preview-registration.md
 [wns object]: http://go.microsoft.com/fwlink/p/?LinkId=260591

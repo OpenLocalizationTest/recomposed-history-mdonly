@@ -1,14 +1,8 @@
 <properties linkid="notification-hubs-how-to-guides-howto-register-user-with-aspnet-webapi-ios" urlDisplayName="Notify iOS app users by using Web API" pageTitle="Register the current user for push notifications by using Web API - Notification Hubs" metaKeywords="Windows Azure registering application, Notification Hubs, Azure push notifications, push notification iOS app" description="Learn how to request push notification registration in an iOS app with Windows Azure Notification Hubs when registeration is performed by ASP.NET Web API." metaCanonical="" services="notification-hubs" documentationCenter="" title="Register the current user for push notifications by using ASP.NET" authors=""  solutions="" writer="" manager="" editor=""  />
-
-
-
-
-
 # Register the current user for push notifications by using ASP.NET
 
 <div class="dev-center-tutorial-selector sublanding">
-    <a href="/en-us/manage/services/notification-hubs/register-users-with-aspnet-dotnet" title="Windows Store C#">Windows Store C#</a>
-    <a href="/en-us/manage/services/notification-hubs/register-users-with-aspnet-ios" title="iOS" class="current">iOS</a>
+    <a href="/en-us/manage/services/notification-hubs/register-users-with-aspnet-dotnet" title="Windows Store C#">Windows Store C#</a><a href="/en-us/manage/services/notification-hubs/register-users-with-aspnet-ios" title="iOS" class="current">iOS</a>
 </div>
 
 This topic shows you how to request push notification registration with Windows Azure Notification Hubs when registration is performed by ASP.NET Web API. This topic extends the tutorial [Notify users with Notification Hubs]. You must have already completed the required steps in that tutorial to create the authenticated mobile service. For more information on the notify users scenario, see [Notify users with Notification Hubs].  
@@ -214,11 +208,11 @@ Now that the client app has been updated, return to the [Notify users with Notif
 <!-- Anchors. -->
 
 <!-- Images. -->
-[0]: ../Media/notification-hub-user-aspnet-ios1.png
-[1]: ../Media/notification-hub-user-aspnet-ios2.png
+[0]: ./media/notification-hubs-ios-aspnet-register-user-push-notifications/notification-hub-user-aspnet-ios1.png
+[1]: ./media/notification-hubs-ios-aspnet-register-user-push-notifications/notification-hub-user-aspnet-ios2.png
 
 <!-- URLs. -->
-[Notify users with Notification Hubs]: ./tutorial-notify-users-aspnet.md
-[WindowsAzure.com]: http://www.windowsazure.com/
+[Notify users with Notification Hubs]: /en-us/manage/services/notification-hubs/notify-users-aspnet
+
 [Windows Azure Management Portal]: https://manage.windowsazure.com/
-[Get Started with Notification Hubs]: getting-started-ios.md
+[Get Started with Notification Hubs]: /en-us/manage/services/notification-hubs/get-started-notification-hubs-ios

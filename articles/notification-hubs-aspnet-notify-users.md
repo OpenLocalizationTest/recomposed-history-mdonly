@@ -1,14 +1,9 @@
 <properties linkid="notification-hubs-how-to-guides-howto-notify-users-aspnet" urlDisplayName="Notify Users" pageTitle="Notify Users of your ASP.NET service with Notification Hubs" metaKeywords="" description="Follow this tutorial to register to receive notifications from your ASP.NET service by using Notification Hubs" metaCanonical="" services="notification-hubs" documentationCenter="" title="Notify users with Notification Hubs" authors=""  solutions="" writer="glenga" manager="" editor=""  />
 
-
-
-
-
 # Notify users with Notification Hubs
 
 <div class="dev-center-tutorial-selector sublanding">
-    <a href="/en-us/manage/services/notification-hubs/notify-users" title="Mobile Services">Mobile Services</a>
-    <a href="/en-us/manage/services/notification-hubs/notify-users-aspnet" title="ASP.NET" class="current">ASP.NET</a>
+    <a href="/en-us/manage/services/notification-hubs/notify-users" title="Mobile Services">Mobile Services</a><a href="/en-us/manage/services/notification-hubs/notify-users-aspnet" title="ASP.NET" class="current">ASP.NET</a>
 </div> 
 
 This tutorial shows you how to use Windows Azure Notification Hubs to send push notifications to a specific app user on a specific device. An ASP.NET Web API backend is used to authenticate clients and to generate notifications. This tutorial builds on the notification hub that you created in the previous **Get started with Notification Hubs** tutorial. The notification registration code is moved from the client to the backend service. This ensures that registration is only completed after a client has been positively authenticated by the service. It also means that notification hub credentials aren't distributed with the client app. The service also controls the tags requested during registration.
@@ -323,29 +318,29 @@ For more information about Notification Hubs, see [Windows Azure Notification Hu
 [Update your ASP.NET application to send notifications]: #send-notifications
 
 <!-- Images. -->
-[0]: ../Media/notification-hub-create-mvc-app.png
-[1]: ../Media/notification-hub-create-aspnet-class.png
-[2]: ../Media/notification-hub-add-nuget-package.png
-[3]: ../Media/notification-hub-add-register-controller2.png
-[6]: ../Media/notification-hub-select-hub-connection.png
-[7]: ../Media/notification-hub-connection-strings.png
-[5]: ../Media/mobile-insert-script-push2.png
+[0]: ./media/notification-hubs-aspnet-notify-users/notification-hub-create-mvc-app.png
+[1]: ./media/notification-hubs-aspnet-notify-users/notification-hub-create-aspnet-class.png
+[2]: ./media/notification-hubs-aspnet-notify-users/notification-hub-add-nuget-package.png
+[3]: ./media/notification-hubs-aspnet-notify-users/notification-hub-add-register-controller2.png
+[6]: ./media/notification-hubs-aspnet-notify-users/notification-hub-select-hub-connection.png
+[7]: ./media/notification-hubs-aspnet-notify-users/notification-hub-connection-strings.png
+
 
 <!-- URLs. -->
-[Get started Windows Store]: ./getting-started-windowsdotnet.md
-[Get started iOS]: ./getting-started-ios.md
-[Get started Android]: ./getting-started-android.md
+[Get started Windows Store]: /en-us/manage/services/notification-hubs/getting-started-windows-dotnet
+[Get started iOS]: /en-us/manage/services/notification-hubs/get-started-notification-hubs-ios
+[Get started Android]: /en-us/manage/services/notification-hubs/get-started-notification-hubs-android
 [Get started auth Windows Store]: /en-us/develop/mobile/tutorials/get-started-with-users-dotnet/
 [Get started auth iOS]: /en-us/develop/mobile/tutorials/get-started-with-users-ios/
 [Get started auth Android]: /en-us/develop/mobile/tutorials/get-started-with-users-android/
-[Client topic Windows Store C# version]: ./howto-register-user-with-aspnet-windowsdotnet.md 
-[Client topic iOS version]: ./howto-register-user-with-aspnet-ios.md 
+[Client topic Windows Store C# version]: /en-us/manage/services/notification-hubs/register-users-aspnet-dotnet 
+[Client topic iOS version]: /en-us/manage/services/notification-hubs/howto-register-user-with-aspnet-ios 
 [Visual Studio 2012 Express for Windows 8]: http://go.microsoft.com/fwlink/?LinkId=257546
-[WindowsAzure.com]: http://www.windowsazure.com/
+
 [Management Portal]: https://manage.windowsazure.com/
 
 [Create a mobile-friendly REST service using ASP.NET Web API and SQL Database]: /en-us/develop/net/tutorials/rest-service-using-web-api/
-[Send cross-platform notifications to users with Notification Hubs]: ./tutorial-notify-users-cross-platform-aspnet.md
-[Breaking news .NET]: ./breaking-news-dotnet.md
-[Breaking news iOS]: ./breaking-news-dotnet.md
+[Send cross-platform notifications to users with Notification Hubs]: /en-us/manage/services/notification-hubs/notify-users-xplat-aspnet
+[Breaking news .NET]: /en-us/manage/services/notification-hubs/breaking-news-dotnet
+[Breaking news iOS]: /en-us/manage/services/notification-hubs/breaking-news-dotnet
 [Windows Azure Notification Hubs]: http://msdn.microsoft.com/en-us/library/windowsazure/jj927170.aspx

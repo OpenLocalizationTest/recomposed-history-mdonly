@@ -1,8 +1,4 @@
-<properties linkid="" urlDisplayName="" pageTitle="" metaKeywords="" description="" metaCanonical="" services="" documentationCenter="" title="Get started with Notification Hubs" authors=""  solutions="" writer="elioda" manager="" editor=""  />
-
-
-
-
+<properties linkid="" urlDisplayName="" pageTitle="Get started with Notification Hubs for Xamarin.Android apps" metaKeywords="" description="Learn how to use Windows Azure Notification Hubs to send push notifications to a Xamarin Android application." metaCanonical="" authors=""  solutions="" writer="elioda" manager="" editor=""  services="mobile-services,notification-hubs" documentationCenter="" title="Get started with Notification Hubs"/>
 
 # Get started with Notification Hubs
 
@@ -139,7 +135,7 @@ Your notification hub is now configured to work with GCM, and you have the conne
 
 6. Open your Xamarin.Android project in Xamarin Studio (or Visual Studio). 
 
-7. Right click the project **References** folder, and choose **Edit References…**
+7. Right click the project **References** folder, and choose **Edit References???**
 
 8. Go to the **.Net Assembly** tab, browse to your project's **_external** folder, select the **PushSharp.Client.MonoForAndroid.dll** we built earlier and click **Add**. Click OK to close the dialog. 
 
@@ -151,7 +147,7 @@ Your notification hub is now configured to work with GCM, and you have the conne
 
 3. Open your Xamarin.Android project in Xamarin Studio (or Visual Studio).
 
-4. Right click the project **References** folder, and choose **Edit References…**
+4. Right click the project **References** folder, and choose **Edit References???**
 
 5. Go to the **.Net Assembly** tab, browse to your project's **_external** folder, select the **ByteSmith.WindowsAzure.Messaging.Android.dll** we built earlier and click **Add**. Click OK to close the dialog. 
 
@@ -427,45 +423,44 @@ In this simple example you broadcast notifications to all your Android devices. 
 [Next Steps]:#next-steps
 
 <!-- Images. -->
-[1]: ../media/mobile-services-google-developers.png
-[2]: ../media/mobile-services-google-create-server.png
-[3]: ../media/mobile-services-google-create-server2.png
-[4]: ../media/mobile-services-google-create-server3.png
+[1]: ./media/partner-xamarin-notification-hubs-android-get-started/mobile-services-google-developers.png
+[2]: ./media/partner-xamarin-notification-hubs-android-get-started/mobile-services-google-create-server.png
+[3]: ./media/partner-xamarin-notification-hubs-android-get-started/mobile-services-google-create-server2.png
+[4]: ./media/partner-xamarin-notification-hubs-android-get-started/mobile-services-google-create-server3.png
 
-[7]: ../media/notification-hub-create-from-portal.png
-[8]: ../media/notification-hub-create-from-portal2.png
-[9]: ../media/notification-hub-select-from-portal.png
-[10]: ../media/notification-hub-select-from-portal2.png
-[11]: ../media/notification-hub-configure-android.png
-[12]: ../media/notification-hub-connection-strings.png
+[7]: ./media/partner-xamarin-notification-hubs-android-get-started/notification-hub-create-from-portal.png
+[8]: ./media/partner-xamarin-notification-hubs-android-get-started/notification-hub-create-from-portal2.png
+[9]: ./media/partner-xamarin-notification-hubs-android-get-started/notification-hub-select-from-portal.png
+[10]: ./media/partner-xamarin-notification-hubs-android-get-started/notification-hub-select-from-portal2.png
+[11]: ./media/partner-xamarin-notification-hubs-android-get-started/notification-hub-configure-android.png
+[12]: ./media/partner-xamarin-notification-hubs-android-get-started/notification-hub-connection-strings.png
 
-[13]: ../media/notification-hub-create-xamarin-android-app1.png
-[14]: ../media/notification-hub-create-xamarin-android-app2.png
-[15]: ../media/notification-hub-create-xamarin-android-app3.png
+[13]: ./media/partner-xamarin-notification-hubs-android-get-started/notification-hub-create-xamarin-android-app1.png
+[14]: ./media/partner-xamarin-notification-hubs-android-get-started/notification-hub-create-xamarin-android-app2.png
+[15]: ./media/partner-xamarin-notification-hubs-android-get-started/notification-hub-create-xamarin-android-app3.png
 
-[18]: ../media/notification-hub-create-android-app7.png
-[19]: ../media/notification-hub-create-android-app8.png
+[18]: ./media/partner-xamarin-notification-hubs-android-get-started/notification-hub-create-android-app7.png
+[19]: ./media/partner-xamarin-notification-hubs-android-get-started/notification-hub-create-android-app8.png
 
-[20]: ../media/notification-hub-create-console-app.png
-[21]: ../media/notification-hub-android-toast.png
-[22]: ../media/notification-hub-scheduler1.png
-[23]: ../media/notification-hub-scheduler2.png
+[20]: ./media/partner-xamarin-notification-hubs-android-get-started/notification-hub-create-console-app.png
+[21]: ./media/partner-xamarin-notification-hubs-android-get-started/notification-hub-android-toast.png
+[22]: ./media/partner-xamarin-notification-hubs-android-get-started/notification-hub-scheduler1.png
+[23]: ./media/partner-xamarin-notification-hubs-android-get-started/notification-hub-scheduler2.png
 
 <!-- URLs. -->
 [Submit an app page]: http://go.microsoft.com/fwlink/p/?LinkID=266582
 [My Applications]: http://go.microsoft.com/fwlink/p/?LinkId=262039
 [Live SDK for Windows]: http://go.microsoft.com/fwlink/p/?LinkId=262253
 [Get started with Mobile Services]: /en-us/develop/mobile/tutorials/get-started-xamarin-android/#create-new-service
-[JavaScript and HTML]: ../tutorials/mobile-services-get-started-with-push-js.md
-[WindowsAzure.com]: http://www.windowsazure.com/
+[JavaScript and HTML]: /en-us/develop/mobile/tutorials/get-started-with-push-js
+
 [Windows Azure Management Portal]: https://manage.windowsazure.com/
-[Windows Developer Preview registration steps for Mobile Services]: ../HowTo/mobile-services-windows-developer-preview-registration.md
 [wns object]: http://go.microsoft.com/fwlink/p/?LinkId=260591
 [Notification Hubs Guidance]: http://msdn.microsoft.com/en-us/library/jj927170.aspx
 [Notification Hubs How-To for Android]: http://msdn.microsoft.com/en-us/library/dn282661.aspx
 
-[Use Notification Hubs to push notifications to users]: ./tutorial-notify-users-aspnet.md
-[Use Notification Hubs to send breaking news]: ./breaking-news-dotnet.md
+[Use Notification Hubs to push notifications to users]: /en-us/manage/services/notification-hubs/notify-users-aspnet
+[Use Notification Hubs to send breaking news]: /en-us/manage/services/notification-hubs/breaking-news-dotnet
 [PushSharp Github page]: https://github.com/Redth/PushSharp
 [Xamarin.NotificationHub Github page]: https://github.com/SaschaDittmann/Xamarin.NotificationHub
 [GitHub]: http://go.microsoft.com/fwlink/p/?LinkId=331329
