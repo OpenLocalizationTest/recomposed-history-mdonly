@@ -31,8 +31,8 @@ You are now ready to use a Windows Azure Active Directory for authentication in 
 <!-- Anchors. -->
 
 <!-- Images. -->
-[1]: ../Media/mobile-services-live-connect-add-app.png
-[2]: ../Media/mobile-live-connect-app-api-settings.png
+[1]: ./media/mobile-services-app-active-directory-login/mobile-services-live-connect-add-app.png
+[2]: ./media/mobile-services-app-active-directory-login/mobile-live-connect-app-api-settings.png
 
 <!-- URLs. -->
 [Windows Azure Management Portal]: https://manage.windowsazure.com/
