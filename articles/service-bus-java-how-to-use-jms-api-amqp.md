@@ -1,23 +1,23 @@
-<properties linkid="develop-java-how-to-guides-service-bus-amqp" urldisplayname="Service Bus AMQP" headerexpose="" pageTitle="How to use AMQP 1.0 with the Java Service Bus API - Windows Azure" metakeywords="Java Messsage AMQP, Service Bus AMQP, download AMQP JMS library" footerexpose="" description="Learn how to use the Java Message Service (JMS) with Windows Azure Service Bus and Advanced Message Queuing Protodol (AMQP) 1.0." umbraconavihide="0" disquscomments="1" metaCanonical="" title="How to use the Java Message Service (JMS) API with Service Bus & AMQP 1.0" authors=""  solutions="" documentationCenter="Java" writer="sethm" manager="dwrede" editor="mattshel" />
+<properties linkid="develop-java-how-to-guides-service-bus-amqp" urlDisplayName="Service Bus AMQP" pageTitle="How to use AMQP 1.0 with the Java Service Bus API - Windows Azure" metaKeywords="ava Messsage AMQP, Service Bus AMQP, download AMQP JMS library" description="Learn how to use the Java Message Service (JMS) with Windows Azure Service Bus and Advanced Message Queuing Protodol (AMQP) 1.0." metaCanonical="" services="service-bus" documentationCenter="Java" title="How to use the Java Message Service (JMS) API with Service Bus & AMQP 1.0" authors=""  solutions="" writer="sethm" manager="dwrede" editor="mattshel"  />
+
+
 
 
 # How to use the Java Message Service (JMS) API with Service Bus & AMQP 1.0
 
-# Introduction
+##Introduction
 
-The Advanced Message Queuing Protocol (AMQP) 1.0 is an efficient, reliable, wire-level messaging protocol that can be used to build robust, cross-platform, messaging applications. AMQP 1.0 support was added to Windows Azure Service Bus as a preview feature in October 2012. It is expected to transition to General Availability (GA) in the first half of 2013.
+The Advanced Message Queuing Protocol (AMQP) 1.0 is an efficient, reliable, wire-level messaging protocol that you can use to build robust, cross-platform messaging applications.
 
-The addition of AMQP 1.0 means that it’s now possible to leverage the queuing and publish/subscribe brokered messaging features of Service Bus from a range of platforms using an efficient binary protocol. Furthermore, you can build applications comprised of components built using a mix of languages, frameworks and operating systems.
+Support for AMQP 1.0 in Service Bus means that you can use the queuing and publish/subscribe brokered messaging features from a range of platforms using an efficient binary protocol. Furthermore, you can build applications comprised of components built using a mix of languages, frameworks, and operating systems.
 
-This How-To Guide explains how to use the Service Bus brokered messaging features (Queues and publish/subscribe Topics) from Java applications using the popular Java Message Service (JMS) API standard.
+This how-to guide explains how to use the Service Bus brokered messaging features (queues and publish/subscribe topics) from Java applications using the popular Java Message Service (JMS) API standard. There is a companion How-to guide that explains how to do the same using the Service Bus .NET API. You can use these two guides together to learn about cross-platform messaging using AMQP 1.0.
 
-# 
+##Getting Started with Service Bus
 
-# Getting started with Service Bus
+This guide assumes that you already have a Service Bus namespace containing a queue named "queue1." If you do not, then you can create the namespace and queue using the [Windows Azure Management Portal](http://manage.windowsazure.com). For more information about how to create Service Bus namespaces and queues, see the How-To Guide titled [How to Use Service Bus Queues](https://www.windowsazure.com/en-us/develop/net/how-to-guides/service-bus-queues/).
 
-This guide assumes that you already have a Service Bus namespace containing a queue named "queue1." If you do not, then you can create the namespace and queue using the [Windows Azure Management Portal](http://manage.windowsazure.com). For more information about how to create Service Bus namespaces and queues, see the How-To Guide titled “[How to Use Service Bus Queues.](https://www.windowsazure.com/en-us/develop/net/how-to-guides/service-bus-queues/)”
-
-## Downloading the AMQP 1.0 JMS client library
+##Downloading the AMQP 1.0 JMS client library
 
 For information about where to download the latest version of the Apache Qpid JMS AMQP 1.0 client library, visit [http://people.apache.org/~rgodfrey/qpid-java-amqp-1-0-client-jms.html](http://people.apache.org/~rgodfrey/qpid-java-amqp-1-0-client-jms.html).
 
@@ -28,12 +28,12 @@ You must add the following four JAR files from the Apache Qpid JMS AMQP 1.0 dist
 *    qpid-amqp-1-0-client-jms-[version].jar
 *    qpid-amqp-1-0-common-[version].jar
 
-## Coding Java applications
+##Coding Java applications
 
-### ***Java Naming and Directory Interface (JNDI)***
+### Java Naming and Directory Interface (JNDI)
 JMS uses the Java Naming and Directory Interface (JNDI) to create a separation between logical names and physical names. Two types of JMS objects are resolved using JNDI: ConnectionFactory and Destination. JNDI uses a provider model into which you can plug different directory services to handle name resolution duties. The Apache Qpid JMS AMQP 1.0 library comes with a simple properties file-based JNDI Provider that is configured using a properties file of the following format:
 
-	# servicebus.properties – sample JNDI configuration
+	# servicebus.properties - sample JNDI configuration
 	
 	# Register a ConnectionFactory in JNDI using the form:
 	# connectionfactory.[jndi_name] = [ConnectionURL]
@@ -104,7 +104,7 @@ For example, if the information obtained from the Windows Azure Management porta
   </tr>
 </table>
 
-Then in order to define a **ConnectionFactory** named “SBCF”, the configuration string appears as follows:
+Then in order to define a **ConnectionFactory** named "SBCF", the configuration string appears as follows:
 
 	connectionfactory.SBCF = amqps://owner:j9VYv1q33Ea%2BcbahWsHFYnLkEzrF0yA5SAqcLNvU7KM%3D@foo.servicebus.windows.net
 
@@ -274,7 +274,7 @@ For more information about the details of cross-platform messaging using Service
 To demonstrate JMS to .NET messaging:
 
 * Start the .NET sample application without any command-line arguments.
-* Start the Java sample application with the “sendonly” command-line argument. In this mode, the application will not receive messages from the queue, it will only send.
+* Start the Java sample application with the "sendonly" command-line argument. In this mode, the application will not receive messages from the queue, it will only send.
 * Press **Enter** a few times in the Java application console, which will cause messages to be sent.
 * These messages are received by the .NET application.
 
@@ -300,7 +300,7 @@ To demonstrate JMS to .NET messaging:
 
 To demonstrate .NET to JMS messaging:
 
-* Start the .NET sample application with the “sendonly” command-line argument. In this mode, the application will not receive messages from the queue, it will only send.
+* Start the .NET sample application with the "sendonly" command-line argument. In this mode, the application will not receive messages from the queue, it will only send.
 * Start the Java sample application without any command-line arguments.
 * Press **Enter** a few times in the .NET application console, which will cause messages to be sent.
 * These messages are received by the Java application.
@@ -346,3 +346,4 @@ You can also use Service Bus AMQP 1.0 from other languages, including .NET, C, P
 * [How to use AMQP 1.0 with the Service Bus .NET API](http://aka.ms/lym3vk)
 * [Service Bus AMQP 1.0 Developer's Guide](http://msdn.microsoft.com/en-us/library/windowsazure/jj841071.aspx)
 * [How to Use Service Bus Queues](http://www.windowsazure.com/en-us/develop/net/how-to-guides/service-bus-queues/)
+
