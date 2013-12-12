@@ -134,7 +134,7 @@ The virtual machine must have an endpoint to listen for incoming TCP communicati
 5. On the **Specify the details of the endpoint** page, provide the following information.
 
 - In the **NAME** box, provide a name for the endpoint.
-- In the **PROTOCOL** box, select **TCP**. You may type SQL Server’s default listening port **1433** in the **Private Port** box. Similarly, you may type **57500** in the **PUBLIC PORT** box. Note that many organizations select different port numbers to avoid malicious security attacks.
+- In the **PROTOCOL** box, select **TCP**. You may type SQL Server???s default listening port **1433** in the **Private Port** box. Similarly, you may type **57500** in the **PUBLIC PORT** box. Note that many organizations select different port numbers to avoid malicious security attacks.
 
 
 	![Endpoint screen] [Image30]
@@ -240,11 +240,11 @@ To connect to the Database Engine from another computer, you must create at leas
 
 1. In SQL Server Management Studio Object Explorer, expand the folder of the server instance in which you want to create the new login.
 
-2. Right-click the **Security** folder, point to **New**, and select **Login…**.
+2. Right-click the **Security** folder, point to **New**, and select **Login???**.
 
     ![New Login] [Image23]
 
-3. In the **Login – New** dialog box, on the **General** page, enter the name of the new user in the **Login name** box.
+3. In the **Login ??? New** dialog box, on the **General** page, enter the name of the new user in the **Login name** box.
 
 4. Select **SQL Server authentication**.
 
@@ -369,40 +369,40 @@ You've seen how to create and configure a SQL Server on a Windows Azure virtual 
 
 * [Windows Virtual Machines](http://www.windowsazure.com/en-us/manage/windows/) 
 
-[Image1]: ../media/1Login.png
-[Image2]: ../media/2select-gallery.png
-[Image3]: ../media/3Select-Image.png
-[Image4]: ../media/4VM-Config.png
-[Image5]: ../media/5VM-Mode.png
-[Image5b]: ../media/5VM-Connect.png
-[Image6]: ../media/6VM-Options.png
-[Image7]: ../media/7VM-Provisioning.png
-[Image8]: ../media/8VM-Connect.png
-[Image8b]: ../media/SQLVMConnectionsOnAzure.GIF
-[Image9]: ../media/9Click-SSCM.png
-[Image10]: ../media/10Enable-TCP.png
-[Image11]: ../media/11Restart.png
-[Image12]: ../media/12Open-WF.png
-[Image13]: ../media/13New-FW-Rule.png
-[Image14]: ../media/14Port-1433.png
-[Image15]: ../media/15Allow-Connection.png
-[Image16]: ../media/16Public-Profile.png
-[Image17]: ../media/17Rule-Name.png
-[Image18]: ../media/18Start-SSMS.png
-[Image19]: ../media/19Connect-to-Server.png
-[Image20]: ../media/20Server-Properties.png
-[Image21]: ../media/21Mixed-Mode.png
-[Image22]: ../media/22Restart2.png
-[Image23]: ../media/23New-Login.png
-[Image24]: ../media/24Test-Login.png
-[Image25]: ../media/25sysadmin.png
 
-[Image26]: ../media/26Select-your-VM.png
-[Image27]: ../media/27VM-Connect.png
-[Image28]: ../media/28Add-Endpoint.png
-[Image29]: ../media/29Add-Endpoint-to-VM.png
-[Image30]: ../media/30Endpoint-Details.png
-[Image31]: ../media/31VM-Connect.png
 
-[Image32]: ../media/32DNS-Name.png
-[Image33]: ../media/33Connect-SSMS.png
+
+[Image4]: ./media/virtual-machines-provision-sql-server/4VM-Config.png
+[Image5]: ./media/virtual-machines-provision-sql-server/5VM-Mode.png
+[Image5b]: ./media/virtual-machines-provision-sql-server/5VM-Connect.png
+[Image6]: ./media/virtual-machines-provision-sql-server/6VM-Options.png
+
+
+[Image8b]: ./media/virtual-machines-provision-sql-server/SQLVMConnectionsOnAzure.GIF
+[Image9]: ./media/virtual-machines-provision-sql-server/9Click-SSCM.png
+[Image10]: ./media/virtual-machines-provision-sql-server/10Enable-TCP.png
+[Image11]: ./media/virtual-machines-provision-sql-server/11Restart.png
+[Image12]: ./media/virtual-machines-provision-sql-server/12Open-WF.png
+[Image13]: ./media/virtual-machines-provision-sql-server/13New-FW-Rule.png
+[Image14]: ./media/virtual-machines-provision-sql-server/14Port-1433.png
+[Image15]: ./media/virtual-machines-provision-sql-server/15Allow-Connection.png
+[Image16]: ./media/virtual-machines-provision-sql-server/16Public-Profile.png
+[Image17]: ./media/virtual-machines-provision-sql-server/17Rule-Name.png
+[Image18]: ./media/virtual-machines-provision-sql-server/18Start-SSMS.png
+[Image19]: ./media/virtual-machines-provision-sql-server/19Connect-to-Server.png
+[Image20]: ./media/virtual-machines-provision-sql-server/20Server-Properties.png
+[Image21]: ./media/virtual-machines-provision-sql-server/21Mixed-Mode.png
+[Image22]: ./media/virtual-machines-provision-sql-server/22Restart2.png
+[Image23]: ./media/virtual-machines-provision-sql-server/23New-Login.png
+[Image24]: ./media/virtual-machines-provision-sql-server/24Test-Login.png
+[Image25]: ./media/virtual-machines-provision-sql-server/25sysadmin.png
+
+
+
+[Image28]: ./media/virtual-machines-provision-sql-server/28Add-Endpoint.png
+[Image29]: ./media/virtual-machines-provision-sql-server/29Add-Endpoint-to-VM.png
+[Image30]: ./media/virtual-machines-provision-sql-server/30Endpoint-Details.png
+[Image31]: ./media/virtual-machines-provision-sql-server/31VM-Connect.png
+
+[Image32]: ./media/virtual-machines-provision-sql-server/32DNS-Name.png
+[Image33]: ./media/virtual-machines-provision-sql-server/33Connect-SSMS.png

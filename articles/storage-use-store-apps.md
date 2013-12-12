@@ -20,11 +20,11 @@ This guide shows how to get started with developing a Windows Store app that mak
 
 Create a new Windows Store app project in Visual Studio 2012:
 
-![store-apps-storage-vs-project][]
+![store-apps-storage-vs-project][store-apps-storage-vs-project]
 
 Next, add a reference to the Windows Azure Storage Client Library by right clicking on **References**, then choosing **Add Reference**, and browsing to the Storage Client Library for Windows Runtime that you downloaded:
 
-![store-apps-storage-choose-library][]
+![store-apps-storage-choose-library][store-apps-storage-choose-library]
 
 <h3>Using the library with the Blob and Queue services</h3>
 
@@ -49,7 +49,7 @@ Build and run the application. Clicking on the button will first check if a cont
 
 Types used to communicate with Table service depend on WCF Data Services for Windows Store Apps library. Next, add a reference to the required WCF libraries by using Package Manager Console:
 
-![store-apps-storage-package-manager][]
+![store-apps-storage-package-manager][store-apps-storage-package-manager]
 
 Use the following command to point Package Manager to the location on your machine:
     
@@ -57,7 +57,7 @@ Use the following command to point Package Manager to the location on your machi
 
 This command will automatically add all required references to your project. If you do not want to use the Package Manager Console, you can also add the WCF Data Services NuGet folder on your local machine to the list of Package Sources and then add the reference through the UI as described in [Managing NuGet Packages Using the Dialog](http://docs.nuget.org/docs/start-here/Managing-NuGet-Packages-Using-The-Dialog).
 
-When you have referenced the WCF Data Services NuGet package, change the code in your button’s **Click** event:
+When you have referenced the WCF Data Services NuGet package, change the code in your button???s **Click** event:
     
     var credentials = new StorageCredentials(accountName, accountKey);
     var account = new CloudStorageAccount(credentials, true);
@@ -71,6 +71,6 @@ You can also add a reference to Microsoft.WindowsAzure.Storage.Table.dll, availa
 
 
 
-[store-apps-storage-vs-project]: ../../../DevCenter/dotNet/Media/store-apps-storage-vs-project.png
-[store-apps-storage-choose-library]: ../../../DevCenter/dotNet/Media/store-apps-storage-choose-library.png
-[store-apps-storage-package-manager]: ../../../DevCenter/dotNet/Media/store-apps-storage-package-manager.png
+
+
+
