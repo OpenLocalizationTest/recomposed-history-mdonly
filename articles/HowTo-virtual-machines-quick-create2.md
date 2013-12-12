@@ -4,4 +4,4 @@
 
 
 
-<div chunk="../../Shared/Chunks/howto-quick-create-vm.md" />
+[WACOM.INCLUDE [howto-quick-create-vm](../includes/howto-quick-create-vm.md)]

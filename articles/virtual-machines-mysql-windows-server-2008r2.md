@@ -16,11 +16,11 @@ In this tutorial, you will learn how to:
 
 ##Create a virtual machine running Windows Server 2008 R2
 
-<div chunk="../../../Shared/Chunks/create-and-configure-windows-server-2008-vm-in-portal.md" />
+[WACOM.INCLUDE [create-and-configure-windows-server-2008-vm-in-portal](../includes/create-and-configure-windows-server-2008-vm-in-portal.md)]
 
 ##Attach a data disk
 
-<div chunk="../../../shared/chunks/attach-data-disk-windows-server-2008-vm-in-portal.md" />
+[WACOM.INCLUDE [attach-data-disk-windows-server-2008-vm-in-portal](../includes/attach-data-disk-windows-server-2008-vm-in-portal.md)]
 
 ##Install and run MySQL Community Server on the virtual machine
 Follow these steps to install, configure, and run MySQL Community Server:
@@ -156,24 +156,24 @@ In this tutorial you learned how to create a Windows 2008 R2 virtual machine and
 
 [AzurePreviewPortal]: http://manage.windowsazure.com
 [MySQLDownloads]: http://www.mysql.com/downloads/mysql/
-[MySQLDocs]: http://dev.mysql.com/doc/
 
-[MySQLInstall1]: ../media/MySQLInstall1.png
-[MySQLInstall2]: ../media/MySQLInstall2.png
-[MySQLInstall3]: ../media/MySQLInstall3.png
-[MySQLInstall4]: ../media/MySQLInstall4.png
-[MySQLConfig1]: ../media/MySQLConfig1.png
-[MySQLConfig2]: ../media/MySQLConfig2.png
-[MySQLConfig3]: ../media/MySQLConfig3.png
-[MySQLConfig4]: ../media/MySQLConfig4.png
-[MySQLConfig5]: ../media/MySQLConfig5.png
-[MySQLConfig6]: ../media/MySQLConfig6.png
-[MySQLConfig7]: ../media/MySQLConfig7.png
-[MySQLConfig8]: ../media/MySQLConfig8.png
-[MySQLConfig9]: ../media/MySQLConfig9.png
-[MySQLConfig10]: ../media/MySQLConfig10.png
-[MySQLConfig11]: ../media/MySQLConfig11.png
-[MySQLConfig12]: ../media/MySQLConfig12.png
-[AddEndPoint]: ../media/WinVMAddEndpointMySQL0.png
-[AddEndPoint2]: ../media/WinVMAddEndpointMySQL1.png
-[AddEndPoint3]: ../media/WinVMAddEndpointMySQL.png
+
+[MySQLInstall1]: ./media/virtual-machines-mysql-windows-server-2008r2/MySQLInstall1.png
+[MySQLInstall2]: ./media/virtual-machines-mysql-windows-server-2008r2/MySQLInstall2.png
+[MySQLInstall3]: ./media/virtual-machines-mysql-windows-server-2008r2/MySQLInstall3.png
+[MySQLInstall4]: ./media/virtual-machines-mysql-windows-server-2008r2/MySQLInstall4.png
+[MySQLConfig1]: ./media/virtual-machines-mysql-windows-server-2008r2/MySQLConfig1.png
+[MySQLConfig2]: ./media/virtual-machines-mysql-windows-server-2008r2/MySQLConfig2.png
+[MySQLConfig3]: ./media/virtual-machines-mysql-windows-server-2008r2/MySQLConfig3.png
+[MySQLConfig4]: ./media/virtual-machines-mysql-windows-server-2008r2/MySQLConfig4.png
+[MySQLConfig5]: ./media/virtual-machines-mysql-windows-server-2008r2/MySQLConfig5.png
+[MySQLConfig6]: ./media/virtual-machines-mysql-windows-server-2008r2/MySQLConfig6.png
+[MySQLConfig7]: ./media/virtual-machines-mysql-windows-server-2008r2/MySQLConfig7.png
+[MySQLConfig8]: ./media/virtual-machines-mysql-windows-server-2008r2/MySQLConfig8.png
+[MySQLConfig9]: ./media/virtual-machines-mysql-windows-server-2008r2/MySQLConfig9.png
+[MySQLConfig10]: ./media/virtual-machines-mysql-windows-server-2008r2/MySQLConfig10.png
+[MySQLConfig11]: ./media/virtual-machines-mysql-windows-server-2008r2/MySQLConfig11.png
+[MySQLConfig12]: ./media/virtual-machines-mysql-windows-server-2008r2/MySQLConfig12.png
+[AddEndPoint]: ./media/virtual-machines-mysql-windows-server-2008r2/WinVMAddEndpointMySQL0.png
+[AddEndPoint2]: ./media/virtual-machines-mysql-windows-server-2008r2/WinVMAddEndpointMySQL1.png
+[AddEndPoint3]: ./media/virtual-machines-mysql-windows-server-2008r2/WinVMAddEndpointMySQL.png

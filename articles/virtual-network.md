@@ -3,5 +3,5 @@
 
 
 
-<div chunk="../../../devcenter/Shared/Chunks/windows-azure-networking.md" />
+[WACOM.INCLUDE [windows-azure-networking](../includes/windows-azure-networking.md)]
 

@@ -173,7 +173,7 @@ To use HPC Cluster Manager to deploy Windows Azure nodes and to submit jobs, you
 
 	<div class="dev-callout"> 
 	<strong>Note</strong> 
-	<p>HPC Pack services use installation credentials only to deploy on–premises compute nodes. </p> 
+	<p>HPC Pack services use installation credentials only to deploy on-premises compute nodes. </p> 
 	</div>
 
 7. In the **Deployment To-do List**, click **Configure the naming of new nodes**. 
@@ -284,7 +284,7 @@ You can use the HPC Pack **clusrun** command to run a command or application on 
 
 <h2 id="BKMK_RunJob">Run a test job</h2>
 
-You can submit a test job that runs on the hybrid cluster. This example is a simple “parametric sweep” job (a type of intrinsically parallel computation) which runs subtasks that add an integer to itself by using the **set /a** command. All the nodes in the cluster contribute to finishing the subtasks for integers from 1 to 100. 
+You can submit a test job that runs on the hybrid cluster. This example is a simple "parametric sweep" job (a type of intrinsically parallel computation) which runs subtasks that add an integer to itself by using the **set /a** command. All the nodes in the cluster contribute to finishing the subtasks for integers from 1 to 100. 
 
 1. In HPC Cluster Manager, in **Job Management**, in the **Actions** pane, click **New Parametric Sweep Job**.
 
@@ -335,39 +335,39 @@ After you try out the cluster, you can use HPC Cluster Manager to stop the Windo
 
 
 
-[Overview]: ../media/hybrid_cluster_overview.png
-[install_hpc1]: ../media/install_hpc1.png
-[install_hpc2]: ../media/install_hpc2.png
-[install_hpc3]: ../media/install_hpc3.png
-[install_hpc4]: ../media/install_hpc4.png
-[install_hpc6]: ../media/install_hpc6.png
-[install_hpc7]: ../media/install_hpc7.png
-[install_hpc10]: ../media/install_hpc10.png
-[upload_cert1]: ../media/upload_cert1.png
-[createstorage1]: ../media/createstorage1.png
-[createservice1]: ../media/createservice1.png
-[config_hpc2]: ../media/config_hpc2.png
-[config_hpc3]: ../media/config_hpc3.png
-[config_hpc6]: ../media/config_hpc6.png
-[config_hpc8]: ../media/config_hpc8.png
-[config_hpc10]: ../media/config_hpc10.png
-[config_hpc12]: ../media/config_hpc12.png
-[config_hpc13]: ../media/config_hpc13.png
-[add_node1]: ../media/add_node1.png
-[add_node1_1]: ../media/add_node1_1.png
-[add_node2]: ../media/add_node2.png
-[add_node3]: ../media/add_node3.png
-[add_node4]: ../media/add_node4.png
-[add_node5]: ../media/add_node5.png
-[add_node6]: ../media/add_node6.png
-[add_node7]: ../media/add_node7.png
-[view_instances1]: ../media/view_instances1.png
-[clusrun1]: ../media/clusrun1.png
-[test_job1]: ../media/test_job1.png
-[param_sweep1]: ../media/param_sweep1.png
-[view_job361]: ../media/view_job361.png
-[view_job362]: ../media/view_job362.png
-[stop_node1]: ../media/stop_node1.png
-[stop_node2]: ../media/stop_node2.png
-[stop_node4]: ../media/stop_node4.png
-[view_instances2]: ../media/view_instances2.png
+[Overview]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/hybrid_cluster_overview.png
+[install_hpc1]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/install_hpc1.png
+[install_hpc2]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/install_hpc2.png
+[install_hpc3]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/install_hpc3.png
+[install_hpc4]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/install_hpc4.png
+[install_hpc6]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/install_hpc6.png
+[install_hpc7]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/install_hpc7.png
+[install_hpc10]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/install_hpc10.png
+[upload_cert1]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/upload_cert1.png
+[createstorage1]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/createstorage1.png
+[createservice1]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/createservice1.png
+[config_hpc2]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/config_hpc2.png
+[config_hpc3]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/config_hpc3.png
+[config_hpc6]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/config_hpc6.png
+[config_hpc8]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/config_hpc8.png
+[config_hpc10]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/config_hpc10.png
+[config_hpc12]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/config_hpc12.png
+[config_hpc13]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/config_hpc13.png
+[add_node1]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/add_node1.png
+[add_node1_1]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/add_node1_1.png
+[add_node2]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/add_node2.png
+[add_node3]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/add_node3.png
+[add_node4]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/add_node4.png
+[add_node5]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/add_node5.png
+[add_node6]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/add_node6.png
+[add_node7]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/add_node7.png
+[view_instances1]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/view_instances1.png
+[clusrun1]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/clusrun1.png
+[test_job1]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/test_job1.png
+[param_sweep1]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/param_sweep1.png
+[view_job361]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/view_job361.png
+[view_job362]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/view_job362.png
+[stop_node1]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/stop_node1.png
+[stop_node2]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/stop_node2.png
+[stop_node4]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/stop_node4.png
+[view_instances2]: ./media/set-up-hybrid-cluster-microsoft-hpc-pack-2012-sp1/view_instances2.png

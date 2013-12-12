@@ -4,4 +4,4 @@
 
 
 
-<div chunk="../../Shared/Chunks/howto-attach-disk-windows-linux.md" />
+[WACOM.INCLUDE [howto-attach-disk-windows-linux](../includes/howto-attach-disk-windows-linux.md)]

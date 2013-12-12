@@ -2,4 +2,4 @@
 
 
 
-<div chunk="../../../Shared/chunks/CreateVirtualMachineWindowsTutorial.md" />
+[WACOM.INCLUDE [CreateVirtualMachineWindowsTutorial](../includes/CreateVirtualMachineWindowsTutorial.md)]
