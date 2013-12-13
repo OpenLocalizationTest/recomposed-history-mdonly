@@ -1,6 +1,4 @@
-﻿<properties umbracoNaviHide="0" pageTitle="How to Configure PHP in Windows Azure Web Sites" services="Web Sites" metaKeywords="Windows Azure, Windows Azure Web Sites, configuration, PHP" services="Web Sites" metaDescription="Learn how to configure the default PHP installation or add a custom PHP installation in Windows Azure Web Sites." linkid="" urlDisplayName="How to Configure PHP in Windows Azure Web Sites" headerExpose="" footerExpose="" disqusComments="1" writer="tbd" editor="mollybos" manager="paulettm" />
-
-
+﻿<properties title="How to Configure PHP in Windows Azure Web Sites" pageTitle="How to Configure PHP in Windows Azure Web Sites" metaKeywords="Windows Azure, Windows Azure Web Sites, configuration, PHP" description="Learn how to configure the default PHP installation or add a custom PHP installation in Windows Azure Web Sites." services="Web Sites" documentationCenter="PHP" />
 
 #How to configure PHP in Windows Azure Web Sites
 
@@ -26,25 +24,25 @@ PHP 5.4 is also available, but not enabled by default. To enable it, follow thes
 
 	![Configure tab on Web Sites dashboard][configure]
 
-2. Click PHP 5.4.
+1. Click PHP 5.4.
 
 	![Select PHP version][select-php-version]
 
-3. Click **SAVE** at the bottom of the page.
+1. Click **SAVE** at the bottom of the page.
 
 	![Save configuration settings][save-button]
 
 For either of the built-in PHP runtimes, you can change any of the configuration options that are not system-level-only directives by following the steps below. (For information about system-level-only directives, see [List of php.ini directives].)
 
 1. Add a [.user.ini] file to your root directory.
-2. Add configuration settings to the `.user.ini` file using the same syntax you would use in a `php.ini` file. For example, if you wanted to turn the `display_errors` setting on and set `upload_max_filesize` setting to 10 MB, your `.user.ini` file would contain this text:
+1. Add configuration settings to the `.user.ini` file using the same syntax you would use in a `php.ini` file. For example, if you wanted to turn the `display_errors` setting on and set `upload_max_filesize` setting to 10 MB, your `.user.ini` file would contain this text:
 
 		; Example Settings
 		display_errors=On
 		upload_max_filesize=10M
 
-3. Deploy your application.
-4. Restart your web site. (Restarting is necessary because the frequency with which PHP reads `.user.ini` files is governed by the `user_ini.cache_ttl` setting, which is a system level setting and is 300 seconds (5 minutes) by default. Restarting the site forces PHP to read the new settings in the `.user.ini` file.)
+1. Deploy your application.
+1. Restart your web site. (Restarting is necessary because the frequency with which PHP reads `.user.ini` files is governed by the `user_ini.cache_ttl` setting, which is a system level setting and is 300 seconds (5 minutes) by default. Restarting the site forces PHP to read the new settings in the `.user.ini` file.)
 
 As an alternative to using a `.user.ini` file, you can use the [ini_set()] function in scripts to set configuration options that are not system-level directives.
 
@@ -52,17 +50,17 @@ As an alternative to using a `.user.ini` file, you can use the [ini_set()] funct
 As noted in the previous section, the best way to see the default PHP version, its default configuration, and the enabled extensions is to deploy a script that calls [phpinfo()]. To enable additional extensions, follow the steps below.
 
 1. Add a `bin` directory to your root directoy.
-2. Put `.dll` extension files in the `bin` directory (for example, `php_mongo.dll`). Make sure that the extensions are compatible with default version of PHP (which is, as of this writing, PHP 5.3) and are VC9 and non-thread-safe (nts) compatible.
-3. Deploy your application.
-4. Navigate to your site’s dashboard in the Windows Azure Portal, and click on **CONFIGURE**.
+1. Put `.dll` extension files in the `bin` directory (for example, `php_mongo.dll`). Make sure that the extensions are compatible with default version of PHP (which is, as of this writing, PHP 5.3) and are VC9 and non-thread-safe (nts) compatible.
+1. Deploy your application.
+1. Navigate to your site�s dashboard in the Windows Azure Portal, and click on **CONFIGURE**.
 
 	![Configure tab on Web Sites dashboard][configure]
 
-5. In the **app settings** section, create a key **PHP_EXTENSIONS** and a value **bin\your-ext-file**. To enable multiple extensions, incude a comma-separated list of `.dll` files.
+1. In the **app settings** section, create a key **PHP_EXTENSIONS** and a value **bin\your-ext-file**. To enable multiple extensions, incude a comma-separated list of `.dll` files.
 
 	![Enable extension in app settings][app-settings]
 
-6. Click **SAVE** at the bottom of the page.
+1. Click **SAVE** at the bottom of the page.
 
 	![Save configuration settings][save-button]
 
@@ -70,24 +68,24 @@ As noted in the previous section, the best way to see the default PHP version, i
 Instead of the default PHP runtime, Windows Azure Web Sites can use a PHP runtime that you provide to execute PHP scripts. The runtime that you provide can be configured by a `php.ini` file that you also provide. To use a custom PHP runtime in Windows Azure Web Sites, follow the steps below.
 
 1. Obtain a non-thread-safe, VC9 compatible version of PHP for Windows. Recent releases of PHP for Windows can be found here: [http://windows.php.net/download/]. Older releases can be found in the archive here: [http://windows.php.net/downloads/releases/archives/].
-2. Modify the `php.ini` file for your runtime. Note that any configuration settings that are system-level-only directives will be ignored by Windows Azure Web Sites. (For information about system-level-only directives, see [List of php.ini directives]).
-3. Optionally, add extensions to your PHP runtime and enable them in the `php.ini` file.
-4. Add `bin` directory to your root directory, and put the directory that contains your PHP runtime in it (for example, `bin\php`).
-5. Deploy your application.
-6. Navigate to your site’s dashboard in the Windows Azure Portal, and click on **CONFIGURE**.
+1. Modify the `php.ini` file for your runtime. Note that any configuration settings that are system-level-only directives will be ignored by Windows Azure Web Sites. (For information about system-level-only directives, see [List of php.ini directives]).
+1. Optionally, add extensions to your PHP runtime and enable them in the `php.ini` file.
+1. Add `bin` directory to your root directory, and put the directory that contains your PHP runtime in it (for example, `bin\php`).
+1. Deploy your application.
+1. Navigate to your site�s dashboard in the Windows Azure Portal, and click on **CONFIGURE**.
 
 	![Configure tab on Web Sites dashboard][configure]
 
-7. In the **handler mappings** section, add `*.php` to EXTENSION and add the path to the `php-cgi.exe` executable. If your put your PHP runtime in the `bin` directory in the root of you application, the path will be `D:\home\site\wwwroot\bin\php\php-cgi.exe`.
+1. In the **handler mappings** section, add `*.php` to EXTENSION and add the path to the `php-cgi.exe` executable. If your put your PHP runtime in the `bin` directory in the root of you application, the path will be `D:\home\site\wwwroot\bin\php\php-cgi.exe`.
 
 	![Specify handler in hander mappings][handler-mappings]
 
-8. Click **SAVE** at the bottom of the page.
+1. Click **SAVE** at the bottom of the page.
 
 	![Save configuration settings][save-button]
 
 <h2><a name="NextSteps"></a>Next steps</h2>
-Now that you’ve learned how to configure PHP in Windows Azure Web Sites, follow the links below to learn how to do more.
+Now that you've learned how to configure PHP in Windows Azure Web Sites, follow the links below to learn how to do more.
 
 - [Configure, monitor, and scale your web sites in Windows Azure]
 - [Download the Windows Azure SDK for PHP]
@@ -97,15 +95,15 @@ Now that you’ve learned how to configure PHP in Windows Azure Web Sites, follo
 [PHP Developer Center Tutorials]: https://www.windowsazure.com/en-us/develop/php/tutorials/
 [How to Configure Web Sites]: https://www.windowsazure.com/en-us/manage/services/web-sites/how-to-configure-websites/
 [phpinfo()]: http://php.net/manual/en/function.phpinfo.php
-[select-php-version]: ../Media/select-php-version.png
+[select-php-version]: ./media/web-sites-php-configure/select-php-version.png
 [List of php.ini directives]: http://www.php.net/manual/en/ini.list.php
 [.user.ini]: http://www.php.net/manual/en/configuration.file.per-user.php
 [ini_set()]: http://www.php.net/manual/en/function.ini-set.php
-[configure]: ../Media/configure.png
-[app-settings]: ../Media/app-settings.png
-[save-button]: ../Media/save-button.png
+[configure]: ./media/web-sites-php-configure/configure.png
+[app-settings]: ./media/web-sites-php-configure/app-settings.png
+[save-button]: ./media/web-sites-php-configure/save-button.png
 [http://windows.php.net/download/]: http://windows.php.net/download/
 [http://windows.php.net/downloads/releases/archives/]: http://windows.php.net/downloads/releases/archives/
-[handler-mappings]: ../Media/handler-mappings.png
+[handler-mappings]: ./media/web-sites-php-configure/handler-mappings.png
 [Configure, monitor, and scale your web sites in Windows Azure]: http://www.windowsazure.com/en-us/manage/services/web-sites/
 [Download the Windows Azure SDK for PHP]: http://www.windowsazure.com/en-us/develop/php/common-tasks/download-php-sdk/

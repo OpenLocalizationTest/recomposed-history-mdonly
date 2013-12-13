@@ -1,8 +1,4 @@
-<properties linkid="develop-php-common-tasks-create-a-php-web-site" urlDisplayName="Create a PHP Web Site" pageTitle="Create a PHP Web Site" metaKeywords="" description="" metaCanonical="" services="" documentationCenter="" title="How to create a PHP web site in Windows Azure Web Sites" authors=""  solutions="" writer="waltpo" manager="bjsmith" editor="mollybos"  />
-
-
-
-
+﻿<properties title="How to create a PHP web site in Windows Azure Web Sites" pageTitle="How to create a PHP web site in Windows Azure Web Sites" metaKeywords="PHP Azure Web Sites" description="Learn how to create a PHP web site in Windows Azure Web Sites" documentationCenter="PHP" services="Web Sites" />
 
 #How to create a PHP web site in Windows Azure Web Sites
 
@@ -24,9 +20,9 @@ When you create a web site in the Windows Azure Management Portal, you have thre
 To create a PHP web site using the Windows Azure Management Portal, do the following:
 
 1. Login to the [Windows Azure Management Portal].
-2. Click **New** at the bottom of the page, then click **Compute**, **Web Site**, and **Quick Create**. Provide a **URL** for your web site and select the **Region** for your web site. Finally, click **Create Web Site**.
+1. Click **New** at the bottom of the page, then click **Compute**, **Web Site**, and **Quick Create**. Provide a **URL** for your web site and select the **Region** for your web site. Finally, click **Create Web Site**.
 
-	![Select Quick Create web site](../Media/select-quickcreate-website.png)
+	![Select Quick Create web site](./media/web-sites-php-create-web-site/select-quickcreate-website.png)
 
 <h2><a name="XplatTools"></a>Create a PHP web site using the Windows Azure Command Line Tools for Mac and Linux</h2>
 
@@ -34,9 +30,9 @@ To create a PHP web site using the Windows Azure Command Line Tools for Mac and 
 
 1. Install the Windows Azure Command Line Tools by following the instructions here: [How to install the Windows Azure Command Line Tools for Mac and Linux](/en-us/develop/php/how-to-guides/command-line-tools/#Download).
 
-2. Download and import your publish settings file by following the instructions here: [How to download and import publish settings](/en-us/develop/php/how-to-guides/command-line-tools/#Account).
+1. Download and import your publish settings file by following the instructions here: [How to download and import publish settings](/en-us/develop/php/how-to-guides/command-line-tools/#Account).
 
-3. Run the following command from a command prompt:
+1. Run the following command from a command prompt:
 
 		azure site create MySiteName
 
@@ -56,9 +52,9 @@ To create a PHP web site using the Windows Azure PowerShell cmdlets, do the foll
 
 1. Install the Windows Azure PowerShell cmdlets by following the instructions here: [Get started with Windows Azure PowerShell](/en-us/develop/php/how-to-guides/powershell-cmdlets/#GetStarted).
 
-2. Download and import your publish settings file by following the instructions here: [How to: Import publish settings](/en-us/develop/php/how-to-guides/powershell-cmdlets/#ImportPubSettings).
+1. Download and import your publish settings file by following the instructions here: [How to: Import publish settings](/en-us/develop/php/how-to-guides/powershell-cmdlets/#ImportPubSettings).
 
-3. Open a PowerShell command prompt and execute the following command:
+1. Open a PowerShell command prompt and execute the following command:
 
 		New-AzureWebSite MySiteName
 
