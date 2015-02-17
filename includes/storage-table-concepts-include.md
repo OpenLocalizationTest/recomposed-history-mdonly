@@ -1,4 +1,4 @@
-## <a name="what-is"> </a>What is the Table Service
+## What is the Table Service
 
 The Azure Table storage service stores large amounts of
 structured data. The service is a NoSQL datastore which accepts
@@ -18,7 +18,7 @@ You can use the Table service to store and query huge sets of
 structured, non-relational data, and your tables will scale as demand
 increases.
 
-## <a name="concepts"> </a>Concepts
+## Table Service Concepts
 
 The Table service contains the following components:
 
@@ -52,5 +52,5 @@ The Table service contains the following components:
 
 
   
-  [Table1]: ./media/storage-java-how-to-use-table-storage/table1.png
+  [Table1]: ./media/storage-table-concepts-include/table1.png
   [OData.org]: http://www.odata.org/
