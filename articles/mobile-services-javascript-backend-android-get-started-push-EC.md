@@ -1,4 +1,3 @@
-
 <properties 
 	pageTitle="Get started with push notifications (Android JavaScript) | Mobile Dev Center" 
 	description="Learn how to use Azure Mobile Services to send push notifications to your Android JavaScript app." 
@@ -15,31 +14,33 @@
 	ms.tgt_pltfrm="Mobile-Android" 
 	ms.devlang="Java" 
 	ms.topic="article" 
-	ms.date="02/03/2015" 
+	ms.date="02/06/2015" 
 	ms.author="ricksal"/>
-
 
 # Add push notifications to your Mobile Services app
 
-[AZURE.INCLUDE [mobile-services-selector-get-started-push](../includes/mobile-services-selector-get-started-push.md)]
-
-## Summary
+[AZURE.INCLUDE [mobile-services-selector-get-started-push](../includes/mobile-services-selector-get-started-push-EC.md)]
 
 This topic shows how to use Azure Mobile Services to send push notifications to your Android app using Google Cloud Messaging (GCM). In this tutorial, you enable push notifications using Azure Notification Hubs to the quickstart project. When complete, your mobile service will send a push notification each time a record is inserted.
 
-<!-- [AZURE.NOTE] If you would like to see the source code of the completed app, go <a href="https://github.com/RickSaling/mobile-services-samples/tree/androidStudio/GettingStartedWithPush/AndroidStudio" target="_blank">here</a>.
--->
+This tutorial walks you through these basic steps to enable push notifications:
 
-> [AZURE.NOTE] If you would like to see the Eclipse version of this tutorial, go to : [Get started with push notifications (Eclipse)].
+1. [Enable Google Cloud Messaging](#register)
+2. [Configure Mobile Services](#configure)
+3. [Add push notifications to your app](#add-push)
+4. [Update scripts to send push notifications](#update-scripts)
+5. [Insert data to receive notifications](#test)
 
+
+>[AZURE.NOTE] If you would like to see the source code of the completed app, go <a href="https://github.com/RickSaling/mobile-services-samples/tree/futures/GettingStartedWithPush/Android" target="_blank">here</a>.
 
 ##Prerequisites
 
-[AZURE.INCLUDE [mobile-services-android-prerequisites](../includes/mobile-services-android-prerequisites.md)]
+[AZURE.INCLUDE [mobile-services-android-prerequisites](../includes/mobile-services-android-prerequisites-EC.md)]
 
 ##<a id="register"></a>Enable Google Cloud Messaging
 
-> [AZURE.NOTE]To complete this procedure, you must have a Google account that has a verified email address. To create a new Google account, go to <a href="http://go.microsoft.com/fwlink/p/?LinkId=268302" target="_blank">accounts.google.com</a>.
+>[AZURE.NOTE]To complete this procedure, you must have a Google account that has a verified email address. To create a new Google account, go to <a href="http://go.microsoft.com/fwlink/p/?LinkId=268302" target="_blank">accounts.google.com</a>.
 
 [AZURE.INCLUDE [Enable GCM](../includes/mobile-services-enable-Google-cloud-messaging.md)]
 
@@ -53,13 +54,11 @@ Next, you will use this API key value to enable Mobile Services to authenticate 
 
 2. Click the **Push** tab, enter the **API Key** value obtained from GCM in the previous procedure, then click **Save**.
 
-	>[WACOM.NOTE]When you are completing this tutorial using an older mobile service, you might see a link at the bottom of the **Push** tab that says **Enable Enhanced Push**. Click this now to upgrade your mobile service to integrate with Notification Hubs. This change cannot be reverted. For details on how to enable enhanced push notifications in a production mobile service, see <a href="http://go.microsoft.com/fwlink/p/?LinkId=391951">this guidance</a>.
+	>[AZURE.NOTE]When you are completing this tutorial using an older mobile service, you might see a link at the bottom of the **Push** tab that says **Enable Enhanced Push**. Click this now to upgrade your mobile service to integrate with Notification Hubs. This change cannot be reverted. For details on how to enable enhanced push notifications in a production mobile service, see <a href="http://go.microsoft.com/fwlink/p/?LinkId=391951">this guidance</a>.
 
    	![](./media/mobile-services-android-get-started-push/mobile-push-tab-android.png)
 
-    <div class="dev-callout"><b>Important</b>
-	<p>When you set your GCM credentials for enhanced push notifications in the Push tab in the portal, they are shared with Notification Hubs to configure the notification hub with your app.</p>
-    </div>
+	> [AZURE.IMPORTANT] When you set your GCM credentials for enhanced push notifications in the Push tab in the portal, they are shared with Notification Hubs to configure the notification hub with your app.
 
 
 Both your mobile service and your app are now configured to work with GCM and Notification Hubs.
@@ -68,7 +67,7 @@ Both your mobile service and your app are now configured to work with GCM and No
 
 ###Verify Android SDK Version
 
-[AZURE.INCLUDE [Verify SDK](../includes/mobile-services-verify-android-sdk-version.md)]
+[AZURE.INCLUDE [Verify SDK](../includes/mobile-services-verify-android-sdk-version-EC.md)]
 
 Your next step is to install Google Play services. Google Cloud Messaging has some minimum API level requirements for development and testing, which the **minSdkVersion** property in the Manifest must conform to. 
 
@@ -76,11 +75,11 @@ If you will be testing with an older device, then consult [Set Up Google Play Se
 
 ###Add Google Play Services to the project
 
-[AZURE.INCLUDE [Add Play Services](../includes/mobile-services-add-Google-play-services.md)]
+[AZURE.INCLUDE [Add Play Services](../includes/mobile-services-add-Google-play-services-EC.md)]
 
 ###Add code
 
-[AZURE.INCLUDE [mobile-services-android-getting-started-with-push](../includes/mobile-services-android-getting-started-with-push.md)]
+[AZURE.INCLUDE [mobile-services-android-getting-started-with-push](../includes/mobile-services-android-getting-started-with-push-EC.md)]
 
 
 ##<a id="update-scripts"></a>Update the registered insert script in the Management Portal
@@ -100,8 +99,8 @@ If you will be testing with an older device, then consult [Set Up Google Play Se
 		function insert(item, user, request) {
 		// Define a payload for the Google Cloud Messaging toast notification.
 		var payload = {
-		    data: {
-		        message: item.text 
+		    "data": {
+		        "message": item.text 
 		    }
 		};		
 		request.execute({
@@ -212,9 +211,9 @@ Learn more about Mobile Services and Notification Hubs in the following topics:
 
 
 <!-- URLs. -->
-[Get started with push notifications (Eclipse)]: /en-us/documentation/articles/mobile-services-javascript-backend-android-get-started-push-EC
 [Submit an app page]: http://go.microsoft.com/fwlink/p/?LinkID=266582
 [My Applications]: http://go.microsoft.com/fwlink/p/?LinkId=262039
+[Live SDK for Windows]: http://go.microsoft.com/fwlink/p/?LinkId=262253
 [Get started with Mobile Services]: /en-us/documentation/articles/mobile-services-android-get-started/
 [Get started with data]: /en-us/documentation/articles/mobile-services-android-get-started-data/
 [Get started with authentication]: /en-us/documentation/articles/mobile-services-android-get-started-users
