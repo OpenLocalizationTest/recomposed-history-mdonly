@@ -13,20 +13,18 @@
 	ms.tgt_pltfrm="Mobile-Android" 
 	ms.devlang="Java" 
 	ms.topic="article" 
-	ms.date="02/03/2015" 
+	ms.date="02/06/2015" 
 	ms.author="ricksal"/>
 
 # Add Mobile Services to an existing app
 
-[AZURE.INCLUDE [mobile-services-selector-get-started-data](../includes/mobile-services-selector-get-started-data.md)]
+[AZURE.INCLUDE [mobile-services-selector-get-started-data](../includes/mobile-services-selector-get-started-data-EC.md)]
 
 This topic shows you how to use Azure Mobile Services as a backend datasource for an Android app. In this tutorial, you will create a new mobile service, download an Eclipse Android project for an app that stores data in memory, integrate the mobile service with the app, and view the changes to data made when running the app.
 
 The mobile service that you create in this tutorial supports the .NET runtime in the Mobile Service. This allows you to use .NET languages and Visual Studio for server-side business logic in the mobile service. To create a mobile service that lets you write your server-side business logic in JavaScript, see the [JavaScript backend version] of this topic.
 
 > [AZURE.IMPORTANT] This tutorial requires Visual Studio 2013.
-
-> [AZURE.NOTE] If you would like to see the Eclipse version of this tutorial, go to : [Get started with data (Eclipse)].
 
 This tutorial walks you through these basic steps:
 
@@ -64,27 +62,27 @@ This tutorial walks you through these basic steps:
 
 ###Get the sample code
 
-[AZURE.INCLUDE [mobile-services-dotnet-backend-create-new-service](../includes/download-android-sample-code.md)]
+[AZURE.INCLUDE [mobile-services-dotnet-backend-create-new-service](../includes/download-android-sample-code-EC.md)]
 
 ###Verify Android SDK Version
 
-[AZURE.INCLUDE [mobile-services-verify-android-sdk-version](../includes/mobile-services-verify-android-sdk-version.md)]
+[AZURE.INCLUDE [mobile-services-verify-android-sdk-version](../includes/mobile-services-verify-android-sdk-version-EC.md)]
 
 
 ###Inspect and run the sample code
 
-[AZURE.INCLUDE [mobile-services-android-run-sample-code](../includes/mobile-services-android-run-sample-code.md)]
+[AZURE.INCLUDE [mobile-services-android-run-sample-code](../includes/mobile-services-android-run-sample-code-EC.md)]
 
 <h2><a name="update-app"></a>Update the app to use the mobile service for data access</h2>
 
-[AZURE.INCLUDE [mobile-services-android-getting-started-with-data](../includes/mobile-services-android-getting-started-with-data.md)]
+[AZURE.INCLUDE [mobile-services-android-getting-started-with-data](../includes/mobile-services-android-getting-started-with-data-EC.md)]
 
 <h2><a name="test-app"></a>Test the app against the published mobile service</h2>
 
 
 Now that the app has been updated to use Mobile Services for back end storage, you can test it against Mobile Services, using either the Android emulator or an Android phone.
 
-1. From the **Run** menu, click **Run app** to start the project.
+1. From the **Run** menu, click **Run** to start the project.
 
 	This executes your app, built with the Android SDK, that uses the client library to send a query that returns items from your mobile service.
 
@@ -178,7 +176,6 @@ Try one of these other tutorials:
 
 
 <!-- URLs. -->
-[Get started with data (Eclipse)]: /en-us/documentation/articles/mobile-services-dotnet-backend-android-get-started-data-EC/
 [Validate and modify data with scripts]: /en-us/develop/mobile/tutorials/validate-modify-and-augment-data-dotnet
 [Refine queries with paging]: /en-us/develop/mobile/tutorials/add-paging-to-data-dotnet
 [Get started with Mobile Services]: /en-us/documentation/articles/mobile-services-dotnet-backend-windows-store-dotnet-get-started/
