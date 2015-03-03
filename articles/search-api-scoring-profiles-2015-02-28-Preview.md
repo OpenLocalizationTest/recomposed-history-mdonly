@@ -1,6 +1,6 @@
 <properties 
-	pageTitle="Scoring profiles (Azure Search REST API Version 2014-10-20-Preview)" 
-	description="Scoring profiles (Azure Search REST API Version 2014-10-20-Preview)" 
+	pageTitle="Scoring profiles (Azure Search REST API Version 2015-02-28-Preview)" 
+	description="Scoring profiles (Azure Search REST API Version 2015-02-28-Preview)" 
 	services="search" 
 	documentationCenter="" 
 	authors="HeidiSteen" 
@@ -14,11 +14,12 @@
 	ms.topic="article" 
 	ms.tgt_pltfrm="na" 
 	ms.date="02/12/2015" 
-	ms.author="heidist"/>
       
-#Scoring Profiles (Azure Search REST API Version 2014-10-20-Preview)#
+#Scoring Profiles (Azure Search REST API Version 2015-02-28-Preview)#
 
-> [AZURE.NOTE] This article describes scoring profiles in the 2014-10-20-Preview version of the REST API. The released version of this API can be found at [Add scoring profiles to a search index](http://msdn.microsoft.com/library/azure/dn798928.aspx) on MSDN. For more information about the 2014-10-20-Preview version, see [Azure Search Service REST API: 2014-10-20-Preview](http://azure.microsoft.com/documentation/articles/search-api-2014-10-20-preview/).
+> [AZURE.NOTE] This article describes scoring profiles in the [2015-02-28-Preview](./search-api-2015-02-28-preview). Currently there is no difference between the `2015-02-28` version documented on [MSDN](http://msdn.microsoft.com/en-us/library/azure/mt183328.aspx) and the `2015-02-28-Preview` version described here. We provide this article to give you the full documentation set for `2015-02-28-Preview`, even though this API happens to be unchanged.
+
+## Overview ##
 
 Scoring refers to the computation of a search score for every item returned in search results. The score is an indicator of an item's relevance in the context of the current search operation. The higher the score, the more relevant the item. In search results, items are rank ordered from high to low, based on the search score calculated for each item.
 
@@ -42,7 +43,8 @@ To give you an idea of what a scoring profile looks like, the following example 
             "interpolation": "logarithmic",
             "distance": {
               "referencePointParameter": "currentLocation",
-              "boostingDistance": 10 }
+              "boostingDistance": 10
+            }
           }
         ]
       }
@@ -50,11 +52,11 @@ To give you an idea of what a scoring profile looks like, the following example 
 
 To use this scoring profile, your query is formulated to specify the profile on the query string. In the query below, notice the query parameter, `scoringProfile=geo` in the request.
 
-    GET /indexes/hotels/docs?search=inn&scoringProfile=geo&scoringParameter=currentLocation:-122.123,44.77233&api-version=2014-10-20-Preview
+    GET /indexes/hotels/docs?search=inn&scoringProfile=geo&scoringParameter=currentLocation:-122.123,44.77233&api-version=2015-02-28-Preview
 
-This query searches on the term 'inn' and passes in the current location. Note that this query includes other parameters, such as `scoringParameter`. Query parameters are described in [Search Documents (Azure Search API)](http://azure.microsoft.com/documentation/articles/search-api-2014-10-20-preview/#SearchDocs).
+This query searches on the term 'inn' and passes in the current location. Note that this query includes other parameters, such as `scoringParameter`. Query parameters are described in [Search Documents (Azure Search API)](http://azure.microsoft.com/en-us/documentation/articles/search-api-2015-02-28-preview/#SearchDocs).
 
-Click [Example](#example)  to review a more detailed example of a scoring profile.
+Click [Example](#example) to review a more detailed example of a scoring profile.
 
 ## What is default scoring? ##
 
@@ -70,7 +72,7 @@ Search score values can be repeated throughout a result set. For example, you mi
 
 You should create one or more scoring profiles when the default ranking behavior doesn’t go far enough in meeting your business objectives. For example, you might decide that search relevance should favor newly added items. Likewise, you might have a field that contains profit margin, or some other field indicating revenue potential. Boosting hits that bring benefits to your business can be an important factor in deciding to use scoring profiles.
 
-Relevancy-based ordering is also implemented through scoring profiles. Consider search results pages you’ve used in the past that let you sort by price, date, rating, or relevance. In Azure Search, scoring profiles drive the ‘relevance’ option. The definition of relevance is controlled by you, predicated on business objectives and the type of search experience you want to deliver.
+Relevancy-based ordering is also implemented through scoring profiles. Consider search results pages you’ve used in the past that let you sort by price, date, rating, or relevance. In Azure Search, scoring profiles drive the 'relevance' option. The definition of relevance is controlled by you, predicated on business objectives and the type of search experience you want to deliver.
 
 <a name="example"></a>
 ## Example##
@@ -79,17 +81,17 @@ As noted, customized scoring is implemented through scoring profiles defined in 
 
 This example shows the schema of an index with two scoring profiles (`boostGenre`, `newAndHighlyRated`). Any query against this index that includes either profile as a query parameter will use the profile to score the result set.
 
-[Try this example](http://azure.microsoft.com/documentation/articles/search-get-started-scoring-profiles/).
+[Try this example](http://azure.microsoft.com/en-us/documentation/articles/search-get-started-scoring-profiles/).
 
     {
       "name": "musicstoreindex",
 	  "fields": [
 	    { "name": "key", "type": "Edm.String", "key": true },
-	    { "name": "albumTitle", "type": "Edm.String", "suggestions": true },
+	    { "name": "albumTitle", "type": "Edm.String" },
 	    { "name": "albumUrl", "type": "Edm.String", "filterable": false },
 	    { "name": "genre", "type": "Edm.String" },
 	    { "name": "genreDescription", "type": "Edm.String", "filterable": false },
-	    { "name": "artistName", "type": "Edm.String", "suggestions": true },
+	    { "name": "artistName", "type": "Edm.String" },
 	    { "name": "orderableOnline", "type": "Edm.Boolean" },
 	    { "name": "rating", "type": "Edm.Int32" },
 	    { "name": "tags", "type": "Collection(Edm.String)" },
@@ -134,7 +136,14 @@ This example shows the schema of an index with two scoring profiles (`boostGenre
             }
           ]
         }
-      ]
+      ],
+      "suggesters": [
+        {
+          "name": "sg",
+          "searchMode": "analyzingInfixMatching",
+          "sourceFields": ["albumTitle", "artistName"]
+        }
+      ] 
     }
 
 
@@ -142,21 +151,21 @@ This example shows the schema of an index with two scoring profiles (`boostGenre
 
 To implement custom scoring behavior, add a scoring profile to the schema that defines the index. You can have multiple scoring profiles within an index, but you can only specify one profile at time in any given query. 
 
-Start with the [Template][#bkmk_template] provided in this topic.
+Start with the [Template](#bkmk_template) provided in this topic.
 
-Provide a name. Scoring profiles are optional, but if you add one, the name is required. Be sure to follow the naming conventions for fields (starts with a letter, avoids special characters and reserved words). See [Naming Rules](http://msdn.microsoft.com/library/azure/dn857353.aspx) for more information.
+Provide a name. Scoring profiles are optional, but if you add one, the name is required. Be sure to follow the naming conventions for fields (starts with a letter, avoids special characters and reserved words). See [Naming Rules](http://msdn.microsoft.com/en-us/library/azure/dn857353.aspx) for more information.
 
 The body of the scoring profile is constructed from weighted fields and functions.
 
 <font>
-<table>
+<table style="font-size:12">
 <thead>
 <tr><td><b>Element</b></td><td><b>Description</b></td></tr></thead>
 <tbody 
 <tr>
 <td><b>Weights</b></td>
 <td>
-Specify name-value pairs that assign a relative weight to a field. In the Example [#bkmk_ex], the albumTitle, genre, and artistName fields are boosted 1, 5, and null, respectively. Why is genre boosted so much higher than the others? If search is conducted over data that is somewhat homogeneous (as is the case with 'genre' in the `musicstoreindex`), you might need a larger variance in the relative weights. For example, in the `musicstoreindex`, 'rock' appears as both a genre and in identically phrased genre descriptions. If you want genre to outweigh genre description, the genre field will need a much higher relative weight.
+Specify name-value pairs that assign a relative weight to a field. In the [Example](#example), the albumTitle, genre, and artistName fields are boosted 1, 5, and null, respectively. Why is genre boosted so much higher than the others? If search is conducted over data that is somewhat homogeneous (as is the case with 'genre' in the `musicstoreindex`), you might need a larger variance in the relative weights. For example, in the `musicstoreindex`, 'rock' appears as both a genre and in identically phrased genre descriptions. If you want genre to outweigh genre description, the genre field will need a much higher relative weight.
 </td>
 </tr>
 <tr>
@@ -176,7 +185,7 @@ Function type (freshness, magnitude, distance, tag) must be lower case.
 <br>
 Functions cannot include null or empty values. Specifically, if you include fieldname, you have to set it to something.
 <br>
-Functions can only be applied to filterable fields. See [Create Index (Azure Search API)](http://azure.microsoft.com/documentation/articles/search-api-2014-10-20-preview/#createindex) for more information about filterable fields.
+Functions can only be applied to filterable fields. See [Create Index](http://azure.microsoft.com/en-us/documentation/articles/search-api-2015-02-28-preview/#createindex) for more information about filterable fields.
 <br>
 Functions can only be applied to fields that are defined in the fields collection of an index.
 <td>
@@ -185,11 +194,10 @@ Functions can only be applied to fields that are defined in the fields collectio
 </table>
 </font>
 
-After the index is defined, build the index by uploading the index schema, followed by documents. See [Create Index (Azure Search API)](http://azure.microsoft.com/documentation/articles/search-api-2014-10-20-preview/#createindex) and [Add or Update Documents (Azure Search API)](http://azure.microsoft.com/documentation/articles/search-api-2014-10-20-preview/#AddOrUpdateDocuments) for instructions on these operations. Once the index is built, you should have a functional scoring profile that works with your search data.
+After the index is defined, build the index by uploading the index schema, followed by documents. See [Create Index](http://azure.microsoft.com/en-us/documentation/articles/search-api-2015-02-28-preview/#createindex) and [Add or Update Documents](http://azure.microsoft.com/en-us/documentation/articles/search-api-2015-02-28-preview/#AddOrUpdateDocuments) for instructions on these operations. Once the index is built, you should have a functional scoring profile that works with your search data.
 
 <a name="bkmk_template"></a>
 ##Template##
-
 This section shows the syntax and template for scoring profiles. Refer to [Index attribute reference](#bkmk_indexref) in the next section for descriptions of the attributes.
 
     ...
@@ -289,17 +297,17 @@ A scoring function can only be applied to fields that are filterable.
 </tr><tr>
 <td>freshness</td>	<td>The freshness scoring function is used to alter ranking scores for items based on values in DateTimeOffset fields. For example, an item with a more recent date can be ranked higher than older items. In the current service release, one end of the range will be fixed to the current time. The rate at which the boosting changes from a maximum and minimum range is determined by the Interpolation applied to the scoring profile (see the figure below). To reverse the boosting factor applied, choose a boost factor of < 1.</td>
 </tr><tr>
-<td>freshness | boostingDuration</td>	<td>Sets an expiration period after which boosting will stop for a particular document. See [Set boostingDuration ](#bkmk_boostdur) in the following section for syntax and examples.</td>
+<td>freshness | boostingDuration</td>	<td>Sets an expiration period after which boosting will stop for a particular document. See [Set boostingDuration ][#bkmk_boostdur] in the following section for syntax and examples.</td>
 </tr><tr>
 <td>distance</td>	<td>The distance scoring function is used to affect the score of documents based on how close or far they are relative to a reference geographic location. The reference location is given as part of the query in a parameter (using the `scoringParameterquery` string option) as a lon,lat argument.</td>
 </tr><tr>
-<td>distance | referencePointParameter</td>	<td>A parameter to be passed in queries to use as reference location. scoringParameter is a query parameter. See [Search Documents (Azure Search API)](http://azure.microsoft.com/documentation/articles/search-api-2014-10-20-preview/#SearchDocs) for descriptions of query parameters.</td>
+<td>distance | referencePointParameter</td>	<td>A parameter to be passed in queries to use as reference location. scoringParameter is a query parameter. See [Search Documents](http://azure.microsoft.com/en-us/documentation/articles/search-api-2015-02-28-preview/#SearchDocs) for descriptions of query parameters.</td>
 </tr><tr>
 <td>distance | boostingDistance</td>	<td>A number that indicates the distance in kilometers from the reference location where the boosting range ends.</td>
 </tr><tr>
 <td>tag</td>	<td>The tag scoring function is used to affect the score of documents based on tags in documents and search queries. Documents that have tags in common with the search query will be boosted. The tags for the search query is provided as a scoring parameter in each search request(using the `scoringParameterquery` string option).</td>
 </tr><tr>
-<td>tag | tagsParameter</td>	<td>A parameter to be passed in queries to specify tags for a particular request. scoringParameter is a query parameter. See [Search Documents (Azure Search API)]() for descriptions of query parameters.</td>
+<td>tag | tagsParameter</td>	<td>A parameter to be passed in queries to specify tags for a particular request. scoringParameter is a query parameter. See [Search Documents](http://azure.microsoft.com/en-us/documentation/articles/search-api-2015-02-28-preview/#SearchDocs) for descriptions of query parameters.</td>
 </tr><tr>
 <td>functionAggregation</td>	<td>Optional. Applies only when functions are specified. Valid values include: sum (default), average, minimum, maximum, and firstMatching. A search score is single value that is computed from multiple variables, including multiple functions. This attributes indicates how the boosts of all the functions are combined into a single aggregate boost that then is applied to the base document score. The base score is based on the tf-idf value computed from the document and the search query.</td>
 </tr><tr>
@@ -356,10 +364,10 @@ The following table provides several examples.
 For more examples, see [XML Schema: Datatypes (W3.org web site)](http://www.w3.org/TR/xmlschema11-2/).
 
 **See Also**
-
-[Azure Search Service REST API](http://msdn.microsoft.com/library/azure/dn798935.aspx) on MSDN <br/>
-[Create Index (Azure Search API)](http://msdn.microsoft.com/library/azure/dn798941.aspx) on MSDN<br/>
-[Add a scoring profile to a search index](http://msdn.microsoft.com/library/azure/dn798928.aspx) on MSDN<br/>
+[Azure Search Service REST API](http://msdn.microsoft.com/en-us/library/azure/dn798935.aspx) on MSDN <br/>
+[Create Index (Azure Search API)](http://msdn.microsoft.com/en-us/library/azure/dn798941.aspx) on MSDN<br/>
+[Add a scoring profile to a search index](http://msdn.microsoft.com/en-us/library/azure/dn798928.aspx) on MSDN<br/>
 
 <!--Image references-->
-[1]: ./media/search-api-scoring-profiles-2014-10-20-Preview/scoring_interpolations.png
+[1]: ./media/search-api-scoring-profiles-2015-02-28/scoring_interpolations.png
+
