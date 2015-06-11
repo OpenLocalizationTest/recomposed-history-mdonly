@@ -219,4 +219,4 @@ See the [Get started with Azure Data Factory][data-factory-get-started] topic fo
 [storagelinkedservice-in-treview]: ./media/data-factory-editor/storagelinkedservice-in-treeview.png
 [delete-datafactory-entity]: ./media/data-factory-editor/delete-datafactory-entity.png
 [clone-datafactory-entity]: ./media/data-factory-editor/clone-datafactory-entity.png
-[add-activity-options]: ./media/data-factory-editor/add-activity-options.png
+[add-activity-options]: ./media/data-factory-editor/add-activity-options.png 
