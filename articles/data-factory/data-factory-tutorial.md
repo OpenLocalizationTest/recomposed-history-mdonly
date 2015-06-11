@@ -432,7 +432,7 @@ Practice the [Walkthrough: Using on-premises data source][tutorial-onpremises] t
 [useonpremisesdatasources]: data-factory-use-onpremises-datasources.md
 [usepigandhive]: data-factory-pig-hive-activities.md
 [tutorial-onpremises]: data-factory-tutorial-extend-onpremises.md
-[download-azure-powershell]: powershell-install-configure.md
+[download-azure-powershell]: ../powershell-install-configure.md
 
 [azure-preview-portal]: http://portal.azure.com
 [azure-purchase-options]: http://azure.microsoft.com/pricing/purchase-options/
@@ -525,4 +525,4 @@ Practice the [Walkthrough: Using on-premises data source][tutorial-onpremises] t
 
 [image-data-factory-new-datafactory-menu]: ./media/data-factory-tutorial/NewDataFactoryMenu.png
 
-[image-data-factory-new-datafactory-create-button]: ./media/data-factory-tutorial/DataFactoryCreateButton.png
+[image-data-factory-new-datafactory-create-button]: ./media/data-factory-tutorial/DataFactoryCreateButton.png 

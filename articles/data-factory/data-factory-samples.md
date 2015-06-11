@@ -54,4 +54,4 @@ Gaming customer profiling | Contoso is a gaming company that creates games for m
 ## Samples on GitHub
 The [GitHub Azure-DataFactory repository](https://github.com/azure/azure-datafactory) contains several samples that help you quickly ramp up with Azure Data Factory service (or) modify the scripts and use it in own application. The Samples\JSON folder contains JSON snippets for common scenarios.   
 
-[data-factory-get-started]: data-factory-get-started.md#CreateDataFactory
+[data-factory-get-started]: data-factory-get-started.md#CreateDataFactory 

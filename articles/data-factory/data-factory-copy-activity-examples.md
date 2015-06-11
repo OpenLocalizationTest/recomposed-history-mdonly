@@ -490,4 +490,4 @@ See [Pipeline JSON reference](https://msdn.microsoft.com/library/dn834988.aspx) 
 
 
 [adf-copyactivity]: data-factory-copy-activity.md
-[copy-activity-video]: http://azure.microsoft.com/documentation/videos/introducing-azure-data-factory-copy-activity/
+[copy-activity-video]: http://azure.microsoft.com/documentation/videos/introducing-azure-data-factory-copy-activity/ 

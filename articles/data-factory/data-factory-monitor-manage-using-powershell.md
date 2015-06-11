@@ -416,14 +416,15 @@ Article | Description
 
 [cmdlet-reference]: https://msdn.microsoft.com/library/dn820234.aspx
 [azure-free-trial]: http://azure.microsoft.com/pricing/free-trial/
-[data-factory-create-storage]: storage-create-storage-account.md
+[data-factory-create-storage]: ../storage-create-storage-account.md
 
 [adf-get-started]: data-factory-get-started.md
 [azure-preview-portal]: http://portal.azure.com
-[download-azure-powershell]: powershell-install-configure.md
-[data-factory-create-sql-database]: sql-database-create-configure.md
+[download-azure-powershell]: ../powershell-install-configure.md
+[data-factory-create-sql-database]: ../sql-database-create-configure.md
 [data-factory-introduction]: data-factory-introduction.md
 
 [image-data-factory-get-started-storage-explorer]: ./media/data-factory-monitor-manage-using-powershell/getstarted-storage-explorer.png
 
-[sql-management-studio]: sql-database-manage-azure-ssms.md#Step2
+[sql-management-studio]: ../sql-database-manage-azure-ssms.md#Step2
+ 

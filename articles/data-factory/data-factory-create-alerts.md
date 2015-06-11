@@ -170,3 +170,4 @@ To retrieve the list of deployed Azure Resource Group deployments, use the cmdle
 Run the following command to see the generated events:
 
 	Get-AzureResourceGroupLog –Name $ResourceGroup -All | Where-Object EventSource -eq "Microsoft.DataFactory"
+ 

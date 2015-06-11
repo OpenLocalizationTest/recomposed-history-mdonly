@@ -412,7 +412,7 @@ Article | Description
 [troubleshoot]: data-factory-troubleshoot.md
 [data-factory-introduction]: data-factory-introduction.md
 [data-factory-create-storage]: http://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account
-[data-factory-create-sql-database]: sql-database-create-configure.md
+[data-factory-create-sql-database]: ../sql-database-create-configure.md
 
 
 [developer-reference]: http://go.microsoft.com/fwlink/?LinkId=516908
@@ -506,3 +506,4 @@ Article | Description
 [image-data-factory-sql-management-console-2]: ./media/data-factory-get-started-using-editor/getstarted-azure-sql-management-console-2.png
 
 [image-data-factory-name-not-available]: ./media/data-factory-get-started-using-editor/getstarted-data-factory-not-available.png
+ 

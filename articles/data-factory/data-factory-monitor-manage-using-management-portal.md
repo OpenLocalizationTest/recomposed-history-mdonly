@@ -220,4 +220,4 @@ Article | Description
 [image-data-factory-activity-run-details]: ./media/data-factory-monitor-manage-using-management-portal/ActivityRunDetails.png
 
 [image-data-factory-events]: ./media/data-factory-monitor-manage-using-management-portal/Events.png
-[DataSlicesBySliceTime]: ./media/data-factory-monitor-manage-using-management-portal/DataSlicesBySliceTime.png
+[DataSlicesBySliceTime]: ./media/data-factory-monitor-manage-using-management-portal/DataSlicesBySliceTime.png 

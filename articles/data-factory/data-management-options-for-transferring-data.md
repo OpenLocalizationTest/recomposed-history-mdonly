@@ -115,7 +115,7 @@ Hybrid Connections provides an easy and convenient way to connect Azure Websites
 
 With [Virtual Network](/services/virtual-network/), you can use data integration tools running in Azure virtual machine to securely connect to on-premises SQL Server databases in your on-site datacenter. Only virtual machines and services within the same virtual network can identify or connect to each other. If you prefer, you can even create an [ExpressRoute](/services/expressroute/) direct connection to Azure through your network service provider or exchange provider and bypass the public internet altogether.
 
-[Azure Marketplace](?source=datamarket.md) offers partner solutions that enable data movement to Azure, e.g. Storm Managed File Transfer.
+[Azure Marketplace](?../source=datamarket.md) offers partner solutions that enable data movement to Azure, e.g. Storm Managed File Transfer.
 
 ## Choose the right data transfer option
 
@@ -248,10 +248,10 @@ Notes about the decision tree:
 
 
 <!--Link references-->
-[import-export]: storage-import-export-service.md
-[azcopy]: storage-use-azcopy.md
-[upload]: hdinsight-upload-data.md#powershell
-[install]: install-configure-powershell.md
+[import-export]: ../storage-import-export-service.md
+[azcopy]: ../storage-use-azcopy.md
+[upload]: ../hdinsight-upload-data.md#powershell
+[install]: ../install-configure-powershell.md
 [start]: data-factory-get-started.md
 [pipelines]: data-factory-use-onpremises-datasources.md
 [copy]: data-factory-copy-activity.md
@@ -265,6 +265,7 @@ Notes about the decision tree:
 [bcp]: http://msdn.microsoft.com/library/azure/jj156153.aspx
 [migrate]: http://msdn.microsoft.com/library/azure/ee730904.aspx
 [overview]: http://msdn.microsoft.com/library/dn836025.aspx
-[stream]: stream-analytics-introduction.md
+[stream]: ../stream-analytics-introduction.md
 [sync]: http://msdn.microsoft.com/library/azure/hh456371.aspx
-[hybrid]: integration-hybrid-connection-overview.md
+[hybrid]: ../integration-hybrid-connection-overview.md
+ 
