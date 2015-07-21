@@ -1,6 +1,6 @@
 <properties 
-	pageTitle="Connect to SQL Database by using Ruby with TinyTDS on Ubuntu" 
-	description="Give a Ruby code sample you can run as a client on Ubuntu Linux to connect to Azure SQL Database."
+	pageTitle="Connect to SQL Database by using Ruby with TinyTDS on Mac OS X (Yosemite)" 
+	description="Give a Ruby code sample you can run on Mac OS X (Yosemite) to connect to Azure SQL Database."
 	services="sql-database" 
 	documentationCenter="" 
 	authors="ajlam" 
@@ -18,40 +18,27 @@
 	ms.author="andrela"/>
 
 
-# Connect to SQL Database by using Ruby on Ubuntu Linux
+# Connect to SQL Database by using Ruby on Mac OS X (Yosemite)
 
 [AZURE.INCLUDE [sql-database-develop-includes-selector-language-platform-depth](../../includes/sql-database-develop-includes-selector-language-platform-depth.md)]
 
-This topic presents a Ruby code sample that runs on an Ubuntu Linux client computer to connect to an Azure SQL Database database.
+This topic presents a Ruby code sample that runs on Mac computer running Yosemite to connect to an Azure SQL Database database.
 
 ## Install the required modules
 
-Open your terminal and install FreeTDS if you do not have it on your machine.
-	
-    sudo apt-get --assume-yes update 
-    sudo apt-get --assume-yes install freetds-dev freetds-bin
+Open your terminal and install the following:
 
-After your machine is configured with FreeTDS, install Ruby if you do not already have it on your machine.
-    
-    sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev 
-    curl -L https://get.rvm.io | bash -s stable
+**1) Homebrew**: Run the following command from your terminal. This will download the Homebrew package manager on your machine. 
 
-If you have any issues with signatures, run the following command.
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-    command curl -sSL https://rvm.io/mpapis.asc | gph --import - 
+**2) FreeTDS:** Run the following command from your terminal. This will install FreeTDS on your machine and is required for TinyTDS to work.
 
-If there are no issues with signatures, run the following commands.  
+    brew install FreeTDS
 
-    source ~/.rvm/scripts/rvm 
-    rvm install 2.1.2 
-    rvm use 2.1.2 --default 
-    ruby -v 
+**3) TinyTDS:** Run the following command from your terminal. This will install TinyTDS on your machine. 
 
-Ensure that you are running version 2.1.2 or the Ruby VM.
-
-Next, install TinyTDS.
-
-    gem install tiny_tds
+    sudo ARCHFLAGS="-arch x86_64" gem install tiny_tds
 
 ## Create a database, retrieve your connection string
 
@@ -115,5 +102,4 @@ To align with the Microsoft SQL Server [datetime](http://msdn.microsoft.com/libr
     OUTPUT INSERTED.ProductID VALUES ('SQL Server Express New', 'SQLEXPRESS New', 0, 0, '#{curr_date}' )")
     results.each do |row| 
     puts row
-    end 
-
+    end
