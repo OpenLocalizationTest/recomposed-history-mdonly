@@ -5,8 +5,7 @@
    documentationCenter=""
    authors="rashimg"
    manager="mwinkle"
-   editor="cgronlun"
-	tags="azure-portal"/>
+   editor="cgronlun"/>
 
 <tags
    ms.service="hdinsight"
@@ -22,18 +21,17 @@
 
 By default, Hadoop clusters are not optimized for performance. This article covers a few of the most common Hive performance optimization methods that you can apply to our queries. 
 
-[AZURE.INCLUDE [preview-portal](../../includes/hdinsight-azure-preview-portal)] 
+[AZURE.INCLUDE [portal](../../includes/hdinsight-azure-portal)] 
 
-* [Optimize Hive queries for Hadoop in HDInsight](hdinsight-hadoop-optimize-hive-query-v1.md).
+* [Optimize Hive queries for Hadoop in HDInsight](hdinsight-hadoop-optimize-hive-query.md).
 
 ##Scale out worker nodes
 
 Increasing the number of worker nodes in a cluster can leverage more mappers and reducers to be run in parallel. There are two ways you can increase scale out in HDInsight:
 
-- At the provision time, you can specify the number of worker nodes using the Azure preview portal, Azure PowerShell or Cross-platform command line interface.  For more information, see [Provision HDInsight clusters](hdinsight-provision-clusters.md). The following screen show the worker node configuration on the Azure preview portal:
+- At the provision time, you can specify the number of worker nodes using the Azure portal, Azure PowerShell or Cross-platform command line interface.  For more information, see [Provision HDInsight clusters](hdinsight-provision-clusters.md). The following screen show the worker node configuration on the Azure portal:
 
 	![scaleout_1][image-hdi-optimize-hive-scaleout_1]
-    
 - At the run time, you can also scale out a cluster without recreating one. This is shown below.
 ![scaleout_1][image-hdi-optimize-hive-scaleout_2]
 
@@ -216,8 +214,8 @@ In this article, you have learned several common Hive query optimization methods
 - [Use Hive with HDInsight to analyze logs from websites](../hdinsight-hive-analyze-web-site-log.md)
 
 
-[image-hdi-optimize-hive-scaleout_1]: ./media/hdinsight-hadoop-optimize-hive-query/scaleout_1.png
-[image-hdi-optimize-hive-scaleout_2]: ./media/hdinsight-hadoop-optimize-hive-query/scaleout_2.png
-[image-hdi-optimize-hive-tez_1]: ./media/hdinsight-hadoop-optimize-hive-query/tez_1.png
-[image-hdi-optimize-hive-partitioning_1]: ./media/hdinsight-hadoop-optimize-hive-query/partitioning_1.png
+[image-hdi-optimize-hive-scaleout_1]: ./media/hdinsight-hadoop-optimize-hive-query-v1/scaleout_1.png
+[image-hdi-optimize-hive-scaleout_2]: ./media/hdinsight-hadoop-optimize-hive-query-v1/scaleout_2.png
+[image-hdi-optimize-hive-tez_1]: ./media/hdinsight-hadoop-optimize-hive-query-v1/tez_1.png
+[image-hdi-optimize-hive-partitioning_1]: ./media/hdinsight-hadoop-optimize-hive-query-v1/partitioning_1.png
  
