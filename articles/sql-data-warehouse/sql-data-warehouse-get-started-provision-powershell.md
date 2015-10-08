@@ -13,10 +13,15 @@
    ms.topic="article"
    ms.tgt_pltfrm="NA"
    ms.workload="data-services"
-   ms.date="10/05/2015"
+   ms.date="10/08/2015"
    ms.author="lodipalm"/>
 
 # Create SQL Data Warehouse using Powershell
+
+> [AZURE.SELECTOR]
+- [Azure preview portal](sql-data-warehouse-get-started-provision.md)
+- [TSQL](sql-data-warehouse-get-started-create-database-tsql.md)
+- [PowerShell](sql-data-warehouse-get-started-provision-powershell.md)
 
 > [AZURE.NOTE]  In order to use Microsoft Azure Powershell with SQL Data Warehouse, you will need version 0.9.4 or greater.  You can check your version by running (Get-Module Azure).Version in Powershell.
 
@@ -39,6 +44,7 @@ After you have ensured that Powershell is successfully set-up on your account yo
         New-AzureSqlDatabase -RequestedServiceObjectiveName "<Service Objective>" -DatabaseName "<Data Warehouse Name>" -ServerName "<Server Name>" -ResourceGroupName "<ResourceGroupName>" -Edition "DataWarehouse"
 
 The necessary parameters for this cmdlet are as follows:
+
  + **RequestedServiceObjectiveName**: The amount of DWU you are requesting, in the form "DWXXX" currently supported values are: 100, 200, 300, 400, 500, 600, 1000, 1200, 1500, 2000.
  + **DatabaseName**: The name of the SQL Data Warehouse that you are creating.
  + **ServerName**: The name of the server that you are using for creation (must be V12).
