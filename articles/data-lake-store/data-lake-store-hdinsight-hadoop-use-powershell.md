@@ -19,8 +19,8 @@
 # Configure an HDInsight Hadoop cluster with Azure Data Lake using Azure PowerShell
 
 > [AZURE.SELECTOR]
-- [Portal](azure-data-lake-hdinsight-hadoop-use-portal.md)
-- [PowerShell](azure-data-lake-hdinsight-hadoop-use-powershell.md)
+- [Portal](data-lake-store-hdinsight-hadoop-use-portal.md)
+- [PowerShell](data-lake-store-hdinsight-hadoop-use-powershell.md)
 
 
 Learn how to use Azure PowerShell to configure an HDInsight Hadoop cluster to work with an Azure Data Lake account. In this release, the Azure Data Lake account can only be used as an additional storage account. The default storage account for the cluster will still be Azure Storage Blobs (WASB). 
