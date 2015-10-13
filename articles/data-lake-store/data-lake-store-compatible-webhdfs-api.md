@@ -1,22 +1,22 @@
 <properties 
-   pageTitle="WebHDFS APIs that are supported with Data Lake | Azure" 
-   description="List of WebHDFS APIs that work with Azure Data Lake" 
-   services="data-lake" 
+   pageTitle="WebHDFS APIs that are supported with Data Lake Store | Azure" 
+   description="List of WebHDFS APIs that work with Azure Data Lake Store" 
+   services="data-lake-store" 
    documentationCenter="" 
    authors="nitinme" 
    manager="paulettm" 
    editor="cgronlun"/>
  
 <tags
-   ms.service="data-lake"
+   ms.service="data-lake-store"
    ms.devlang="na"
    ms.topic="article"
    ms.tgt_pltfrm="na"
    ms.workload="big-data" 
-   ms.date="09/29/2015"
+   ms.date="10/27/2015"
    ms.author="nitinme"/>
 
-# WebHDFS APIs compatible with Azure Data Lake
+# WebHDFS APIs compatible with Azure Data Lake Store
 
 [ TBD: Add some blurb on swebhdfs and webhdfs and how it's implemented for ADL ]
 
@@ -43,6 +43,5 @@
 | FileSystem.access            | CHECKACCESS                | See [here](http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/WebHDFS.html#Check_access)         |
 ## See also
 
-- [ TBD: Link to using ADL with Kona ]
-- [ TBD: Link to using ADL with HDInsight ]
-- [ TBD: Link to using ADL with HDP ]  
+- [Open Source Big Data applications compatible with Azure Data Lake Store](data-lake-store-compatible-oss-other-applications.md)
+ 
