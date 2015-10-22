@@ -17,7 +17,7 @@
    ms.author="sahajs"/>
 
 # Analyze data with Azure Machine Learning
-This tutorial will show you how to build a predictive machine learning model with Azure Machine Learning using your Azure SQL Data Warehouse data. In this tutorial, we will use the AdventureWorksDW database and classify the customers of the Adventure Works bike shop as likely bike buyers or not, in order to build a targeted marketing campaign.
+This tutorial will show you how to build a predictive machine learning model with Azure Machine Learning using your Azure SQL Data Warehouse data. In this tutorial, we will use the AdventureWorksDW database and classify customers of the Adventure Works bike shop as likely bike buyers or not, in order to build a targeted marketing campaign.
 
 
 ## Prerequisites
@@ -111,8 +111,8 @@ To learn more, refer to [Introduction to Machine Learning on Azure][].
 
 
 <!--Article references-->
-[Azure Machine Learning studio]:https://studio.azureml.net/
-[Introduction to Machine Learning on Azure]:https://azure.microsoft.com/documentation/articles/machine-learning-what-is-machine-learning/
-[load sample data manually]: sql-data-warehouse-get-started-manually-load-samples.md
-[Create a SQL Data Warehouse]: sql-data-warehouse-get-started-provision.md
+[Azure Machine Learning studio]: https://studio.azureml.net/
+[Introduction to Machine Learning on Azure]: ../machine-learning/machine-learning-what-is-machine-learning.md
+[load sample data manually]: ./sql-data-warehouse-get-started-manually-load-samples.md
+[Create a SQL Data Warehouse]: ./sql-data-warehouse-get-started-provision.md
 
