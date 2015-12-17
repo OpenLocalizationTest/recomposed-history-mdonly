@@ -12,12 +12,12 @@ ms.service="search"
 ms.devlang="rest-api"
 ms.workload="search" ms.topic="article"  
 ms.tgt_pltfrm="na"
-ms.date="12/09/2015"
+ms.date="12/11/2015"
 ms.author="eugenesh" />
 
 # Indexing Documents in Azure Blob Storage with Azure Search
 
-For quite some time now, Azure Search customers have been able to "automagically" index some popular data sources by using indexers for [Azure SQL Database](search-howto-connecting-azure-sql-database-to-azure-search-using-indexers-2015-02-28.md) and [Azure DocumentDB](documentdb-search-indexer.md).
+For quite some time now, Azure Search customers have been able to "automagically" index some popular data sources by using indexers for [Azure SQL Database](search-howto-connecting-azure-sql-database-to-azure-search-using-indexers-2015-02-28.md) and [Azure DocumentDB](../documentdb/documentdb-search-indexer.md).
 
 We're now adding support for indexing documents stored in Azure Blob storage. Many customers have asked us to simplify indexing documents stored in blobs, such as PDFs, Office documents, or HTML pages. Until now, this involved writing custom code to do text extraction and adding the documents to an Azure Search index. 
 
@@ -104,7 +104,7 @@ Azure Search indexes each document (blob) as follows:
 
 You don't need to define fields for all of the above properties in your search index - just capture the properties you need for your application. 
 
-> [AZURE.NOTE] Often, the field names in your existing index will be different from the field names generated during document extraction. You can use **field mappings** to map the property names provided by Azure Search to the field names in your search index. 
+> [AZURE.NOTE] Often, the field names in your existing index will be different from the field names generated during document extraction. You can use **field mappings** to map the property names provided by Azure Search to the field names in your search index. You will see an example of field mappings use below. 
 
 ## Picking the document key field and dealing with different field names
 
@@ -144,6 +144,8 @@ To bring this all together, here's how you can add field mappings and enable bas
 	  "parameters" : { "base64EncodeKeys": true }
 	}
 
+> [AZURE.NOTE] To learn more about field mappings, see [this article](search-indexers-customization.md).
+
 ## Incremental indexing and deletion detection
 
 When you set up a blob indexer to run on a schedule, it re-indexes only the changed blobs, as determined by the blob's `LastModified` timestamp.
@@ -152,7 +154,7 @@ When you set up a blob indexer to run on a schedule, it re-indexes only the chan
 
 To indicate that certain documents must be removed from the index, you should use a soft delete strategy - instead of deleting the corresponding blobs, add a custom metadata property to indicate that they're deleted, and set up a soft deletion detection policy on the data source.
 
-> [AZURE.NOTE] If you just delete the blobs instead of using a deletion detection policy, corresponding documents will not be removed from the search index.
+> [AZURE.WARNING] If you just delete the blobs instead of using a deletion detection policy, corresponding documents will not be removed from the search index.
 
 For example, the policy shown below will consider that a blob is deleted if it has a metadata property `IsDeleted` with the value `true`:
 
@@ -177,187 +179,30 @@ For example, the policy shown below will consider that a blob is deleted if it h
 
 The following table summarizes processing done for each document format, and describes the metadata properties extracted by Azure Search.
 
-<table style="font-size:12">
-
-<tr>
-<th>Document format / content type</th>
-<th>Content-type specific metadata properties</th>
-<th>Processing details </th>
-</tr>
-
-<tr>
-<td>HTML (`text/html`)</td>
-<td>
-`metadata_content_encoding`<br/>
-`metadata_content_type`<br/>
-`metadata_language`<br/>
-`metadata_description`<br/>
-`metadata_keywords`<br/>
-`metadata_title`
-</td>
-<td>Strip HTML markup and extract text</td>
-</tr>
-
-<tr>
-<td>PDF (`application/pdf`)</td>
-<td>
-`metadata_content_type`<br/>
-`metadata_language`<br/>
-`metadata_author`<br/>
-`metadata_title`
-</td>
-<td>Extract text, including embedded documents (excluding images)</td>
-</tr>
-
-<tr>
-<td>DOCX (application/vnd.openxmlformats-officedocument.wordprocessingml.document)</td>
-<td>
-`metadata_content_type`<br/>
-`metadata_author`<br/>
-`metadata_character_count`<br/>
-`metadata_creation_date`<br/>
-`metadata_last_modified`<br/>
-`metadata_page_count`<br/>
-`metadata_word_count`
-</td>
-<td>Extract text, including embedded documents</td>
-</tr>
-
-<tr>
-<td>DOC (application/msword)</td>
-<td>
-`metadata_content_type`<br/>
-`metadata_author`<br/>
-`metadata_character_count`<br/>
-`metadata_creation_date`<br/>
-`metadata_last_modified`<br/>
-`metadata_page_count`<br/>
-`metadata_word_count`
-</td>
-<td>Extract text, including embedded documents</td>
-</tr>
-
-<tr>
-<td>XLSX (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)</td>
-<td>
-`metadata_content_type`<br/>
-`metadata_author`<br/>
-`metadata_creation_date`<br/>
-`metadata_last_modified`
-</td>
-<td>Extract text, including embedded documents</td>
-</tr>
-
-<tr>
-<td>XLS (application/vnd.ms-excel)</td>
-<td>
-`metadata_content_type`<br/>
-`metadata_author`<br/>
-`metadata_creation_date`<br/>
-`metadata_last_modified`
-</td>
-<td>Extract text, including embedded documents</td>
-</tr>
-
-<tr>
-<td>PPTX (application/vnd.openxmlformats-officedocument.presentationml.presentation)</td>
-<td>
-`metadata_content_type`<br/>
-`metadata_author`<br/>
-`metadata_creation_date`<br/>
-`metadata_last_modified`<br/>
-`metadata_slide_count`<br/>
-`metadata_title`
-</td>
-<td>Extract text, including embedded documents</td>
-</tr>
-
-<tr>
-<td>PPT (application/vnd.ms-powerpoint)</td>
-<td>
-`metadata_content_type`<br/>
-`metadata_author`<br/>
-`metadata_creation_date`<br/>
-`metadata_last_modified`<br/>
-`metadata_slide_count`<br/>
-`metadata_title`
-</td>
-<td>Extract text, including embedded documents</td>
-</tr>
-
-<tr>
-<td>MSG (application/vnd.ms-outlook)</td>
-<td>
-`metadata_content_type`<br/>
-`metadata_message_from`<br/>
-`metadata_message_to`<br/>
-`metadata_message_cc`<br/>
-`metadata_message_bcc`<br/>
-`metadata_creation_date`<br/>
-`metadata_last_modified`<br/>
-`metadata_subject`
-</td>
-<td>Extract text, including attachments</td>
-</tr>
-
-<tr>
-<td>ZIP (application/zip)</td>
-<td>
-`metadata_content_type`
-</td>
-<td>Extract text from all documents in the archive</td>
-</tr>
-
-<tr>
-<td>XML (application/xml)</td>
-<td>
-`metadata_content_type`</br>
-`metadata_content_encoding`</br>
-</td>
-<td>Strip XML markup and extract text </td>
-</tr>
-
-<tr>
-<td>JSON (application/json)</td>
-<td>
-`metadata_content_type`</br>
-`metadata_content_encoding`
-</td>
-<td></td>
-</tr>
-
-<tr>
-<td>Plain text (text/plain)</td>
-<td>
-`metadata_content_type`</br>
-`metadata_content_encoding`</br>
-</td>
-<td></td>
-</tr>
-</table>
+Document format / content type | Content-type specific metadata properties | Processing details
+-------------------------------|-------------------------------------------|-------------------
+HTML (`text/html`) | `metadata_content_encoding`<br/>`metadata_content_type`<br/>`metadata_language`<br/>`metadata_description`<br/>`metadata_keywords`<br/>`metadata_title` | Strip HTML markup and extract text
+PDF (`application/pdf`) | `metadata_content_type`<br/>`metadata_language`<br/>`metadata_author`<br/>`metadata_title`| Extract text, including embedded documents (excluding images)
+DOCX (application/vnd.openxmlformats-officedocument.wordprocessingml.document) | `metadata_content_type`<br/>`metadata_author`<br/>`metadata_character_count`<br/>`metadata_creation_date`<br/>`metadata_last_modified`<br/>`metadata_page_count`<br/>`metadata_word_count` | Extract text, including embedded documents
+DOC (application/msword) | `metadata_content_type`<br/>`metadata_author`<br/>`metadata_character_count`<br/>`metadata_creation_date`<br/>`metadata_last_modified`<br/>`metadata_page_count`<br/>`metadata_word_count` | Extract text, including embedded documents
+XLSX (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) | `metadata_content_type`<br/>`metadata_author`<br/>`metadata_creation_date`<br/>`metadata_last_modified` | Extract text, including embedded documents
+XLS (application/vnd.ms-excel) | `metadata_content_type`<br/>`metadata_author`<br/>`metadata_creation_date`<br/>`metadata_last_modified` | Extract text, including embedded documents
+PPTX (application/vnd.openxmlformats-officedocument.presentationml.presentation) | `metadata_content_type`<br/>`metadata_author`<br/>`metadata_creation_date`<br/>`metadata_last_modified`<br/>`metadata_slide_count`<br/>`metadata_title` | Extract text, including embedded documents
+PPT (application/vnd.ms-powerpoint) | `metadata_content_type`<br/>`metadata_author`<br/>`metadata_creation_date`<br/>`metadata_last_modified`<br/>`metadata_slide_count`<br/>`metadata_title` | Extract text, including embedded documents
+MSG (application/vnd.ms-outlook) | `metadata_content_type`<br/>`metadata_message_from`<br/>`metadata_message_to`<br/>`metadata_message_cc`<br/>`metadata_message_bcc`<br/>`metadata_creation_date`<br/>`metadata_last_modified`<br/>`metadata_subject` | Extract text, including attachments
+ZIP (application/zip) | `metadata_content_type` | Extract text from all documents in the archive
+XML (application/xml) | `metadata_content_type`</br>`metadata_content_encoding`</br> | Strip XML markup and extract text </td>
+JSON (application/json) | `metadata_content_type`</br>`metadata_content_encoding` | Extract text<br/>NOTE: If you need to extract multiple document fields from a JSON blob, please vote for [this UserVoice suggestion](https://feedback.azure.com/forums/263029-azure-search/suggestions/11113539-extract-document-structure-from-json-blobs)
+Plain text (text/plain) | `metadata_content_type`</br>`metadata_content_encoding`</br> | 
 
 <a name="CustomMetadataControl"></a>
 ## Using custom metadata to control document extraction
 
 You can add metadata properties to a blob to control certain aspects of the blob indexing and document extraction process. Currently the following properties are supported:
 
-<table style="font-size:12">
-
-<tr>
-<th>Property name</th>
-<th>Property value</th>
-<th>Explanation</th>
-</tr>
-
-<tr>
-<td>AzureSearch_Skip</td>
-<td>"true"</td>
-<td>Instructs the blob indexer to completely skip the blob; neither metadata nor content extraction will be attempted.
-This is useful when you want to skip certain content types, or when a particular blob fails repeatedly and interrupts the indexing process.
-</td>
-</tr>
-
-</table>
+Property name | Property value | Explanation
+--------------|----------------|------------
+AzureSearch_Skip | "true" | Instructs the blob indexer to completely skip the blob; neither metadata nor content extraction will be attempted. This is useful when you want to skip certain content types, or when a particular blob fails repeatedly and interrupts the indexing process.
 
 ## Help us make Azure Search better
 
