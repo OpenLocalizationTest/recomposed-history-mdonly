@@ -10,7 +10,7 @@
    />
 
 <tags
-   ms.service="azure-functions"
+   ms.service="functions"
    ms.devlang="multiple"
    ms.topic="get-started-article"
    ms.tgt_pltfrm="multiple"
@@ -20,7 +20,7 @@
    
 # Create an event processing Azure Function
 
-[AZURE.INCLUDE [Getting Started Note](../../includes/azure-functions-getting-started.md)]
+[AZURE.INCLUDE [Getting Started Note](../../includes/functions-getting-started.md)]
 
 [AZURE.VIDEO []()]
 
