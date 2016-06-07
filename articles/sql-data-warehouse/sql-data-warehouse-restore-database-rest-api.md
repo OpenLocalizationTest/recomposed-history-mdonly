@@ -1,5 +1,5 @@
 <properties
-   pageTitle="Database restore in Azure SQL Data Warehouse (Azure portal) | Microsoft Azure"
+   pageTitle="Restore a database in Azure SQL Data Warehouse (REST API) | Microsoft Azure"
    description="REST API tasks for restoring a live, deleted, or inaccessible database in Azure SQL Data Warehouse."
    services="sql-data-warehouse"
    documentationCenter="NA"
@@ -13,23 +13,24 @@
    ms.topic="article"
    ms.tgt_pltfrm="NA"
    ms.workload="data-services"
-   ms.date="06/01/2016"
-   ms.author="elfish;barbkess;sonyama;kevin"/>
+   ms.date="06/04/2016"
+   ms.author="elfish;barbkess;sonyama"/>
 
-# Backup and restore a database in Azure SQL Data Warehouse (REST API)
+# Restore a database in Azure SQL Data Warehouse (REST API)
 
 > [AZURE.SELECTOR]
-- [Overview](sql-data-warehouse-overview-manage-database-restore.md)
-- [Portal](sql-data-warehouse-manage-database-restore-portal.md)
-- [PowerShell](sql-data-warehouse-manage-database-restore-powershell.md)
-- [REST](sql-data-warehouse-manage-database-restore-rest-api.md)
+- [Overview](sql-data-warehouse-restore-database-overview.md)
+- [Portal](sql-data-warehouse-restore-database-portal.md)
+- [PowerShell](sql-data-warehouse-restore-database-powershell.md)
+- [REST](sql-data-warehouse-manage-restore-database-rest-api.md)
 
-REST API tasks for restoring a database in SQL Data Warehouse. 
+REST API tasks for restoring a live, deleted, or inaccessible database in Azure SQL Data Warehouse. 
 
 Tasks in this topic:
 
 - Restore a live database
 - Restore a deleted database
+- Restore an inaccessible database from a different Azure geographical region
 
 ## Before you begin
 
@@ -55,6 +56,25 @@ To restore a deleted database
 4.	Track the status of your restore by using the [Database operation status][] operation.
 
 >[AZURE.NOTE] After the restore has completed, you can configure your recovered database by following the [Finalize a recovered database][] guide.
+
+## Restore from an Azure geographical region
+
+To perform a geo-restore:
+
+1. Get your list of recoverable databases using the [List Recoverable Databases][] operation.
+2. Get the database you want to recover using the [Get Recoverable Database][] operation.
+3. Create the recovery request using the [Create Database Recovery Request][] operation.
+4. Track the status of the recovery using the [Database Operation Status][] operation.
+
+### Configure your database after performing a geo-restore
+This is a checklist to help get your recovered database production ready.
+
+1. **Update Connection Strings**: Verify connection strings of your client tools are pointing to the newly recovered database.
+2. **Modify Firewall Rules**: Verify the firewall rules on the target server and make sure connections from your client computers or Azure to the server and the newly recovered database are enabled.
+3. **Verify Server Logins and Database Users**: Verify if all the logins used by your application exist on the server which is hosting your recovered database. Re-create the missing logins and grant them appropriate permissions on the recovered database. 
+4. **Enable Auditing**: If auditing is required to access your database, you need to enable Auditing after the database recovery.
+
+The recovered database will be TDE-enabled if the source database is TDE-enabled.
 
 
 ## Next steps
