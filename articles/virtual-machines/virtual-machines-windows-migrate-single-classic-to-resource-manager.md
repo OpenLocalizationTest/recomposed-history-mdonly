@@ -24,6 +24,15 @@ ms.author: cynthn
 
 This section helps you to migrate your existing Azure VMs from the classic deployment model to [Managed Disks](../storage/storage-managed-disks-overview.md) in the Resource Manager deployment model.
 
+## Before you begin
+If you use PowerShell, make sure that you have the latest version of the AzureRM.Compute PowerShell module. Run the following command to install it.
+
+```powershell
+Install-Module AzureRM.Compute -RequiredVersion 2.6.0
+```
+For more information, see [Azure PowerShell Versioning](https://docs.microsoft.com/powershell/azureps-cmdlets-docs/#azure-powershell-versioning).
+
+
 ## Plan for the migration to Managed Disks
 
 This section helps you to make the best decision on VM and disk types.
@@ -68,7 +77,7 @@ By default, disk caching policy is *Read-Only* for all the Premium data disks, a
 
 ### Pricing
 
-Review the [pricing for Managed Disks](https://azure.microsoft.com/en-us/pricing/details/storage/disks/). Pricing of Premium Managed Disks is same as the Premium Unmanaged Disks. But pricing for Standard Managed Disks is different than Standard Unmanaged Disks.
+Review the [pricing for Managed Disks](https://azure.microsoft.com/en-us/pricing/details/managed-disks/). Pricing of Premium Managed Disks is same as the Premium Unmanaged Disks. But pricing for Standard Managed Disks is different than Standard Unmanaged Disks.
 
 
 ## Checklist
