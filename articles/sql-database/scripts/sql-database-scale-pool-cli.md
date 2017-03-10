@@ -25,15 +25,15 @@ This sample CLI script creates elastic pools, moves pooled databases, and change
 
 Before running this script, ensure that a connection with Azure has been created using the `az login` command. 
 
-This sample works in a Bash shell. For options on running Azure CLI scripts on Windows, see [Running the Azure CLI in Windows](../virtual-machines/virtual-machines-windows-cli-options.md).
+This sample works in a Bash shell. For options on running Azure CLI scripts on Windows, see [Running the Azure CLI in Windows](../../virtual-machines/virtual-machines-windows-cli-options.md).
 
-## Script Samples
+## Sample script
 
-[!code-azurecli[main](../../cli_scripts/sql-database/scale-pool/scale-pool.sh "Move database between pools")]
+[!code-azurecli[main](../../../cli_scripts/sql-database/scale-pool/scale-pool.sh "Move database between pools")]
 
 ## Clean up deployment
 
-After the script sample has been run, the following command can be used to remove the Resource Group, logical server and SQL Database.
+After the script sample has been run, the following command can be used to remove the resource group and all resources associated with it.
 
 ```azurecli
 az group delete --name myResourceGroup
@@ -56,4 +56,4 @@ This script uses the following commands to create a resource group, logical serv
 
 For more information on the Azure CLI, see [Azure CLI documentation](https://docs.microsoft.com/cli/azure/overview).
 
-Additional SQL Database CLI script samples can be found in the [Azure SQL Database documentation](sql-database-cli-samples.md).
+Additional SQL Database CLI script samples can be found in the [Azure SQL Database documentation](../sql-database-cli-samples.md).
